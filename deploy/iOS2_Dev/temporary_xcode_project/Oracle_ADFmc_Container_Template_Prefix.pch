@@ -1,0 +1,12 @@
+//
+// Prefix header for all source files of the 'Oracle_ADFmc_Container_Template' target in the 'Oracle_ADFmc_Container_Template' project
+//
+/*
+ Copyright (c) 2011 Oracle.
+ All rights reserved. 
+ */
+
+#ifdef __OBJC__
+@import Foundation;
+@import UIKit;
+#endif

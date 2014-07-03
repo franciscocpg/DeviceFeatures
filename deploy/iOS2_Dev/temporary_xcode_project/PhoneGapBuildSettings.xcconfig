@@ -1,0 +1,7 @@
+//
+//  PhoneGap.xcconfig
+//  Oracle_ADFmc_Container_Template
+//
+
+// Override this to use your project specific PHONEGAPLIB
+PHONEGAPLIB = $(PHONEGAPLIB)

@@ -1,0 +1,26 @@
+/* Copyright (c) 2011, 2012, Oracle and/or its affiliates. All rights reserved. */
+/* ------------------------------------------------------ */
+/* ------------------- ADFInfoBundle_it.js ---------------------- */
+/* ------------------------------------------------------ */
+// AUTO-GENERATED FILE
+// since this gets loaded programmatically, adf.mf.resource will already be defined
+
+adf.mf.resource.ADFInfoBundle_it={
+"LBL_WARNING_DISPLAY_STR":"Avvertenza",
+"LBL_CONFIRMATION_DISPLAY_STR":"Conferma",
+"WARN_SKIP_REMOTE_WRITE":"Java non \u00e8 disponibile, pertanto la scrittura remota verr\u00e0 saltata.",
+"LBL_INFO_DISPLAY_STR":"Informazioni",
+"WARN_MESSAGE_FOR_SELENIUM_TEST":"Messaggio di avvertenza per il test Selenium con argomento: {0}",
+"WARN_PROCESSING_CREATE_DATA_CHANGE":"Rilevato problema durante l\'\'elaborazione della modifica dati (creazione) per #\'\'{{0}.collectionModel\'\'} - {1}",
+"WARN_PROCESSING_VAR_CHANGES":"Errore in processDataChangeEvent durante l\'\'elaborazione delle modifiche delle variabili {0}",
+"oracle.core.ojdl.logging.MessageIdKeyResourceBundle":"",
+"LBL_OK_DISPLAY_STR":"OK",
+"LBL_FATAL_DISPLAY_STR":"Irreversibile",
+"WARN_PROCESSING_REMOVE_DATA_CHANGE":"Rilevato problema durante l\'\'elaborazione della modifica dati (rimozione) per #\'\'{{0}.collectionModel\'\'} - {1}",
+"WARN_PROCESSING_UPDATE_DATA_CHANGE":"Rilevato problema durante l\'\'elaborazione della modifica dati (aggiornamento) per #\'\'{{0}.collectionModel\'\'} - {1}",
+"LBL_ERROR_DISPLAY_STR":"Errore",
+"WARN_PROCESSING_PROVIDER_CHANGES":"Errore in processDataChangeEvent durante l\'\'elaborazione delle modifiche provider {0}",
+"WARN_UPDATING_CACHE":"Rilevato problema durante l\'aggiornamento della cache come risultato di un evento di modifica dati.",
+"WARN_PURGING_CACHE":"Errore durante il tentativo di rimozione della cache - {0}",
+"WARN_UNABLE_TO_FETCH_SET":"Impossibile recuperare tramite fetch il set - {0}"
+}

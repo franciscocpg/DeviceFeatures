@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<adfmf:features xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:adfmf="http://xmlns.oracle.com/adf/mf">
+    <adfmf:feature id="_Oracle_Default_Login_Feature_Id_" name="Login" icon="oracle.login/LoginIcon.png"
+        image="oracle.login/LoginImage.png">
+        <adfmf:content id="oracle.login">
+            <adfmf:localHTML url="adf.login.iphone.html"/>
+        </adfmf:content>
+    </adfmf:feature>
+</adfmf:features>
