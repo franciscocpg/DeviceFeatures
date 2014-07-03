@@ -1,9 +1,0 @@
-<?xml version = '1.0' encoding = 'UTF-8'?>
-<!DOCTYPE plist PUBLIC "-//Apple//DTD 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd"><plist version="1.0" xmlns:adfmf="http://xmlns.oracle.com/adf/mf" xmlns:FileUtils="http://www.oracle.com/XSL/Transform/java/oracle.adfmf.common.util.FileUtils">
-   <dict>
-      <key>PreferenceSpecifiers</key>
-      <array/>
-      <key>StringsTable</key>
-      <string>Localizable</string>
-   </dict>
-</plist>
