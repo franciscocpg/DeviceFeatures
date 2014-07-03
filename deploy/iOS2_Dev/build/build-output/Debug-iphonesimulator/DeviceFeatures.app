@@ -1,0 +1,1 @@
+/Users/Marcelo/Work/Oracle/work/DeviceFeatures/deploy/iOS2_Dev/Destination_Root/Applications/DeviceFeatures.app

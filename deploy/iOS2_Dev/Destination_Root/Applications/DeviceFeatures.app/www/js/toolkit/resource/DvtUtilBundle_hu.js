@@ -1,0 +1,20 @@
+DvtUtilBundle_RB={
+"DvtUtilBundle.SCALING_SUFFIX_TRILLION":"T",
+"DvtUtilBundle.MONTH_SHORT_AUGUST":"Aug.",
+"DvtUtilBundle.MONTH_SHORT_MAY":"M\u00e1j.",
+"DvtUtilBundle.MONTH_SHORT_MARCH":"M\u00e1r.",
+"DvtUtilBundle.MONTH_SHORT_NOVEMBER":"Nov.",
+"DvtUtilBundle.MONTH_SHORT_SEPTEMBER":"Szep.",
+"DvtUtilBundle.CLEAR_SELECTION":"Kijel\u00f6l\u00e9s t\u00f6rl\u00e9se",
+"DvtUtilBundle.MONTH_SHORT_APRIL":"\u00c1pr.",
+"DvtUtilBundle.MONTH_SHORT_JANUARY":"Jan.",
+"DvtUtilBundle.SCALING_SUFFIX_MILLION":"M",
+"DvtUtilBundle.MONTH_SHORT_OCTOBER":"Okt.",
+"DvtUtilBundle.MONTH_SHORT_FEBRUARY":"Feb.",
+"DvtUtilBundle.MONTH_SHORT_JULY":"J\u00fal.",
+"DvtUtilBundle.MONTH_SHORT_DECEMBER":"Dec.",
+"DvtUtilBundle.MONTH_SHORT_JUNE":"J\u00fan.",
+"DvtUtilBundle.SCALING_SUFFIX_BILLION":"B",
+"DvtUtilBundle.SCALING_SUFFIX_THOUSAND":"E",
+"DvtUtilBundle.SCALING_SUFFIX_QUADRILLION":"Q"
+}

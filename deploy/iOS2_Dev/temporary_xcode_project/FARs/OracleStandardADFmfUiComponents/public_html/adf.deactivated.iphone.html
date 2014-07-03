@@ -1,0 +1,60 @@
+<!-- Copyright (c) 2008, 2013, Oracle and/or its affiliates. All rights reserved. 11.1.2.4.0 -->
+<!DOCTYPE html>
+<html height="100%">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+    <title>Inactive</title>
+    <!-- We are using amx styles to style the springboard -->
+    <link id="amx" rel="stylesheet" href="../../../www/css/amx.css"/>
+    <!-- Load the two layouts so swapping is fast-->
+    <link id="precached-layout" rel="stylesheet" href="../../../www/css/adf.springboard.iphone.landscape.css"/>
+    <link id="layout" rel="stylesheet" href="../../../www/css/adf.springboard.iphone.portrait.css"/>
+    <script type="text/javascript">if (!window.adf) window.adf = {}; adf.wwwPath = "../../../www/";</script>
+    <script type="text/javascript" src="../../../www/js/base.js"></script>
+    <script language="javascript">
+      function handlePageShown()
+      {
+        try
+        {
+          // Load the skin for this application
+          window.containerInternalRoot().getAmxIncludeList(loadIncludes);
+        }
+        catch(e)
+        {
+          alert("In onDeviceReady() ERROR:"+e);
+        }
+      }
+      function loadIncludes(includes)
+      {
+        // Load all the includes - skins - should all have "file://" prefix
+        var theHead = document.head;
+        for (var i = 0; i < includes.length; i++)
+        {
+          var cssLink = document.createElement('link');
+          cssLink.setAttribute('rel', "stylesheet");
+          cssLink.setAttribute('href', includes[i].file);
+          theHead.append(cssLink);
+        }
+      }
+      document.addEventListener("showpagecomplete", handlePageShown, false);
+    </script>
+  </head>
+  <body>
+    <div id="bodyPage">
+      <div class="amx-view-container current">
+        <div class="amx-node amx-view">
+          <div class="amx-node amx-panelPage">
+            <div class="amx-panelPage-header">
+              <div class="amx-panelPage-facet-header">
+                <div class="amx-node amx-outputText" id="message"></div>
+              </div>
+            </div>
+            <div class="amx-panelPage-content">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

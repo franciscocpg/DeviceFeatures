@@ -1,0 +1,5582 @@
+/* Copyright (c) 2005, 2013, Oracle and/or its affiliates. All rights reserved. */
+/* css-mobileAlta-1.0-ios/amx-carousel.css */
+
+.amx-carousel {
+  position: relative;
+  width: 100%;
+  height: 300px;
+  overflow: hidden;
+  outline: 0;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.amx-carousel_view,
+.amx-carousel_control-area,
+.amx-carouselItem {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+.amx-carousel_view,
+.amx-carouselItem {
+  overflow: hidden;
+}
+
+.amx-carousel_view.p_AMXOneByOne {
+  box-shadow: rgba(0,0,0,0.5) 0 1px 2px;
+  border: 0 solid #CCCCCC;
+}
+
+.amx-carousel_item {
+  display: none;
+  background-color: #FFFFFF;
+  color: #000000;
+  overflow: hidden;
+  position: absolute;
+}
+
+.amx-carousel_item.p_AMXCircular {
+  border: 1px solid #D5DFE5;
+  box-shadow: rgba(0,0,0,0.1) 0 1px 2px;
+}
+
+.amx-carousel_item-overlay {
+  -webkit-tap-highlight-color: transparent;
+  background-color: #FFFFFF;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  position: absolute;
+  display: none;
+}
+
+.amx-carousel_control-area.p_AMXSmall,
+.amx-carousel_control-area.p_AMXCompact {
+  top: auto;
+  z-index: 2;
+}
+
+.amx-carousel_item-text {
+  font-size: 17px;
+  font-weight: bold;
+  color: #333333;
+  position: absolute;
+  text-align: center;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.amx-carousel_item-text.p_AMXVertical,
+.amx-carousel_control-area.p_AMXSmall.p_AMXVertical,
+.amx-carousel_control-area.p_AMXCompact.p_AMXVertical {
+  z-index: 301;
+  padding: 2px;
+  color: #333333;
+  background-color: #FFFFFF;
+  border-color: #0572CE1;
+  box-shadow: rgba(0,0,0,0.5) 0 1px 2px;
+}
+
+.amx-carousel_item-text.p_AMXSmall,
+.amx-carousel_item-text.p_AMXCompact {
+  padding: 0 2px;
+}
+
+.amx-carousel_item-text.p_AMXVertical.p_AMXSmall,
+.amx-carousel_item-text.p_AMXVertical.p_AMXCompact,
+.amx-carousel_item-text.p_AMXCircular.p_AMXVertical.p_AMXSmall,
+.amx-carousel_item-text.p_AMXCircular.p_AMXVertical.p_AMXCompact {
+  z-index: 301;
+  padding: 2px;
+  color: #333333;
+  background-color: #FFFFFF;
+  border: none;
+  box-shadow: none;
+}
+
+.amx-carousel_spin-info {
+  white-space: nowrap;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  overflow: hidden;
+  text-align: center;
+  font-weight: normal;
+  font-size: 17px;
+  color: #333333;
+}
+
+html[dir=ltr] .amx-carousel_spin-info.p_AMXFull.p_AMXVertical {
+  left: auto;
+  top: 0;
+  text-align: left;
+  white-space: normal;
+  font-size: 17px;
+}
+
+html[dir=rtl] .amx-carousel_spin-info.p_AMXFull.p_AMXVertical {
+  right: auto;
+  top: 0;
+  text-align: right;
+  white-space: normal;
+  font-size: 17px;
+}
+
+.amx-carousel_spin-info.p_AMXSmall.p_AMXVertical,
+.amx-carousel_spin-info.p_AMXCompact.p_AMXVertical {
+  top: auto;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  text-align: center;
+}
+.amx-carousel_spin-bar {
+  background-repeat: repeat-x;
+  background-position: 0 12px;
+  background-image: url(../css/images/alta_carousel_h.png);
+  -webkit-background-size: 1px 9px; /* Note: the actual image is 2x; 1x18 */
+  position: absolute;
+  left: 15%;
+  right: 15%;
+  height: 32px;
+}
+
+.amx-carousel_spin-bar > .amx-extendedTarget {
+  left: 5px;
+  right: 5px;
+  top: -6px;
+  bottom: -6px;
+}
+
+.amx-carousel_spin-bar.p_AMXVertical {
+  background-repeat: repeat-y;
+  background-position: 12px 0;
+  -webkit-background-size: 9px 1px; /* Note: the actual image is 2x; 18x1 */
+  top: 10%;
+  bottom: 10%;
+  width: 32px;
+  left: auto;
+  right: auto;
+  height: auto;
+}
+html[dir=ltr] .amx-carousel_spin-bar.p_AMXVertical {
+  background-image: url(../css/images/alta_carousel_v_ltr.png);
+}
+html[dir=rtl] .amx-carousel_spin-bar.p_AMXVertical {
+  background-image: url(../css/images/alta_carousel_v_rtl.png);
+}
+
+.amx-carousel_spin-bar.p_AMXVertical > .amx-extendedTarget {
+  left: -6px;
+  right: -6px;
+  top: 5px;
+  bottom: 5px;
+}
+
+.amx-carousel_spin-h-previous-icon-style {
+  background-repeat: no-repeat;
+  position: absolute;
+  height: 32px;
+  width: 11px;
+}
+
+html[dir=ltr] .amx-carousel_spin-h-previous-icon-style,
+html[dir=rtl] .amx-carousel_spin-h-next-icon-style {
+  right: 85%;
+}
+
+html[dir=ltr] .amx-carousel_spin-h-next-icon-style,
+html[dir=rtl] .amx-carousel_spin-h-previous-icon-style {
+  left: 85%;
+}
+
+html[dir=ltr] .amx-carousel_spin-h-previous-icon-style.p_AMXCompact,
+html[dir=ltr] .amx-carousel_spin-h-previous-icon-style.p_AMXSmall,
+html[dir=ltr] .amx-carousel_spin-v-previous-icon-style.p_AMXCompact,
+html[dir=ltr] .amx-carousel_spin-v-previous-icon-style.p_AMXSmall,
+html[dir=rtl] .amx-carousel_spin-h-next-icon-style.p_AMXCompact,
+html[dir=rtl] .amx-carousel_spin-h-next-icon-style.p_AMXSmall,
+html[dir=rtl] .amx-carousel_spin-v-next-icon-style.p_AMXCompact,
+html[dir=rtl] .amx-carousel_spin-v-next-icon-style.p_AMXSmall {
+  z-index: 302;
+  left: 0;
+  right: auto;
+}
+
+html[dir=rtl] .amx-carousel_spin-h-previous-icon-style.p_AMXCompact,
+html[dir=rtl] .amx-carousel_spin-h-previous-icon-style.p_AMXSmall,
+html[dir=rtl] .amx-carousel_spin-v-previous-icon-style.p_AMXCompact,
+html[dir=rtl] .amx-carousel_spin-v-previous-icon-style.p_AMXSmall,
+html[dir=ltr] .amx-carousel_spin-h-next-icon-style.p_AMXCompact,
+html[dir=ltr] .amx-carousel_spin-h-next-icon-style.p_AMXSmall,
+html[dir=ltr] .amx-carousel_spin-v-next-icon-style.p_AMXCompact,
+html[dir=ltr] .amx-carousel_spin-v-next-icon-style.p_AMXSmall {
+  z-index: 302;
+  left: auto;
+  right: 0;
+}
+
+.amx-carousel_spin-h-previous-icon-style.p_AMXCompact > .amx-extendedTarget,
+.amx-carousel_spin-h-previous-icon-style.p_AMXSmall > .amx-extendedTarget,
+.amx-carousel_spin-v-previous-icon-style.p_AMXCompact > .amx-extendedTarget,
+.amx-carousel_spin-v-previous-icon-style.p_AMXSmall > .amx-extendedTarget,
+.amx-carousel_spin-h-next-icon-style.p_AMXCompact > .amx-extendedTarget,
+.amx-carousel_spin-h-next-icon-style.p_AMXSmall > .amx-extendedTarget,
+.amx-carousel_spin-v-next-icon-style.p_AMXCompact > .amx-extendedTarget,
+.amx-carousel_spin-v-next-icon-style.p_AMXSmall > .amx-extendedTarget {
+  top: -14px;
+  bottom: -15px;
+  left: -14px;
+  right: -14px;
+}
+
+.amx-carousel_spin-h-previous-icon-style.p_AMXFull {
+  background-position: 0 12px;
+  -webkit-background-size: 11px 9px; /* Note: the actual image is 2x; 22x18 */
+}
+
+html[dir=ltr] .amx-carousel_spin-h-next-icon-style.p_AMXFull {
+  background-image: url(../css/images/alta_carousel_slider_horizontal_right.png);
+}
+html[dir=rtl] .amx-carousel_spin-h-next-icon-style.p_AMXFull {
+  background-image: url(../css/images/alta_carousel_slider_horizontal_left.png);
+}
+
+html[dir=ltr] .amx-carousel_spin-h-previous-icon-style.p_AMXFull {
+  background-image: url(../css/images/alta_carousel_slider_horizontal_left.png);
+}
+html[dir=rtl] .amx-carousel_spin-h-previous-icon-style.p_AMXFull {
+  background-image: url(../css/images/alta_carousel_slider_horizontal_right.png);
+}
+
+
+html[dir=ltr] .amx-carousel_spin-h-previous-icon-style.p_AMXFull > .amx-extendedTarget,
+html[dir=rtl] .amx-carousel_spin-h-next-icon-style.p_AMXFull > .amx-extendedTarget {
+  top: -6px;
+  bottom: -6px;
+  left: -29px;
+  right: -4px;
+}
+
+/* Horizontal Mode Next Icon */
+.amx-carousel_spin-h-next-icon-style.p_AMXCompact,
+.amx-carousel_spin-h-next-icon-style.p_AMXSmall {
+  position: absolute;
+  -webkit-tap-highlight-color: transparent;
+  box-sizing: border-box;
+  background-repeat: no-repeat;
+  -webkit-background-size: 300px 164px;
+  width: 17px;
+  height: 17px;
+  background-position: -38px -92px;
+  -webkit-transform: rotate(180deg);
+  z-index: 2;
+}
+
+html[dir=ltr] .amx-carousel_spin-h-next-icon-style.p_AMXCompact,
+html[dir=ltr] .amx-carousel_spin-h-next-icon-style.p_AMXSmall {
+  background-image: url(../css/images/amx-ios-ltr.png);
+  right: 0;
+  left: auto;
+}
+
+html[dir=rtl] .amx-carousel_spin-h-next-icon-style.p_AMXCompact,
+html[dir=rtl] .amx-carousel_spin-h-next-icon-style.p_AMXSmall {
+  background-image: url(../css/images/amx-ios-rtl.png);
+  right: auto;
+  left: 0;
+}
+
+/* Horizontal Mode Previous Icon */
+.amx-carousel_spin-h-previous-icon-style.p_AMXCompact,
+.amx-carousel_spin-h-previous-icon-style.p_AMXSmall {
+  position: absolute;
+  -webkit-tap-highlight-color: transparent;
+  box-sizing: border-box;
+  background-repeat: no-repeat;
+  -webkit-background-size: 300px 164px;
+  width: 17px;
+  height: 17px;
+  background-position: -38px -92px;
+}
+
+html[dir=ltr] .amx-carousel_spin-h-previous-icon-style.p_AMXCompact,
+html[dir=ltr] .amx-carousel_spin-h-previous-icon-style.p_AMXSmall {
+  background-image: url(../css/images/amx-ios-ltr.png);
+  left: 0;
+  right: auto;
+}
+
+html[dir=rtl] .amx-carousel_spin-h-previous-icon-style.p_AMXCompact,
+html[dir=rtl] .amx-carousel_spin-h-previous-icon-style.p_AMXSmall {
+  background-image: url(../css/images/amx-ios-rtl.png);
+  left: auto;
+  right: 0;
+}
+
+/* Orientation Horizontal Carousel Previous Icon-Selected State */
+.amx-carousel_spin-h-next-icon-style.p_AMXCompact.amx-selected,
+.amx-carousel_spin-h-next-icon-style.p_AMXSmall.amx-selected {
+  /*background-position: -51px -92px; */
+}
+
+/* Orientation Horizontal Carousel Previous Icon-Selected State */
+.amx-carousel_spin-h-previous-icon-style.p_AMXCompact.amx-selected,
+.amx-carousel_spin-h-previous-icon-style.p_AMXSmall.amx-selected {
+  /*background-position: -51px -92px;*/
+}
+
+/* Orientation Vertical Caurosel Previous Icon */
+.amx-carousel_spin-v-previous-icon-style.p_AMXCompact,
+.amx-carousel_spin-v-previous-icon-style.p_AMXSmall {
+  position: absolute;
+  -webkit-tap-highlight-color: transparent;
+  box-sizing: border-box;
+  background-repeat: no-repeat;
+  background-image: url(../css/images/amx-ios-ltr.png);
+  width: 18px;
+  height: 17px;
+  background-position: -149px -59px;
+  -webkit-background-size: 300px 164px;
+}
+
+/* Orientation Vertical Caurosel Next Icon */
+.amx-carousel_spin-v-next-icon-style.p_AMXCompact,
+.amx-carousel_spin-v-next-icon-style.p_AMXSmall {
+  position: absolute;
+  -webkit-tap-highlight-color: transparent;
+  box-sizing: border-box;
+  background-repeat: no-repeat;
+  background-image: url(../css/images/amx-ios-ltr.png);
+  width: 18px;
+  height: 17px;
+  background-position: -188px -59px;
+  -webkit-background-size: 300px 164px;
+}
+
+/* Orientation Vertical Carousel Previous Icon-Selected State */
+.amx-carousel_spin-v-previous-icon-style.p_AMXCompact.amx-selected,
+.amx-carousel_spin-v-previous-icon-style.p_AMXSmall.amx-selected {
+  /* background-position: -219px -78px; */
+}
+
+/* Orientation Vertical Carousel Next Icon-Selected State */
+.amx-carousel_spin-v-next-icon-style.p_AMXCompact.amx-selected,
+.amx-carousel_spin-v-next-icon-style.p_AMXSmall.amx-selected {
+  /* background-position: -219px -78px; */
+}
+
+.amx-carousel_spin-h-thumb-container,
+.amx-carousel_spin-v-thumb-container {
+  position: absolute;
+  height: 32px;
+  width: 32px;
+  z-index: 2;
+}
+
+.amx-carousel_spin-h-thumb-icon-style,
+.amx-carousel_spin-v-thumb-icon-style {
+  background-repeat: no-repeat;
+  position: absolute;
+  height: 19px;
+  width: 19px;
+  box-sizing: border-box;
+  border-radius: 10px;
+  border: 1px solid #ababab;
+  box-shadow: 0 1px 0 rgba(0,0,0,.07), inset 0 0 2px rgba(255,255,255,.7);
+  background-image: -webkit-linear-gradient(bottom, #fbfbfb 0%, #fbfbfb 40.99%, #cfcfcf 96.75%, #cfcfcf 100%);
+  top: 7px;
+  left: 7px;
+  -webkit-transform: rotate(180deg)
+}
+
+html[dir=ltr] .amx-carousel_spin-v-thumb-icon-style {
+-webkit-transform: rotate(90deg);
+}
+
+html[dir=rtl] .amx-carousel_spin-v-thumb-icon-style {
+  -webkit-transform: rotate(270deg);
+}
+
+.amx-carousel_spin-h-thumb-icon-style:active,
+.amx-carousel_spin-v-thumb-icon-style:active {
+  width: 19px;
+  height: 19px;
+  position: absolute;
+  box-sizing: border-box;
+  border-radius: 10px;
+  box-shadow: inset 0 0 0 1px #FFFFFF;
+  background-image: -webkit-linear-gradient(bottom, #d9d9d9 0%, #d9d9d9 19.24%, #b1b1b1 82.74%, #b1b1b1 100%);
+  background-image: linear-gradient(bottom, #d9d9d9 0%, #d9d9d9 19.24%, #b1b1b1 82.74%, #b1b1b1 100%);
+  box-shadow: 0 1px 0 rgba(0,0,0,.07), inset 0 0 2px rgba(255,255,255,.7);
+  border: 1px solid #797979;
+  top: 7px;
+  left: 7px;
+}
+
+.amx-carousel_spin-h-thumb-icon-style > .amx-extendedTarget,
+.amx-carousel_spin-v-thumb-icon-style > .amx-extendedTarget {
+  top: -14px;
+  bottom: -13px;
+  left: -13px;
+  right: -14px;
+}
+
+.amx-carousel_spin-h-thumb-icon-style.p_AMXDisabled,
+.amx-carousel_spin-v-thumb-icon-style.p_AMXDisabled {
+  background-image: none;
+  background-color: #F6F4F4;
+}
+
+.amx-carousel_spin-h-next-icon-style {
+  background-repeat: no-repeat;
+  position: absolute;
+  height: 32px;
+  width: 11px;
+}
+
+.amx-carousel_spin-h-next-icon-style.p_AMXFull {
+  background-position: 0 12px;
+  -webkit-background-size: 11px 9px; /* Note: the actual image is 2x; 22x18 */
+}
+
+.amx-carousel_spin-h-previous-icon-style {
+  background-repeat: no-repeat;
+  position: absolute;
+  height: 32px;
+  width: 11px;
+}
+
+html[dir=ltr] .amx-carousel_spin-h-next-icon-style.p_AMXFull > .amx-extendedTarget,
+html[dir=rtl] .amx-carousel_spin-h-previous-icon-style.p_AMXFull > .amx-extendedTarget {
+  top: -6px;
+  bottom: -6px;
+  left: -4px;
+  right: -29px;
+}
+
+.amx-carousel_spin-v-previous-icon-style {
+  background-repeat: no-repeat;
+  position: absolute;
+  height: 11px;
+  width: 32px;
+  bottom: 90%;
+}
+
+.amx-carousel_spin-v-previous-icon-style.p_AMXFull,
+.amx-carousel_spin-v-next-icon-style.p_AMXFull {
+  background-position: 12px 0;
+  -webkit-background-size: 9px 11px; /* Note: the actual image is 2x; 18x22 */
+}
+
+html[dir=ltr] .amx-carousel_spin-v-previous-icon-style.p_AMXFull {
+  background-image: url(../css/images/alta_carousel_slider_vertical_top.png);
+}
+html[dir=rtl] .amx-carousel_spin-v-previous-icon-style.p_AMXFull {
+  background-image: url(../css/images/alta_carousel_slider_vertical_top_rtl.png);
+}
+
+.amx-carousel_spin-v-previous-icon-style.p_AMXFull > .amx-extendedTarget {
+  top: -29px;
+  bottom: -4px;
+  left: -6px;
+  right: -6px;
+}
+
+.amx-carousel_spin-v-next-icon-style {
+  background-repeat: no-repeat;
+  position: absolute;
+  height: 11px;
+  width: 32px;
+  top: 90%;
+}
+
+html[dir=ltr] .amx-carousel_spin-v-next-icon-style.p_AMXFull {
+  background-image: url(../css/images/alta_carousel_slider_vertical_bottom.png);
+}
+
+html[dir=rtl] .amx-carousel_spin-v-next-icon-style.p_AMXFull {
+  background-image: url(../css/images/alta_carousel_slider_vertical_bottom_rtl.png);
+}
+
+.amx-carousel_spin-v-next-icon-style.p_AMXFull > .amx-extendedTarget {
+  top: -4px;
+  bottom: -29px;
+  left: -6px;
+  right: -6px;
+}
+
+html[dir=ltr] .amx-carousel_spin-h-previous-icon-style.p_AMXCompact.p_AMXDisabled,
+html[dir=ltr] .amx-carousel_spin-h-previous-icon-style.p_AMXSmall.p_AMXDisabled,
+html[dir=rtl] .amx-carousel_spin-h-next-icon-style.p_AMXCompact.p_AMXDisabled,
+html[dir=rtl] .amx-carousel_spin-h-next-icon-style.p_AMXSmall.p_AMXDisabled {
+  opacity: 0.50;
+  pointer-events: none;
+}
+
+html[dir=ltr] .amx-carousel_spin-h-next-icon-style.p_AMXCompact.p_AMXDisabled,
+html[dir=ltr] .amx-carousel_spin-h-next-icon-style.p_AMXSmall.p_AMXDisabled,
+html[dir=rtl] .amx-carousel_spin-h-previous-icon-style.p_AMXCompact.p_AMXDisabled,
+html[dir=rtl] .amx-carousel_spin-h-previous-icon-style.p_AMXSmall.p_AMXDisabled {
+  opacity: 0.50;
+  pointer-events: none;
+}
+
+.amx-carousel_spin-v-previous-icon-style.p_AMXCompact.p_AMXDisabled,
+.amx-carousel_spin-v-previous-icon-style.p_AMXSmall.p_AMXDisabled {
+  opacity: 0.50;
+  pointer-events: none;
+}
+
+.amx-carousel_spin-v-next-icon-style.p_AMXCompact.p_AMXDisabled,
+.amx-carousel_spin-v-next-icon-style.p_AMXSmall.p_AMXDisabled {
+  opacity: 0.50;
+  pointer-events: none;
+}
+
+.amx-carousel_spin-bar.p_AMXDisabled,
+.amx-carousel_spin-h-previous-icon-style.p_AMXFull.p_AMXDisabled,
+.amx-carousel_spin-h-next-icon-style.p_AMXFull.p_AMXDisabled,
+.amx-carousel_spin-v-previous-icon-style.p_AMXFull.p_AMXDisabled,
+.amx-carousel_spin-v-next-icon-style.p_AMXFull.p_AMXDisabled {
+  opacity: 0.50;
+  pointer-events: none;
+}
+
+.amx-carousel_item-overlay[theme="dark"] {
+  background-color: #000000;
+}
+
+.amx-carousel_item-text.p_AMXCircular.p_AMXVertical,
+.amx-carousel_control-area.p_AMXCircular.p_AMXSmall.p_AMXVertical,
+.amx-carousel_control-area.p_AMXCircular.p_AMXCompact.p_AMXVertical {
+  border: 2px solid #0572CE;
+  border-top-width: 0;
+}
+
+.amx-carousel_item.p_AMXCircular.p_AMXSelected {
+  border: 2px solid #0572CE;
+  box-shadow: 0 0 10px 0 rgba(0,0,0,.15);
+}
+
+.amx-carousel.p_AMXVertical .amx-carousel_item.p_AMXCircular.p_AMXSelected {
+  border-bottom-color: transparent;
+}
+
+/* Styles added during v1.1 development are below */
+html[dir=ltr] .amx-carousel_spin-h-previous-icon-style.p_AMXCompact,
+html[dir=ltr] .amx-carousel_spin-h-previous-icon-style.p_AMXSmall,
+html[dir=ltr] .amx-carousel_spin-h-next-icon-style.p_AMXCompact,
+html[dir=ltr] .amx-carousel_spin-h-next-icon-style.p_AMXSmall,
+html[dir=rtl] .amx-carousel_spin-h-previous-icon-style.p_AMXCompact,
+html[dir=rtl] .amx-carousel_spin-h-previous-icon-style.p_AMXSmall,
+html[dir=rtl] .amx-carousel_spin-h-next-icon-style.p_AMXCompact,
+html[dir=rtl] .amx-carousel_spin-h-next-icon-style.p_AMXSmall,
+.amx-carousel_spin-v-previous-icon-style.p_AMXCompact,
+.amx-carousel_spin-v-previous-icon-style.p_AMXSmall,
+.amx-carousel_spin-v-next-icon-style.p_AMXCompact,
+.amx-carousel_spin-v-next-icon-style.p_AMXSmall {
+  background-position: 0 0;
+}
+
+html[dir=ltr] .amx-carousel_spin-h-previous-icon-style.p_AMXCompact.amx-selected,
+html[dir=ltr] .amx-carousel_spin-h-previous-icon-style.p_AMXSmall.amx-selected,
+html[dir=ltr] .amx-carousel_spin-h-next-icon-style.p_AMXCompact.amx-selected,
+html[dir=ltr] .amx-carousel_spin-h-next-icon-style.p_AMXSmall.amx-selected,
+html[dir=rtl] .amx-carousel_spin-h-previous-icon-style.p_AMXCompact.amx-selected,
+html[dir=rtl] .amx-carousel_spin-h-previous-icon-style.p_AMXSmall.amx-selected,
+html[dir=rtl] .amx-carousel_spin-h-next-icon-style.p_AMXCompact.amx-selected,
+html[dir=rtl] .amx-carousel_spin-h-next-icon-style.p_AMXSmall.amx-selected,
+.amx-carousel_spin-v-previous-icon-style.p_AMXCompact.amx-selected,
+.amx-carousel_spin-v-previous-icon-style.p_AMXSmall.amx-selected,
+.amx-carousel_spin-v-next-icon-style.p_AMXCompact.amx-selected,
+.amx-carousel_spin-v-next-icon-style.p_AMXSmall.amx-selected {
+}
+
+html[dir=ltr] .amx-carousel_spin-h-previous-icon-style.p_AMXCompact.p_AMXDisabled,
+html[dir=ltr] .amx-carousel_spin-h-previous-icon-style.p_AMXSmall.p_AMXDisabled,
+html[dir=ltr] .amx-carousel_spin-h-next-icon-style.p_AMXCompact.p_AMXDisabled,
+html[dir=ltr] .amx-carousel_spin-h-next-icon-style.p_AMXSmall.p_AMXDisabled,
+html[dir=rtl] .amx-carousel_spin-h-previous-icon-style.p_AMXCompact.p_AMXDisabled,
+html[dir=rtl] .amx-carousel_spin-h-previous-icon-style.p_AMXSmall.p_AMXDisabled,
+html[dir=rtl] .amx-carousel_spin-h-next-icon-style.p_AMXCompact.p_AMXDisabled,
+html[dir=rtl] .amx-carousel_spin-h-next-icon-style.p_AMXSmall.p_AMXDisabled,
+.amx-carousel_spin-v-previous-icon-style.p_AMXCompact.p_AMXDisabled,
+.amx-carousel_spin-v-previous-icon-style.p_AMXSmall.p_AMXDisabled,
+.amx-carousel_spin-v-next-icon-style.p_AMXCompact.p_AMXDisabled,
+.amx-carousel_spin-v-next-icon-style.p_AMXSmall.p_AMXDisabled {
+  opacity: 0.40;
+}
+
+.amx-carousel_spin-h-previous-icon-style.p_AMXCompact::before,
+.amx-carousel_spin-h-previous-icon-style.p_AMXSmall::before,
+.amx-carousel_spin-h-next-icon-style.p_AMXCompact::before,
+.amx-carousel_spin-h-next-icon-style.p_AMXSmall::before,
+.amx-carousel_spin-v-previous-icon-style.p_AMXCompact::before,
+.amx-carousel_spin-v-previous-icon-style.p_AMXSmall::before,
+.amx-carousel_spin-v-next-icon-style.p_AMXCompact::before,
+.amx-carousel_spin-v-next-icon-style.p_AMXSmall::before {
+  position: absolute;
+  content: '';
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  background-repeat: no-repeat;
+  background-image: url(../css/images/amx-ios-ltr.png);
+  /*background-position: -204px -79px;*/
+  background-size: 300px 164px; 
+}
+/* Orientation Horizontal Carousel prev/next  Icons   */
+html[dir=ltr] .amx-carousel_spin-h-previous-icon-style.p_AMXCompact::before,
+html[dir=ltr] .amx-carousel_spin-h-previous-icon-style.p_AMXSmall::before,
+html[dir=rtl] .amx-carousel_spin-h-next-icon-style.p_AMXCompact::before,
+html[dir=rtl] .amx-carousel_spin-h-next-icon-style.p_AMXSmall::before {
+  background-position: -204px -79px; /* enabled arrow pointing left */
+}
+html[dir=ltr] .amx-carousel_spin-h-next-icon-style.p_AMXCompact::before,
+html[dir=ltr] .amx-carousel_spin-h-next-icon-style.p_AMXSmall::before,
+html[dir=rtl] .amx-carousel_spin-h-previous-icon-style.p_AMXCompact::before,
+html[dir=rtl] .amx-carousel_spin-h-previous-icon-style.p_AMXSmall::before {
+    background-position: -204px -79px; /* enabled arrow pointing right */
+}
+/* Orientation Vertical Carousel up/down Icons  */
+.amx-carousel_spin-v-previous-icon-style.p_AMXCompact::before,
+.amx-carousel_spin-v-previous-icon-style.p_AMXSmall::before {
+  background-position:-202px -79px;   
+  -webkit-transform: rotate(270deg); /* enabled arrow pointing up */
+}
+.amx-carousel_spin-v-next-icon-style.p_AMXCompact::before,
+.amx-carousel_spin-v-next-icon-style.p_AMXSmall::before {
+  background-position:-202px -79px;
+  -webkit-transform: rotate(90deg); /* enabled arrow pointing up */
+}
+/* Copyright (c) 2005, 2014, Oracle and/or its affiliates. All rights reserved. */
+/* css-mobileAlta-1.0-ios/amx-commonTags.css */
+
+.transparentScreen {
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 5;
+}
+
+.amx-view {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 10;
+}
+
+.amx-view-historyIndicatorBack,
+.amx-view-historyIndicatorForward {
+  display: inline-block;
+  z-index: 2000;
+  position: fixed;
+  top: 50%;
+  margin-top: -70px;
+  width: 70px;
+  height: 140px;
+  -webkit-background-size: 70px 140px;
+  background-repeat: no-repeat;
+}
+
+html[dir=ltr] .amx-view-historyIndicatorBack,
+html[dir=rtl] .amx-view-historyIndicatorForward {
+  left: -70px;
+  background-image: url(../css/images/historyIndicatorLeft.png);
+  background-position: left;
+}
+
+html[dir=rtl] .amx-view-historyIndicatorBack,
+html[dir=ltr] .amx-view-historyIndicatorForward {
+  right: -70px;
+  background-image: url(../css/images/historyIndicatorRight.png);
+  background-position: right;
+}
+
+.amx-image-error {
+  min-width: 20px;
+  min-height: 20px;
+  -webkit-background-size: 100% 100%;
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-image: url(../css/images/image-load-error.svg);
+}
+
+/* ------ <amx:outputText> ------ */
+.amx-outputText {
+  font-size: 17px;
+  margin: 0;
+  padding: 0;
+  clear: both;
+  color: #000000;
+  font-family: Arial;
+  font-weight: normal;
+  -webkit-user-select: text;
+  user-select: text;
+}
+
+.amx-outputText.adfmf-outputText-bold {
+  font-weight: bold;
+}
+
+.amx-outputText.adfmf-outputText-small {
+  font-size: 14px;
+}
+
+.amx-outputText.adfmf-outputText-note {
+  font-size: 12px;
+}
+
+.amx-outputText-truncateAt {
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.amx-panelPage-content > .amx-outputText {
+  display: block;
+  padding: 10px 19px 2px 19px;
+}
+
+.amx-outputText.amx-text-sectiontitle,
+.adfmf-outputText-sectionTitle {
+  font-size: 17px;
+  color: #000000;
+  font-weight: bold;
+  text-shadow: none;
+}
+
+/* ------ </amx:outputText> ------ */
+/* ------ <amx:commandLink>  <amx:goLink> ------ */
+a,
+.amx-goLink,
+.amx-commandLink {
+  color: #2F6BAC;
+  text-decoration: underline;
+  font-size: 17px;
+  font-weight: normal;
+}
+
+a.adfmf-goLink-noUnderline,
+a.adfmf-commandLink-noUnderline,
+.amx-goLink.adfmf-goLink-noUnderline,
+.amx-commandLink.adfmf-commandLink-noUnderline {
+  color: #2F6BAC;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.adfmf-goLink-icon.amx-goLink:after {
+  content: " ";
+  background-image: url(../css/images/amx-ios-ltr.png);
+  width: 15px;
+  height: 15px;
+  background-position: -163px -63px;
+  background-repeat: no-repeat;
+  -webkit-background-size: 300px 164px;
+  position: relative;
+  margin: 0 3px;
+  display: inline-block;
+}
+
+.amx-goLink:active,
+.amx-commandLink:active {
+  color: #2F6BAC;
+  background-color: #D7ECFE;
+  border-radius: 2px;
+  text-decoration: underline;
+  font-size: 17px;
+}
+
+.amx-goLink.adfmf-goLink-alternateColor,
+.amx-commandLink.adfmf-commandLink-alternateColor {
+  color: #56656E;
+  text-decoration: underline;
+  font-size: 17px;
+}
+
+.amx-goLink.adfmf-goLink-alternateColor:active,
+.amx-commandLink.adfmf-commandLink-alternateColor:active {
+  color: #56656E;
+  background-color: #E1E3E5;
+  border-radius: 2px;
+  text-decoration: underline;
+  font-size: 17px;
+}
+
+.adfmf-goLink-icon.adfmf-goLink-alternateColor.amx-goLink:after {
+  content: " ";
+  background-image: url(../css/images/amx-ios-ltr.png);
+  width: 15px;
+  height: 15px;
+  background-position: -192px -63px;
+  background-repeat: no-repeat;
+  -webkit-background-size: 300px 164px;
+  position: relative;
+  margin: 0 3px;
+  display: inline-block;
+}
+
+.amx-goLink.amx-disabled,
+.amx-commandLink.amx-disabled,
+.adfmf-goLink-icon.amx-disabled.amx-goLink:after {
+  opacity: 0.5;
+  pointer-events: none;
+}
+
+/* facet variant */
+.amx-panelPage-facet-primary .amx-commandLink,
+.amx-panelPage-facet-secondary .amx-commandLink,
+.amx-panelPage-facet-footer .amx-commandLink {
+  display: inline-block;
+  margin: 12px 6px 0 6px;
+}
+
+.amx-panelPage-facet-primary .amx-commandLink img,
+.amx-panelPage-facet-secondary .amx-commandLink img,
+.amx-panelPage-facet-footer .amx-commandLink img {
+  width: 18px;
+  height: 18px;
+}
+
+.amx-panelPage-facet-primary .amx-commandLink label,
+.amx-panelPage-facet-secondary .amx-commandLink label,
+.amx-panelPage-facet-footer .amx-commandLink label {
+  display: inline-block;
+  padding: 0 0 30px 0;
+}
+
+.amx-panelPage-facet-secondary .amx-commandLink,
+.amx-panelPage-facet-secondary .amx-goLink {
+  float: right;
+}
+
+.amx-panelPage-facet-primary .amx-commandLink,
+.amx-panelPage-facet-primary .amx-goLink {
+  float: left;
+}
+
+/* /facet variant */
+/* ------ </amx:commandLink> </amx:goLink>  ------ */
+/* ------ <amx:commandButton-back> ------ */
+html[dir=ltr] .amx-panelPage-facet-primary .amx-commandButton.amx-commandButton-back {
+  left: 6px;
+  text-align: left;
+  padding-left: 0;
+  border-left: none;
+}
+
+html[dir=rtl] .amx-panelPage-facet-primary .amx-commandButton.amx-commandButton-back {
+  right: 6px;
+  text-align: right;
+  padding-right: 0;
+}
+
+html[dir=ltr].amx-dtmode .amx-panelPage-facet-primary .amx-commandButton-back {
+  padding-left: 5px;
+  left: 1px;
+}
+
+html[dir=rtl].amx-dtmode .amx-panelPage-facet-primary .amx-commandButton-back {
+  padding-right: 5px;
+  right: 1px;
+}
+
+.amx-panelPage-facet-primary .amx-commandButton-back:before {
+  position: absolute;
+  content: '';
+  height: 20px;
+  width: 23px;
+  background-repeat: no-repeat;
+  border-top-right-radius: 10px;
+  border-top-left-radius: 0;
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 9.5px;
+  border-left: 1.7px solid #A6A5A5;
+  border-top: 1.7px solid #A6A5A5;
+  box-sizing: border-box;
+  -webkit-mask-image: -webkit-gradient(linear, left top, right bottom, from(#000000), color-stop(0.4, #000000), color-stop(0.45, transparent), to(transparent));
+}
+
+html[dir=ltr] .amx-panelPage-facet-primary .amx-commandButton-back:before {
+  left: -8px;
+  top: 3px;
+  background-image: -webkit-linear-gradient(45deg, #cacaca 0%, #cacaca 16.99%, #f4f4f4 81.49%, #f4f4f4 100%);
+  -webkit-transform: rotate(-46deg) skew(-10deg, -10deg);
+}
+html[dir=ltr] .amx-panelPage-facet-primary .amx-selected.amx-commandButton-back:before {
+  background-image: -webkit-linear-gradient(45deg, #B1B1B1 0%, #B1B1B1 16.99%, #DADADA 81.49%, #DADADA 100%);
+}
+
+html[dir=rtl] .amx-panelPage-facet-primary .amx-commandButton-back:before {
+  right: -8px;
+  top: 3px;
+  background-image: -webkit-linear-gradient(225deg, #cacaca 0%, #cacaca 16.99%, #f4f4f4 81.49%, #f4f4f4 100%);
+  -webkit-transform: rotate(134deg) skew(-10deg, -10deg);
+}
+html[dir=rtl] .amx-panelPage-facet-primary .amx-selected.amx-commandButton-back:before {
+  background-image: -webkit-linear-gradient(225deg, #B1B1B1 0%, #B1B1B1 16.99%, #DADADA 81.49%, #DADADA 100%);
+}
+
+/* ------ </amx:commandButton-back> ------ */
+
+/* ------ <amx:commandButton> ------ */
+.amx-commandButton {
+  position: relative;
+  width: auto;
+  min-width: 27px;
+  max-width: 100%;
+  box-sizing: border-box;
+  min-height: 16px;
+  margin: 5px 0;
+  padding: 4px 4px 3px 4px;
+  display: -webkit-inline-box;
+  -webkit-box-align: center;
+  background-image: -webkit-linear-gradient(90deg, #CACACA 0%, #CACACA 16.99%, #F4F4F4 81.49%, #F4F4F4 100%);
+  box-shadow: 0 1px 0 #FFFFFF;
+  border: 1px solid #A6A5A5;
+  border-radius: 5px;
+  -webkit-tap-highlight-color: transparent;
+  white-space: nowrap;
+  -webkit-box-pack: center; /* Center the contents in this flex box */
+  overflow: hidden;
+}
+
+.amx-commandButton.adfmf-commandButton-large {
+  min-width: 278px;
+  min-height: 46px;
+}
+
+.amx-commandButton.adfmf-commandButton-large .amx-commandButton-label {
+  font: bold 20px Arial;
+  padding: 12px;
+}
+
+.amx-commandButton > .amx-extendedTarget {
+  top: -8px;
+  bottom: -10px;
+  left: -4px;
+  right: -4px;
+}
+
+.amx-commandButton-icon {
+  width: 18px;
+  height: 18px;
+  padding: 0;
+  vertical-align: middle;
+  display: block; 
+}
+
+.amx-commandButton-label {
+  display: block;
+  box-sizing: border-box;
+  font-family: Arial;
+  padding: 0 4px 0 4px;
+  font-size: 13.5px;
+  font-weight: bold;
+  color: #333333;
+  vertical-align: middle;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  -webkit-flex: 1;
+}
+
+.adfmf-commandButton-bright .amx-commandButton-label,
+.adfmf-commandButton-bright .amx-commandButton.amx-disabled {
+  color: #333325;
+}
+
+.adfmf-commandButton-alert .amx-commandButton-label,
+.adfmf-commandButton-highlight .amx-commandButton-label,
+.adfmf-commandButton-confirm .amx-commandButton-label,
+.adfmf-commandButton-alternate2 .amx-commandButton-label,
+.adfmf-commandButton-alternate1 .amx-commandButton-label,
+.adfmf-commandButton-dark .amx-commandButton-label {
+  color: #FFFFFF;
+}
+
+.adfmf-commandButton-alert.amx-selected .amx-commandButton-label,
+.adfmf-commandButton-highlight.amx-selected .amx-commandButton-label,
+.adfmf-commandButton-confirm.amx-selected .amx-commandButton-label,
+.adfmf-commandButton-alternate2.amx-selected .amx-commandButton-label,
+.adfmf-commandButton-alternate1.amx-selected .amx-commandButton-label,
+.adfmf-commandButton-dark.amx-selected .amx-commandButton-label {
+  color: #FFFFFF;
+}
+
+.amx-commandButton.amx-label-no-text .amx-commandButton-label {
+  padding: 0;
+}
+
+.amx-commandButton.amx-iconPosition-trailing .amx-commandButton-label,
+.amx-commandButton.amx-iconPosition-leading .amx-commandButton-icon {
+  -webkit-box-ordinal-group: 1;
+}
+.amx-commandButton.amx-iconPosition-trailing .amx-commandButton-icon,
+.amx-commandButton.amx-iconPosition-leading .amx-commandButton-label {
+  -webkit-box-ordinal-group: 2;
+}
+
+
+
+.amx-commandButton.amx-selected {
+  background-image: -webkit-linear-gradient(90deg, #b1b1b1 0%, #b1b1b1 16.99%, #dadada 81.49%, #dadada 100%);
+}
+
+.amx-commandButton.amx-disabled {
+  opacity: 0.5;
+}
+
+.adfmf-commandButton-rounded {
+  box-shadow: inset 1px 0 0 0 rgba(0,0,0,0.75), inset 0 0 1px 2px rgba(0,0,0,0.75);
+  border-radius: 10px;
+}
+
+/* facet variant */
+.adfmf-commandButton-rounded .amx-commandButton-label {
+  font-size: 16px;
+}
+
+.amx-listItem .amx-commandButton {
+  margin: 4px;
+}
+
+.amx-panelFormLayout .amx-commandButton {
+  margin: 0;
+}
+
+.amx-panelPage-facet-primary .amx-commandButton,
+.amx-panelPage-facet-secondary .amx-commandButton,
+.amx-panelPage-facet-footer .amx-commandButton {
+  background-image: -webkit-linear-gradient(90deg, #cacaca 0%, #cacaca 16.99%, #f4f4f4 81.49%, #f4f4f4 100%);
+  padding: 4px 4px 3px 4px;
+  margin: 7px 5px 5px 5px;
+}
+/* Since footer is larger than the header we need to add additional top margin */
+.amx-panelPage-facet-footer .amx-commandButton {
+  margin-top: 10px;
+}
+
+.amx-panelPage-facet-primary .amx-commandButton.amx-selected,
+.amx-panelPage-facet-secondary .amx-commandButton.amx-selected,
+.amx-panelPage-facet-footer .amx-commandButton.amx-selected {
+  background-image: -webkit-linear-gradient(90deg, #b1b1b1 0%, #b1b1b1 16.99%, #dadada 81.49%, #dadada 100%);
+}
+
+.amx-panelPage-facet-primary .amx-commandButton.amx-disabled,
+.amx-panelPage-facet-secondary .amx-commandButton.amx-disabled,
+.amx-panelPage-facet-footer .amx-commandButton.amx-disabled {
+  opacity: 0.50;
+}
+
+.amx-panelPage-facet-primary .amx-commandButton-label,
+.amx-panelPage-facet-secondary .amx-commandButton-label,
+.amx-panelPage-facet-footer .amx-commandButton-label {
+  padding: 1px 4px 0 4px;
+  text-shadow: none;
+}
+
+html[dir=ltr] .amx-panelPage-facet-secondary > * {
+  float: right;
+}
+
+html[dir=rtl] .amx-panelPage-facet-secondary > * {
+  float: left;
+}
+/* /facet variant */
+
+/* Alert */
+.amx-commandButton.adfmf-commandButton-alert,
+.amx-commandButton.amx-button-alert {
+  background-image: -webkit-linear-gradient(90deg, #e9090b 0%, #e9090b 39.99%, #fd8c8d 100%);
+  border: 1px solid #8e4437;
+  box-shadow: 0 1px 0 #FFFFFF;
+}
+
+.amx-panelPage-facet-primary .amx-commandButton.adfmf-commandButton-alert,
+.amx-panelPage-facet-primary .amx-commandButton.amx-button-alert,
+.amx-panelPage-facet-secondary .amx-commandButton.adfmf-commandButton-alert,
+.amx-panelPage-facet-secondary .amx-commandButton.amx-button-alert,
+.amx-panelPage-facet-footer .amx-commandButton.adfmf-commandButton-alert,
+.amx-panelPage-facet-footer .amx-commandButton.amx-button-alert {
+  background-image: -webkit-linear-gradient(90deg, #e9090b 0%, #e9090b 39.99%, #fd8c8d 100%);
+  border: 1px solid #8e4437;
+  box-shadow: 0 1px 0 #FFFFFF;
+}
+
+.amx-panelPage-facet-primary .amx-commandButton.adfmf-commandButton-alert.amx-commandButton-back:before {
+  background-image: -webkit-gradient( linear, left bottom, right top, color-stop(0, #BB2120), color-stop(0.45, #5e1211), color-stop(0.46, #612c2d), color-stop(1.00, #fe9a9e));
+  border: 1px solid #8e4437;
+}
+
+.amx-commandButton.adfmf-commandButton-alert.amx-selected,
+.amx-commandButton.amx-button-alert.amx-selected,
+.amx-panelPage-facet-primary .amx-commandButton.adfmf-commandButton-alert.amx-selected,
+.amx-panelPage-facet-primary .amx-commandButton.amx-button-alert.amx-selected,
+.amx-panelPage-facet-secondary .amx-commandButton.adfmf-commandButton-alert.amx-selected,
+.amx-panelPage-facet-secondary .amx-commandButton.amx-button-alert.amx-selected,
+.amx-panelPage-facet-footer .amx-commandButton.adfmf-commandButton-alert.amx-selected,
+.amx-panelPage-facet-footer .amx-commandButton.amx-button-alert.amx-selected {
+  background-image: -webkit-linear-gradient(90deg, #b00809 0%, #b00809 39.99%, #e05e5f 100%);
+}
+
+.amx-panelPage-facet-primary .amx-commandButton.adfmf-commandButton-alert.amx-selected.amx-commandButton-back:before {
+  background-image: -webkit-gradient( linear, left bottom, right top, color-stop(0, #f12a29), color-stop(0.45, #801817), color-stop(0.46, #9b4549), color-stop(1.00, #ffaeb2));
+}
+/* /Alert */
+
+/* Highlight */
+.amx-commandButton.adfmf-commandButton-highlight,
+.amx-commandButton.amx-button-hightlight,
+.amx-panelPage-facet-primary .amx-commandButton.adfmf-commandButton-highlight,
+.amx-panelPage-facet-primary .amx-commandButton.amx-button-hightlight,
+.amx-panelPage-facet-secondary .amx-commandButton.adfmf-commandButton-highlight,
+.amx-panelPage-facet-secondary .amx-commandButton.amx-button-hightlight,
+.amx-panelPage-facet-footer .amx-commandButton.adfmf-commandButton-highlight,
+.amx-panelPage-facet-footer .amx-commandButton.amx-button-hightlight {
+  background-image: -webkit-linear-gradient(90deg, #5e646e 0%, #5e646e 16.99%, #9fa2a7 81.49%, #9fa2a7 100%);
+  border: 1px solid #7b7b7b;
+  box-shadow: 0 1px 0 #FFFFFF;
+}
+
+.amx-panelPage-facet-primary .amx-commandButton.adfmf-commandButton-highlight.amx-commandButton-back:before {
+  background-image: -webkit-gradient( linear, left bottom, right top, color-stop(0, #8bb7de), color-stop(0.45, #212e3e), color-stop(0.46, #384457), color-stop(0.94, #c0ccde), color-stop(1.00, #d7d7d7));
+}
+
+.amx-commandButton.adfmf-commandButton-highlight.amx-selected,
+.amx-commandButton.amx-button-hightlight.amx-selected,
+.amx-panelPage-facet-primary .amx-commandButton.adfmf-commandButton-highlight.amx-selected,
+.amx-panelPage-facet-primary .amx-commandButton.amx-button-hightlight.amx-selected,
+.amx-panelPage-facet-secondary .amx-commandButton.adfmf-commandButton-highlight.amx-selected,
+.amx-panelPage-facet-secondary .amx-commandButton.amx-button-hightlight.amx-selected,
+.amx-panelPage-facet-footer .amx-commandButton.adfmf-commandButton-highlight.amx-selected,
+.amx-panelPage-facet-footer .amx-commandButton.amx-button-hightlight.amx-selected {
+  background-image: -webkit-linear-gradient(90deg, #3f4349 0%, #3f4349 16.99%, #878a8f 81.49%, #878a8f 100%);
+}
+
+.amx-panelPage-facet-primary .amx-commandButton.adfmf-commandButton-highlight.amx-selected.amx-commandButton-back:before {
+  background-image: -webkit-gradient( linear, left bottom, right top, color-stop(0, #a6e8ff), color-stop(0.45, #31465d), color-stop(0.46, #495871), color-stop(0.94, #ebffff), color-stop(1.00, #ffffff));
+}
+/* /Highlight */
+
+
+/* Confirm */
+.amx-commandButton.adfmf-commandButton-confirm,
+.amx-commandButton.amx-button-confirm,
+.amx-panelPage-facet-primary .amx-commandButton.adfmf-commandButton-confirm,
+.amx-panelPage-facet-primary .amx-commandButton.amx-button-confirm,
+.amx-panelPage-facet-secondary .amx-commandButton.adfmf-commandButton-confirm,
+.amx-panelPage-facet-secondary .amx-commandButton.amx-button-confirm,
+.amx-panelPage-facet-footer .amx-commandButton.adfmf-commandButton-confirm,
+.amx-panelPage-facet-footer .amx-commandButton.amx-button-confirm {
+  background-image: -webkit-linear-gradient(90deg, #268901 0%, #268901 10.25%, #47d313 90.26%, #47d313 100%);
+  border: 1px solid #618f5a;
+  box-shadow: 0 1px 0 #FFFFFF;
+}
+
+.amx-panelPage-facet-primary .amx-commandButton.adfmf-commandButton-confirm.amx-commandButton-back:before {
+  background-image: -webkit-linear-gradient(90deg, #268901 0%, #268901 10.25%, #47d313 90.26%, #47d313 100%);
+}
+
+.amx-commandButton.adfmf-commandButton-confirm.amx-selected,
+.amx-commandButton.amx-button-confirm.amx-selected,
+.amx-panelPage-facet-primary .amx-commandButton.adfmf-commandButton-confirm.amx-selected,
+.amx-panelPage-facet-primary .amx-commandButton.amx-button-confirm.amx-selected,
+.amx-panelPage-facet-secondary .amx-commandButton.adfmf-commandButton-confirm.amx-selected,
+.amx-panelPage-facet-secondary .amx-commandButton.amx-button-confirm.amx-selected,
+.amx-panelPage-facet-footer .amx-commandButton.adfmf-commandButton-confirm.amx-selected,
+.amx-panelPage-facet-footer .amx-commandButton.amx-button-confirm.amx-selected {
+  background-image: -webkit-linear-gradient(90deg, #1e6902 0%, #1e6902 10.25%, #44bd16 90.26%, #44bd16 100%);
+}
+
+.amx-panelPage-facet-primary .amx-commandButton.adfmf-commandButton-confirm.amx-selected.amx-commandButton-back:before {
+  background-image: -webkit-linear-gradient(90deg, #1e6902 0%, #1e6902 10.25%, #44bd16 90.26%, #44bd16 100%);
+}
+/* /Confirm */
+
+/* Alternate Button Skins */
+
+/* Alta Blue */
+.amx-commandButton.adfmf-commandButton-alternate1,
+.amx-commandButton.amx-button-alternate1,
+.amx-panelPage-facet-primary .amx-commandButton.adfmf-commandButton-alternate1,
+.amx-panelPage-facet-primary .amx-commandButton.amx-button-alternate1,
+.amx-panelPage-facet-secondary .amx-commandButton.adfmf-commandButton-alternate1,
+.amx-panelPage-facet-secondary .amx-commandButton.amx-button-alternate1,
+.amx-panelPage-facet-footer .amx-commandButton.adfmf-commandButton-alternate1,
+.amx-panelPage-facet-footer .amx-commandButton.amx-button-alternate1 {
+  background-image: -webkit-linear-gradient(90deg, #0571cd 0%, #0571cd 10.01%, #6fa3e2 89.5%, #6fa3e2 100%);
+  border: 1px solid #6888a6;
+  box-shadow: 0 1px 0 #FFFFFF;
+}
+
+.amx-panelPage-facet-primary .amx-commandButton.adfmf-commandButton-alternate1.amx-commandButton-back:before {
+  background-image: -webkit-linear-gradient(90deg, #0571cd 0%, #0571cd 10.01%, #6fa3e2 89.5%, #6fa3e2 100%);
+}
+
+.amx-commandButton.adfmf-commandButton-alternate1.amx-selected,
+.amx-commandButton.amx-button-alternate1.amx-selected,
+.amx-panelPage-facet-primary .amx-commandButton.adfmf-commandButton-alternate1.amx-selected,
+.amx-panelPage-facet-primary .amx-commandButton.amx-button-alternate1.amx-selected,
+.amx-panelPage-facet-secondary .amx-commandButton.adfmf-commandButton-alternate1.amx-selected,
+.amx-panelPage-facet-secondary .amx-commandButton.amx-button-alternate1.amx-selected,
+.amx-panelPage-facet-footer .amx-commandButton.adfmf-commandButton-alternate1.amx-selected,
+.amx-panelPage-facet-footer .amx-commandButton.amx-button-alternate1.amx-selected {
+  background-image: -webkit-linear-gradient(90deg, #035ba6 0%, #035ba6 10.01%, #208dea 89.5%, #208dea 100%);
+}
+
+.amx-panelPage-facet-primary .amx-commandButton.adfmf-commandButton-alternate1.amx-selected.amx-commandButton-back:before {
+  background-image: -webkit-linear-gradient(90deg, #035ba6 0%, #035ba6 10.01%, #208dea 89.5%, #208dea 100%);
+}
+/* /Alta Blue */
+
+/* Lighter Blue */
+.amx-commandButton.adfmf-commandButton-alternate2,
+.amx-commandButton.amx-button-alternate2,
+.amx-panelPage-facet-primary .amx-commandButton.adfmf-commandButton-alternate2,
+.amx-panelPage-facet-primary .amx-commandButton.amx-button-alternate2,
+.amx-panelPage-facet-secondary .amx-commandButton.adfmf-commandButton-alternate2,
+.amx-panelPage-facet-secondary .amx-commandButton.amx-button-alternate2,
+.amx-panelPage-facet-footer .amx-commandButton.adfmf-commandButton-alternate2,
+.amx-panelPage-facet-footer .amx-commandButton.amx-button-alternate2 {
+  background-image: -webkit-linear-gradient(90deg, #047cba 0%, #047cba 10.01%, #62b7e3 89.5%, #62b7e3 100%);
+  border: 1px solid #51a7c7;
+  box-shadow: 0 1px 0 #FFFFFF;
+}
+
+.amx-panelPage-facet-primary .amx-commandButton.adfmf-commandButton-alternate2.amx-commandButton-back:before {
+  background-image: -webkit-linear-gradient(90deg, #047cba 0%, #047cba 10.01%, #62b7e3 89.5%, #62b7e3 100%);
+}
+
+.amx-commandButton.adfmf-commandButton-alternate2.amx-selected,
+.amx-commandButton.amx-button-alternate2.amx-selected,
+.amx-panelPage-facet-primary .amx-commandButton.adfmf-commandButton-alternate2.amx-selected,
+.amx-panelPage-facet-primary .amx-commandButton.amx-button-alternate2.amx-selected,
+.amx-panelPage-facet-secondary .amx-commandButton.adfmf-commandButton-alternate2.amx-selected,
+.amx-panelPage-facet-secondary .amx-commandButton.amx-button-alternate2.amx-selected,
+.amx-panelPage-facet-footer .amx-commandButton.adfmf-commandButton-alternate2.amx-selected,
+.amx-panelPage-facet-footer .amx-commandButton.amx-button-alternate2.amx-selected {
+  background-image: -webkit-linear-gradient(90deg, #05699c 0%, #05699c 10.01%, #64b0d8 89.5%, #64b0d8 100%);
+}
+
+.amx-panelPage-facet-primary .amx-commandButton.adfmf-commandButton-alternate2.amx-selected.amx-commandButton-back:before {
+  background-image: -webkit-linear-gradient(90deg, #05699c 0%, #05699c 10.01%, #64b0d8 89.5%, #64b0d8 100%);
+}
+/* /Lighter Blue */
+
+/* Black */
+.amx-commandButton.adfmf-commandButton-dark,
+.amx-commandButton.amx-button-dark,
+.amx-panelPage-facet-primary .amx-commandButton.adfmf-commandButton-dark,
+.amx-panelPage-facet-primary .amx-commandButton.amx-button-dark,
+.amx-panelPage-facet-secondary .amx-commandButton.adfmf-commandButton-dark,
+.amx-panelPage-facet-secondary .amx-commandButton.amx-button-dark,
+.amx-panelPage-facet-footer .amx-commandButton.adfmf-commandButton-dark,
+.amx-panelPage-facet-footer .amx-commandButton.amx-button-dark {
+  background-image: -webkit-linear-gradient(90deg, #000 0%, #000 16.99%, #656464 81.49%, #656464 100%);
+  border: 1px solid #5f5d5d;
+  box-shadow: 0 1px 0 #FFFFFF;
+}
+
+.amx-panelPage-facet-primary .amx-commandButton.adfmf-commandButton-dark.amx-commandButton-back:before {
+  background-image: -webkit-linear-gradient(90deg, #000 0%, #000 16.99%, #656464 81.49%, #656464 100%);
+}
+
+.amx-commandButton.adfmf-commandButton-dark.amx-selected,
+.amx-commandButton.amx-button-dark.amx-selected,
+.amx-panelPage-facet-primary .amx-commandButton.adfmf-commandButton-dark.amx-selected,
+.amx-panelPage-facet-primary .amx-commandButton.amx-button-dark.amx-selected,
+.amx-panelPage-facet-secondary .amx-commandButton.adfmf-commandButton-dark.amx-selected,
+.amx-panelPage-facet-secondary .amx-commandButton.amx-button-dark.amx-selected,
+.amx-panelPage-facet-footer .amx-commandButton.adfmf-commandButton-dark.amx-selected,
+.amx-panelPage-facet-footer .amx-commandButton.amx-button-dark.amx-selected {
+  background-image: -webkit-linear-gradient(90deg, #504f4f 0%, #504f4f 16.5%, #929292 81.25%, #929292 100%);
+}
+
+.amx-panelPage-facet-primary .amx-commandButton.adfmf-commandButton-dark.amx-selected.amx-commandButton-back:before {
+  background-image: -webkit-linear-gradient(90deg, #504f4f 0%, #504f4f 16.5%, #929292 81.25%, #929292 100%);
+}
+/* /Black */
+
+/* Bright */
+.amx-commandButton.adfmf-commandButton-bright,
+.amx-commandButton.amx-button-bright,
+.amx-panelPage-facet-primary .amx-commandButton.adfmf-commandButton-bright,
+.amx-panelPage-facet-primary .amx-commandButton.amx-button-bright,
+.amx-panelPage-facet-secondary .amx-commandButton.adfmf-commandButton-bright,
+.amx-panelPage-facet-secondary .amx-commandButton.amx-button-bright,
+.amx-panelPage-facet-footer .amx-commandButton.adfmf-commandButton-bright,
+.amx-panelPage-facet-footer .amx-commandButton.amx-button-bright {
+  background-image: -webkit-linear-gradient(90deg, #e6b824 0%, #e6b824 17.5%, #f8dc95 81.49%, #f8dc95 100%);
+  border: 1px solid #ac9901;
+  box-shadow: 0 1px 0 #FFFFFF;
+}
+
+.amx-panelPage-facet-primary .amx-commandButton.adfmf-commandButton-bright.amx-commandButton-back:before {
+  background-image: -webkit-linear-gradient(90deg, #e6b824 0%, #e6b824 17.5%, #f8dc95 81.49%, #f8dc95 100%);
+}
+
+.amx-commandButton.adfmf-commandButton-bright.amx-selected,
+.amx-commandButton.amx-button-bright.amx-selected,
+.amx-panelPage-facet-primary .amx-commandButton.adfmf-commandButton-bright.amx-selected,
+.amx-panelPage-facet-primary .amx-commandButton.amx-button-bright.amx-selected,
+.amx-panelPage-facet-secondary .amx-commandButton.adfmf-commandButton-bright.amx-selected,
+.amx-panelPage-facet-secondary .amx-commandButton.amx-button-bright.amx-selected,
+.amx-panelPage-facet-footer .amx-commandButton.adfmf-commandButton-bright.amx-selected,
+.amx-panelPage-facet-footer .amx-commandButton.amx-button-bright.amx-selected {
+  background-image: -webkit-linear-gradient(90deg, #bc9412 0%, #bc9412 17.5%, #dec177 81.49%, #dec177 100%);
+}
+
+.amx-panelPage-facet-primary .amx-commandButton.adfmf-commandButton-bright.amx-selected.amx-commandButton-back:before {
+  background-image: -webkit-linear-gradient(90deg, #bc9412 0%, #bc9412 17.5%, #dec177 81.49%, #dec177 100%);
+}
+/* /Bright */
+
+/* /Alternate Button Skins */
+
+/* ------ </amx:commandButton> ------ */
+
+/* --------- <amx:inputText> --------- */
+.amx-inputText .field-value .wrap {
+  display: inline-block;
+  background-color: #ffffff;
+  padding: 8px;
+  border-radius: 8px;
+  border: 1px solid #c8d7e0;
+}
+
+.adfmf-panelGroupLayout-groupBox .amx-inputText .field-value .wrap,
+.amx-style-groupbox .amx-inputText .field-value .wrap,
+.amx-panelFormLayout .amx-inputText .field-value .wrap {
+  display: inline-block;
+  position: relative;
+  width: 100%;
+  box-sizing: border-box;
+  padding: 0;
+  border: none;
+}
+
+.amx-inputText .field-value input,
+.amx-inputText .field-value textarea {
+  box-sizing: border-box;
+  padding: 0;
+  width: 100%;
+  -webkit-appearance: none;
+}
+
+.amx-inputText .field-value textarea {
+  display: block;
+}
+
+.amx-inputText.amx-simple {
+  font-size: 14px;
+  position: relative;
+}
+
+.amx-inputText.amx-simple input,
+.amx-inputText.amx-simple textarea {
+  font-size: inherit;
+}
+
+.amx-panelFormLayout .amx-inputText.amx-simple input,
+.amx-panelFormLayout .amx-inputText.amx-simple textarea {
+  position: static;
+}
+
+.amx-inputText.amx-disabled {
+  opacity: 0.40;
+}
+
+.amx-inputText.amx-disabled input,
+.amx-inputText.amx-disabled textarea {
+  background: none;
+}
+
+.adfmf-panelGroupLayout-groupBox .amx-inputText .field-value .readOnlyLabel,
+.amx-style-groupbox .amx-inputText .field-value .readOnlyLabel,
+.amx-panelFormLayout .amx-inputText .field-value .readOnlyLabel {
+  white-space: nowrap;
+  display: block;
+  word-break: normal;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  color: #000000;
+  font-size: 17px;
+  font-family: Arial;
+}
+
+.adfmf-inputText-bold .field-value input,
+.adfmf-inputText-bold .field-value textarea {
+  font-weight: bold;
+}
+
+.adfmf-inputText-bold .field-value input,
+.adfmf-inputText-bold .field-value textarea {
+  font-weight: bold;
+}
+
+.adfmf-inputText-search .field-value .wrap {
+  border-radius: 16px 16px 15px 15px;
+  border: 1px solid #85a4cb;
+}
+
+.adfmf-inputText-bold .field-value input,
+.adfmf-inputText-bold .field-value textarea {
+  font-weight: bold;
+}
+
+::-webkit-input-placeholder,
+::-webkit-textarea-placeholder {
+  color: #6E6E6E;
+}
+
+/* --------- </amx:inputText> --------- */
+
+/* Styles added during v1.1 development are below */
+
+/* facet secondary and primary floats and nested components */
+.amx-panelPage-header .amx-inputText.amx-node {
+  width: 210px;
+  margin-top: -10px;
+}
+
+html[dir=ltr] .amx-panelPage-facet-primary > * {
+  float: left;
+}
+
+html[dir=rtl] .amx-panelPage-facet-primary > * {
+  float: right;
+}
+/* facet secondary and primary floats and nested components  */
+/* Copyright (c) 2005, 2013, Oracle and/or its affiliates. All rights reserved. */
+/* css-mobileAlta-1.0-ios/amx-core.css */
+/* VERSION 55 */
+
+* {
+  -webkit-user-select: none;
+  user-select: none;
+}
+
+@keyframes fade-in {
+  0%   { opacity: 0; }
+  50%  { opacity: 0; }
+  75%  { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+@-webkit-keyframes fade-in {
+  0%   { opacity: 0; }
+  50%  { opacity: 0; }
+  75%  { opacity: 0; }
+  100% { opacity: 1; }
+} 
+
+.amx-loading.hidden {
+  display: none;
+}
+
+.amx-loading.hiding {
+  opacity: 0;
+  -webkit-transition: all .25s ease-in-out;
+  transition: all .25s ease-in-out;
+}
+
+.amx-loading.beforeShowing {
+  opacity: 0;
+}
+
+.amx-loading.showing {
+  animation-name: fade-in;
+  -webkit-animation-name: fade-in;
+  animation-duration: 500ms;
+  -webkit-animation-duration: 500ms;
+}
+
+.amx-loading {
+  background-image: url(../css/images/iOS6-ActivityIndicatorLarge.gif);
+  background-position: center center;
+  background-repeat: no-repeat;
+  -webkit-background-size: 75px 75px; /* Note: the actual image is 150x150 */
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 10000;
+}
+
+/* The loading indicator should not be displayed at design time */
+.amx-dtmode .amx-loading {
+  display: none;
+}
+
+input,
+textarea {
+  -webkit-user-select: text;
+}
+
+body {
+  margin: 0;
+  overflow: hidden;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  -webkit-text-size-adjust: none;
+}
+
+a {
+  -webkit-tap-highlight-color: rgba(0,0,0,0);
+  -webkit-touch-callout: none;
+}
+
+.ui-page {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+
+.amx-scrollable {
+  /* 
+   * Added the following to enable native iPhone scrolling in iOS 5.0 and above.
+   * Note that a change to the PhoneGap javascript library was also required
+   * because the outer iFrame created by PhoneGap was interfering with the
+   * ability to use native scrolling. The change was originally made to the
+   * phonegap-1.0.0.js file, and whenever our PhoneGap library is updated to
+   * a newer version, this change may need to be replicated in the new version
+   * of PhoneGap. See the discussion at the PhoneGap discussion groups at the
+   * following location for more info:
+   *
+   *    http://groups.google.com/group/phonegap/msg/7beee231774af8c9
+   *
+   */
+  -webkit-overflow-scrolling: touch;
+  /* Note that this causes the panelSplitter's flip animations to appear in
+     2D instead of 3D in the iOS simulator but not in desktop Safari 6
+     because this style does nothing in desktop Safari 6. */
+}
+
+/* Adding this translateZ helps speed up the scrolling on iOS devices. */
+.amx-scrollable > * {
+    -webkit-transform: translateZ(0);
+  /* Note that this also causes bleed-through on desktop Safari 6
+     when doing flip transitions in the panelSplitter but not
+     in the iOS simulator because -webkit-overflow-scrolling: touch;
+     from .amx-scrollable corrects the issue there (not available on
+     desktop Safari 6). */
+}
+
+/* In low memory situations, we need to drop use of expensive styles that consume large amounts of memory. */
+.adfmf-low-memory .amx-scrollable,
+.adfmf-low-memory.amx-scrollable,
+.adfmf-low-memory .amx-scrollPolicy-auto,
+.adfmf-low-memory.amx-scrollPolicy-auto {
+  -webkit-overflow-scrolling: auto;
+}
+
+.adfmf-low-memory .amx-scrollable > *,
+.adfmf-low-memory.amx-scrollable > *,
+.adfmf-low-memory .amx-scrollPolicy-auto > *,
+.adfmf-low-memory.amx-scrollPolicy-auto > * {
+  -webkit-transform: none;
+}
+
+/* In order to save memory on iOS, use this "adfmf-limited-scrolling" marker styleClass on your root component to disable the amx-scrollable selector and then use the adfmf-scrollable styleClass on components that you really do want scrolling on. Note that this only works on iOS (Android uses a different scrolling technique). */
+.adfmf-limited-scrolling .amx-scrollable,
+.adfmf-limited-scrolling.amx-scrollable,
+.adfmf-limited-scrolling .amx-scrollPolicy-auto,
+.adfmf-limited-scrolling.amx-scrollPolicy-auto {
+  -webkit-overflow-scrolling: auto;
+  overflow: visible;
+}
+
+.adfmf-limited-scrolling .amx-scrollable > *,
+.adfmf-limited-scrolling.amx-scrollable > *,
+.adfmf-limited-scrolling .amx-scrollPolicy-auto > *,
+.adfmf-limited-scrolling.amx-scrollPolicy-auto > * {
+  -webkit-transform: none;
+}
+
+/* adfmf-scrollable overrides (note messageBox is always active since there is no component to add a styleClass to it) */
+.amx-ios .adfmf-limited-scrolling .amx-listView.adfmf-scrollable,
+.amx-ios .adfmf-limited-scrolling .amx-panelPage.adfmf-scrollable > .amx-panelPage-content,
+.amx-ios .adfmf-limited-scrolling .amx-panelFormLayout.amx-scrollPolicy-auto.adfmf-scrollable,
+.amx-ios .adfmf-limited-scrolling .amx-panelGroupLayout.amx-scrollPolicy-auto.adfmf-scrollable,
+.amx-ios .adfmf-limited-scrolling .amx-panelGroupLayout.amx-scrollable.adfmf-scrollable,
+.amx-ios .adfmf-limited-scrolling .amx-panelStretchLayout_center.amx-scrollPolicy-auto.adfmf-scrollable,
+.amx-ios .adfmf-limited-scrolling .amx-panelStretchLayout_center.amx-scrollable.adfmf-scrollable,
+.amx-ios .adfmf-limited-scrolling .amx-panelSplitter.adfmf-scrollable > .amx-panelSplitter_inner > .amx-panelSplitter_contentContainer,
+.amx-ios .adfmf-limited-scrolling .amx-panelSplitter.adfmf-scrollable > .amx-panelSplitter_inner > .amx-panelSplitter_navLandscape,
+.amx-ios .adfmf-limited-scrolling .amx-panelSplitter.adfmf-scrollable > .amx-panelSplitter_inner > .amx-panelSplitter_navPortrait,
+.amx-ios .adfmf-limited-scrolling .amx-popup.adfmf-scrollable,
+.amx-ios .adfmf-limited-scrolling .amx-tableLayout.amx-scrollPolicy-auto.adfmf-scrollable,
+.amx-ios .adfmf-limited-scrolling .messageBox.amx-scrollable,
+.amx-ios .adfmf-limited-scrolling.amx-listView.adfmf-scrollable,
+.amx-ios .adfmf-limited-scrolling.amx-panelPage.adfmf-scrollable > .amx-panelPage-content,
+.amx-ios .adfmf-limited-scrolling.amx-panelFormLayout.amx-scrollPolicy-auto.adfmf-scrollable,
+.amx-ios .adfmf-limited-scrolling.amx-panelGroupLayout.amx-scrollPolicy-auto.adfmf-scrollable,
+.amx-ios .adfmf-limited-scrolling.amx-panelGroupLayout.amx-scrollable.adfmf-scrollable,
+.amx-ios .adfmf-limited-scrolling.amx-panelStretchLayout_center.amx-scrollPolicy-auto.adfmf-scrollable,
+.amx-ios .adfmf-limited-scrolling.amx-panelStretchLayout_center.amx-scrollable.adfmf-scrollable,
+.amx-ios .adfmf-limited-scrolling.amx-panelSplitter.adfmf-scrollable > .amx-panelSplitter_inner > .amx-panelSplitter_contentContainer,
+.amx-ios .adfmf-limited-scrolling.amx-panelSplitter.adfmf-scrollable > .amx-panelSplitter_inner > .amx-panelSplitter_navLandscape,
+.amx-ios .adfmf-limited-scrolling.amx-panelSplitter.adfmf-scrollable > .amx-panelSplitter_inner > .amx-panelSplitter_navPortrait,
+.amx-ios .adfmf-limited-scrolling.amx-popup.adfmf-scrollable,
+.amx-ios .adfmf-limited-scrolling.amx-tableLayout.amx-scrollPolicy-auto.adfmf-scrollable {
+  -webkit-overflow-scrolling: touch;
+  overflow: auto;
+}
+.amx-ios .adfmf-limited-scrolling .amx-listView.adfmf-scrollable > *,
+.amx-ios .adfmf-limited-scrolling .amx-panelPage.adfmf-scrollable > .amx-panelPage-content > *,
+.amx-ios .adfmf-limited-scrolling .amx-panelFormLayout.amx-scrollPolicy-auto.adfmf-scrollable > *,
+.amx-ios .adfmf-limited-scrolling .amx-panelGroupLayout.amx-scrollPolicy-auto.adfmf-scrollable > *,
+.amx-ios .adfmf-limited-scrolling .amx-panelGroupLayout.amx-scrollable.adfmf-scrollable > *,
+.amx-ios .adfmf-limited-scrolling .amx-panelStretchLayout_center.amx-scrollPolicy-auto.adfmf-scrollable > *,
+.amx-ios .adfmf-limited-scrolling .amx-panelStretchLayout_center.amx-scrollable.adfmf-scrollable > *,
+.amx-ios .adfmf-limited-scrolling .amx-panelSplitter.adfmf-scrollable > .amx-panelSplitter_inner > .amx-panelSplitter_contentContainer > *,
+.amx-ios .adfmf-limited-scrolling .amx-panelSplitter.adfmf-scrollable > .amx-panelSplitter_inner > .amx-panelSplitter_navLandscape > *,
+.amx-ios .adfmf-limited-scrolling .amx-panelSplitter.adfmf-scrollable > .amx-panelSplitter_inner > .amx-panelSplitter_navPortrait > *,
+.amx-ios .adfmf-limited-scrolling .amx-popup.adfmf-scrollable > *,
+.amx-ios .adfmf-limited-scrolling .amx-tableLayout.amx-scrollPolicy-auto.adfmf-scrollable > *,
+.amx-ios .adfmf-limited-scrolling .messageBox.amx-scrollable > *,
+.amx-ios .adfmf-limited-scrolling.amx-listView.adfmf-scrollable > *,
+.amx-ios .adfmf-limited-scrolling.amx-panelPage.adfmf-scrollable > .amx-panelPage-content > *,
+.amx-ios .adfmf-limited-scrolling.amx-panelFormLayout.amx-scrollPolicy-auto.adfmf-scrollable > *,
+.amx-ios .adfmf-limited-scrolling.amx-panelGroupLayout.amx-scrollPolicy-auto.adfmf-scrollable > *,
+.amx-ios .adfmf-limited-scrolling.amx-panelGroupLayout.amx-scrollable.adfmf-scrollable > *,
+.amx-ios .adfmf-limited-scrolling.amx-panelStretchLayout_center.amx-scrollPolicy-auto.adfmf-scrollable > *,
+.amx-ios .adfmf-limited-scrolling.amx-panelStretchLayout_center.amx-scrollable.adfmf-scrollable > *,
+.amx-ios .adfmf-limited-scrolling.amx-panelSplitter.adfmf-scrollable > .amx-panelSplitter_inner > .amx-panelSplitter_contentContainer > *,
+.amx-ios .adfmf-limited-scrolling.amx-panelSplitter.adfmf-scrollable > .amx-panelSplitter_inner > .amx-panelSplitter_navLandscape > *,
+.amx-ios .adfmf-limited-scrolling.amx-panelSplitter.adfmf-scrollable > .amx-panelSplitter_inner > .amx-panelSplitter_navPortrait > *,
+.amx-ios .adfmf-limited-scrolling.amx-popup.adfmf-scrollable > *,
+.amx-ios .adfmf-limited-scrolling.amx-tableLayout.amx-scrollPolicy-auto.adfmf-scrollable > * {
+    -webkit-transform: translateZ(0);
+}
+
+#amxUIFlush{
+	position: absolute;
+	top: 100px; left: 50%;
+	height: 100px;
+	width: 100px;
+	overflow: hidden;
+	border: solid 1px #000000;
+	z-index: -1;
+}
+
+#amxDebug{
+	position: absolute;
+	top: 0; left: 5%; right: 5%;
+	height: 60px;
+	background-color: rgba(255,255,255,.6);
+	color: #333;
+	font-size: 12px;
+	border: solid 1px #999;
+	z-index: 1000;
+	overflow: auto;
+}
+
+#bodyPage.transitioning {
+  -webkit-perspective: 2000;
+  perspective: 2000;
+}
+#bodyPage {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index:0;
+  background-color: #F1F1F1;
+  background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAYAAAAGBAMAAAAS4vJ7AAAAG1BMVEXp6enw8PDx8fHo6Ojv7+/q6urr6+vt7e3u7u67mNovAAAAIElEQVQIHWNgVHZicFZiYVAxFGVIchBhKNNIYRBPagMAJS4D8XrMbr8AAAAASUVORK5CYII=);
+  background-repeat: repeat;
+  -webkit-background-size: 3px 3px; /* actual size is 6x6 */
+  font-family: Arial, sans-serif;
+}
+
+#bodyPage.amx-debug:after {
+  pointer-events: none;
+  z-index: 1;
+  content: '';
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  width: 16px;
+  height: 16px;
+  background-repeat: no-repeat;
+  -webkit-background-size: 12px 12px; /* actual size is 24x24 */
+  background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAABZklEQVR42tWSPUsDQRCGJ9qopFbOXGxE0DZ/QCxFC1vttRTstEwjFiJomz8gYqlFBIn4FbEQbRRFUKL5Ddqd84Ivt5f1ctnLpfDggWV2d56ZnZNDGXFhVpkzY58y1haX5KtK8Mta1oJBJjcYylKwiaSXMgoo2MpKUGLVr1IEWJNSFoIKkt1o5XoB6LpAQaVbwSKr/To6DfhhbXSxlFaQY5I7rfi7Vmd+rBEzJbk0gnVcromHZ7EEiJ2JR8GGq2CY1T2KHyt4Ep8C4LkItnHpioONESg4Q8FOp4JpVvUmxUTBe/S3nelEsI/Dt1JgkjgBwVkKDpIEy6yGl0nLb2rtn4QDX4kT9DH5vfhWgubARNDMTwGsrf2H6MD7/xKUsXnOwToIyEU48HKrYJz2Zw7W4YnIS3Tgk6ZgF8Frq/qkIdvUwy72KJintcGDKTogH4rRxQIExwz0gCo76IWkyg66Ql+sLf9f8ANt1YXAKU8nPgAAAABJRU5ErkJggg==');
+}
+#bodyPageViews {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+
+/* Element to exceed outside of a component's interactive area for a larger
+ target area; increases reliability of hitting it with a finger.
+ This definition just declares some sample extension values; more specific
+ selectors for a component might declare alternate values. */
+.amx-extendedTarget {
+  z-index: 1;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+/* Way to visually identify extended target areas if an app is having trouble
+ due to overlapping components; components that were too close to each other. */
+.adfmf-extendedTargetsDebug .amx-extendedTarget {
+  background-color: red;
+  opacity: 0.5;
+}
+
+/* Way to disable the extended target areas for a subtree of a page. */
+.adfmf-extendedTargetsDisabled .amx-extendedTarget {
+  display: none;
+}
+
+/* amx container elements need to be relative */
+.amx-listView,
+.amx-listItem,
+.amx-panelGroupLayout {
+  position: relative;
+}
+
+/* single finger scrollables */
+.amx-panelPage-content,
+.amx-panelStretchLayout_center.amx-scrollable,
+.amx-panelStretchLayout_center.amx-scrollPolicy-auto,
+.amx-panelGroupLayout.amx-scrollable,
+.amx-panelGroupLayout.amx-scrollPolicy-auto,
+.amx-panelFormLayout.amx-scrollPolicy-auto,
+.amx-tableLayout.amx-scrollPolicy-auto {
+  overflow: auto;
+}
+
+.amx-node.amx-fitParent {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+
+/* ------ Generic Field label/value ------ */
+.field-label {
+  box-sizing: border-box;
+  vertical-align: middle;
+  color: #2F6BAC;
+  font-size: 13.5px;
+  -webkit-user-select: text;
+}
+
+html[dir=ltr] .field-label {
+  padding: 12px 5px 12px 19px;
+}
+
+html[dir=rtl] .field-label {
+  padding: 12px 19px 12px 5px;
+}
+
+.field-value {
+  box-sizing: border-box;
+  vertical-align: middle;
+  overflow: hidden;
+  word-break: break-all;
+  color: #000000;
+  font-size: 17px;
+  font-weight: bold;
+}
+
+html[dir=ltr] .field-value {
+  padding: 12px 10px 12px 5px;
+}
+
+html[dir=rtl] .field-value {
+  padding: 12px 5px 12px 10px;
+}
+
+.field-value input,
+.field-value textarea {
+  font-size: 17px;
+  font-family: Arial;
+  font-weight: normal;
+  border: none;
+}
+
+.field {
+  display: table;
+  width: 100%;
+  border-spacing: 0;
+}
+
+.field.required .field-label:before {
+  content: ' ';
+  background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAYAAADED76LAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAF5JREFUeNpi+P//P8N/HgYQTgDiHUD8FUqD+EAJiAIQ5wcQ/0fCIH4CEwMERAAxOwMqAPEjGEEmMPAyfgVyuBgwwTeYCYcZsIPDMAUrgPgnmuRPsDghX0DcgAcABBgA4h44YfKwCcEAAAAASUVORK5CYII=');
+  background-repeat: no-repeat;
+  width: 7px; /* 4 for the image width plus 3 padding */
+  height: 4px;
+  margin-top: -2px;
+  display: inline-block;
+  vertical-align: middle;
+  -webkit-background-size: 4px 4px; /* actual size is 8x8 */
+}
+
+html[dir=ltr] .field.required .field-label:before {
+  background-position: left center;
+  margin-left: -8px;
+  margin-right: 1px;
+}
+
+html[dir=rtl] .field.required .field-label:before {
+  background-position: right center;
+  margin-left: 1px;
+  margin-right: -8px;
+}
+
+.field > .field-label {
+  white-space: nowrap;
+  display: table-cell;
+  word-break: break-all;
+}
+
+.field.amx-simple > .field-label {
+  display: none;
+}
+
+.field > .field-value {
+  width: 100%;
+  display: table-cell;
+  word-break: break-all;
+}
+
+.field.amx-simple > .field-value {
+  padding: 12px 10px 12px 10px;
+}
+
+input[type="date"],
+input[type="datetime"],
+input[type="datetime-local"],
+input[type="month"],
+input[type="time"] {
+  border: 1px solid #0360AE;
+  font-weight: normal;
+  margin: 0;
+  -webkit-appearance: none;
+}
+
+input[type="datetime"]:after,
+input[type="datetime-local"]:after,
+input[type="time"]:after,
+input[type="date"]:after {
+  content: '';
+  background: url(../css/images/down-arrow-enabled.svg) center 8px, 
+              -webkit-linear-gradient(bottom, #0571cd 0%, #0571cd 10.01%, #6fa3e2 89.5%, #6fa3e2 100%);
+  background-repeat: no-repeat;
+  border: 1px solid #0360AE;
+  width: 23px;
+  height: 25px;
+  box-sizing: border-box;
+  position: absolute;
+  top: -1px;
+  bottom: -1px;
+  overflow: auto;
+}
+
+html[dir=ltr] input[type="datetime"]:after,
+html[dir=ltr] input[type="datetime-local"]:after,
+html[dir=ltr] input[type="time"]:after,
+html[dir=ltr] input[type="date"]:after {
+  border-radius: 0 5px 5px 0;
+  right: -1px;
+}
+
+html[dir=rtl] input[type="datetime"]:after,
+html[dir=rtl] input[type="datetime-local"]:after,
+html[dir=rtl] input[type="time"]:after,
+html[dir=rtl] input[type="date"]:after {
+  border-radius: 5px 0 0 5px;
+  left: -1px;
+}
+
+input[type="date"]:focus:after,
+input[type="datetime"]:focus:after,
+input[type="datetime-local"]:focus:after,
+input[type="time"]:focus:after {
+  content: '';
+  background: url(../css/images/down-arrow-enabled.svg) center 8px, 
+              -webkit-linear-gradient(bottom, #035ba6 0%, #035ba6 10.01%, #208dea 89.5%, #208dea 100%);
+  background-repeat: no-repeat;
+}
+
+/* ------/Generic Field label/value ------ */
+
+/* ------ Icons ------ */
+.ico {
+  background-image: url(../css/images/amx.png);
+  width: 32px;
+  height: 32px;
+  -webkit-background-size: 144px 192px;
+}
+
+.ico-arrow-r {
+  background-position: 0 0;
+}
+/* ------ /Icons ------ */
+
+/* Debug Log */
+#log {
+  z-index: 100;
+  border: solid 1px #AAAAAA;
+  background: rgba(255,255,255,.5);
+  position: absolute;
+  bottom: 10px;
+  width: 50%;
+  height: 60px;
+  font-size: 12px;
+}
+
+/* Copyright (c) 2005, 2014, Oracle and/or its affiliates. All rights reserved. */
+/* css-mobileAlta-1.0-ios/amx-filmStrip.css */
+
+.amx-filmStrip > div > .amx-filmStrip_page-container {
+  overflow: hidden;
+  perspective: 1000;
+  display: -webkit-box;
+  -webkit-box-orient: horizontal;
+  -webkit-box-flex: 1;
+}
+
+.amx-filmStrip {
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 8px;
+  margin-bottom: 8px;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  -webkit-box-pack: center;
+}
+
+.amx-filmStrip.vertical {
+  height: 100%;
+  margin-top: auto;
+  margin-bottom: auto;
+  margin-left: auto;
+  margin-right: auto;
+  display: -webkit-box;
+  -webkit-box-orient: horizontal;
+}
+
+.amx-filmStrip > div {
+  -webkit-box-flex:0;
+  display:-webkit-box;
+}
+
+.amx-filmStrip.amx-filmStrip-stretchItems > div {
+  -webkit-box-flex: 1;
+  -webkit-box-pack: center;
+}
+
+.amx-filmStrip.vertical > div > .amx-filmStrip_page-container {
+  height: 100%;
+  -webkit-box-orient: vertical;
+}
+
+.amx-filmStrip_page {
+  display: -webkit-box;
+  -webkit-box-orient: horizontal;
+  -webkit-box-pack: justify;
+  transform-style: preserve-3d;
+}
+
+.amx-filmStrip.vertical > div > .amx-filmStrip_page-container > .amx-filmStrip_page {
+  -webkit-box-orient: vertical;
+}
+
+.amx-filmStrip.vertical.valign-top .amx-filmStrip_page,
+.amx-filmStrip.halign-start .amx-filmStrip_page {
+  -webkit-box-pack: start;
+}
+
+.amx-filmStrip.vertical.valign-middle .amx-filmStrip_page,
+.amx-filmStrip.halign-center .amx-filmStrip_page {
+  -webkit-box-pack: center;
+}
+
+.amx-filmStrip.vertical.valign-bottom .amx-filmStrip_page,
+.amx-filmStrip.halign-end .amx-filmStrip_page {
+  -webkit-box-pack: end;
+}
+
+.amx-filmStrip.vertical.valign-middle .amx-filmStripItem.amx-empty,
+.amx-filmStrip.halign-center .amx-filmStripItem.amx-empty,
+.amx-filmStrip.vertical.valign-bottom .amx-filmStripItem.amx-empty,
+.amx-filmStrip.halign-end .amx-filmStripItem.amx-empty,
+.amx-filmStrip.vertical.valign-top .amx-filmStripItem.amx-empty,
+.amx-filmStrip.halign-start amx-filmStripItem.amx-empty,
+.amx-filmStrip.vertical.valign-middle .amx-filmStripItem.amx-empty,
+.amx-filmStrip.halign-center .amx-filmStripItem.amx-empty,
+.amx-filmStrip.vertical.valign-bottom .amx-filmStripItem.amx-empty,
+.amx-filmStrip.halign-end .amx-filmStripItem.amx-empty {
+  display: none;
+}
+
+.amx-filmStrip_page.animation {
+  -webkit-transition: all 200ms ease;
+  transition: all 200ms ease;
+}
+
+.amx-filmStripItem {
+  width: 298px;
+  height: 198px;
+  margin-left: 8px;
+  margin-right: 8px;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  perspective: 1000;
+  transform-style: preserve-3d;
+  -webkit-transition: all 200ms linear;
+  transition: all 200ms linear;
+}
+
+.amx-filmStrip.vertical .amx-filmStripItem {
+  margin-left: 0px;
+  margin-right: 0px;
+  margin-top: 8px;
+  margin-bottom: 8px;
+}
+
+.amx-filmStrip.amx-filmStrip-stretchItems .amx-filmStripItem,
+.amx-filmStrip.amx-filmStrip-stretchItems.vertical .amx-filmStripItem{
+  width: auto;
+  height: auto;
+  margin: 0px;
+  -webkit-box-flex: 1;
+}
+
+.amx-filmStrip-item-content {
+  overflow: hidden;
+  position: relative;
+  display: -webkit-box;
+  -webkit-box-orient: block-axis;
+  -webkit-box-flex: 1;
+  border: 1px solid #c8d7e0;
+  background-color: #fff;
+  -webkit-border-radius: 5px;
+  border-radius: 5px;
+  -webkit-background-clip: padding-box;
+  background-clip: padding-box;
+}
+
+.amx-filmStrip-item-content > div:only-child
+{
+  position: absolute;
+  top:0;right:0;bottom:0;left:0;
+}
+
+.amx-filmStrip-item-text {
+  background-color: rgba(0, 0, 0, 0);
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-box-flex: 0;
+  text-align: center;
+}
+
+.amx-filmStripItem.adfmf-filmStripItem-selected .amx-filmStrip-item-content {
+  border-color: #ff0000;
+}
+
+.amx-filmStrip > div.amx-filmStrip_pageControl,
+.amx-filmStrip.amx-filmStrip-stretchItems > div.amx-filmStrip_pageControl {
+  margin-top: 44px;
+  display: -webkit-box; 
+  -webkit-box-pack: center;
+  -webkit-box-flex: 0;
+}
+
+.amx-filmStrip > div.amx-filmStrip_pageControl {
+  -webkit-box-orient: horizontal;
+}
+
+.amx-filmStrip.vertical > div.amx-filmStrip_pageControl {
+  -webkit-box-orient: vertical;
+}
+
+.amx-filmStrip.vertical .amx-filmStrip_pageControl.position-start {
+  margin-top: 0px;
+  margin-right: 44px;
+}
+
+.amx-filmStrip.vertical .amx-filmStrip_pageControl.position-end {
+  margin-top: 0px;
+  margin-left: 44px;
+}
+
+.amx-filmStrip .amx-filmStrip_pageControl.position-top {
+  margin-top: 0px;
+  margin-bottom: 44px;
+}
+
+.amx-filmStrip_pageControlButton {
+  display: -webkit-box;
+  -webkit-box-flex: 0;
+  height: 20px;
+  width: 20px;
+  background: rgba(0,0,0,0);
+}
+
+.amx-filmStrip_pageControlButton-chevron {
+  height: 6px;
+  width: 6px;
+  margin: 6px;
+  border: 1px solid #939da3;
+  background-color: #fff;
+  -webkit-border-radius: 3px;
+  border-radius: 3px;
+  -webkit-background-clip: padding-box;
+  background-clip: padding-box;
+}
+
+.amx-filmStrip_pageControlButton.selected .amx-filmStrip_pageControlButton-chevron {
+  border-color: #295fa1;
+  background-color: #437fcb;
+}
+/* Copyright (c) 2005, 2013, Oracle and/or its affiliates. All rights reserved. */
+/* css-mobileAlta-1.0-ios/amx-inputDate.css */
+
+/* --------- <amx:inputDate> --------- */
+.amx-inputDate .dateLabel {
+  font-weight: bold;
+}
+
+.amx-inputDate.amx-disabled {
+  opacity: 0.50;
+  pointer-events: none;
+}
+
+.amx-inputDate .amx-inputDate-content {
+  font-size: 17px;
+  font-family: Arial;
+  position: relative;
+  white-space: nowrap;
+  width: 100%;
+  /* On iOS 7, the text field height is shrunk very small if the 'clear' button on the date picker is clicked. 
+   * Explicitly setting height to work around that (apparent) bug. */
+  height: 25px;
+  line-height: 25px;
+  vertical-align: middle;
+  padding-top: 6px;
+  box-sizing: border-box;
+  overflow: hidden;
+  text-overflow: ellipsis;  
+  background-image: -webkit-linear-gradient(bottom, #cacaca 0%, #cacaca 16.99%, #f3f3f3 81.49%, #f3f3f3 100%);
+}
+
+html[dir=ltr] .amx-inputDate .amx-inputDate-content {
+  padding-left: 6px;   /* Results in 7 px between border and date value (6 padding and 1 border) */
+  padding-right: 23px; /* Adjust the right-padding to be the width of the down-arrow image */
+}
+
+html[dir=rtl] .amx-inputDate .amx-inputDate-content {
+  padding-right: 6px; /* Results in 7 px between border and date value (6 padding and 1 border) */
+  padding-left: 23px; /* Adjust the left-padding to be the width of the down-arrow image */
+}
+
+html[dir=ltr] .amx-inputDate > .field-value {
+  padding-left: 5px;
+  padding-right: 10px;
+}
+
+html[dir=rtl] .amx-inputDate > .field-value {
+  padding-left: 10px;
+  padding-right: 5px;
+}
+
+.amx-inputDate.amx-readOnly .amx-inputDate-content {
+  font-weight: bold;
+  color: #000000;
+}
+.amx-dtmode .amx-inputDate .amx-inputDate-content {
+  border: 1px solid #0360AE;
+  margin: 0;
+  font-weight: normal;
+  -webkit-appearance: menulist-button; 
+  position: initial;
+}
+/* --------- </amx:inputDate> --------- */
+/* Copyright (c) 2005, 2013, Oracle and/or its affiliates. All rights reserved. */
+/* css-mobileAlta-1.0-ios/amx-inputNumberSlider.css */
+
+/* --------- <amx: inputNumberSilder> --------- */
+.amx-inputNumberSlider .field-label {
+  margin: 3px 0 0 0;
+}
+
+.amx-inputNumberSlider .field-value {
+  position: relative;
+}
+
+.amx-inputNumberSlider .field-value .disable {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(255,255,255,.2);
+}
+
+.amx-inputNumberSlider .field-value .container {
+  padding: 5px 10px;
+  z-index: -1;
+}
+
+.amx-panelFormLayout .amx-inputNumberSlider .field-value .container {
+  text-align: center;
+}
+
+.amx-inputNumberSlider .field-value .inputTextNumber {
+  display: inline-block;
+  position: relative;
+}
+
+html[dir=ltr] .amx-inputNumberSlider .field-value .inputTextNumber {
+  margin: 0 5px 0 0;
+}
+
+html[dir=rtl] .amx-inputNumberSlider .field-value .inputTextNumber {
+  margin: 0 0 0 5px;
+}
+
+.amx-inputNumberSlider .field-value .inputTextNumber input[type='text'] {
+  -webkit-user-select: text;
+  width: 30px;
+  height: 24px;
+  border: 1px solid #B3B3B3;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+.amx-inputNumberSlider .field-value .inputTextNumber .btn {
+  position: absolute;
+  width: 9px;
+  height: 9px;
+  background-color: #000000;
+  border: 1px solid #ABADB3;
+  box-sizing: border-box;
+  background-image: -webkit-gradient(linear,0% 0%, 0% 100%, from(#F2F2F2), to(#D1D1D1), color-stop(0.5,#E8E8E8),color-stop(0.5,#DBDBDB));
+}
+
+html[dir=ltr] .amx-inputNumberSlider .field-value .inputTextNumber .btn {
+  right: 1px;
+}
+
+html[dir=rtl] .amx-inputNumberSlider .field-value .inputTextNumber .btn {
+  left: 1px;
+}
+
+.amx-inputNumberSlider .field-value .inputTextNumber .btn: hover {
+  border: 1px solid #3C7FB1;
+  background: -webkit-gradient(linear,0% 0%, 0% 100%, from(#E9F6FD), to(#A9DBF5), color-stop(0.5,#D2EDFC),color-stop(0.5,#BBE5FC));
+}
+
+.amx-inputNumberSlider .field-value .inputTextNumber .btn.up {
+  top: 2px;
+  -webkit-border-top-right-radius: 2px;
+  -webkit-border-top-left-radius: 2px;
+}
+
+.amx-inputNumberSlider .field-value .inputTextNumber .btn.down {
+  top: 14px;
+  -webkit-border-bottom-left-radius: 2px;
+  -webkit-border-bottom-right-radius: 2px;
+  box-sizing: border-box;
+}
+
+.amx-inputNumberSlider .field-value .slider {
+  display: inline-block;
+  background-color: #000000;
+  position: relative;
+  width: 98%;
+  margin: 0 4px;
+  min-width: 100px;
+  height: 9px;
+  border: 1px solid #A6A5A5;
+  background-image: -webkit-linear-gradient(bottom, #cfcfcf 0%, #cfcfcf 10.25%, #fff 70.24%, #fff 100%);
+  border-radius: 5px;
+}
+
+.amx-inputNumberSlider .field-value .slider .selected {
+  position: absolute;
+  z-index: 1;
+  width: 23px;
+  height: 100%;
+  border-radius: 5px;
+  border: 1px solid #035FAD;
+  box-sizing: border-box;
+  background-image: -webkit-linear-gradient(bottom, #0572ce 0%, #0572ce 10.01%, #6fa3e2 89.5%, #6fa3e2 100%);
+}
+
+.amx-inputNumberSlider .field-value .slider .valve-background {
+  width: 19px;
+  height: 19px;
+  position: absolute;
+  top: -6px;
+  z-index: 2;
+  margin-left:-10px;
+}
+
+html[dir=ltr] .amx-inputNumberSlider .field-value .slider .valve-background {
+  left: 20px;
+}
+
+html[dir=rtl] .amx-inputNumberSlider .field-value .slider .valve-background {
+  right: 20px;
+}
+.amx-inputNumberSlider .field-value .slider .valve-background .valve {
+  width: 19px;
+  height: 19px;
+  position: absolute;
+  z-index: 3;
+  border-radius: 10px;
+  box-shadow: 0 1px 0 rgba(0,0,0,.07), inset 0 0 3px rgba(255,255,255,.7);
+  background-image: -webkit-linear-gradient(bottom, #fbfbfb 0%, #fbfbfb 40.99%, #cfcfcf 96.75%, #cfcfcf 100%);
+  border: 1px solid #ABABAB;
+  box-sizing: border-box;
+  top:1px;
+}
+
+.amx-inputNumberSlider .field-value .slider .valve-background .valve:active {
+  width: 19px;
+  height: 19px;
+  position: absolute;
+  z-index: 3;
+  border-radius: 10px;
+  background-image: -webkit-linear-gradient(bottom, #d9d9d9 0%, #d9d9d9 19.24%, #b1b1b1 82.74%, #b1b1b1 100%);
+  background-image: linear-gradient(bottom, #d9d9d9 0%, #d9d9d9 19.24%, #b1b1b1 82.74%, #b1b1b1 100%);
+  box-shadow: 0 1px 0 rgba(0,0,0,.07), inset 0 0 2px rgba(255,255,255,.7);
+  border: 1px solid #797979;
+  box-sizing: border-box;
+}
+
+html[dir=ltr] .amx-inputNumberSlider .field-value .slider .valve-background .valve {
+  left: 8px;
+}
+
+html[dir=rtl] .amx-inputNumberSlider .field-value .slider .valve-background .valve {
+  right: 8px;
+}
+
+.amx-inputNumberSlider.amx-disabled {
+  opacity: 0.40;
+}
+
+.amx-inputNumberSlider.amx-readOnly .field-value .slider  .selected {
+  border: solid 1px #2C2C2C;
+  background-image: -webkit-gradient(linear, left bottom, left top,
+  color-stop(0, #b3b3b3),
+  color-stop(0.49, #858585),
+  color-stop(0.5, #909090),
+  color-stop(1.0, #c7c7c7));
+}
+
+.amx-inputNumberSlider .slider .selected .valve:active {
+  border: 1px solid #797979;
+  box-shadow: 0 1px 0 rgba(0,0,0,.07), inset 0 0 3px rgba(255,255,255,.7);
+  background-image: -webkit-linear-gradient(bottom, #d9d9d9 0%, #d9d9d9 19.24%, #b1b1b1 82.74%, #b1b1b1 100%);
+}
+
+.amx-inputNumberSlider .field-value .slider .valve-background .valve > .amx-extendedTarget {
+  top: -14px;
+  bottom: -14px;
+  left: -14px;
+  right: -14px;
+}
+
+/* --------- </amx: inputNumberSilder> --------- */
+/* Copyright (c) 2005, 2013, Oracle and/or its affiliates. All rights reserved. */
+/* css-mobileAlta-1.0-ios/amx-listView.css */
+
+/* ------ <amx:listView> ------ */
+.amx-listView {
+  margin: 0;
+  background-color: #FFFFFF;
+  position: relative;
+  -webkit-transform: none;
+  transform: none;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.amx-panelPage-content > .amx-listView:only-child {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+.adfmf-listView-scrollable-disabled {
+  overflow: hidden !important;
+}
+
+.adfmf-listView-main {
+  position: relative;
+  height: 100%;
+  -webkit-box-flex: 1;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+}
+
+.adfmf-listView-innerList {
+  height: 100%;
+  overflow: auto;
+  -webkit-box-flex: 1;
+}
+
+.adfmf-listView-group {
+  position: relative;
+  padding-top: 26px;
+  -webkit-transform: none;
+  transform: none;
+}
+
+.adfmf-listView-group.amx-static {
+  position: static;
+}
+
+.adfmf-listView-index {
+  position: absolute;
+  top: 0;
+  left: auto;
+  right: 4px;
+  bottom: 0;
+  width: 28px;
+  z-index: 100;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-box-pack: justify;
+  -webkit-border-radius: 5px;
+  border-radius: 5px;
+  -webkit-background-clip: padding-box;
+  background-clip: padding-box;
+  background-color: rgba(0,0,0,0.2);
+}
+
+HTML[dir=rtl] .adfmf-listView-index {
+   left: 4px;
+   right: auto;
+}
+
+.adfmf-listView-indexItem {
+  text-align: center;
+  color: #dcdcde;
+  font-family: "Helvetica Neue";
+  font-size: 12px;
+  font-weight: bold;
+  height:14px;
+  line-height:14px;
+}
+
+.adfmf-listView-indexItem-active {
+  color: #0572CE;
+}
+
+HTML[dir=rtl] .amx-listView.adfmf-listView-has-index .amx-listItem-caret {
+  left: 33px;
+  right: auto;
+}
+
+HTML[dir=ltr] .amx-listView.adfmf-listView-has-index .amx-listItem-caret {
+  right: 33px;
+  left: auto;
+}
+
+.amx-listView.adfmf-listView-has-index .amx-listView-dividerCounter {
+  right: 33px;
+}
+
+.amx-listView.adfmf-listView-insetList,
+.amx-listView.amx-listView-insetList {
+  margin: 12px 9px;
+  border-radius: 5px;
+}
+
+.amx-listView.adfmf-listView-insetList .amx-listItem:first-child,
+.amx-listView.amx-listView-insetList .amx-listItem:first-child {
+  -webkit-border-top-left-radius: 5px;
+  -webkit-border-top-right-radius: 5px;
+}
+
+.amx-listView.adfmf-listView-insetList .amx-listItem:last-child,
+.amx-listView.amx-listView-insetList .amx-listItem:last-child {
+  -webkit-border-bottom-left-radius: 5px;
+  -webkit-border-bottom-right-radius: 5px;
+}
+
+.amx-listView.notSelect * {
+  -webkit-user-select: none;
+  user-select: none;
+}
+
+.amx-listView-editMode .amx-listItem-caret {
+  display: none;
+}
+
+/* --- <facets> ---*/
+
+.amx-listView-facet-header > .amx-outputText,
+.amx-listView-facet-footer > .amx-outputText {
+  color: #595959;
+  font-size: 16px;
+  font-weight: bold;
+  position: relative;
+  left: 10px;
+  top: 3px;
+}
+
+/* --- </facets> --- */
+
+/* --- <dividers> --- */
+.amx-listView-divider,
+.amx-listView-header,
+.amx-listView-footer {
+  position: relative;
+  background-image: -webkit-linear-gradient(bottom, #78848e 0%, #78848e 4%, #d9d9d9 5%, #d9d9d9 94%, #fff 98%, #c1bfbf 99%);
+  height: 26px;
+  box-sizing: border-box;
+  left:0;
+  right:0;
+}
+
+.amx-listView-divider {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  right: 0px;
+  z-index:50;
+}
+.amx-listItem, .amx-listView-divider {
+  -webkit-transform: translateZ(0);
+} 
+
+.amx-listView-divider.amx-bottom {
+   top: auto;
+   bottom: 0px;
+}
+.amx-listView-divider .amx-listView-dividerText {
+  font-weight: bold;
+  font-size: 16px;
+  color: #595959;
+  position: absolute;
+  margin-left: 30px;
+  margin-top: 3px;
+  top: 0;
+  text-shadow: 0 1px 1px #FFFFFF;
+  font-family: Arial;
+}
+
+.amx-listView-divider.amx-listView-nonCollapsibleDivider .amx-listView-dividerText {
+  position: absolute;
+  margin-left: 10px;
+}
+
+.amx-listView-dividerCounter {
+  position: absolute;
+  top: 6px;
+  right: 10px;
+  border: 1px solid #000000;
+  border-radius: 13px;
+  height: 15px;
+  padding: 0 3px;
+  box-sizing: border-box;
+}
+
+.adfmf-listView-dividerCounter-noBorder .amx-listView-dividerCounter {
+  border: none;
+}
+
+.amx-listView-dividerCounterText {
+  color: #595959;
+  font-weight: bold;
+  font-size: 12px;
+  padding-bottom: 4px;
+  text-shadow: 0 1px 1px #FFFFFF;
+  text-align: center;
+}
+
+.amx-listView-disclosedIcon {
+  background-image: url(../css/images/amx-ios-ltr.png);
+  background-position: -96px -86px;
+  -webkit-background-size: 300px 164px;
+  background-repeat: no-repeat;
+  height: 16px;
+  width: 12px;
+  margin: 0 10px;
+}
+
+.amx-listView-undisclosedIcon {
+  background-image: url(../css/images/amx-ios-ltr.png);
+  background-position: -84px -85px;
+  -webkit-background-size: 300px 164px;
+  background-repeat: no-repeat;
+  height: 18px;
+  width: 12px;
+  margin: 0 10px;
+}
+
+/* --- </dividers> --- */
+
+
+/* This requires a relative position so that the caret and drag handles can be positioned inside. */
+.amx-listItem {
+  position: relative;
+  border-bottom: solid 1px #BBBBBB;
+  min-height: 43px;
+}
+.amx-listItem-undisclosed {
+  display: none;
+}
+
+.amx-listItem.amx-listItem-selected {
+  background-color: #C2DDF7;
+}
+
+.adfmf-listItem-selected-alternate1 {
+  background-color: #0572CE;
+  color: #FFFFFF;
+}
+
+.amx-listItem.move {
+  position: absolute;
+  left: 0;
+  right: 0;
+  box-shadow: 0 11px 10px rgba(0,0,0,.65);
+  opacity: .8;
+}
+
+.amx-listItem-caret {
+  -webkit-background-size: 300px 164px;
+  width: 9px;
+  height: 13px;
+  position: absolute;
+  top: 50%;
+  margin-top: -7px;
+}
+
+html[dir=ltr] .amx-listView.adfmf-listView-has-index .amx-listItem {
+  padding-right: 28px;
+}
+html[dir=rtl] .amx-listView.adfmf-listView-has-index .amx-listItem {
+  padding-left: 28px;
+}
+
+html[dir=ltr] .amx-listItem-caret {
+  background-image: url(../css/images/amx-ios-ltr.png);
+  background-position: 32px 83px; /* LTR and RTL slices are not perfectly centered hence the unique positions */
+  right: 10px;
+}
+
+html[dir=rtl] .amx-listItem-caret {
+  background-image: url(../css/images/amx-ios-rtl.png);
+  background-position: 32px 83px;/* LTR and RTL slices are not perfectly centered hence the unique positions */
+  left: 10px;
+}
+
+html[dir=ltr] .amx-listItem-selected > .amx-listItem-caret {
+  background-position: 24px 83px; /* LTR and RTL slices are not perfectly centered hence the unique positions */
+}
+
+html[dir=rtl] .amx-listItem-selected > .amx-listItem-caret {
+  background-position: 32px 83px; /* LTR and RTL slices are not perfectly centered hence the unique positions */
+}
+
+.amx-listItem-handle {
+  -webkit-background-size: 300px 164px;
+  width: 21px;
+  height: 31px;
+  position: absolute;
+  top: 75%;
+  margin-top: -25px;
+}
+
+html[dir=ltr] .amx-listItem-handle {
+  background-image: url(../css/images/amx-ios-ltr.png);
+  background-position: -108px -84px; /* LTR and RTL slices are not perfectly centered hence the unique positions */
+  right: 10px;
+}
+
+html[dir=rtl] .amx-listItem-handle {
+  background-image: url(../css/images/amx-ios-rtl.png);
+  background-position: -108px -84px;  /* LTR and RTL slices are not perfectly centered hence the unique position */
+  left: 10px;
+}
+
+.amx-listItem-drop-spacer {
+  height: 10px;
+  box-shadow: 0 2px 3px 0 #A0A0A0, 0 -2px 3px 0 #A0A0A0;
+}
+
+.amx-listItem .amx-image {
+  margin-top: 7px;
+}
+
+.amx-listItem .amx-outputText {
+  font-weight: bold;
+  white-space: nowrap;
+  text-overflow: clip;
+  overflow: hidden;
+  display: block;
+  line-height: 33px;
+}
+
+html[dir=ltr] .amx-listItem > .amx-outputText {
+  margin-right: 30px;
+  padding: 5px 0 5px 10px;
+}
+
+html[dir=rtl] .amx-listItem > .amx-outputText {
+  margin-left: 30px;
+  padding: 5px 10px 5px 0;
+  text-align:  right;
+}
+
+html[dir=ltr] .amx-listItem.amx-listItem-noCaret > .amx-outputText {
+  margin-right: 10px;
+}
+
+html[dir=rtl] .amx-listItem.amx-listItem-noCaret > .amx-outputText {
+  margin-left: 10px;
+}
+
+html[dir=ltr] .amx-listItem > .amx-panelGroupLayout {
+  margin-right: 30px;
+}
+
+html[dir=rtl] .amx-listItem > .amx-panelGroupLayout {
+  margin-left: 30px;
+}
+
+.amx-listItem > .amx-panelGroupLayout.amx-wrap {
+  display: block;
+}
+
+html[dir=ltr] .amx-listItem > .amx-tableLayout {
+  margin-right: 30px;
+}
+
+html[dir=rtl] .amx-listItem > .amx-tableLayout {
+  margin-left: 30px;
+}
+
+html[dir=ltr] .amx-listItem.amx-listItem-noCaret > .amx-tableLayout {
+  margin-right: 10px;
+}
+
+html[dir=rtl] .amx-listItem.amx-listItem-noCaret > .amx-tableLayout {
+  margin-left: 10px;
+}
+
+.amx-listItem .amx-tableLayout .amx-outputText.adfmf-listItem-captionText {
+  font-size: 14px;
+  color:#595960;
+  margin-top: -10px;
+  margin-bottom: -2px;
+}
+
+.amx-listItem .amx-tableLayout .amx-outputText.adfmf-listItem-highlightText {
+  color: #2F6BAC;
+}
+
+/* Start Deprecated listItem Styles */
+.amx-listItem.adfmf-listItem-hasStartIcon .amx-outputText {
+  position: absolute;
+  top: 0;
+  left: 30px;
+  padding: 10px 0 10px 10px;
+  margin-right: 0;
+  font-weight: bold;
+  font-size: 18px;
+  color: black;
+  right: 30px;
+}
+
+.amx-listItem .amx-outputText.adfmf-listItem-mainText {
+  padding: 2px 0 0 10px;
+  font-weight: bold;
+  color: #000;
+}
+
+.amx-listItem .amx-outputText.adfmf-listItem-subText {
+  padding: 0 0 0 10px;
+  font-weight: normal;
+  font-size: 14px;
+  margin-top: -3px;
+  color: #8D8C8C;
+}
+
+.amx-listItem.adfmf-listItem-hasStartIcon .adfmf-listItem-mainText {
+  position: absolute;
+  top: 0;
+  left: 30px;
+  padding: 2px 0 10px 10px;
+  margin-right: 0;
+  right: 30px;
+}
+
+.amx-listItem.adfmf-listItem-hasStartIcon .adfmf-listItem-subText {
+  position: absolute;
+  top: 18px;
+  left: 30px;
+  padding: 4px 0 10px 10px;
+  margin-top: 0;
+  margin-right: 0;
+  right: 30px;
+}
+
+.amx-listItem .amx-outputText.adfmf-listItem-startText {
+  padding: 10px 0 10px 10px;
+  margin-right: 0;
+  font-weight: bold;
+  color: #000;
+  width: 55%;
+}
+
+.amx-listItem .amx-outputText.adfmf-listItem-endText {
+  position: absolute;
+  margin-right: 0;
+  padding: 10px 0 10px 0;
+  top: 0;
+  right: 30px;
+  text-align: right;
+  color: #2F6BAC;
+  left: 60%;
+}
+
+.amx-listItem.adfmf-listItem-hasStartIcon .amx-outputText.adfmf-listItem-startText {
+  position: absolute;
+  top: 0;
+  left: 30px;
+  padding: 10px 0 10px 10px;
+  margin-right: 0;
+  font-weight: bold;
+  font-size: 18px;
+  color: #000;
+  width: 45%;
+}
+
+.amx-listItem .amx-outputText.adfmf-listItem-upperStartText {
+  padding: 2px 0 0 10px;
+  margin-right: 0;
+  font-weight: bold;
+  color: #000;
+  width: 55%;
+}
+
+.amx-listItem.adfmf-listItem-hasStartIcon .adfmf-listItem-upperStartText {
+  position: absolute;
+  top: 0;
+  left: 30px;
+  padding: 2px 0 10px 10px;
+  margin-right: 0;
+  right: 30px;
+  width: 45%;
+}
+
+.amx-listItem .amx-outputText.adfmf-listItem-upperEndText {
+  position: absolute;
+  padding: 2px 0 10px 10px;
+  top: 0;
+  right: 0;
+  text-align: right;
+  color: #2F6BAC;
+  left: 60%;
+}
+
+.amx-listItem .amx-outputText.adfmf-listItem-lowerStartText {
+  padding: 0 0 1px 10px;
+  font-weight: normal;
+  font-size: 14px;
+  color: #8D8C8C;
+  right: 0;
+  margin-top: -3px;
+  width: 55%;
+}
+
+.amx-listItem.adfmf-listItem-hasStartIcon .adfmf-listItem-lowerStartText {
+  position: absolute;
+  top: 18px;
+  left: 30px;
+  padding: 4px 0 10px 10px;
+  margin-top: 0;
+  margin-right: 0;
+  right: 30px;
+  width: 45%;
+}
+
+.amx-listItem .amx-outputText.adfmf-listItem-lowerEndText {
+  position: absolute;
+  padding: 5px 0 10px 10px;
+  top: 18px;
+  right: 0;
+  text-align: right;
+  color: #8D8C8C;
+  font-weight: normal;
+  font-size: 14px;
+  left: 60%;
+}
+
+.amx-listItem.adfmf-listItem-hasStartIcon.amx-listItem-noLinkIcon .amx-outputText {
+  right: 0;
+}
+
+.amx-listItem.amx-listItem-noLinkIcon .amx-outputText {
+  margin-right: 10px;
+}
+
+.amx-listItem.adfmf-listItem-hasStartIcon .adfmf-listItem-lowerEndText,
+.amx-listItem.adfmf-listItem-hasStartIcon .adfmf-listItem-upperEndText {
+  right: 30px;
+}
+
+.amx-listItem.adfmf-listItem-hasStartIcon.amx-listItem-noLinkIcon .adfmf-listItem-mainText,
+.amx-listItem.adfmf-listItem-hasStartIcon.amx-listItem-noLinkIcon .adfmf-listItem-endText,
+.amx-listItem.adfmf-listItem-hasStartIcon.amx-listItem-noLinkIcon .adfmf-listItem-upperEndText,
+.amx-listItem.adfmf-listItem-hasStartIcon.amx-listItem-noLinkIcon .adfmf-listItem-lowerEndText,
+.amx-listItem.amx-listItem-noLinkIcon .adfmf-listItem-endText,
+.amx-listItem.amx-listItem-noLinkIcon .adfmf-listItem-upperEndText,
+.amx-listItem.amx-listItem-noLinkIcon .adfmf-listItem-lowerEndText,
+.amx-listItem.adfmf-listItem-hasStartIcon.amx-listItem-noLinkIcon .adfmf-listItem-subText {
+  margin-right: 0;
+  right: 10px;
+}
+
+.amx-listItem .amx-outputText.amx-listItem-lefttext {
+  padding: 10px 0 10px 10px;
+  margin-right: 0;
+  font-weight: bold;
+  font-size: 18px;
+  color: #000;
+  width: 45%;
+}
+
+.amx-listItem .amx-outputText.amx-listItem-lefttexticon {
+  position: absolute;
+  top: 0;
+  left: 30px;
+  padding: 10px 0 10px 10px;
+  margin-right: 0;
+  font-weight: bold;
+  font-size: 18px;
+  color: #000;
+  width: 45%;
+}
+
+.amx-listItem .amx-outputText.amx-listItem-righttext {
+  position: absolute;
+  margin-right: 0;
+  padding: 10px 0 10px 0;
+  top: 0;
+  right: 30px;
+  text-align: right;
+  color: #2F6BAC;
+  width: 40%;
+}
+
+.amx-listItem .amx-outputText.amx-listItem-righttextnochevron {
+  position: absolute;
+  margin-right: 0;
+  padding: 10px 0 10px 0;
+  top: 0;
+  right: 10px;
+  text-align: right;
+  color: #2F6BAC;
+  width: 45%;
+}
+
+.amx-listItem .amx-outputText.amx-listItem-maintext {
+  padding: 1px 0 0 10px;
+  font-weight: bold;
+  color: #000;
+}
+
+.amx-listItem .amx-outputText.amx-listItem-subtext {
+  padding: 0 0 1px 10px;
+  font-weight: normal;
+  font-size: 14px;
+  color: #8D8C8C;
+}
+
+.amx-listItem .amx-outputText.amx-listItem-upperlefttext {
+  padding: 1px 0 0 10px;
+  margin-right: 0;
+  font-weight: bold;
+  color: #000;
+  width: 50%;
+}
+
+.amx-listItem .amx-outputText.amx-listItem-upperlefttexticon {
+  position: absolute;
+  top: 0;
+  left: 30px;
+  padding: 1px 0 0 10px;
+  margin-right: 0;
+  font-weight: bold;
+  color: #000;
+  width: 50%;
+}
+
+.amx-listItem .amx-outputText.amx-listItem-lowerlefttext {
+  padding: 0 0 1px 10px;
+  margin-right: 0;
+  font-weight: normal;
+  font-size: 14px;
+  color: #8D8C8C;
+  width: 50%;
+}
+
+.amx-listItem .amx-outputText.amx-listItem-lowerlefttexticon {
+  position: absolute;
+  top: 24px;
+  left: 30px;
+  padding: 0 0 1px 10px;
+  margin-right: 0;
+  font-weight: normal;
+  font-size: 14px;
+  color: #8D8C8C;
+  width: 50%;
+}
+
+.amx-listItem .amx-outputText.amx-listItem-upperrighttext {
+  position: absolute;
+  margin-right: 0;
+  padding: 2px 0 0 0;
+  top: 0;
+  right: 30px;
+  text-align: right;
+  color: #8D8C8C;
+  font-weight: normal;
+  width: 35%;
+  font-size: 16px;
+}
+
+.amx-listItem .amx-outputText.amx-listItem-upperrighttextnochevron {
+  position: absolute;
+  margin-right: 0;
+  padding: 2px 0 0 0;
+  top: 0;
+  right: 10px;
+  text-align: right;
+  color: #8D8C8C;
+  font-weight: normal;
+  width: 40%;
+  font-size: 16px;
+}
+
+.amx-listItem .amx-outputText.amx-listItem-lowerrighttext {
+  position: absolute;
+  margin-right: 0;
+  padding: 0 0 1px 0;
+  top: 24px;
+  right: 30px;
+  text-align: right;
+  color: #8D8C8C;
+  font-weight: normal;
+  width: 35%;
+  font-size: 14px;
+  white-space: nowrap;
+  text-overflow: clip;
+  overflow: hidden;
+}
+
+.amx-listItem .amx-outputText.amx-listItem-lowerrighttextnochevron {
+  position: absolute;
+  margin-right: 0;
+  padding: 0 0 1px 0;
+  top: 24px;
+  right: 10px;
+  text-align: right;
+  color: #8D8C8C;
+  font-weight: normal;
+  width: 40%;
+  font-size: 14px;
+  white-space: nowrap;
+  text-overflow: clip;
+  overflow: hidden;
+}
+/* Stop Deprecated listItem Styles */
+
+.amx-panelSplitter_contentContainer .amx-listItem-moreRows .amx-outputText,
+.amx-listItem-moreRows .amx-outputText {
+  color: #0572C3;
+}
+
+.amx-listView-editMode .amx-listItem-moreRows {
+  display: none;
+}
+
+/* For the scroll-based showMoreStrategy options, show an indicator in place of
+   the Load More Rows... link. However, in order to minimize memory use, use a
+   static image when idle and only use the animated GIF when actually doing a
+   load when the "show more" is invoked (with the idea that a refresh will occur
+   when it is complete at which point the PNG will then replace it or the row
+   will be removed completely). */
+.amx-listView-placeholder,
+.amx-listItem-scrollStrategy {
+  background-color: #EEEEEE;
+  background-image: url(../css/images/iOS6_ActivityIndicatorPageBackgrnd.png);
+  -webkit-background-size: 18px 18px;
+}
+.amx-listView-placeholder,
+.amx-listItem-scrollStrategyLoading {
+  background-image: url(../css/images/iOS6_ActivityIndicatorPageBackgrnd.gif);
+}
+.amx-listView-placeholder {
+  background-position: center center;
+  background-repeat: no-repeat;
+  min-height: 43px;
+}
+.amx-listItem-scrollStrategy .amx-outputText,
+.amx-listItem-scrollStrategyLoading .amx-outputText {
+  display: none;
+}
+.amx-listItem-outsideOfBuffer {
+  box-sizing: border-box;
+}
+.amx-listItem.amx-listItem-outsideOfBuffer > * {
+  display: none;
+}
+.amx-listItem-moreRows {
+  background-position: center center;
+  background-repeat: no-repeat;
+}
+
+/* ------ </amx:listView> ------ */
+
+/* ------ <Springboard> ------ */
+.adfmf-panelPage-springboard {
+  background-color: #2B3540;
+}
+
+.adfmf-panelPage-springboard a,
+.adfmf-panelPage-springboard .amx-goLink,
+.adfmf-panelPage-springboard .amx-commandLink {
+  color: #CFCFCF;
+}
+
+.adfmf-panelPage-springboard .amx-goLink:active,
+.adfmf-panelPage-springboard .amx-commandLink:active {
+  color: #2B3540;
+  background-color: #FFFFFF;
+}
+
+.adfmf-panelPage-springboard .adfmf-goLink-icon.amx-goLink:after {
+  content: " ";
+  background-image: url(../css/images/amx-ios-ltr.png);
+  width: 15px;
+  height: 15px;
+  background-position: -163px -63px;
+  background-repeat: no-repeat;
+  -webkit-background-size: 300px 164px;
+  position: relative;
+  margin: 0 3px;
+  display: inline-block;
+}
+
+.adfmf-panelPage-springboard .amx-outputText,
+.adfmf-panelPage-springboard .amx-inputText .field-value .readOnlyLabel {
+  color: #F8F8F8;
+}
+
+.adfmf-panelPage-springboard .field-label {
+  opacity: .7;
+  color: #CFCFCF;
+}
+
+.adfmf-panelPage-springboard .amx-listView-divider .amx-listView-dividerText,
+.adfmf-panelPage-springboard .amx-listView-dividerCounterText,
+.adfmf-panelPage-springboard .amx-outputText.amx-text-sectiontitle,
+.adfmf-panelPage-springboard .adfmf-outputText-sectionTitle,
+.adfmf-panelPage-springboard .amx-inputText .field-value input,
+.adfmf-panelPage-springboard .amx-inputText .field-value textarea {
+  color: #FFFFFF;
+}
+
+.adfmf-panelPage-springboard .amx-inputText .wrap {
+  -webkit-border-image: url(../css/images/enabledTextFieldSpringboard.png) 0 5 6 6 repeat;
+  border-image: url(../css/images/enabledTextFieldSpringboard.png) 0 5 6 6 fill repeat;
+}
+
+.adfmf-panelPage-springboard .amx-panelPage-facet-header > .amx-outputText,
+.adfmf-panelPage-springboard .amx-panelPage-facet-footer > .amx-outputText,
+.adfmf-panelPage-springboard .amx-panelFormLayout .amx-inputText .field-value input,
+.adfmf-panelPage-springboard .amx-panelFormLayout .amx-inputText .field-value textarea,
+.adfmf-panelPage-springboard .amx-panelGroupLayout .amx-inputText .field-value input,
+.adfmf-panelPage-springboard .amx-panelGroupLayout .amx-inputText .field-value textarea,
+.adfmf-panelPage-springboard .amx-panelFormLayout .amx-outputText,
+.adfmf-panelPage-springboard .amx-panelGroupLayout .amx-outputText,
+.adfmf-panelPage-springboard .amx-panelFormLayout .amx-panelLabelAndMessage,
+.adfmf-panelPage-springboard .panelFormLayout .amx-inputText .field-value .readOnlyLabel,
+.adfmf-panelPage-springboard .paneGroupLayout .amx-inputText .field-value .readOnlyLabel,
+.adfmf-panelPage-springboard .panelFormLayout  .amx-panelLabelAndMessage .amx-inputText .field-value .readOnlyLabel {
+  color: #000000;
+}
+
+.adfmf-panelPage-springboard .adfmf-panelGroupLayout-groupBox input:disabled,
+.adfmf-panelPage-springboard textarea:disabled,
+.adfmf-panelPage-springboard .amx-style-groupbox input:disabled,
+.adfmf-panelPage-springboard .amx-panelFormLayout input:disabled {
+  opacity: .35;
+  color: #BEBEBE;
+}
+
+.amx-springboard.amx-listView,
+.adfmf-panelPage-springboard .amx-listView {
+  background-color: transparent;
+}
+
+.adfmf-panelPage-springboard .amx-listView-divider {
+  background-image: -webkit-gradient(linear, center bottom, center top, color-stop(0%, #262f37), color-stop(2.44%, #262f37), color-stop(7.74%, #313c46), color-stop(91.5%, #394754), color-stop(97.51%, #4e5a63), color-stop(100%, #4e5a63));
+  background-image: -webkit-linear-gradient(bottom, #262f37 0%, #262f37
+  2.44%, #313c46 7.74%, #394754 91.5%, #4e5a63 97.51%, #4e5a63 100%);
+  background-image: linear-gradient(to top, #262f37 0%, #262f37 2.44%, #313c46 7.74%, #394754 91.5%, #4e5a63 97.51%, #4e5a63 100%);
+  border: 0;
+}
+
+.adfmf-panelPage-springboard .amx-listItem > .amx-outputText {
+  color: #CFCFCF;
+}
+
+.amx-springboard .amx-listItem,
+.adfmf-panelPage-springboard .amx-listItem {
+  border-bottom: solid 1px rgba(0, 0, 0, 0.12);
+}
+
+.amx-springboard .amx-listItem:first-child,
+.adfmf-panelPage-springboard .amx-listItem:first-child {
+  border-top: none;
+}
+
+.amx-springboard .amx-listItem:last-child,
+.adfmf-panelPage-springboard .amx-listItem:last-child {
+  border-bottom: none;
+}
+
+.amx-springboard .amx-listItem.amx-listItem-selected {
+  background-color: rgba(0, 0, 0, 0.35);
+}
+/* ------ </Springboard> ------ */
+/* Copyright (c) 2005, 2013, Oracle and/or its affiliates. All rights reserved. */
+/* css-mobileAlta-1.0-ios/amx-page-transitions.css */
+
+.amx-view-container {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 0;
+}
+
+.amx-view-container.current,
+.amx-view-container.showing {
+  z-index: 1;
+}
+
+.amx-view-container.new {
+  z-index: -5;
+  opacity: 0;
+}
+
+.amx-view-container.old {
+  z-index: -2;
+}
+/* Copyright (c) 2005, 2013, Oracle and/or its affiliates. All rights reserved. */
+/* css-mobileAlta-1.0-ios/amx-panelSplitter.css */
+
+/* ------ <amx:panelSplitter> ------ */
+.amx-panelPage-content > .amx-panelSplitter {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+
+.amx-panelSplitter {
+  position: relative;
+  overflow: hidden;
+  min-width: 55px;
+  min-height: 55px;
+  margin: 0;
+  padding: 0;
+  -webkit-transition: width 1s ease-in-out;
+  transition: width 1s ease-in-out;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.amx-panelSplitter_inner {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.amx-panelSplitter_navLandscape {
+  z-index: 1000;
+  position: absolute;
+  margin: 0;
+  padding: 0;
+  overflow: auto;
+  top: 0;
+  bottom: 0;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+html[dir=ltr] .amx-panelSplitter_navLandscape {
+    right: auto;
+    left: 0;
+}
+
+html[dir=rtl] .amx-panelSplitter_navLandscape {
+    right: 0;
+    left: auto;
+}
+
+.amx-panelSplitter_contentContainer {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  overflow: auto;
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.amx-panelSplitter_contentContainer .amx-outputText {
+  color: #000000;
+}
+
+.amx-panelSplitter_items {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+}
+
+.amx-panelSplitter_button {
+  z-index: 1001;
+  position: absolute;
+  -webkit-transition-property: opacity, left, right;
+  transition-property: opacity, left, right;
+  -webkit-transition-duration: .5s, .5s;
+  transition-duration: .5s, .5s;
+  -webkit-transition-timing-function: ease-in-out, ease-in-out;
+  transition-timing-function: ease-in-out, ease-in-out;
+  height: 58px;
+  width: 36px;
+  box-sizing: border-box;
+  background-image: url(../css/images/amx-ios-ltr.png);
+  background-position: -160px 0;
+  background-repeat: no-repeat;
+  -webkit-background-size: 300px 164px;
+  margin: 2px 18px 0 0;
+}
+
+html[dir=ltr] .amx-panelSplitter_button {
+  left: 0;
+}
+
+html[dir=rtl] .amx-panelSplitter_button {
+  right: 0;
+}
+
+.amx-panelSplitter_button.disclosed {
+  background-image: url(../css/images/amx-ios-ltr.png);
+  background-position: -121px 0;
+  background-repeat: no-repeat;
+  -webkit-background-size: 300px 164px;
+  margin: 2px 18px 0 0;
+}
+
+.amx-panelSplitter_button.no-animate {
+  -webkit-transition-property: none;
+  transition-property: none;
+}
+
+.amx-panelSplitter_navPortrait {
+  z-index: 1002;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  -webkit-transition-property: opacity, left, right;
+  transition-property: opacity, left, right;
+  -webkit-transition-duration: .5s, .5s;
+  transition-duration: .5s, .5s;
+  -webkit-transition-timing-function: ease-in-out, ease-in-out;
+  transition-timing-function: ease-in-out, ease-in-out;
+  overflow: auto;
+  box-sizing: border-box;
+  box-shadow: 2px 0 6px rgba(0,0,0,0.55);
+  background-color: #F1F1F1;
+}
+
+html[dir=ltr] .amx-panelSplitter_navPortrait {
+  left: 0;
+}
+
+html[dir=rtl] .amx-panelSplitter_navPortrait {
+  right: 0;
+}
+
+.amx-panelSplitter_navPortrait.no-animate {
+  -webkit-transition-property: none;
+  transition-property: none;
+}
+
+.amx-panelSplitter_screenPortrait {
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 900;
+}
+
+.amx-panelItem {
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+}
+
+.amx-panelItem.new {
+  z-index: -5;
+  opacity: 0;
+}
+
+.amx-panelItem.old {
+  z-index: -2;
+}
+
+.amx-panelItem.current,
+.amx-panelItem.showing {
+  z-index: 1;
+}
+
+/* When the panelSplitter has a navigator, add extra space on the start side of the content area */
+html[dir=ltr] .amx-panelSplitter_contentContainer.amx-portrait {
+  left: 20px;
+}
+
+html[dir=rtl] .amx-panelSplitter_contentContainer.amx-portrait {
+  right: 20px;
+}
+
+html[dir=ltr] .amx-panelSplitter_contentContainer.amx-portrait.amx-noNavigation {
+  left: 0;
+}
+
+html[dir=rtl] .amx-panelSplitter_contentContainer.amx-portrait.amx-noNavigation {
+  right: 0;
+}
+/* Copyright (c) 2005, 2013, Oracle and/or its affiliates. All rights reserved. */
+/* css-mobileAlta-1.0-ios/amx-panels.css */
+
+/* ------ <amx:panelPage> ------ */
+.amx-panelPage {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+}
+
+.amx-panelPage-header,
+.amx-panelPage-footer {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  height: 44px;
+  display: block;
+  font-weight: bold;
+  background-image: -webkit-linear-gradient(bottom, #c8c7c7 0%, #c8c7c7 16.75%, #ebebeb 81.49%, #ebebeb 100%);
+  box-shadow: 0 1px 3px rgba(0,0,0,.75);
+  z-index: 1;
+}
+
+.amx-panelPage-footer {
+  width: 100%;
+  height: 49px;
+  background-image: -webkit-linear-gradient(90deg, #c7c7c7 0%, #c7c7c7 16.75%, #ebebeb 81.01%, #ebebeb 92.26%, rgba(235, 235, 235, 0.93) 92.75%, rgba(254, 254, 254, 0.5) 96%, rgba(255, 255, 255, 0.49) 96.24%, rgba(25, 25, 25, 0.4) 98.51%, rgba(0, 0, 0, 0.4) 98.75%);
+  box-shadow: none;
+}
+
+.amx-panelPage-facet-footer,.amx-panelPage-facet-header {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 2;
+}
+
+.amx-panelPage-facet-primary {
+  position: absolute;
+  top: 0;
+  right: 50%;
+  bottom: 0;
+  left: 0;
+  z-index: 3;
+}
+
+html[dir=rtl] .amx-panelPage-facet-primary {
+  right: 0;
+  left: 50%;
+}
+
+.amx-panelPage-facet-secondary {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 50%;
+  z-index: 3;
+}
+
+html[dir=rtl] .amx-panelPage-facet-secondary {
+  right: 50%;
+  left: 0;
+}
+
+.amx-panelPage-contentWrapper {
+  position: relative;
+  -webkit-box-flex: 1;
+}
+
+.amx-panelPage-content {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+
+.amx-panelPage-facet-header > .amx-outputText,
+.amx-panelPage-facet-footer > .amx-outputText {
+  display: block;
+  font-size: 18px;
+  font-weight: bold;
+  text-align: center;
+  margin: 10px auto 0 auto;
+  padding: 0;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+  outline: 0 !important;
+}
+/* ------ </amx:panelPage> ------ */
+
+/* ------ <amx:deck> ----- */
+
+.amx-deck {
+  position: relative;
+}
+
+.amx-deck.amx-stretched > .amx-deck_items,
+.amx-deck.amx-stretched > .amx-deck_items > * {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+/* ------ </amx:deck> ----- */
+
+/* ------ <amx:panelLabelAndMessage> ------ */
+.amx-panelLabelAndMessage .field-value {
+  margin: 1px 0 0 0;
+}
+/* ------ </amx:panelLabelAndMessage> ------ */
+
+/* --------- <amx:panelGroupLayout> --------- */
+
+.amx-panelGroupLayout.adfmf-panelGroupLayout-groupBox, 
+.amx-panelGroupLayout.amx-style-groupbox,
+.amx-panelGroupLayout.adfmf-panelGroupLayout-groupBox {
+  border: 1px solid #C8D7E0;
+  border-radius: 5px;
+  background-color: #FFFFFF;
+  margin: 12px 9px;
+  padding: 10px;
+}
+
+.amx-panelGroupLayout.adfmf-panelGroupLayout-groupBox-selected {
+  border: 2px solid #0572CE;
+  border-radius: 5px;
+  background-color: #FFFFFF;
+  margin: 12px 9px;
+  padding: 10px;
+}
+
+.amx-panelGroupLayout.adfmf-panelGroupLayout-accent1 {
+  border: 1px solid #C8C8C8;
+  border-radius: 5px;
+  background-color: #F0F0F0;
+  margin: 12px 9px;
+  padding: 10px;
+}
+
+.amx-panelGroupLayout.adfmf-panelGroupLayout-accent1-selected {
+  border: 2px solid #0572CE;
+  border-radius: 5px;
+  background-color: #F0F0F0;
+  margin: 12px 9px;
+  padding: 10px;
+}
+
+.amx-panelGroupLayout.adfmf-panelGroupLayout-accent2 {
+  border: 1px solid #AED8FA;
+  border-radius: 5px;
+  background-color: #DAE9f5;
+  margin: 12px 9px;
+  padding: 10px;
+}
+
+.amx-panelGroupLayout.adfmf-panelGroupLayout-accent2-selected {
+  border: 2px solid #0572CE;
+  border-radius: 5px;
+  background-color: #DAE9F5;
+  margin: 12px 9px;
+  padding: 10px;
+}
+
+.amx-panelGroupLayout.adfmf-panelGroupLayout-groupBox.amx-wrap,
+.amx-panelGroupLayout.amx-style-groupbox.amx-wrap {
+  display: block;
+}
+
+.amx-panelGroupLayout.adfmf-panelGroupLayout-groupBox .amx-outputText,
+.amx-panelGroupLayout.amx-style-groupbox .amx-outputText {
+  font-weight: bold;
+  font-size: 18px;
+  color: #000000;
+}
+
+.amx-panelGroupLayout.adfmf-panelGroupLayout-groupBox .field-label,
+.amx-panelGroupLayout.amx-style-groupbox .field-label {
+  color: #2F6BAC;
+  padding-left: 0;
+  padding-top: 0;
+  padding-bottom: 0;
+}
+
+.amx-panelGroupLayout.adfmf-panelGroupLayout-groupBox .field-value,
+.amx-panelGroupLayout.amx-style-groupbox .field-value {
+  padding-top: 0;
+  padding-bottom: 0;
+}
+
+.amx-panelGroupLayout.adfmf-panelGroupLayout-groupBox .amx-inputText .field-value .wrap,
+.amx-panelGroupLayout.amx-style-groupbox .amx-inputText .field-value .wrap {
+  padding: 0;
+}
+
+.amx-panelGroupLayout > table {
+  border-spacing: 0;
+}
+
+.amx-panelGroupLayout td {
+  padding: 0;
+}
+
+.amx-panelGroupLayout.amx-wrap > .amx-panelGroupLayout {
+  display: inline-block;
+}
+/* --------- </amx:panelGroupLayout> --------- */
+
+/* --------- <amx:panelFormLayout> --------- */
+
+/* PFL Generic Styles */
+.amx-panelFormLayout {
+  margin: 12px 9px 8px 9px;
+  padding: 0;
+  border-radius: 5px;
+  border: 1px solid #C8D7E0;
+  background: #FFFFFF;
+}
+
+.amx-panelFormLayout.amx-label-position-start .field-label,
+.amx-panelFormLayout.amx-label-position-topStart .field-label {
+  text-align: start;
+}
+
+.amx-panelFormLayout.amx-label-position-center .field-label,
+.amx-panelFormLayout.amx-label-position-topCenter .field-label {
+  text-align: center;
+}
+
+.amx-panelFormLayout.amx-label-position-end .field-label,
+.amx-panelFormLayout.amx-label-position-topEnd .field-label {
+  text-align: end;
+}
+
+.amx-panelFormLayout.amx-field-halign-start .field-value {
+  text-align: start;
+}
+
+.amx-panelFormLayout.amx-field-halign-center .field-value,
+.amx-field-halign-center .amx-inputText input,
+.amx-field-halign-center .amx-inputText textarea  {
+  text-align: center;
+}
+
+.amx-panelFormLayout.amx-field-halign-end .field-value,
+.amx-field-halign-end .amx-inputText input,
+.amx-field-halign-end .amx-inputText textarea  {
+  text-align: end;
+}
+.amx-panelFormLayout .field .field-label {
+  float: none;
+  color: #2F6BAC;
+  white-space: normal;
+  word-break: initial;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+
+.amx-panelFormLayout .field .field-value {
+  float: none;
+  color: #000000;
+  font-weight: bold;
+  white-space: normal;
+  word-break: initial;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+
+.amx-panelFormLayout_column {
+  overflow: hidden;
+}
+
+.amx-panelGroupLayout.adfmf-panelGroupLayout-groupBox .field .field-label,
+.amx-panelGroupLayout.amx-style-groupbox .field .field-label {
+  color: #2F6BAC;
+}
+
+.amx-panelGroupLayout.adfmf-panelGroupLayout-groupBox .field .field-value,
+.amx-panelGroupLayout.amx-style-groupbox .field .field-value {
+  float: none;
+  color: #000000;
+}
+
+.amx-panelGroupLayout.adfmf-panelGroupLayout-groupBox .amx-outputText,
+.amx-panelGroupLayout.adfmf-panelGroupLayout-groupBox .amx-goLink,
+.amx-panelGroupLayout.adfmf-panelGroupLayout-groupBox .amx-commandLink,
+.amx-panelGroupLayout.amx-style-groupbox .amx-outputText,
+.amx-panelGroupLayout.amx-style-groupbox .amx-goLink,
+.amx-panelGroupLayout.amx-style-groupbox .amx-commandLink,
+.amx-panelFormLayout .field-value > .amx-outputText,
+.amx-panelFormLayout .field-value > .amx-goLink,
+.amx-panelFormLayout .field-value > .amx-commandLink {
+  font-size: 17px;
+}
+
+.amx-panelFormLayout .field-value > .amx-goLink:after,
+.amx-panelFormLayout .field-value > .amx-commandLink:after {
+  content: ' ';
+  background-repeat: no-repeat;
+  width: 17px; /* 9 for the image width plus 8 padding */
+  height: 13px;
+  margin-top: 5px;
+  -webkit-background-size: 9px 13px; /* actual size is 18x26 */
+}
+
+html[dir=ltr] .amx-panelFormLayout .field-value > .amx-goLink:after,
+html[dir=ltr] .amx-panelFormLayout .field-value > .amx-commandLink:after {
+  float: right;
+  background-position: right center;
+  background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABIAAAAaCAYAAAC6nQw6AAAAw0lEQVR42qXUMQoCMRCFYUFYWLASBGFB8BKCB1lvmEoQtrIVPICVYCUIHsAbxDfg+qYQZ4Yp/jQhHyQkmdRav+36fooKOqCGc3YaadAe1U9DBNPIQCSOCdKiowbiGKETqhlMhiRGSGPnOEYoiRFKYoTyGKE89hsiNvNiXJjDigeao8sf5IU2FrLwINZhL9HVg0gpxLqQHboZyNZ6IoLc/QjTyCqOsBFZo0ccYeN2nhlE4n9tIInPn4gb0piBmJDGChF/b1g2T6rFGc2MAAAAAElFTkSuQmCC');
+}
+
+html[dir=rtl] .amx-panelFormLayout .field-value > .amx-goLink:after,
+html[dir=rtl] .amx-panelFormLayout .field-value > .amx-commandLink:after {
+  float: left;
+  background-position: left center;
+  background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABIAAAAaCAYAAAC6nQw6AAAAt0lEQVR42qXUwQZCQRjF8YghWkXEJXqJ6EFubziriFm1jR6gVbSK6AF6g+kMHWaRe+Z2Fv9vM5/f6jOTnHNz+74P6IgimtZvY5GE8rcDCgKSCEvEHISd0MxB2JmQjZR9B7kQKdkIsxFmI8xG2Bhk/guooegihLboPQBd0UJCGK3YUkGt2A2tBGRgA5e9E9gddQJqxh7EasjB1jXkYE+0IeRiL9SVZRdLKAhEYPrz11iNEPoHi0TYB4sKT6pjfEGoAAAAAElFTkSuQmCC');
+}
+
+/* PFL One Row Layout Styles */
+.amx-panelFormLayout > .amx-panelFormLayout_body {
+  width: 100%;
+  table-layout: fixed;
+  display: table;
+  border-spacing: 0;
+}
+
+.amx-panelFormLayout > .amx-panelFormLayout_body > * {
+  display: table-cell;
+}
+
+.amx-panelFormLayout > .amx-panelFormLayout_body > * > *:first-child {
+  border-top: none;
+}
+
+.amx-panelFormLayout.amx-panelFormLayout_hideHorizontalDividers > .amx-panelFormLayout_body > * > * {
+  border-top: none;
+}
+
+.amx-panelFormLayout > .amx-panelFormLayout_body > * > * {
+  border-top: 1px solid #C8D7E0;
+}
+
+.amx-panelFormLayout .field-label {
+  margin: 0;
+  width: 33%;
+}
+
+html[dir=ltr] .amx-panelFormLayout .field-label {
+  padding: 12px 5px 12px 10px;
+}
+
+html[dir=rtl] .amx-panelFormLayout .field-label {
+  padding: 12px 10px 12px 5px;
+}
+
+.amx-panelFormLayout .field-value {
+  margin: 0;
+}
+
+html[dir=ltr] .amx-panelFormLayout .field-value {
+  padding: 12px 10px;
+}
+
+html[dir=rtl] .amx-panelFormLayout .field-value {
+  padding: 12px 10px;
+}
+
+/* PFL label on top Styles */
+.amx-panelFormLayout.amx-label-position-topStart > .amx-panelFormLayout_body > * > *,
+.amx-panelFormLayout.amx-label-position-topStart > .amx-panelFormLayout_body > * > * > *,
+.amx-panelFormLayout.amx-label-position-topCenter > .amx-panelFormLayout_body > * > *,
+.amx-panelFormLayout.amx-label-position-topCenter > .amx-panelFormLayout_body > * > * > *,
+.amx-panelFormLayout.amx-label-position-topEnd > .amx-panelFormLayout_body > * > *,
+.amx-panelFormLayout.amx-label-position-topEnd > .amx-panelFormLayout_body > * > * > * {
+  display: block;
+}
+/* Same padding for LTR & RTL but for specificity, we are adding html[dir] to the selector */
+html[dir="ltr"] .amx-panelFormLayout.amx-label-position-topStart .field-label,
+html[dir="ltr"] .amx-panelFormLayout.amx-label-position-topCenter .field-label,
+html[dir="ltr"] .amx-panelFormLayout.amx-label-position-topEnd .field-label,
+html[dir="rtl"] .amx-panelFormLayout.amx-label-position-topStart .field-label,
+html[dir="rtl"] .amx-panelFormLayout.amx-label-position-topCenter .field-label,
+html[dir="rtl"] .amx-panelFormLayout.amx-label-position-topEnd .field-label {
+ padding: 10px 10px 0 10px;
+ line-height: 23px;
+ width: 100%;
+}
+
+/* Same padding for LTR & RTL but for specificity, we are adding html[dir] to the selector */
+html[dir="ltr"] .amx-panelFormLayout.amx-label-position-topStart .field-value,
+html[dir="ltr"] .amx-panelFormLayout.amx-label-position-topCenter .field-value,
+html[dir="ltr"] .amx-panelFormLayout.amx-label-position-topEnd .field-value,
+html[dir="rtl"] .amx-panelFormLayout.amx-label-position-topStart .field-value,
+html[dir="rtl"] .amx-panelFormLayout.amx-label-position-topCenter .field-value,
+html[dir="rtl"] .amx-panelFormLayout.amx-label-position-topEnd .field-value {
+  padding: 0 10px 10px 10px;
+}
+/* --------- </amx:panelFormLayout> --------- */
+
+/* Styles added during v1.1 development are below */
+
+/* --------- <amx:panelStretchLayout> --------- */
+
+.amx-panelStretchLayout {
+  display:-webkit-box;
+  -webkit-box-orient: vertical;
+}
+.amx-panelStretchLayout > * {
+  -webkit-align-self: stretch;
+}
+.amx-panelStretchLayout > *:nth-child(2) {
+  -webkit-box-flex: 1;
+  position: relative;
+}
+.amx-panelStretchLayout_center {
+  position: absolute; 
+  top: 0; 
+  bottom: 0; 
+  left: 0; 
+  right: 0;
+  overflow: hidden;
+}
+.amx-panelStretchLayout_top {
+}
+.amx-panelStretchLayout_bottom {
+}
+
+/* --------- </amx:panelStretchLayout> --------- */
+
+/* Use solid borders instead of a beveled border design. */
+.amx-tableLayout > TABLE,
+.amx-cellFormat {
+  border-style: solid;
+}
+
+.amx-tableLayout > TABLE[cellspacing="0"] {
+  border-collapse: collapse;
+}
+
+/* Google Chrome has a bug where table and cell borders still show up when border is set to zero */
+.amx-tableLayout > TABLE[border="0"],
+.amx-tableLayout > TABLE[border="0"] > TR > .amx-cellFormat {
+  border-style: none;
+}
+/* Copyright (c) 2005, 2013, Oracle and/or its affiliates. All rights reserved. */
+/* css-mobileAlta-1.0-ios/amx-popup.css */
+
+/* --------- <amx:popup> --------- */
+
+.amx-popup {
+  position: absolute;
+  padding: 10px;
+  box-shadow: 0 0 14px 3px rgba(0,0,0,.25);
+  z-index: 1000;
+  overflow: auto;
+  border: 1px solid #B5B4B4;
+  border-radius: 5px;
+  background-color: #E9E9E9;
+}
+
+.amx-popup .amx-outputText {
+  font-size: 13.5px;
+}
+
+.amx-popup-animate-container {
+  position: fixed;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 1000;
+}
+
+.amx-popup-animate-container.transitioning {
+  -webkit-transition: all .25s ease-in-out;
+  transition: all .25s ease-in-out;
+}
+
+.amx-popup.popup-holder {
+  display: none;
+}
+
+.amx-popup-anchor {
+  pointer-events: none;
+  position: absolute;
+  content: '';
+  background-repeat: no-repeat;
+  z-index: 1001;
+}
+.amx-popup-anchor-top-left {
+  background-image: url(../css/images/alta-popup-anchor-tl.png);
+  left: -11px;
+  top: -13px;
+  width: 53px;
+  height: 53px;
+  -webkit-background-size: 53px 53px;
+}
+.amx-popup-anchor-top {
+  background-image: url(../css/images/alta-popup-anchor-t.png);
+  margin-left: -22px;
+  left: 50%;
+  top: -18px;
+  width: 44px;
+  height: 19px;
+  -webkit-background-size: 44px 19px;
+}
+.amx-popup-anchor-top-right {
+  background-image: url(../css/images/alta-popup-anchor-tr.png);
+  right: -11px;
+  top: -13px;
+  width: 53px;
+  height: 53px;
+  -webkit-background-size: 53px 53px;
+}
+.amx-popup-anchor-left {
+  background-image: url(../css/images/alta-popup-anchor-l.png);
+  margin-top: -18px;
+  top: 50%;
+  left: -18px;
+  width: 19px;
+  height: 44px;
+  -webkit-background-size: 19px 44px;
+}
+.amx-popup-anchor-right {
+  background-image: url(../css/images/alta-popup-anchor-r.png);
+  margin-top: -22px;
+  top: 50%;
+  right: -18px;
+  width: 19px;
+  height: 44px;
+  -webkit-background-size: 19px 44px;
+}
+.amx-popup-anchor-bottom-left {
+  background-image: url(../css/images/alta-popup-anchor-bl.png);
+  left: -11px;
+  bottom: -13px;
+  width: 53px;
+  height: 53px;
+  -webkit-background-size: 53px 53px;
+}
+.amx-popup-anchor-bottom {
+  background-image: url(../css/images/alta-popup-anchor-b.png);
+  margin-left: -22px;
+  left: 50%;
+  bottom: -18px;
+  width: 44px;
+  height: 19px;
+  -webkit-background-size: 44px 19px;
+}
+.amx-popup-anchor-bottom-right {
+  background-image: url(../css/images/alta-popup-anchor-br.png);
+  right: -11px;
+  bottom: -13px;
+  width: 53px;
+  height: 53px;
+  -webkit-background-size: 53px 53px;
+}
+/* adfmf public popup/outputText style class: This style class adds a horizontal divide between title text (outputText) and the content underneath */
+.amx-popup .amx-outputText.adfmf-outputText-titleBar {
+  display: block;
+  border-bottom: 3px solid #C8C8C8;
+  margin-bottom: 16px;
+  padding-bottom: 8px;
+  font-size: 17px;
+  font-family: Arial;
+  color: #212121;
+}
+
+/* --------- </amx:popup> --------- */
+
+/* Styles added during v1.1 development are below */
+
+/* The glass pane for the popup in this skin should be a solid semi-transparent color (no more radial gradient)  */
+.popupTransparentScreen {
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 999;
+  -webkit-tap-highlight-color: transparent;
+  opacity: 0.5;
+  background-color: #000000;
+}
+/* Copyright (c) 2005, 2014, Oracle and/or its affiliates. All rights reserved. */
+/* css-mobileAlta-1.0-ios/amx-selects.css */
+
+/* --------- <amx:selectBooleanSwitch> --------- */
+
+.testSelectorTempiOS {
+  display: block;
+}
+
+.amx-selectBooleanSwitch {
+  min-height: 27px;
+}
+
+.amx-selectOneChoice.amx-readOnly .field-value,
+.amx-selectManyChoice.amx-readOnly .field-value,
+.amx-selectManyCheckbox.amx-readOnly .field-value,
+.amx-selectOneButton.amx-readOnly .field-value,
+.amx-selectBooleanCheckbox.amx-readOnly .field-value,
+.amx-selectBooleanSwitch.amx-readOnly .field-value,
+.amx-selectOneRadio.amx-readOnly .field-value,
+.amx-inputDate.amx-readOnly .field-value {
+  color: #000000;
+  font-size: 17px;
+}
+
+html[dir=ltr] .amx-selectOneChoice.amx-readOnly .field-value,
+html[dir=ltr] .amx-selectManyChoice.amx-readOnly .field-value,
+html[dir=ltr] .amx-selectManyCheckbox.amx-readOnly .field-value,
+html[dir=ltr] .amx-selectOneButton.amx-readOnly .field-value,
+html[dir=ltr] .amx-selectBooleanCheckbox.amx-readOnly .field-value,
+html[dir=ltr] .amx-selectBooleanSwitch.amx-readOnly .field-value,
+html[dir=ltr] .amx-selectOneRadio.amx-readOnly .field-value,
+html[dir=ltr] .amx-inputDate.amx-readOnly .field-value {
+  padding: 12px 10px 12px 5px;
+}
+
+html[dir=rtl] .amx-selectOneChoice.amx-readOnly .field-value,
+html[dir=rtl] .amx-selectManyChoice.amx-readOnly .field-value,
+html[dir=rtl] .amx-selectManyCheckbox.amx-readOnly .field-value,
+html[dir=rtl] .amx-selectOneButton.amx-readOnly .field-value,
+html[dir=rtl] .amx-selectBooleanCheckbox.amx-readOnly .field-value,
+html[dir=rtl] .amx-selectBooleanSwitch.amx-readOnly .field-value,
+html[dir=rtl] .amx-selectOneRadio.amx-readOnly .field-value,
+html[dir=rtl] .amx-inputDate.amx-readOnly .field-value {
+  padding: 12px 5px 12px 10px;
+}
+
+.amx-selectBooleanSwitch.amx-readOnly .field-value .readOnlyLabel {
+  padding: 0;
+  text-transform: uppercase;
+}
+
+.amx-panelFormLayout .amx-selectOneChoice.amx-readOnly .field-value,
+.amx-panelFormLayout .amx-selectManyChoice.amx-readOnly .field-value,
+.amx-panelFormLayout .amx-selectManyCheckbox.amx-readOnly .field-value,
+.amx-panelFormLayout .amx-selectOneButton.amx-readOnly .field-value,
+.amx-panelFormLayout .amx-selectBooleanCheckbox.amx-readOnly .checkbox-text,
+.amx-panelFormLayout .amx-selectBooleanSwitch.amx-readOnly .field-value,
+.amx-panelFormLayout .amx-inputDate.amx-readOnly .field-value,
+.amx-panelFormLayout .amx-selectOneRadio.amx-readOnly .field-value,
+.adfmf-panelGroupLayout-groupBox .amx-selectOneChoice.amx-readOnly .field-value,
+.adfmf-panelGroupLayout-groupBox .amx-selectManyChoice.amx-readOnly .field-value,
+.adfmf-panelGroupLayout-groupBox .amx-selectManyCheckbox.amx-readOnly .field-value,
+.adfmf-panelGroupLayout-groupBox .amx-selectOneButton.amx-readOnly .field-value,
+.adfmf-panelGroupLayout-groupBox .amx-selectBooleanCheckbox.amx-readOnly .checkbox-text,
+.adfmf-panelGroupLayout-groupBox .amx-selectBooleanSwitch.amx-readOnly .field-value,
+.adfmf-panelGroupLayout-groupBox .amx-inputDate.amx-readOnly .field-value,
+.adfmf-panelGroupLayout-groupBox .amx-selectOneRadio.amx-readOnly .field-value {
+  color: #000000;
+}
+
+.amx-selectBooleanSwitch .switch {
+  display: inline-block;
+  position: relative;
+  height: 28px;
+  width: 95px;
+  box-sizing: border-box;
+  background-image: url(../css/images/amx-ios-ltr.png);
+  background-position: -95px -134px;
+  background-repeat: no-repeat;
+  -webkit-background-size: 300px 164px;
+}
+
+.amx-selectBooleanSwitch.on .switch {
+  height: 28px;
+  width: 95px;
+  box-sizing: border-box;
+  background-image: url(../css/images/amx-ios-ltr.png);
+  background-position: 0 -134px;
+  background-repeat: no-repeat;
+  -webkit-background-size: 300px 164px;
+}
+.amx-selectBooleanSwitch .switch > label {
+  position: absolute;
+  top: 50%;
+  margin-top: -10px;
+  font-size: 17px;
+  font-weight: bold;
+  color: #6C6C6C;
+  text-transform: uppercase;
+}
+.amx-selectBooleanSwitch.adfmf-selectBooleanSwitch-noTextCase .switch > label,
+.amx-selectBooleanCheckbox.amx-readOnly.adfmf-selectBooleanCheckbox-noTextCase .checkbox-text {
+  text-transform: none;
+}
+.amx-selectBooleanSwitch .switch > .label-on {
+  overflow: hidden;
+  text-align: center;
+  white-space: nowrap;
+  color: #FFFFFF;
+  text-overflow: ellipsis;
+}
+.amx-selectBooleanSwitch.off .switch > .label-on {
+  display: none;
+}
+.amx-selectBooleanSwitch.on .switch > .label-off {
+  display: none;
+}
+
+html[dir=ltr] .amx-selectBooleanSwitch .switch > .label-on {
+  right: 32px;
+  left: 0;
+}
+
+html[dir=rtl] .amx-selectBooleanSwitch .switch > .label-on {
+  right: 0;
+  left: -32px;
+}
+.amx-selectBooleanSwitch .switch > .label-off {
+  overflow: hidden;
+  text-align: center;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+html[dir=ltr] .amx-selectBooleanSwitch .switch > .label-off {
+  right: 0;
+  left: 32px;
+}
+
+html[dir=rtl] .amx-selectBooleanSwitch .switch > .label-off {
+  right: -32px;
+  left: 0;
+}
+
+.amx-selectBooleanSwitch .switch-button {
+  position: absolute;
+  top: -1px;
+  bottom: -1px;
+  height: 28px;
+  width: 110px;
+  box-sizing: border-box;
+  background-image: url(../css/images/amx-ios-ltr.png);
+  background-position: -142px -200px;
+  background-repeat: no-repeat;
+  -webkit-background-size: 300px 164px;
+}
+
+html[dir=ltr] .amx-selectBooleanSwitch.off .switch-button {
+  left: -1px;
+  border-radius: 15px 0 0 15px;
+  background-image: -webkit-linear-gradient(90deg, #cdcdcd 0%, #cdcdcd 2.2%, #e5e5e5 45.34%, #f5f5f5 83.57%, #f6f4f4 97.8%, #f6f4f4 100%);
+  background-image: linear-gradient(0deg, #cdcdcd 0%, #cdcdcd 2.2%, #e5e5e5 45.34%, #f5f5f5 83.57%, #f6f4f4 97.8%, #f6f4f4 100%);
+}
+html[dir=rtl] .amx-selectBooleanSwitch.off .switch-button {
+  right: -1px;
+}
+
+
+html[dir=ltr] .amx-selectBooleanSwitch.on .switch-button {
+  right: -1px;
+}
+
+html[dir=rtl] .amx-selectBooleanSwitch.on .switch-button {
+  left: -1px;
+}
+.amx-selectBooleanSwitch.amx-disabled {
+  opacity: 0.50;
+}
+/* --------- </amx:selectBooleanSwitch> --------- */
+
+/* --------- <amx:selectBooleanCheckbox> --------- */
+.amx-selectBooleanCheckbox .checkbox {
+  display: inline-block;
+  width: 23px;
+  height: 23px;
+  margin: 0 10px 2px 0;
+  border: solid 1px #C3D4EE;
+  border-radius: 5px;
+  vertical-align: middle;
+  box-sizing: border-box;
+}
+.amx-selectBooleanCheckbox .checkbox-text {
+  display: inline-block;
+  vertical-align: middle;
+  color: #000000;
+}
+
+html[dir=ltr] .amx-selectBooleanCheckbox .checkbox-text {
+    margin: 0 0 3px 0;
+}
+html[dir=rtl] .amx-selectBooleanCheckbox .checkbox-text {
+  margin: 0 3px 0 0;
+}
+
+.amx-selectBooleanCheckbox.on .checkbox {
+  border: solid 1px #6888A6;
+  background-image: -webkit-linear-gradient(90deg, #0571cd 0%, #0571cd 10.01%, #6fa3e2 89.5%, #6fa3e2 100%);
+}
+.amx-selectBooleanCheckbox.off .checkbox .img-check {
+  display: none;
+}
+.amx-selectBooleanCheckbox .checkbox .img-check {
+  width: 14px;
+  height: 13px;
+  -webkit-background-size: 300px 164px;
+}
+
+html[dir=ltr] .amx-selectBooleanCheckbox .checkbox .img-check {
+  margin: 4px 0 0 4px;
+  background-image: url(../css/images/amx-ios-ltr.png);
+  background-position: -65px -70px;
+}
+
+html[dir=rtl] .amx-selectBooleanCheckbox .checkbox .img-check {
+  margin: 4px 4px 0 0;
+  background-image: url(../css/images/amx-ios-rtl.png);
+  background-position: -65px -70px;
+}
+.amx-selectBooleanCheckbox.amx-readOnly.on .checkbox {
+  background-image: none;
+}
+html[dir=ltr] .amx-selectBooleanCheckbox.amx-readOnly .checkbox .img-check,
+html[dir=rtl] .amx-selectBooleanCheckbox.amx-readOnly .checkbox .img-check {
+  background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABoAAAAaCAQAAAADQ4RFAAAAsklEQVR4AbWTYQ3CMBBGH2DgJExCJUwCEpAwCXUwCZUwCZNQCfvLv0oYCT/IF1rguoR3/655yUsuveBlxLjThVHYiXSR2J+TCf60XcalGZsoKy5mUQpDf9r0t7SIphkOApp25Y2FmZosytI+XepJu72eMvYjTRXRhkZaqu9QVKMQgEk2G0ZFqLSoG0ZaiFbPzEcCuRY0rY3Vmqb5tYgDYxUl4ybpD+3VIp2k72knDnDmAA/UobpW785BEAAAAABJRU5ErkJggg==);
+  -webkit-background-size: 13px 13px;
+  background-position: center center;
+  background-repeat: no-repeat;
+  bottom: 0;
+  right: 0;
+  width: 23px;
+  margin: 5px 0 0 0;
+}
+.amx-selectBooleanCheckbox.amx-readOnly.on .checkbox,
+.amx-selectBooleanCheckbox.amx-readOnly.off .checkbox {
+  border-width: 0;
+  border-bottom: 1px solid #A1A1A1;
+}
+.amx-selectBooleanCheckbox.amx-disabled {
+  opacity: 0.50;
+}
+/* --------- </amx:selectBooleanCheckbox> --------- */
+
+/* --------- <amx:selectOneButton> --------- */
+.amx-selectOneButton .selectItemsContainer {
+  overflow: visible;
+  box-shadow: 0 1px 0 #FFFFFF;
+}
+.amx-selectOneButton .selectItemsContainer .amx-selectItem {
+  box-sizing: border-box;
+  padding: 6px 0;
+  border: solid 1px #A6A5A5;
+  overflow: hidden;
+  text-align: center;
+  white-space: nowrap;
+  color: #595959;
+  font-size: 12px;
+  box-shadow: 0 1px 0 #FFFFFF;
+  background-image: -webkit-linear-gradient(90deg, #CACACA 0%, #CACACA 16.99%, #F4F4F4 81.49%, #F4F4F4 100%);
+}
+
+html[dir="ltr"] .amx-selectOneButton .selectItemsContainer .amx-selectItem {
+  float: left;
+  border-left: none;
+}
+
+html[dir="rtl"] .amx-selectOneButton .selectItemsContainer .amx-selectItem {
+  float: right;
+  border-right: none;
+}
+
+html[dir="ltr"] .amx-selectOneButton .selectItemsContainer .amx-selectItem:first-child {
+  border-left: solid 1px #6888A6;
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+}
+html[dir="rtl"] .amx-selectOneButton .selectItemsContainer .amx-selectItem:first-child {
+  border-right: solid 1px #191919;
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+}
+
+html[dir="ltr"] .amx-selectOneButton .selectItemsContainer .amx-selectItem:last-child {
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+}
+
+html[dir="rtl"] .amx-selectOneButton .selectItemsContainer .amx-selectItem:last-child {
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+}
+.amx-selectOneButton .selectItemsContainer .amx-selectItem.amx-selected {
+  font-weight: bold;
+  color: #FFFFFF;
+  background-image: -webkit-linear-gradient(90deg, #0572CE 0%, #0572CE 10.5%, #6FA3E2 89.5%, #6FA3E2 100%);
+  border: 1px solid #6888A6;
+}
+.amx-selectOneButton.amx-disabled {
+  opacity: 0.50;
+}
+/* layout vertical (both directions declared identically due to selector specificity requirements) */
+html[dir="ltr"] .amx-selectOneButton.vertical .amx-selectItem,
+html[dir="rtl"] .amx-selectOneButton.vertical .amx-selectItem {
+  float: none;
+  border-top: none;
+  border-right: solid 1px #A6A5A5;
+  border-bottom: solid 1px #A6A5A5;
+  border-left: solid 1px #A6A5A5;
+  text-align: center;
+}
+
+html[dir="ltr"] .amx-selectOneButton.vertical .amx-selectItem:first-child,
+html[dir="rtl"] .amx-selectOneButton.vertical .amx-selectItem:first-child {
+  border-top: solid 1px #A6A5A5;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+}
+
+html[dir="ltr"] .amx-selectOneButton.vertical .amx-selectItem:last-child,
+html[dir="rtl"] .amx-selectOneButton.vertical .amx-selectItem:last-child {
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+}
+
+/* --------- </amx:selectOneButton> --------- */
+/* --------- <amx:selectOneRadio> --------- */
+.amx-selectOneRadio .field-label {
+  vertical-align: top;
+}
+
+.amx-selectOneRadio .field-value {
+  font-size: 17px;
+}
+
+.amx-selectOneRadio.amx-readOnly .field-label {
+  vertical-align: middle;
+}
+
+.amx-selectOneRadio .selectItemsContainer {
+  border: solid 1px #D7E1E7;
+  border-radius: 5px;
+  background: #F5FAFD;
+}
+
+.amx-selectOneRadio .selectItemsContainer .amx-selectItem {
+  padding: 10px;
+  border-top: 1px solid #BBBBBB;
+  font-weight: bold;
+  color: #000000;
+}
+
+html[dir="ltr"] .amx-selectOneRadio .selectItemsContainer .amx-selectItem {
+  text-align: left;
+}
+
+html[dir="rtl"] .amx-selectOneRadio .selectItemsContainer .amx-selectItem {
+  text-align: right;
+}
+
+.amx-selectOneRadio .selectItemsContainer .amx-selectItem:first-child {
+  border-top: none;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+}
+
+.amx-selectOneRadio .selectItemsContainer .amx-selectItem:last-child {
+  border-bottom: none;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+}
+
+.amx-selectOneRadio .selectItemsContainer .amx-selectItem.amx-selected {
+  color: #0572CE;
+}
+
+.amx-selectOneRadio .selectItemsContainer .amx-selectItem:active {
+  background-color: #0572CE;
+  color: #FFFFFF;
+}
+
+.amx-selectOneRadio .amx-selectItem .checkmark {
+  display: inline-block;
+  width: 15px;
+  height: 14px;
+  margin-top: 4px;
+}
+
+html[dir="ltr"] .amx-selectOneRadio .amx-selectItem .checkmark {
+  float: right;
+}
+
+html[dir="rtl"] .amx-selectOneRadio .amx-selectItem .checkmark {
+  float: left;
+}
+
+.amx-selectOneRadio .amx-selectItem.amx-selected .checkmark {
+  background-position: -116px -69px;
+  background-repeat: no-repeat;
+  -webkit-background-size: 300px 164px;
+}
+
+html[dir="ltr"] .amx-selectOneRadio .amx-selectItem.amx-selected .checkmark {
+  background-image: url(../css/images/amx-ios-ltr.png);
+}
+
+html[dir="rtl"] .amx-selectOneRadio .amx-selectItem.amx-selected .checkmark {
+  background-image: url(../css/images/amx-ios-rtl.png);
+}
+
+.amx-selectOneRadio.amx-disabled {
+  opacity: 0.50;
+}
+
+/* --------- </amx:selectOneRadio> --------- */
+/* --------- <amx:selectManyCheckbox> --------- */
+.amx-selectManyCheckbox {
+  font-size: 17px;
+}
+
+.amx-selectManyCheckbox .selectItemsContainer {
+  border: solid 1px #D7E1E7;
+  border-radius: 5px;
+  background: #F5FBFD;
+}
+
+.amx-selectManyCheckbox .field-label {
+  vertical-align: top;
+}
+
+.amx-selectManyCheckbox.amx-readOnly .field-label {
+  vertical-align: middle;
+}
+
+.amx-selectManyCheckbox .selectItemsContainer .amx-selectItem {
+  padding: 8px 0;
+  border-top: 1px solid #BBBBBB;
+  text-align: center;
+  font-weight: bold;
+}
+
+.amx-selectManyCheckbox .selectItemsContainer .amx-selectItem:first-child {
+  border-top: none;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+}
+
+.amx-selectManyCheckbox .selectItemsContainer .amx-selectItem:last-child {
+  border-bottom: none;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+}
+
+.amx-selectManyCheckbox .selectItemsContainer .amx-selectItem:active,
+.amx-selectManyCheckbox .selectItemsContainer .amx-selectItem:active .checkbox .checkbox-text {
+  background-color: #0572CE;
+  color: #FFFFFF;
+}
+
+.amx-selectManyCheckbox.amx-readOnly .amx-selectItem {
+  opacity: .6;
+}
+
+.amx-selectManyCheckbox .checkbox {
+  width: 20px;
+  height: 20px;
+  margin: 2px;
+  border: solid 1px #C3D4EE;
+  border-radius: 5px;
+  background: #FFFFFF;
+  box-sizing: border-box;
+}
+
+html[dir="ltr"] .amx-selectManyCheckbox .checkbox {
+  float: left;
+}
+
+html[dir="rtl"] .amx-selectManyCheckbox .checkbox {
+  float: right;
+}
+
+.amx-selectManyCheckbox .amx-selectItem.amx-selected .checkbox {
+  border: solid 1px #FFFFFF;
+  background-image: -webkit-gradient(linear,left bottom,left top,
+    color-stop(0,#79b6fe),
+    color-stop(0.49,#377dcf),
+    color-stop(0.5,#4e89ca),
+    color-stop(1.0,#b4c9e2));
+  box-shadow: 1px 1px rgba(0,0,0,0.2);
+}
+
+.amx-selectManyCheckbox .checkbox .img-check {
+  position: absolute;
+  width: 25px;
+  height: 24px;
+  -webkit-background-size: 300px 164px;
+}
+
+html[dir="ltr"] .amx-selectManyCheckbox .checkbox .img-check {
+  margin: 8px 0 0 -20px;
+  background-image: url(../css/images/amx-ios-ltr.png);
+  background-position: -52px 0; /* LTR and RTL slices are not perfectly centered hence the unique positions */
+}
+
+html[dir="rtl"] .amx-selectManyCheckbox .checkbox .img-check {
+  margin: 8px 0 0 -15px;
+  background-image: url(../css/images/amx-ios-rtl.png);
+  background-position: -56px 0; /* LTR and RTL slices are not perfectly centered hence the unique positions */
+}
+
+.amx-selectManyCheckbox .checkbox-text {
+  font-weight: bold;
+  color: #000000;
+}
+
+.amx-selectManyCheckbox .amx-selectItem.amx-selected .checkbox-text {
+  color: #0572CE;
+}
+
+html[dir="ltr"] .amx-selectManyCheckbox .checkbox-text {
+  margin: 2px 0 0 40px;
+  text-align: left;
+}
+
+html[dir="rtl"] .amx-selectManyCheckbox .checkbox-text {
+  margin: 2px 40px 0 0;
+  text-align: right;
+}
+
+.amx-selectManyCheckbox.amx-readOnly .readOnlyLabel {
+  display: block;
+  border-width: 0;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.amx-selectManyCheckbox .amx-selectItem:not(.amx-selected).checkbox .img-check {
+  display: none;
+}
+
+.amx-selectManyCheckbox.amx-disabled {
+  opacity: 0.50;
+}
+
+.amx-selectManyCheckbox.amx-disabled .amx-selectItem.amx-selected {
+  color: #0571CD;
+}
+
+/* --------- </amx:selectManyCheckbox> --------- */
+/* --------- <amx:selectOneChoice> --------- */
+.amx-selectOneChoice .selectItemsContainer,
+.amx-selectManyChoice .selectItemsContainer {
+  position: relative;
+  width: 100%;
+  margin: 0;
+  font-family: Arial;
+  font-size: 13.5px;
+  font-weight: normal;
+  -webkit-appearance: none;
+  height: 25px;
+  line-height: 25px;
+  border: 1px solid #0360AE;
+  border-radius: 5px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  box-sizing: border-box;
+  background-image: -webkit-linear-gradient(bottom, #cacaca 0%, #cacaca 16.99%, #f3f3f3 81.49%, #f3f3f3 100%);
+}
+
+.amx-selectOneChoice select:active,
+.amx-selectManyChoice select:active {
+  border: 1px solid #035498;
+}
+
+.amx-selectOneChoice.amx-readOnly .selectItemsContainer,
+.amx-selectManyChoice.amx-readOnly .selectItemsContainer {
+  border-width: 0;
+  font-weight: bold;
+  font-size: 17px;
+  background-image: none;
+}
+
+.amx-panelFormLayout .amx-selectOneChoice.amx-readOnly .selectItemsContainer,
+.amx-panelFormLayout .amx-selectManyChoice.amx-readOnly .selectItemsContainer,
+.amx-panelGroupLayout .amx-selectOneChoice.amx-readOnly .selectItemsContainer,
+.amx-panelGroupLayout .amx-selectManyChoice.amx-readOnly .selectItemsContainer,
+.amx-panelFormLayout .amx-selectManyCheckbox .readOnlyLabel,
+.amx-panelGroupLayout .amx-selectManyCheckbox .readOnlyLabel {
+  color: #000000;
+}
+
+.amx-selectManyChoice.amx-disabled,
+.amx-selectOneChoice.amx-disabled {
+  opacity: 0.50;
+  pointer-events: none;
+}
+
+html[dir="ltr"] .amx-selectOneChoice .selectItemsContainer,
+html[dir="ltr"] .amx-selectManyChoice .selectItemsContainer {
+  padding-left: 6px;
+  padding-right: 23px;
+}
+
+html[dir="ltr"] .amx-selectOneChoice.amx-readOnly .selectItemsContainer,
+html[dir="ltr"] .amx-selectManyChoice.amx-readOnly .selectItemsContainer {
+ padding-left: 0;
+ padding-right: 0;
+}
+
+html[dir="rtl"] .amx-selectOneChoice .selectItemsContainer,
+html[dir="rtl"] .amx-selectManyChoice .selectItemsContainer {
+  padding-right: 6px;
+  padding-left: 23px;
+}
+
+html[dir="rtl"] .amx-selectOneChoice.amx-readOnly .selectItemsContainer,
+html[dir="rtl"] .amx-selectManyChoice.amx-readOnly .selectItemsContainer {
+ padding-left: 0;
+ padding-right: 0;
+}
+
+html[dir="ltr"] .amx-selectOneChoice .field-value::after,
+html[dir="ltr"] .amx-selectManyChoice .field-value::after {
+  border-radius: 0 5px 5px 0;
+  right: 10px;
+}
+
+html[dir="rtl"] .amx-selectOneChoice .field-value::after,
+html[dir="rtl"] .amx-selectManyChoice .field-value::after {
+  border-radius: 5px 0 0 5px;
+  left: 10px;
+}
+
+.amx-dtmode .amx-selectOneChoice .field-value:after,
+.amx-dtmode .amx-selectManyChoice .field-value:after,
+.amx-selectOneChoice.amx-readOnly .field-value:after,
+.amx-selectManyChoice.amx-readOnly .field-value:after {
+  display: none;
+}
+
+.amx-selectOneChoice .field-value:after,
+.amx-selectManyChoice .field-value:after {
+  position: absolute;
+  border: 1px solid #0360AE;
+  width: 23px;
+  height: 25px;
+  box-sizing: border-box;
+  pointer-events: none;
+  overflow: auto;
+}
+
+.amx-selectOneChoice .field-value:after {
+  content: '';
+  background: center 8px no-repeat url(../css/images/down-arrow-enabled.svg), 
+              -webkit-linear-gradient(bottom, #0571cd 0%, #0571cd 10.01%, #6fa3e2 89.5%, #6fa3e2 100%);
+}
+
+.amx-selectOneChoice.amx-focus .field-value:after {
+  background: center 8px no-repeat url(../css/images/down-arrow-enabled.svg), 
+              -webkit-linear-gradient(bottom, #035ba6 0%, #035ba6 10.01%, #208dea 89.5%, #208dea 100%);
+}
+
+.amx-selectManyChoice .field-value:after {
+  content: '';
+  background: center 11px no-repeat url(../css/images/select-many-choice-button-enabled.svg),
+              -webkit-linear-gradient(bottom, #0571cd 0%, #0571cd 10.01%, #6fa3e2 89.5%, #6fa3e2 100%);
+}            
+
+.amx-selectManyChoice.amx-focus .field-value:after {
+  background: center 11px no-repeat url(../css/images/select-many-choice-button-enabled.svg), 
+              -webkit-linear-gradient(bottom, #035ba6 0%, #035ba6 10.01%, #208dea 89.5%, #208dea 100%);
+}
+
+.amx-dtmode .amx-selectOneChoice:not(.amx-readOnly) .selectItemsContainer {
+  -webkit-appearance: menulist;
+}
+
+.amx-dtmode .amx-selectManyChoice:not(.amx-readOnly) .selectItemsContainer {
+  -webkit-appearance: listbox;
+}
+
+.amx-dtmode .amx-selectOneChoice .selectItemsContainer,
+.amx-dtmode .amx-selectManyChoice .selectItemsContainer {
+  position: initial;
+  height: initial;
+  line-height: initial;
+  border-radius: initial;
+  display: block;
+}
+
+/* --------- </amx:selectOneChoice> --------- */
+/* --------- <amx:selectManyChoice> --------- */
+/* --------- </amx:selectManyChoice> --------- */
+/* Styles added during v1.1 development are below */
+/* amx-selects.css for SelectManyCheckbox updates. It includes the replacement of checkbox to checkmark image
+   implemented for both LTR and RTL modes. Note the class names are still the same just CSS rules are overwritten*/
+.amx-selectManyCheckbox .checkbox {
+  height: 0;
+  width: 0;
+  margin: 0;
+  border: none;
+}
+
+.amx-selectManyCheckbox .amx-selectItem.amx-selected .checkbox {
+  border: none;
+  background: none;
+}
+
+html[dir="ltr"] .amx-selectManyCheckbox .checkbox {
+  float: right;
+}
+
+html[dir="rtl"] .amx-selectManyCheckbox .checkbox {
+  float: left;
+}
+
+html[dir="ltr"] .amx-selectManyCheckbox .amx-selectItem.amx-selected .img-check {
+  background-image: url(../css/images/amx-ios-ltr.png);
+  background-position: -116px -69px;
+  background-repeat: no-repeat;
+  -webkit-background-size: 300px 164px;
+  margin: 4px 0 0 -23px;
+}
+
+html[dir="rtl"] .amx-selectManyCheckbox .amx-selectItem.amx-selected .img-check {
+  background-image: url(../css/images/amx-ios-rtl.png);
+  background-position: -116px -69px;
+  background-repeat: no-repeat;
+  -webkit-background-size: 300px 164px;
+  margin: 4px -23px 0 0;
+}
+
+html[dir="rtl"] .amx-selectManyCheckbox .checkbox .img-check {
+  margin: 0;
+  background-image: none;
+}
+
+.amx-selectManyCheckbox .amx-selectItem .img-check {
+  display: inline-block;
+  width: 15px;
+  height: 15px;
+}
+
+html[dir="ltr"] .amx-selectManyCheckbox .checkbox-text {
+  margin: 2px 0 0 10px;
+  text-align: left;
+}
+
+html[dir="rtl"] .amx-selectManyCheckbox .checkbox-text {
+  margin: 2px 10px 0 0;
+  text-align: right;
+}
+/* Copyright (c) 2005, 2013, Oracle and/or its affiliates. All rights reserved. */
+/* css-mobileAlta-1.0-ios/amx-validations.css */
+
+/* ------ <amx:messages> ------ */
+.amx-messages-header-text {
+  position: relative;
+  padding: 13px 0;
+  padding-left: 8px;
+  font-family: Arial;
+  color: #000000;
+  font-size: 16px;
+  font-weight: bold;
+}
+/* Alta Mobile Icon Images used from Sprite sheet for various types of messages styled below */
+.amx-messages-icon {
+  position: absolute;
+  top: 4px;
+  width: 31px;
+  height: 35px;
+  background-image: url(../css/images/amx-ios-ltr.png);
+  -webkit-background-size: 300px 164px;
+}
+/* Alta Mobile Icon Image for Error */
+.amx-messages-icon-error {
+  background-position: -154px -99px;
+}
+/* Alta Mobile Icon Image for Warning */
+.amx-messages-icon-warning {
+  background-position: -185px -99px;
+}
+/* Alta Mobile Icon Image for Confirmation */
+.amx-messages-icon-confirmation{
+  background-position: -216px -99px;
+}
+/* Alta Mobile Icon Image for Information */
+.amx-messages-icon-information {
+  background-position: -247px -99px;
+}
+/* ------ </amx:messages> ------ */
+/* ------ <messageBox> ------ */
+.messageBox {
+  position: relative;
+  z-index: 9000;
+  width: 290px;
+  margin: auto;
+  display: block;
+  max-height: 100%;
+  overflow: auto;
+  border: 1px solid #B5B4B4;
+  border-radius: 5px;
+  box-sizing: border-box;
+  background-color: #EDEDED;
+  box-shadow: 2px 2px 11px 11px rgba(0,0,0,.25);
+}
+
+.messageBoxScreen {
+  background: rgba(0,0,0,0.5);
+}
+.amx-messages-item {
+  position: relative;
+  border-bottom: 1px solid #BBD3E5;
+  min-height: 43px;
+}
+.messageBox .messageBoxContainer .messageBoxContent {
+  max-height: 300px;
+  overflow: auto;
+  padding: 0 13px;
+}
+.messageBox .amx-messages-header {
+  position: relative;
+  border-bottom: 3px solid #C8C8C8;
+}
+.messageBox .amx-messages-text {
+  position: relative;
+  left: 39px;
+  padding: 13px 0 13px 0;
+  word-break: break-word;
+  font-size: 13.5px;
+}
+/* This style is used to center the OK Command button within */
+.amx-messages-footer {
+  text-align: center;
+  padding: 18px;
+}
+/* ------ </messageBox> ------ */
+.OraBITooltipText
+{
+  font-size: 11px;
+  color: red
+}
+
+.OraDVTTooltipPopup
+{
+  background-color: #c1ccd7;
+  color: black;
+  border-style: solid;
+  border-color: black;
+  border-width: 2px;
+  padding: 2px;
+  opacity: 0.9;
+  position: absolute;
+  z-index: 2147483647;
+  font-size: 11px;
+  font-family: tahoma, sans-serif;
+}
+
+.OraDVTDatatipPopup
+{
+  background-color: #ffffff;
+  color: black;
+  border-style: solid;
+  border-color: black;
+  border-width: 2px;
+  padding: 2px;
+  opacity: 0.9;
+  position: absolute;
+  z-index: 2147483647;
+  font-size: 11px;
+  font-family: tahoma, sans-serif;
+}
+/* Start private */
+.OraDVTUnstyledPopup
+{
+  position: absolute;
+  z-index: 2147483647
+}
+
+.OraDVTContextMenuPopup
+{
+  position: absolute;
+  z-index: 2147483647;
+}
+
+.dvtm-areaChart
+{
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  -webkit-user-select: none;
+  -webkit-touch-callout: none;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+.dvtm-barChart
+{
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  -webkit-user-select: none;
+  -webkit-touch-callout: none;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+.dvtm-bubbleChart
+{
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  -webkit-user-select: none;
+  -webkit-touch-callout: none;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+.dvtm-comboChart
+{
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  -webkit-user-select: none;
+  -webkit-touch-callout: none;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+.dvtm-funnelChart
+{
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  -webkit-user-select: none;
+  -webkit-touch-callout: none;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+.dvtm-horizontalBarChart
+{
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  -webkit-user-select: none;
+  -webkit-touch-callout: none;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+.dvtm-lineChart
+{
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  -webkit-user-select: none;
+  -webkit-touch-callout: none;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+.dvtm-pieChart
+{
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  -webkit-user-select: none;
+  -webkit-touch-callout: none;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+.dvtm-scatterChart
+{
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  -webkit-user-select: none;
+  -webkit-touch-callout: none;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+.dvtm-chartTitle
+{
+  font-size: 13px;
+  font-weight: 400;
+  color: #252525;
+}
+
+.dvtm-chartSubtitle
+{
+  font-size: 12px;
+  font-weight: 400;
+  color: #252525;
+}
+
+.dvtm-chartFootnote
+{
+  font-size: 11px;
+  font-weight: 400;
+  color: #333333;
+}
+
+.dvtm-chartTitleSeparator
+{
+  visibility: hidden;
+  border-top-color: #74779A;
+  border-bottom-color: #FFFFFF;
+}
+
+.dvtm-chartPieLabel
+{
+  font-size: 12px;
+  font-weight: 400;
+  color: #74779A;
+}
+
+.dvtm-chartSliceLabel
+{
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-size: 11px;
+}
+
+.dvtm-funnelDataItem
+{
+  background-color: #ededed;
+  border-bottom-color: #ffffff;
+}
+
+.dvtm-chartXAxisTitle
+{
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-size: 12px;
+  color: #737373;
+}
+
+.dvtm-chartYAxisTitle
+{
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-size: 12px;
+  color: #737373;
+}
+
+.dvtm-chartY2AxisTitle
+{
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-size: 12px;
+  color: #737373;
+}
+
+.dvtm-chartXAxisTickLabel
+{
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-size: 11px;
+  color: #333333;
+}
+
+.dvtm-chartYAxisTickLabel
+{
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-size: 11px;
+  color: #333333;
+}
+
+.dvtm-chartY2AxisTickLabel
+{
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-size: 11px;
+  color: #333333;
+}
+
+.dvtm-legend
+{
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  border-color: #111111;
+  /* border width must be set when setting color so we can tell when the user has set a color vs the default
+    css border style */
+
+  border-width: 1px;
+  background-color: rgba(255, 255, 255, 0);
+  font-size: 14px;
+  color: #333333;
+}
+
+.dvtm-legendTitle
+{
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-size: 14px;
+  font-weight: 700;
+  color: #333333;
+}
+
+.dvtm-legendSectionTitle
+{
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-size: 14px;
+  font-weight: 700;
+  color: #333333;
+}
+
+.dvtm-ledGauge
+{
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  border-color: rgba(0, 0, 0, 0);
+  color: #393737;
+  -webkit-user-select: none;
+  -webkit-touch-callout: none;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+.dvtm-statusMeterGauge
+{
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  border-color: rgba(0, 0, 0, 0);
+  color: #393737;
+  -webkit-user-select: none;
+  -webkit-touch-callout: none;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+.dvtm-gaugePlotArea
+{
+  background-color: #AAAAAA;
+}
+
+.dvtm-gaugeMetricLabel, .dvtm-gaugeTickLabel
+{
+  color: #2f4f4f;
+}
+
+.dvtm-gaugeMetricLabel
+{
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-size: 14px;
+  color: #333333;
+}
+
+.dvtm-gaugeTickLabel
+{
+  font-size: 12px;
+  font-weight: bold;
+}
+
+.dvtm-dialGauge .dvtm-gaugeMetricLabel.dvtm-dialGauge-background-circleAntiqueCustom, .dvtm-dialGauge .dvtm-gaugeMetricLabel.dvtm-dialGauge-background-rectangleAntiqueCustom, .dvtm-dialGauge .dvtm-gaugeMetricLabel.dvtm-dialGauge-background-domeAntiqueCustom, .dvtm-dialGauge .dvtm-gaugeTickLabel.dvtm-dialGauge-background-circleAntiqueCustom, .dvtm-dialGauge .dvtm-gaugeTickLabel.dvtm-dialGauge-background-rectangleAntiqueCustom, .dvtm-dialGauge .dvtm-gaugeTickLabel.dvtm-dialGauge-background-domeAntiqueCustom, .dvtm-dialGauge .dvtm-gaugeMetricLabel.dvtm-dialGauge-background-circleAntique, .dvtm-dialGauge .dvtm-gaugeMetricLabel.dvtm-dialGauge-background-rectangleAntique, .dvtm-dialGauge .dvtm-gaugeMetricLabel.dvtm-dialGauge-background-domeAntique
+{
+  color: #000000;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.dvtm-dialGauge .dvtm-gaugeMetricLabel.dvtm-dialGauge-background-circleLightCustom, .dvtm-dialGauge .dvtm-gaugeMetricLabel.dvtm-dialGauge-background-rectangleLightCustom, .dvtm-dialGauge .dvtm-gaugeMetricLabel.dvtm-dialGauge-background-domeLightCustom, .dvtm-dialGauge .dvtm-gaugeTickLabel.dvtm-dialGauge-background-circleLightCustom, .dvtm-dialGauge .dvtm-gaugeTickLabel.dvtm-dialGauge-background-rectangleLightCustom, .dvtm-dialGauge .dvtm-gaugeTickLabel.dvtm-dialGauge-background-domeLightCustom, .dvtm-dialGauge .dvtm-gaugeMetricLabel.dvtm-dialGauge-background-circleLight, .dvtm-dialGauge .dvtm-gaugeMetricLabel.dvtm-dialGauge-background-rectangleLight, .dvtm-dialGauge .dvtm-gaugeMetricLabel.dvtm-dialGauge-background-domeLight
+{
+  color: #000000;
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+
+.dvtm-dialGauge .dvtm-gaugeMetricLabel.dvtm-dialGauge-background-circleDarkCustom, .dvtm-dialGauge .dvtm-gaugeMetricLabel.dvtm-dialGauge-background-rectangleDarkCustom, .dvtm-dialGauge .dvtm-gaugeMetricLabel.dvtm-dialGauge-background-domeDarkCustom, .dvtm-dialGauge .dvtm-gaugeTickLabel.dvtm-dialGauge-background-circleDarkCustom, .dvtm-dialGauge .dvtm-gaugeTickLabel.dvtm-dialGauge-background-rectangleDarkCustom, .dvtm-dialGauge .dvtm-gaugeTickLabel.dvtm-dialGauge-background-domeDarkCustom, .dvtm-dialGauge .dvtm-gaugeMetricLabel.dvtm-dialGauge-background-circleDark, .dvtm-dialGauge .dvtm-gaugeMetricLabel.dvtm-dialGauge-background-rectangleDark, .dvtm-dialGauge .dvtm-gaugeMetricLabel.dvtm-dialGauge-background-domeDark
+{
+  color: #FFFFFF;
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+
+.dvtm-ratingGauge
+{
+}
+
+.dvtm-ratingGaugeSelected
+{
+  border-width: 1px;
+  border-style: solid;
+  border-color: #F5A700;
+  color: #F8C15A;
+}
+
+.dvtm-ratingGaugeUnselected
+{
+  border-width: 1px;
+  border-style: solid;
+  border-color: #B6B6B6;
+  color: #C4CED7;
+}
+
+.dvtm-ratingGaugeHover
+{
+  border-width: 1px;
+  border-style: solid;
+  border-color: #4A86C5;
+  color: #007CC8;
+}
+
+.dvtm-ratingGaugeChanged
+{
+  border-width: 1px;
+  border-style: solid;
+  border-color: #959595;
+  color: #ED2C02;
+}
+
+.dvtm-thematicMap
+{
+  -webkit-user-select: none;
+  -webkit-touch-callout: none;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+.dvtm-areaLayer
+{
+  background-color: #B8CDEC;
+  border-color: #FFFFFF;
+  color: #132636;
+  font-family: tahoma, sans-serif;
+  font-size: 11pt;
+  font-weight: bold;
+  font-style: normal;
+}
+
+.dvtm-areaHover
+{
+  border-color: #FFFFFF;
+}
+
+.dvtm-areaSelected
+{
+  border-top-color: #FFFFFF;
+  border-bottom-color: #000000;
+}
+
+.dvtm-area
+{
+  background-color: #DDDDDD;
+  border-color: #FFFFFF;
+}
+
+.dvtm-marker
+{
+  background-color: #000000;
+  opacity: 0.7;
+  color: #000000;  
+  font-family: tahoma, sans-serif;
+  font-size: 13pt;
+  font-weight: bold;
+  font-style: normal;
+  border-style: solid;
+  border-color: #FFFFFF;
+  border-bottom-width: 0.5px;
+}
+
+.dvtm-geographicMap-loadPage
+{
+  display: table;
+  width: 100%;
+  height: 100%;
+}
+
+.dvtm-geographicMap-loadPage > div
+{
+  display: table-cell;
+  vertical-align: middle;
+  text-align: center;
+}
+
+.dvtm-treemapAttributeTypeLabel, .dvtm-sunburstAttributeTypeLabel
+{
+}
+
+.dvtm-treemapAttributeValueLabel, .dvtm-sunburstAttributeValueLabel
+{
+}
+
+.dvtm-treemap
+{
+  color: #333333;
+  border-style: solid;
+  border-color: #E2E8EE;
+  border-radius: 3px;
+  background-color: #EDF2F7;
+}
+
+.dvtm-treemapNodeSelected
+{
+  border-top-color: #E2E8EE;
+  border-bottom-color: #B3C6DB;
+}
+
+.dvtm-treemapNodeHover
+{
+  border-color: #FFE475;
+}
+
+.dvtm-treemapNodeHeader
+{
+  background-color: #EDF2F7;
+  border-color: #E2E8EE;
+}
+
+.dvtm-treemapNodeHeaderSelected
+{
+  border-top-color: #E2E8EE;
+  border-bottom-color: #B3C6DB;
+}
+
+.dvtm-treemapNodeHeaderHover
+{
+  border-top-color: #FFD475;
+  border-bottom-color: #FFEEA8;
+}
+
+.dvtm-nBox
+{
+}
+
+.dvtm-nBox-columns-title
+{
+  color: #003d5b;
+  font-family: tahoma, sans-serif;
+  font-size: 14px;
+  font-weight: bold;
+  font-style: normal;
+}
+
+.dvtm-nBox-rows-title
+{
+  color: #003d5b;
+  font-family: tahoma, sans-serif;
+  font-size: 14px;
+  font-weight: bold;
+  font-style: normal;
+}
+
+.dvtm-nBox-cell
+{
+  background-color: white;
+  border: 1px solid #bbbbbb;
+}
+
+.dvtm-nBox-cell-label
+{
+  color: rgb(0, 0, 0);
+  font-family: tahoma, sans-serif;
+  font-size: 13px;
+  font-weight: bold;
+  font-style: normal;
+}
+
+.dvtm-nBox-column-label
+{
+  color: rgb(0, 0, 0);
+  font-family: tahoma, sans-serif;
+  font-size: 14px;
+  font-weight: normal;
+  font-style: normal;
+}
+
+.dvtm-nBox-row-label
+{
+  color: rgb(0, 0, 0);
+  font-family: tahoma, sans-serif;
+  font-size: 14px;
+  font-weight: normal;
+  font-style: normal;
+}
+
+.timeAxis-backgroundColor
+{
+  color: #f9f9f9;
+}
+
+.timeAxis-borderColor
+{
+  color: #d9dfe3;
+}
+
+.timeAxis-borderWidth
+{
+  width: 1px;
+}
+
+.timeAxis-labelStyle
+{
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 12px;
+  color: #333333;
+}
+
+.timeAxis-separatorColor
+{
+  color: #bcc7d2;
+}
+
+.timelineItem-backgroundColor
+{
+  color: white;
+}
+
+.timelineItem-selectedBackgroundColor
+{
+  color: white;
+}
+
+.timelineItem-borderColor
+{
+  color: #648baf
+}
+
+.timelineItem-selectedBorderColor
+{
+  color: #333333;
+}
+
+.timelineItem-borderWidth
+{
+  width: 1px;
+}
+
+.timelineItem-selectedBorderWidth
+{
+  width: 2px;
+}
+
+.timelineItem-feelerColor
+{
+  color: #648baf;
+}
+
+.timelineItem-selectedFeelerColor
+{
+  color: #333333;
+}
+
+.timelineItem-feelerWidth
+{
+  width: 1px;
+}
+
+.timelineItem-selectedFeelerWidth
+{
+  width: 2px;
+}
+
+.timelineItem-descriptionStyle
+{
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 15px;
+  color: #084B8A;
+}
+
+.timelineItem-titleStyle
+{
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 13px;
+  color: black
+}
+
+.timelineSeries-backgroundColor
+{
+  color: #F9F9F9;
+}
+
+.timelineSeries-labelStyle
+{
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 12px;
+  color: black;
+}
+
+.timelineSeries-emptyTextStyle
+{
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 15px;
+  color: black;
+}
+
+.dvtm-readonly
+{
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 10000;
+}
