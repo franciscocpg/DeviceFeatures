@@ -1,0 +1,197 @@
+<?xml version = '1.0' encoding = 'utf-8'?>
+<!-- $Header: wptg/idmmobile/src/Android/IDMMobileSDK/res/values-he/oamms_strings.xml /st_wptg_11.1.1.9.0/4 2014/05/31 10:10:31 gmolloy Exp $ -->
+<!--
+ Copyright (c) 2013, 2014, Oracle and/or its affiliates. All rights reserved.
+
+   NAME
+     oamms_strings.xml
+
+   DESCRIPTION
+     Contains the strings being used by the SDK
+
+   NOTES
+     <other useful comments, qualifications, etc.>
+
+   MODIFIED   (MM/DD/YY)
+   ayjindal    04/08/14 - Bug 18477622
+   arunpras    01/17/14 - Bug fix: 17623143
+   arunpras    12/31/13 - Added an error message to be shown during the negative use case: Invoking logout method before performing authentication
+   arunpras	   10/03/13 - Added a string a part of the fix for bug - 16186113
+   arunpras    09/02/13 - Added custom HTTP headers
+-->
+<resources>
+
+    <!-- General Messages -->
+    <string name="oamms_app_name">Mobile and Social SDK for Android</string>
+    <string name="processing">מעבד...</string>
+    <string name="activityExcep">הפעילות אינה יכולה להיות null. רשום את הפעילות הנוכחית באמצעות OMMobileSecurityService#registerActivity(Activity) עדיף ב-onResume().</string>
+    <string name="secProfileExcep">API ההקמה לא הופעל.</string>
+    <string name="servicenamenull">לא צוינה תוכנית אימות זהות.</string>
+    <string name="invalidServerType">סוג שרת אימות הזהות אינו תקף.</string>
+    <string name="notConnectToServer">השרת אינו נגיש בכתובת שצוינה. פנה למנהלן לקבלת עזרה.</string>
+    <string name="networkUnavailable">הרשת אינה זמינה. ודא שאתה מחובר לאינטרנט ונסה שוב.</string>
+    <string name="notParseResponse">אי אפשר לנתח את התגובה שנשלחה מהשרת.</string>
+    <string name="certificateNotAccepted">המשתמש דחה את אישור השרת.</string>
+    <string name="internalError">שגיאה פנימית</string>
+    <string name="invalidArgumentsNullOrEmpty">הארגומנטים לא יכולים להיות null ולא מחרוזות ריקות</string>
+    <string name="updateCookiesValidationFailure">נכשל עדכון ערך cookie כיוון שאי אפשר לאמת את תכונות ה-cookie</string>
+    <string name="cookieNotFound">ה-cookie לעדכון לא קיימת</string>
+    <string name="invalidArgumentsNull">הארגומנטים לא יכולים להיות null</string>
+    <string name="clearUsernamePasswordFailed">לא ניתן למחוק את שם המשתמש והסיסמה המאוחסנים ב-Embedded Webview כיוון שבוטל רישום של פעילות ביניהם.</string>
+    <string name="customAuthHeadersNotAllowed">לא ניתן להוסיף כמה מכותרות HTTP שצוינו במפה שהועברה כערך כנגד OM_PROP_CUSTOM_AUTH_HEADERS של המפתח. לקבלת רשימת כותרות HTTP האסורות, עיין בתיעוד.</string>
+    <string name="customAuthHeadersCountExceeded">מספר כותרות ההרשאה המותאמות אישית שצוינו כחלק של OM_PROP_CUSTOM_AUTH_HEADERS עובד את המספר המרבי (%1$d).</string>
+    <string name="applicationNotAvailable">היישום המבוקש אינו זמין.</string>
+    <string name="httpCallbackNull">לבקשה אסינכרונית, call back לא יכול להיות null</string>
+    <string name="httpResUrlNull">כתובת URL של משאב Http לא יכולה להיות null</string>
+    <string name="logoutInProgress">מתבצעת התנתקות. נסה שוב בעוד זמן מה.</string>
+    <string name="logoutTimedOut">פעולת ההתנתקות נכשלה כיוון שהחיבור בפסק זמן.</string>
+    <string name="logoutFailure">ההתנתקות נכשלה עקב השגיאה הבאה: %1$s</string>
+    <string name="notFound">כתובת ה-URL המבוקשת לא קיימת. פנה למנהלן לקבלת עזרה.</string>
+    <!-- *********************************************************************** -->
+
+
+    <!-- ************************ Success/Error Messages ************************* -->
+    <string name="usernameRequired">שם משתמש דרוש.</string>
+    <string name="identityDomainRequired">דומיין זהויות דרוש.</string>
+    <string name="usernameIdentityDomainRequired">שם משתמש ודומיין זהויות דרושים.</string>
+    <string name="passwordNull">סיסמה הכרחית</string>
+    <string name="unPwdMissing">שם משתמש או סיסמה בלתי תקפים.</string>
+    <string name="unPwdTenantMissing">שם משתמש, סיסמה או דומיין זהויות לא תקפים.</string>
+    <string name="chalgMissing">שאלת האתגר לא תקפה.</string>
+    <string name="userCanceled">המשתמש ביטל את פעולת ההתחברות.</string>
+    <string name="authfailed">אימות זהות המשתמש נכשל.</string>
+    <string name="authSuccess">אימות זהות המשתמש הצליח.</string>
+    <!-- *********************************************************************** -->
+
+
+    <!-- *********** UI Messages and Descriptions of Images ************* -->
+    <string name="username">שם משתמש</string>
+    <string name="usernameHint">הזן שם משתמש</string>
+    <string name="password">סיסמה</string>
+    <string name="passwordHint">הזן סיסמה</string>
+    <string name="tenant">דומיין זהויות</string>
+    <string name="tenantHint">הזן דומיין זהויות</string>
+    <string name="login">התחבר</string>
+    <string name="cancel">בטל</string>
+    <string name="challengeHead">ציין מידע נוסף</string>
+    <string name="challengeQues">שאלה</string>
+    <string name="challengeAns">תשובה</string>
+    <string name="challengeAnswerHint">הזן תשובה לשאלת האבטחה</string>
+    <string name="submit">שלח</string>
+    <string name="rememberUsername">זכור את שם המשתמש</string>
+    <string name="rememberCredentials">זכור את פרטי האימות</string>
+    <string name="autoLogin">התחברות אוטומטית</string>
+    <string name="backButton">הקודם</string>
+    <string name="forwardButton">הבא</string>
+    <string name="refreshButton">רענון</string>
+    <string name="cancelButton">בטל</string>
+    <!-- *********************************************************************** -->
+
+
+    <!-- URL-Based Configuration -->
+    <string name="configPropertiesMissing">לא נמצאו מאפייני תצורה ב-SharedPreferences</string>
+    <string name="configIntentUriNull">הכוונה שהועברה לא מכילה URI לפרטי תצורת השרת.</string>
+    <string name="configIntentUriInvalid">הכוונה שהועברה לא מכילה URI תקף לפרטי תצורת השרת.</string>
+    <string name="couldNotRetrieveConfiguration">אי אפשר לאחזר מאפייני תצורה מ-SharedPreferences</string>
+    <string name="couldNotStoreConfiguration">לא ניתן לאחסן מאפייני תצורה ב-SharedPreferences</string>
+    <!-- *********************************************************************** -->
+    
+    
+    <!-- Setup failure -->
+    <string name="mssInitFailed">האתחול של SDK נכשל, כיוון שלא סופק המידע הדרוש על השרת.</string>
+    <string name="setupFailedMS">אי אפשר להוריד את פרופיל היישום בגלל שהתצורה חסרה</string>
+    <string name="setupFailedDefault">פרופיל היישום או שם היישום לא תקפים</string>
+    <!-- *********************************************************************** -->
+
+
+    <!-- Mobile & Social Server -->
+    <string name="invalidAppName">שם היישום אינו תקף.</string>
+    <string name="invalidServerUrl">כתובת ה-Url של השרת אינה תקפה.</string>
+    <string name="invalidServiceDomain">דומיין השירות לא תקף.</string>
+    <string name="tokenMissing">המכשיר טרם אומת בשרת Mobile and Social.</string>
+    <string name="noUserToken">טרם אומתה זהות המשתמש.</string>
+    <string name="noRpLoginUrl">אי אפשר לפתוח את כתובת URL של אימות זהות RP.</string>
+    <string name="reqFailed">בקשת אימות הזהות נכשלה למשתמש %1$s.</string>
+    <string name="reqDenied">בקשת אימות הזהות נדחתה.</string>
+    <string name="oaamDeniedAction">פעולת האימות נחסמה על-ידי השרת. פנה למנהלן לקבלת עזרה.</string>
+    <string name="oaamWipeoutAction">התקבלה פקודת הסטה מהשרת. מנקה נתוני יישום רגישים.</string>
+
+    <!-- SSO Messages -->
+    <string name="sigNotValid">נכשל אימות הקריאה לחתימת היישום.</string>
+    <string name="ssoActivitymissing">שם יישום SSO לא צוין.</string>
+    <string name="initSSOAgentSuccess">יישום של סוכן SSO אותחל בהצלחה.</string>
+    <string name="serviceDomainNotSame">אימות הזהות נדחה על-ידי הסוכן כיוון שדומיין השירות לא מתאים.</string>
+    <string name="invalidConfig">יישום הלקוח לא מורשה להשתתף ב-SSO.</string>
+    <string name="noAgentAvail">אי אפשר לפתוח את כתובת URL של אימות זהות SSO.</string>
+    <string name="tokensNotAvailable">האסימון OAM_ID אינו זמין. בדוק את הגדרות השרת. אחת משגיאות התצורה האפשריות היא ששיטת האימות אינה מוגדרת כ-MobileOAMAuthentication.</string>
+    <!-- *********************************************************************** -->
+
+    <!-- *********************************************************************** -->
+
+
+    <!-- Basic Authentication Messages -->
+    <string name="invalidBasicUrl">URL לא תקף להתחברות.</string>
+    <string name="serverReturnedError">השרת נתקל בשגיאה %1$s. פנה למנהלן לקבלת עזרה.</string>
+    <string name="forbidden">המשתמש אינו מורשה.</string>
+    <!-- *********************************************************************** -->
+
+
+    <!-- Federated Authentication Messages -->
+    <string name="authenticationTimedOut">פסק זמן באימות.</string>
+    <!-- *********************************************************************** -->
+
+
+    <!-- HTML Login View Customization -->
+    <string name="customHtmlFieldsInvalid">בדף אימות הזהות המותאם אישית אין שדה פרטי אימות.</string>
+    <string name="kbaHtmlFieldsInvalid">בדף אימות הזהות החזק המותאם אישית אין שדה פרטי אימות.</string>
+    <string name="htmlFileException">קובץ ה-HTML המותאם אישית אינו יכול להיות null.</string>
+    <string name="invalidHtmlFile">סוג הנתיב של קובץ ה-HTML המותאם אישית אינו תקף</string>
+    <string name="remoteHTMLFile">דף ה-HTML המותאם אישית לא יכול להיות דף מרוחק. SDK תומך בדף HTML מקומי בלבד לטעינה</string>
+    <!-- *********************************************************************** -->
+
+
+    <!-- ************************* SSL Certificate Warning ********************* -->
+    <string name="ssl_settingsheader">אישור זה אינו מרשות אישורים אמינה.</string>
+    <string name="ssl_security_certificate">אישור אבטחה</string>
+    <string name="ssl_issued_to">נושא:</string>
+    <string name="ssl_common_name">כינוי:</string>
+    <string name="ssl_organization">ארגון:</string>
+    <string name="ssl_organization_unit">יחידה ארגונית:</string>
+    <string name="ssl_issued_by">מנפיק:</string>
+    <string name="ssl_validity">תקפות:</string>
+    <string name="ssl_issued_on">תאריך התחלה:</string>
+    <string name="ssl_expires_on">תאריך סיום:</string>
+    <string name="security_warning">אזהרת אבטחה</string>
+    <string name="ssl_continue">קבל</string>
+    <string name="ssl_view_certificate">פרטים</string>
+    <string name="ssl_message">יש בעיות בנוגע לאישור האבטחה של כתובת URL זו.</string>
+    <string name="serial_number">מספר סידורי:</string>
+    <string name="fingerprint">טביעות אצבע:</string>
+    <string name="sha_fp">טביעת אצבע SHA1:</string>
+    <string name="md5_fp">טביעת אצבע MD5:</string>
+    <string name="ssl_alert_icon">סמל התראה</string>
+    <string name="importCertificateFailure">אי אפשר להתקין את האישור.</string>
+    <!-- *********************************************************************** -->
+
+
+    <!-- ************************OAuth2.0 Known errors************************** -->
+    <string name="oAuthFailed">אימות OAuth נכשל.</string>
+    <string name="oAuthInvalidState">שוחזר מצב לא תקף מהתגובה.</string>
+    <string name="oAuthContextInvalid">לא נמצא אסימון גישה תקף לבקשה הנתונה. עליך לאמת בתוך הטווח המתאים.</string>
+
+    <!-- ********* Description messages if server returns no description ****** -->
+    <string name="oAuthInvalidRequestDesc">בבקשה אירעה אחת מהבעיות הבאות: חסר פרמטר דרוש; הבקשה כוללת ערך פרמטר לא נתמך; הבקשה כוללת פרמטר חוזר; כוללת ריבוי של פרטי אימות; נעשה שימוש ביותר ממנגנון אחד לאימות הלקוח; מבנה הבקשה שגוי.</string>
+    <string name="oAuthUnauthorizedClientDesc">הלקוח שעובר אימות אינו מורשה להשתמש בסוג הרשאה זה.</string>
+    <string name="oAuthAccessDeniedDesc">בעלי המשאב או שרת ההרשאות דחו את הבקשה.</string>
+    <string name="oAuthUnsupportedResponseTypeDesc">שרת ההרשאות אינו תומך בהבאת קוד הרשאה באמצעות שיטה זו.</string>
+    <string name="oAuthServerErrorDesc">שרת ההרשאות נתקל בתנאי בלתי צפוי אשר מנע ממנו למלא את הבקשה.</string>
+    <string name="oAuthTempUnavailableDesc">שרת ההרשאות לא יכול כעת לטפל בבקשה עקב עומס-יתר זמני בשרת או תחזוקה המבוצעת בו.</string>
+    <string name="oAuthInvalidScopeDesc">ייתכן שהטווח המבוקש אינו תקף, לא מוכר, בעל מבנה שגוי או שהוא חורג מהטווח שקיבל הרשאה מבעלי המשאב.</string>
+    <string name="oAuthUnsupportedGrantTypeDesc">שרת ההרשאות אינו תומך בסוג הענקת ההרשאה.</string>
+    <string name="oAuthInvalidClientDesc">אימות הלקוח נכשל.</string>
+    <string name="oAuthInvalidGrantDesc">ייתכן שאירע אחד מהבאים לגבי ההרשאה שהוענקה או אסימון הרענון: לא תקפים, פג תוקפם, בוטלו, לא מתאימים ל-URI של הניתוב מחדש המשמש בבקשת האימות או נופקו ללקוח אחר.</string>
+    <!-- *********************************************************************** -->
+
+    <!-- *********************************************************************** -->
+
+</resources>

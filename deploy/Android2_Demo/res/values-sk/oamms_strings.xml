@@ -1,0 +1,197 @@
+<?xml version = '1.0' encoding = 'utf-8'?>
+<!-- $Header: wptg/idmmobile/src/Android/IDMMobileSDK/res/values-sk/oamms_strings.xml /st_wptg_11.1.1.9.0/4 2014/05/30 05:24:16 gmolloy Exp $ -->
+<!--
+ Copyright (c) 2013, 2014, Oracle and/or its affiliates. All rights reserved.
+
+   NAME
+     oamms_strings.xml
+
+   DESCRIPTION
+     Contains the strings being used by the SDK
+
+   NOTES
+     <other useful comments, qualifications, etc.>
+
+   MODIFIED   (MM/DD/YY)
+   ayjindal    04/08/14 - Bug 18477622
+   arunpras    01/17/14 - Bug fix: 17623143
+   arunpras    12/31/13 - Added an error message to be shown during the negative use case: Invoking logout method before performing authentication
+   arunpras	   10/03/13 - Added a string a part of the fix for bug - 16186113
+   arunpras    09/02/13 - Added custom HTTP headers
+-->
+<resources>
+
+    <!-- General Messages -->
+    <string name="oamms_app_name">Mobile and Social SDK pre Android</string>
+    <string name="processing">Prebieha spracovanie...</string>
+    <string name="activityExcep">Činnosť nemôže byť null. Zaregistrujte aktuálnu činnosť pomocou metódy OMMobileSecurityService#registerActivity(Activity), najlepšie v metóde onResume().</string>
+    <string name="secProfileExcep">Rozhranie API pre nastavenie nebolo vyvolané.</string>
+    <string name="servicenamenull">Nie je zadaná žiadna schéma autentifikácie.</string>
+    <string name="invalidServerType">Typ servera autentifikácie je neplatný.</string>
+    <string name="notConnectToServer">Server nie je na zadanej adrese dostupný. Požiadajte o pomoc administrátora.</string>
+    <string name="networkUnavailable">Sieť je nedostupná. Skontrolujte, či je počítač pripojený na internet, a skúste to znova.</string>
+    <string name="notParseResponse">Nepodarilo sa syntakticky analyzovať odozvu odoslanú zo servera.</string>
+    <string name="certificateNotAccepted">Používateľ odmietol certifikát servera.</string>
+    <string name="internalError">Interná chyba</string>
+    <string name="invalidArgumentsNullOrEmpty">Argumenty nemôžu byť null ani prázdne reťazce</string>
+    <string name="updateCookiesValidationFailure">Aktualizácia hodnoty súboru cookie zlyhala, pretože atribúty súboru cookie nemožno overiť</string>
+    <string name="cookieNotFound">Súbor cookie, ktorý sa má aktualizovať, neexistuje</string>
+    <string name="invalidArgumentsNull">Argumenty nemôžu byť null</string>
+    <string name="clearUsernamePasswordFailed">Meno používateľa a heslo uložené vo vloženom objekte WebView sa nepodarilo odstrániť, pretože sa medzitým zrušila registrácia činnosti.</string>
+    <string name="customAuthHeadersNotAllowed">Niektoré hlavičky HTTP zadané v mape, ktoré boli odovzdané ako hodnota pre kľúč OM_PROP_CUSTOM_AUTH_HEADERS, sa nedajú pridať. Pozrite si dokumentáciu, kde nájdete zoznam hlavičiek HTTP, ktoré nie sú povolené.</string>
+    <string name="customAuthHeadersCountExceeded">Počet vlastných hlavičiek autorizácie, ktoré sú zadané ako súčasť OM_PROP_CUSTOM_AUTH_HEADERS, prekročil maximálnu hodnotu (%1$d).</string>
+    <string name="applicationNotAvailable">Požadovaná aplikácia nie je k dispozícii.</string>
+    <string name="httpCallbackNull">Spätné volanie pre asynchrónnu požiadavku nemôže byť null</string>
+    <string name="httpResUrlNull">Adresa URL prostriedku HTTP nemôže byť null</string>
+    <string name="logoutInProgress">Práve prebieha odhlásenie. Skúste to znova o niečo neskôr.</string>
+    <string name="logoutTimedOut">Operácia odhlásenia zlyhala, pretože uplynul časový limit pripojenia.</string>
+    <string name="logoutFailure">Odhlásenie zlyhalo pre nasledujúcu chybu: %1$s</string>
+    <string name="notFound">Požadovaná adresa URL neexistuje. Požiadajte o pomoc administrátora.</string>
+    <!-- *********************************************************************** -->
+
+
+    <!-- ************************ Success/Error Messages ************************* -->
+    <string name="usernameRequired">Požaduje sa meno používateľa.</string>
+    <string name="identityDomainRequired">Požaduje sa doména identity.</string>
+    <string name="usernameIdentityDomainRequired">Požaduje sa meno používateľa a doména identity.</string>
+    <string name="passwordNull">Vyžaduje sa heslo.</string>
+    <string name="unPwdMissing">Neplatné meno používateľa alebo heslo.</string>
+    <string name="unPwdTenantMissing">Neplatné meno používateľa, heslo alebo doména identity.</string>
+    <string name="chalgMissing">Odpoveď na kontrolnú otázku je neplatná.</string>
+    <string name="userCanceled">Používateľ zrušil operáciu prihlásenia.</string>
+    <string name="authfailed">Autentifikácia používateľa zlyhala.</string>
+    <string name="authSuccess">Autentifikácia používateľa bola úspešná.</string>
+    <!-- *********************************************************************** -->
+
+
+    <!-- *********** UI Messages and Descriptions of Images ************* -->
+    <string name="username">Meno používateľa</string>
+    <string name="usernameHint">Zadajte meno používateľa</string>
+    <string name="password">Heslo</string>
+    <string name="passwordHint">Zadajte heslo</string>
+    <string name="tenant">Doména identity</string>
+    <string name="tenantHint">Zadajte doménu identity</string>
+    <string name="login">Prihlásiť sa</string>
+    <string name="cancel">Zrušiť</string>
+    <string name="challengeHead">Zadajte ďalšie informácie</string>
+    <string name="challengeQues">Otázka</string>
+    <string name="challengeAns">Odpoveď</string>
+    <string name="challengeAnswerHint">Zadajte odpoveď na bezpečnostnú otázku</string>
+    <string name="submit">Odoslať</string>
+    <string name="rememberUsername">Zapamätať si meno používateľa</string>
+    <string name="rememberCredentials">Zapamätať si doklady</string>
+    <string name="autoLogin">Automatické prihlásenie</string>
+    <string name="backButton">Späť</string>
+    <string name="forwardButton">Dopredu</string>
+    <string name="refreshButton">Obnoviť</string>
+    <string name="cancelButton">Zrušiť</string>
+    <!-- *********************************************************************** -->
+
+
+    <!-- URL-Based Configuration -->
+    <string name="configPropertiesMissing">Vlastnosti konfigurácie sa nenašli v triede SharedPreferences</string>
+    <string name="configIntentUriNull">Odovzdané zameranie neobsahuje identifikátor URI pre detaily konfigurácie servera.</string>
+    <string name="configIntentUriInvalid">Odovzdané zameranie neobsahuje platný identifikátor URI pre detaily konfigurácie servera.</string>
+    <string name="couldNotRetrieveConfiguration">Nepodarilo sa vyvolať vlastnosti konfigurácie z časti SharedPreferences</string>
+    <string name="couldNotStoreConfiguration">Vlastnosti konfigurácie sa nepodarilo uložiť v triede SharedPreferences</string>
+    <!-- *********************************************************************** -->
+    
+    
+    <!-- Setup failure -->
+    <string name="mssInitFailed">Inicializácia súpravy SDK zlyhala, pretože požadované informácie o serveri neboli zadané.</string>
+    <string name="setupFailedMS">Profil aplikácie nie je možné prevziať v dôsledku chýbajúcej konfigurácie</string>
+    <string name="setupFailedDefault">Profil aplikácie alebo názov aplikácie je neplatný</string>
+    <!-- *********************************************************************** -->
+
+
+    <!-- Mobile & Social Server -->
+    <string name="invalidAppName">Názov aplikácie je neplatný.</string>
+    <string name="invalidServerUrl">Adresa URL servera je neplatná.</string>
+    <string name="invalidServiceDomain">Doména služby je neplatná.</string>
+    <string name="tokenMissing">Toto zariadenie ešte nebolo autentifikované na serveri Mobile and Social.</string>
+    <string name="noUserToken">Používateľ zatiaľ nebol autentifikovaný.</string>
+    <string name="noRpLoginUrl">Nemožno otvoriť adresu URL autentifikácie RP.</string>
+    <string name="reqFailed">Zlyhala požiadavka na autentifikáciu pre používateľa %1$s.</string>
+    <string name="reqDenied">Požiadavka na autentifikáciu bola zamietnutá.</string>
+    <string name="oaamDeniedAction">Autentifikácia bola zablokovaná serverom. Požiadajte o pomoc administrátora.</string>
+    <string name="oaamWipeoutAction">Zo servera bol prijatý príkaz na vymazanie. Vymažú sa citlivé dáta aplikácie.</string>
+
+    <!-- SSO Messages -->
+    <string name="sigNotValid">Nepodarilo sa overiť podpis volajúcej aplikácie.</string>
+    <string name="ssoActivitymissing">Názov aplikácie SSO nebol zadaný.</string>
+    <string name="initSSOAgentSuccess">Aplikácia agenta SSO bola úspešne inicializovaná.</string>
+    <string name="serviceDomainNotSame">Agent odmietol autentifikáciu, pretože doména služby sa nezhoduje.</string>
+    <string name="invalidConfig">Aplikácia klienta nie je autorizovaná na účasť v SSO.</string>
+    <string name="noAgentAvail">Nemožno otvoriť adresu URL autentifikácie SSO.</string>
+    <string name="tokensNotAvailable">Token OAM_ID nie je k dispozícii. Skontrolujte nastavenia servera. Jednou z možných nesprávnych konfigurácií je, že schéma autentifikácie nie je nastavená ako MobileOAMAuthentication.</string>
+    <!-- *********************************************************************** -->
+
+    <!-- *********************************************************************** -->
+
+
+    <!-- Basic Authentication Messages -->
+    <string name="invalidBasicUrl">Neplatná adresa URL prihlásenia.</string>
+    <string name="serverReturnedError">Server zistil chybu %1$s. Požiadajte o pomoc administrátora.</string>
+    <string name="forbidden">Používateľ nie je autorizovaný.</string>
+    <!-- *********************************************************************** -->
+
+
+    <!-- Federated Authentication Messages -->
+    <string name="authenticationTimedOut">Časový limit autentifikácie uplynul.</string>
+    <!-- *********************************************************************** -->
+
+
+    <!-- HTML Login View Customization -->
+    <string name="customHtmlFieldsInvalid">Stránka vlastnej autentifikácie neobsahuje pole dokladov.</string>
+    <string name="kbaHtmlFieldsInvalid">Stránka vlastnej silnej autentifikácie neobsahuje pole dokladov.</string>
+    <string name="htmlFileException">Vlastný súbor HTML nemôže byť null.</string>
+    <string name="invalidHtmlFile">Cesta vlastného súboru HTML je neplatného typu</string>
+    <string name="remoteHTMLFile">Vlastná stránka HTML nemôže byť vzdialená stránka, SDK podporuje len zavedenie lokálnej stránky HTML</string>
+    <!-- *********************************************************************** -->
+
+
+    <!-- ************************* SSL Certificate Warning ********************* -->
+    <string name="ssl_settingsheader">Tento certifikát nie je od dôveryhodnej autority.</string>
+    <string name="ssl_security_certificate">Certifikát zabezpečenia</string>
+    <string name="ssl_issued_to">Predmet:</string>
+    <string name="ssl_common_name">Bežný názov:</string>
+    <string name="ssl_organization">Organizácia:</string>
+    <string name="ssl_organization_unit">Organizačná jednotka:</string>
+    <string name="ssl_issued_by">Vydavateľ:</string>
+    <string name="ssl_validity">Platnosť:</string>
+    <string name="ssl_issued_on">Počiatočný dátum:</string>
+    <string name="ssl_expires_on">Koncový dátum:</string>
+    <string name="security_warning">Upozornenie zabezpečenia</string>
+    <string name="ssl_continue">Prijať</string>
+    <string name="ssl_view_certificate">Detaily</string>
+    <string name="ssl_message">Vyskytli sa problémy s certifikátom zabezpečenia pre túto adresu URL.</string>
+    <string name="serial_number">Sériové číslo:</string>
+    <string name="fingerprint">Odtlačky prstov:</string>
+    <string name="sha_fp">Odtlačok prsta SHA1:</string>
+    <string name="md5_fp">Odtlačok prsta MD5:</string>
+    <string name="ssl_alert_icon">Ikona výstrahy</string>
+    <string name="importCertificateFailure">Certifikát nemožno nainštalovať.</string>
+    <!-- *********************************************************************** -->
+
+
+    <!-- ************************OAuth2.0 Known errors************************** -->
+    <string name="oAuthFailed">Autentifikácia OAuth zlyhala.</string>
+    <string name="oAuthInvalidState">Z odpovede bol získaný neplatný stav.</string>
+    <string name="oAuthContextInvalid">Pre danú požiadavku neexistuje platný prístupový token. Autentifikujte v zodpovedajúcom rozsahu.</string>
+
+    <!-- ********* Description messages if server returns no description ****** -->
+    <string name="oAuthInvalidRequestDesc">V požiadavke chýba povinný parameter, požiadavka obsahuje nepodporovanú hodnotu parametra, opakuje parameter, obsahuje viacero dokladov, používa viac než jeden mechanizmus na autentifikáciu klienta alebo je inak chybne vytvorená.</string>
+    <string name="oAuthUnauthorizedClientDesc">Autentifikovaný klient nemá oprávnenie na používanie tohto typu pridelenia autorizácie.</string>
+    <string name="oAuthAccessDeniedDesc">Vlastník prostriedku alebo server autorizácie odmietol požiadavku.</string>
+    <string name="oAuthUnsupportedResponseTypeDesc">Server autorizácie nepodporuje získanie autorizačného kódu pomocou tejto metódy.</string>
+    <string name="oAuthServerErrorDesc">Server autorizácie zistil neočakávaný stav, ktorý mu zabránil v splnení požiadavky.</string>
+    <string name="oAuthTempUnavailableDesc">Server autorizácie nie je momentálne schopný spracovať požiadavku v dôsledku dočasného preťaženia alebo údržby servera.</string>
+    <string name="oAuthInvalidScopeDesc">Požadovaný rozsah je neplatný, neznámy, chybne vytvorený alebo prekračuje rozsah pridelený vlastníkom prostriedku.</string>
+    <string name="oAuthUnsupportedGrantTypeDesc">Server autorizácie nepodporuje typ pridelenia autorizácie.</string>
+    <string name="oAuthInvalidClientDesc">Autentifikácia klienta zlyhala.</string>
+    <string name="oAuthInvalidGrantDesc">Poskytnuté pridelenie autorizácie alebo token obnovenia je neplatný, odobratý, uplynula mu platnosť, nezhoduje sa s identifikátorom URI použitým v požiadavke autorizácie alebo bol vydaný pre iného klienta.</string>
+    <!-- *********************************************************************** -->
+
+    <!-- *********************************************************************** -->
+
+</resources>

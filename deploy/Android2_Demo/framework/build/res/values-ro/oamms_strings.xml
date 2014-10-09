@@ -1,0 +1,197 @@
+<?xml version = '1.0' encoding = 'utf-8'?>
+<!-- $Header: wptg/idmmobile/src/Android/IDMMobileSDK/res/values-ro/oamms_strings.xml /st_wptg_11.1.1.9.0/4 2014/05/31 09:02:13 gmolloy Exp $ -->
+<!--
+ Copyright (c) 2013, 2014, Oracle and/or its affiliates. All rights reserved.
+
+   NAME
+     oamms_strings.xml
+
+   DESCRIPTION
+     Contains the strings being used by the SDK
+
+   NOTES
+     <other useful comments, qualifications, etc.>
+
+   MODIFIED   (MM/DD/YY)
+   ayjindal    04/08/14 - Bug 18477622
+   arunpras    01/17/14 - Bug fix: 17623143
+   arunpras    12/31/13 - Added an error message to be shown during the negative use case: Invoking logout method before performing authentication
+   arunpras	   10/03/13 - Added a string a part of the fix for bug - 16186113
+   arunpras    09/02/13 - Added custom HTTP headers
+-->
+<resources>
+
+    <!-- General Messages -->
+    <string name="oamms_app_name">SDK pt. aplicaţii mobile şi reţele de socializare pt. Android</string>
+    <string name="processing">Se procesează...</string>
+    <string name="activityExcep">Activitatea nu poate fi nulă. Înregistraţi activitatea curentă utilizând OMMobileSecurityService#registerActivity(Activity) preferabil în onResume().</string>
+    <string name="secProfileExcep">API-ul de configurare nu este invocat.</string>
+    <string name="servicenamenull">Nu a fost specificată nicio schemă de autentificare.</string>
+    <string name="invalidServerType">Tipul de server de autentificare este nevalid.</string>
+    <string name="notConnectToServer">Serverul nu poate fi găsit la adresa specificată. Contactaţi administratorul pt. asistenţă.</string>
+    <string name="networkUnavailable">Reţeaua nu este disponibilă. Verificaţi dacă sunteţi conectat la internet şi încercaţi din nou.</string>
+    <string name="notParseResponse">Nu s-a putut interpreta răspunsul trimis de la server.</string>
+    <string name="certificateNotAccepted">Utilizatorul a respins certificatul serverului.</string>
+    <string name="internalError">Eroare internă</string>
+    <string name="invalidArgumentsNullOrEmpty">Argumentele nu pot fi nule sau şiruri necompletate</string>
+    <string name="updateCookiesValidationFailure">Actualizarea valorii cookie-ului a eşuat, deoarece atributele cookie-ului nu au putut fi validate</string>
+    <string name="cookieNotFound">Cookie-ul de actualizat nu există</string>
+    <string name="invalidArgumentsNull">Argumentele nu pot fi nule</string>
+    <string name="clearUsernamePasswordFailed">Numele de utilizator şi parola stocate în vizualizarea web înglobată nu au putut fi şterse, deoarece activitatea a fost dez-înregistrată între timp.</string>
+    <string name="customAuthHeadersNotAllowed">Anumite anteturi HTTP specificate în maparea transferată ca valoare pt. cheia OM_PROP_CUSTOM_AUTH_HEADERS nu au putut fi şterse. Consultaţi documentaţia pt. lista de anteturi HTTP nepermise.</string>
+    <string name="customAuthHeadersCountExceeded">Nr. de anteturi de autentificare personalizate, care sunt specificate ca parte din OM_PROP_CUSTOM_AUTH_HEADERS, a depăşit nr. maxim (%1$d).</string>
+    <string name="applicationNotAvailable">Aplicaţia solicitată nu este disponibilă.</string>
+    <string name="httpCallbackNull">Callbackul nu poate fi nul pt. cererea asincronă</string>
+    <string name="httpResUrlNull">URL-ul resursei HTTP nu poate fi nul</string>
+    <string name="logoutInProgress">Deconectare în curs. Încercaţi din nou mai târziu.</string>
+    <string name="logoutTimedOut">Operaţia de deconectare a eşuat, deoarece conexiunea a expirat.</string>
+    <string name="logoutFailure">Deconectarea a eşuat din cauza următoarei erori: %1$s</string>
+    <string name="notFound">Adresa URL solicitată nu există. Contactaţi administratorul pt. asistenţă.</string>
+    <!-- *********************************************************************** -->
+
+
+    <!-- ************************ Success/Error Messages ************************* -->
+    <string name="usernameRequired">Numele de utilizator este obligatoriu.</string>
+    <string name="identityDomainRequired">Domeniul de identităţi este obligatoriu.</string>
+    <string name="usernameIdentityDomainRequired">Numele de utilizator şi domeniul de identităţi sunt obligatorii.</string>
+    <string name="passwordNull">Este nevoie de parolă.</string>
+    <string name="unPwdMissing">Numele de utilizator sau parola sunt incorecte.</string>
+    <string name="unPwdTenantMissing">Nume de utilizator, parolă sau domeniu de identităţi nevalid.</string>
+    <string name="chalgMissing">Întrebarea de interogare este nevalidă.</string>
+    <string name="userCanceled">Utilizatorul a anulat operaţia de conectare.</string>
+    <string name="authfailed">Autentificarea utilizatorului a eşuat.</string>
+    <string name="authSuccess">Autentificarea utilizatorului a reuşit.</string>
+    <!-- *********************************************************************** -->
+
+
+    <!-- *********** UI Messages and Descriptions of Images ************* -->
+    <string name="username">Nume de utilizator</string>
+    <string name="usernameHint">Introduceţi numele de utilizator</string>
+    <string name="password">Parolă</string>
+    <string name="passwordHint">Introduceţi parola</string>
+    <string name="tenant">Domeniu de identităţi</string>
+    <string name="tenantHint">Introduceţi domeniu de identităţi</string>
+    <string name="login">Conectare</string>
+    <string name="cancel">Anulare</string>
+    <string name="challengeHead">Furnizaţi informaţii suplimentare</string>
+    <string name="challengeQues">Întrebare</string>
+    <string name="challengeAns">Răspuns</string>
+    <string name="challengeAnswerHint">Introduceţi răspunsul la întrebarea de securitate</string>
+    <string name="submit">Trimitere</string>
+    <string name="rememberUsername">Reţinere nume de utilizator</string>
+    <string name="rememberCredentials">Reţinere acreditări</string>
+    <string name="autoLogin">Conectare automată</string>
+    <string name="backButton">Înapoi</string>
+    <string name="forwardButton">Înainte</string>
+    <string name="refreshButton">Reîmprospătare</string>
+    <string name="cancelButton">Anulare</string>
+    <!-- *********************************************************************** -->
+
+
+    <!-- URL-Based Configuration -->
+    <string name="configPropertiesMissing">Proprietăţile configuraţiei nu au fost găsite în SharedPreferences</string>
+    <string name="configIntentUriNull">Intenţia transmisă nu conţine un URI pt. detaliile configuraţiei serverului.</string>
+    <string name="configIntentUriInvalid">Intenţia transmisă nu conţine un URI valid pt. detaliile configuraţiei serverului.</string>
+    <string name="couldNotRetrieveConfiguration">Nu s-au putut prelua proprietăţile configuraţiei din SharedPreferences</string>
+    <string name="couldNotStoreConfiguration">Nu s-au putut stoca proprietăţile configuraţiei în SharedPreferences</string>
+    <!-- *********************************************************************** -->
+    
+    
+    <!-- Setup failure -->
+    <string name="mssInitFailed">Iniţializarea SDK a eşuat, deoarece informaţiile obligatorii despre server nu au fost specificate.</string>
+    <string name="setupFailedMS">Profilul aplicaţiei nu poate fi descărcat, deoarece lipseşte configuraţia</string>
+    <string name="setupFailedDefault">Profilul sau numele aplicaţiei este nevalid</string>
+    <!-- *********************************************************************** -->
+
+
+    <!-- Mobile & Social Server -->
+    <string name="invalidAppName">Numele aplicaţiei este nevalid.</string>
+    <string name="invalidServerUrl">URL-ul serverului este nevalid.</string>
+    <string name="invalidServiceDomain">Domeniul serviciului este nevalid.</string>
+    <string name="tokenMissing">Acest dispozitiv nu este autentificat încă pe serverul de aplicaţii mobile şi reţele de socializare.</string>
+    <string name="noUserToken">Utilizatorul nu este autentificat încă.</string>
+    <string name="noRpLoginUrl">Nu se poate deschide URL-ul de autentificare RP.</string>
+    <string name="reqFailed">Cererea de autentificare a eşuat pt. utilizatorul %1$s.</string>
+    <string name="reqDenied">Cererea pt. autentificare este refuzată.</string>
+    <string name="oaamDeniedAction">Autentificarea a fost blocată de server. Contactaţi administratorul pt. asistenţă.</string>
+    <string name="oaamWipeoutAction">S-a primit de pe server o comandă de ştergere definitivă. Se şterg datele de aplicaţie confidenţiale.</string>
+
+    <!-- SSO Messages -->
+    <string name="sigNotValid">Eşec la validarea semnăturii aplicaţiei apelante.</string>
+    <string name="ssoActivitymissing">Numele aplicaţiei SSO nu a fost specificat.</string>
+    <string name="initSSOAgentSuccess">Aplicaţia agent SSO a fost iniţializată cu succes.</string>
+    <string name="serviceDomainNotSame">Autentificarea este respinsă de agent, deoarece domeniului serviciului nu corespunde.</string>
+    <string name="invalidConfig">Aplicaţia client nu este autorizată să participe la SSO.</string>
+    <string name="noAgentAvail">Nu se poate deschide URL-ul de autentificare SSO.</string>
+    <string name="tokensNotAvailable">Tokenul OAM_ID nu este disponibil. Verificaţi setările serverului. Una dintre posibilele configuraţii greşite este faptul că schema de autentificare nu este setată la MobileOAMAuthentication.</string>
+    <!-- *********************************************************************** -->
+
+    <!-- *********************************************************************** -->
+
+
+    <!-- Basic Authentication Messages -->
+    <string name="invalidBasicUrl">URL de conectare nevalid.</string>
+    <string name="serverReturnedError">A survenit eroarea %1$s pe server. Contactaţi administratorul pt. asistenţă.</string>
+    <string name="forbidden">Utilizatorul nu este autorizat.</string>
+    <!-- *********************************************************************** -->
+
+
+    <!-- Federated Authentication Messages -->
+    <string name="authenticationTimedOut">Autentificarea a expirat.</string>
+    <!-- *********************************************************************** -->
+
+
+    <!-- HTML Login View Customization -->
+    <string name="customHtmlFieldsInvalid">Pagina de autentificare personalizată nu are câmpul Acreditări.</string>
+    <string name="kbaHtmlFieldsInvalid">Pagina de autentificare severă personalizată nu are câmpul Acreditări.</string>
+    <string name="htmlFileException">Fişierul HTML personalizat nu poate fi nul.</string>
+    <string name="invalidHtmlFile">Calea fişierului HTML personalizat are un tip nevalid </string>
+    <string name="remoteHTMLFile">Pagina HTML personalizată nu poate fi o pagină la distanţă; SDK acceptă doar încărcarea unei pagini HTML locale</string>
+    <!-- *********************************************************************** -->
+
+
+    <!-- ************************* SSL Certificate Warning ********************* -->
+    <string name="ssl_settingsheader">Acest certificat nu provine de la un autoritate sigură.</string>
+    <string name="ssl_security_certificate">Certificat de securitate</string>
+    <string name="ssl_issued_to">Subiect:</string>
+    <string name="ssl_common_name">Nume comun:</string>
+    <string name="ssl_organization">Organizaţie:</string>
+    <string name="ssl_organization_unit">Unitate organizaţională:</string>
+    <string name="ssl_issued_by">Emitent: </string>
+    <string name="ssl_validity">Valabilitate:</string>
+    <string name="ssl_issued_on">Data iniţială:</string>
+    <string name="ssl_expires_on">Data finală:</string>
+    <string name="security_warning">Avertisment de securitate</string>
+    <string name="ssl_continue">Acceptare</string>
+    <string name="ssl_view_certificate">Detalii</string>
+    <string name="ssl_message">Există probleme cu certificatul de securitate pt. acest URL.</string>
+    <string name="serial_number">Nr. de serie: </string>
+    <string name="fingerprint">Amprente:</string>
+    <string name="sha_fp">Amprentă SHA1:</string>
+    <string name="md5_fp">Amprentă MD5:</string>
+    <string name="ssl_alert_icon">Pictogramă pt. alertă</string>
+    <string name="importCertificateFailure">Nu s-a putut instala certificatul.</string>
+    <!-- *********************************************************************** -->
+
+
+    <!-- ************************OAuth2.0 Known errors************************** -->
+    <string name="oAuthFailed">Autentificarea OAuth a eşuat.</string>
+    <string name="oAuthInvalidState">A fost restabilită o stare nevalidă din răspuns.</string>
+    <string name="oAuthContextInvalid">Nu există niciun token de acces valid pt. cererea dată; autentificaţi-vă cu domeniul corespunzător.</string>
+
+    <!-- ********* Description messages if server returns no description ****** -->
+    <string name="oAuthInvalidRequestDesc">Din cerere lipseşte un parametru obligatoriu, cererea include o valoare neacceptată a parametrului, repetă un parametru, include mai multe acreditări, utilizează mai multe mecanisme pt. autentificarea clientului sau este formatată greşit în alt mod.</string>
+    <string name="oAuthUnauthorizedClientDesc">Clientul autentificat nu este autorizat să utilizeze acest tip de drept de autorizare.</string>
+    <string name="oAuthAccessDeniedDesc">Proprietarul resursei sau serverul de autorizare a refuzat cererea.</string>
+    <string name="oAuthUnsupportedResponseTypeDesc">Serverul de autorizare nu acceptă obţinerea unui cod de autorizare care utilizează această metodă.</string>
+    <string name="oAuthServerErrorDesc">Serverul de autorizare a generat o condiţie neaşteptată, care l-a împiedicat să onoreze cererea.</string>
+    <string name="oAuthTempUnavailableDesc">Serverul de autorizare nu poate trata cererea momentan, din cauza unei supraîncărcări sau a întreţinerii temporare a serverului.</string>
+    <string name="oAuthInvalidScopeDesc">Domeniul solicitat este nevalid, necunoscut, formatat greşit sau depăşeşte domeniul acordat de proprietarul resursei.</string>
+    <string name="oAuthUnsupportedGrantTypeDesc">Tipul dreptului de autorizare nu este acceptat de serverul de autorizare.</string>
+    <string name="oAuthInvalidClientDesc">Autentificarea clientului a eşuat.</string>
+    <string name="oAuthInvalidGrantDesc">Dreptul de autorizare specificat sau tokenul de reîmprospătare este nevalid, expirat, revocat, nu corespunde URI-ului de redirecţionare utilizat în cererea de autorizare sau a fost emis pt. alt client.</string>
+    <!-- *********************************************************************** -->
+
+    <!-- *********************************************************************** -->
+
+</resources>

@@ -1,0 +1,1 @@
+l={USA:["EE.UU.","Estados Unidos de Am\u00e9rica"]};(DvtBaseMapManager=this.DvtBaseMapManager)||(DvtBaseMapManager={});DvtBaseMapManager._UNPROCESSED_MAPS||(DvtBaseMapManager._UNPROCESSED_MAPS=[[],[],[]]);DvtBaseMapManager._UNPROCESSED_MAPS[2].push(["usa","country",l]);

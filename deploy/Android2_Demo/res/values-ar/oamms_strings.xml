@@ -1,0 +1,197 @@
+<?xml version = '1.0' encoding = 'utf-8'?>
+<!-- $Header: wptg/idmmobile/src/Android/IDMMobileSDK/res/values-ar/oamms_strings.xml /st_wptg_11.1.1.9.0/4 2014/05/29 19:23:13 gmolloy Exp $ -->
+<!--
+ Copyright (c) 2013, 2014, Oracle and/or its affiliates. All rights reserved.
+
+   NAME
+     oamms_strings.xml
+
+   DESCRIPTION
+     Contains the strings being used by the SDK
+
+   NOTES
+     <other useful comments, qualifications, etc.>
+
+   MODIFIED   (MM/DD/YY)
+   ayjindal    04/08/14 - Bug 18477622
+   arunpras    01/17/14 - Bug fix: 17623143
+   arunpras    12/31/13 - Added an error message to be shown during the negative use case: Invoking logout method before performing authentication
+   arunpras	   10/03/13 - Added a string a part of the fix for bug - 16186113
+   arunpras    09/02/13 - Added custom HTTP headers
+-->
+<resources>
+
+    <!-- General Messages -->
+    <string name="oamms_app_name">مجموعة SDK لخدمة Mobile and Social  لـ Android</string>
+    <string name="processing">جارٍ المعالجة...</string>
+    <string name="activityExcep">لا يمكن ترك النشاط خاليًا. قم بتسجيل النشاط الحالي باستخدام OMMobileSecurityService#registerActivity(Activity) والمفضل أن يكون في onResume().</string>
+    <string name="secProfileExcep">لم يتم استدعاء واجهة API للإعداد.</string>
+    <string name="servicenamenull">لم يتم تحديد مخطط تصديق.</string>
+    <string name="invalidServerType">نوع خادم التصديق غير صالح.</string>
+    <string name="notConnectToServer">لا يمكن الوصول إلى الخادم في العنوان المحدد. اتصل بالمسئول لطلب المساعدة.</string>
+    <string name="networkUnavailable">الشبكة غير متاحة. تأكد من اتصالك بالإنترنت وحاول مرة أخرى.</string>
+    <string name="notParseResponse">تعذر تحليل الاستجابة المرسلة من الخادم.</string>
+    <string name="certificateNotAccepted">رفض المستخدم شهادة الخادم.</string>
+    <string name="internalError">خطأ داخلي</string>
+    <string name="invalidArgumentsNullOrEmpty">الوسيطة (الوسائط) لا يمكن أن تكون سلسلة خالية أو فارغة</string>
+    <string name="updateCookiesValidationFailure">فشل تحديث قيمة ملف تعريف الارتباط لتعذر تدقيق سمات ملف تعريف الارتباط</string>
+    <string name="cookieNotFound">ملف تعريف الارتباط المطلوب تحديثه غير موجود</string>
+    <string name="invalidArgumentsNull">لا يمكن أن تكون الوسيطة (الوسائط) خالية</string>
+    <string name="clearUsernamePasswordFailed">تعذر حذف اسم المستخدم وكلمة السر المخزنين في Embedded Webview حيث تم إلغاء ذلك النشاط في تلك الأثناء.</string>
+    <string name="customAuthHeadersNotAllowed">بعض رؤوس HTTP المحددة في التخطيط وتم تمريرها كقيمة مقابل المفتاح OM_PROP_CUSTOM_AUTH_HEADERS لا يمكن إضافتها. راجع الوثائق للاطلاع على قائمة برؤوس HTTP غير المسموح بها.</string>
+    <string name="customAuthHeadersCountExceeded">عدد رؤوس التصديق المخصصة والتي تم تحديدها كجزء من OM_PROP_CUSTOM_AUTH_HEADERS تتجاوز الحد الأقصى للعدد (%1$d).</string>
+    <string name="applicationNotAvailable">التطبيق المطلوب غير متاح.</string>
+    <string name="httpCallbackNull">بالنسبة لطلب غير متزامن، لا يمكن ترك الاستدعاء خاليًا</string>
+    <string name="httpResUrlNull">يجب عدم ترك عنوان URL لمورد Http خالٍ</string>
+    <string name="logoutInProgress">الخروج قيد التنفيذ. حاول مرة أخرى بعد قليل.</string>
+    <string name="logoutTimedOut">فشلت عملية الخروج لانتهاء الاتصال.</string>
+    <string name="logoutFailure">فشل الخروج لحدوث الخطأ التالي: %1$s</string>
+    <string name="notFound">عنوان URL المطلوب غير موجود. اتصل بالمسئول لطلب المساعدة.</string>
+    <!-- *********************************************************************** -->
+
+
+    <!-- ************************ Success/Error Messages ************************* -->
+    <string name="usernameRequired">اسم المستخدم مطلوب.</string>
+    <string name="identityDomainRequired">نطاق الهوية مطلوب.</string>
+    <string name="usernameIdentityDomainRequired">اسم المستخدم ونطاق الهوية مطلوبان.</string>
+    <string name="passwordNull">مطلوب كلمة السر</string>
+    <string name="unPwdMissing">اسم المستخدم أو كلمة السر غير صالح.</string>
+    <string name="unPwdTenantMissing">اسم المستخدم أو كلمة السر أو نطاق الهوية غير صالح.</string>
+    <string name="chalgMissing">إجابة التحقق من الهوية غير صالحة.</string>
+    <string name="userCanceled">قام المستخدم بإلغاء عملية الدخول الحالية.</string>
+    <string name="authfailed">فشلت التصديق على المستخدم.</string>
+    <string name="authSuccess">تمت مصادقة المستخدم بنجاح.</string>
+    <!-- *********************************************************************** -->
+
+
+    <!-- *********** UI Messages and Descriptions of Images ************* -->
+    <string name="username">اسم المستخدم</string>
+    <string name="usernameHint">إدخال اسم مستخدم</string>
+    <string name="password">كلمة السر</string>
+    <string name="passwordHint">أدخل كلمة السر</string>
+    <string name="tenant">نطاق الهوية</string>
+    <string name="tenantHint">إدخال نطاق هوية</string>
+    <string name="login">تسجيل الدخول</string>
+    <string name="cancel">إلغاء</string>
+    <string name="challengeHead">توفير معلومات إضافية</string>
+    <string name="challengeQues">السؤال</string>
+    <string name="challengeAns">الإجابة</string>
+    <string name="challengeAnswerHint">إدخال إجابات على أسئلة التأمين</string>
+    <string name="submit">تقديم</string>
+    <string name="rememberUsername">تذكر اسم المستخدم</string>
+    <string name="rememberCredentials">تذكر بيانات الصلاحية</string>
+    <string name="autoLogin">الدخول التلقائي</string>
+    <string name="backButton">للخلف</string>
+    <string name="forwardButton">للأمام</string>
+    <string name="refreshButton">تجديد</string>
+    <string name="cancelButton">إلغاء</string>
+    <!-- *********************************************************************** -->
+
+
+    <!-- URL-Based Configuration -->
+    <string name="configPropertiesMissing">خصائص التكوين غير موجودة في SharedPreferences</string>
+    <string name="configIntentUriNull">الهدف الذي تم تمريره لا يشتمل على معرف URI لبيانات تكوين الخادم.</string>
+    <string name="configIntentUriInvalid">الهدف الذي تم تمريره لا يشتمل على معرف URI صالح لبيانات تكوين الخادم.</string>
+    <string name="couldNotRetrieveConfiguration">تعذر استرجاع خصائص التكوين من SharedPreferences</string>
+    <string name="couldNotStoreConfiguration">تعذر تخزين خصائص التكوين في SharedPreferences</string>
+    <!-- *********************************************************************** -->
+    
+    
+    <!-- Setup failure -->
+    <string name="mssInitFailed">فشلت تهيئة SDK لأنه لم يتم إدخال \tمعلومات الخادم المطلوبة.</string>
+    <string name="setupFailedMS">لا يمكن تنزيل ملف تعريف التطبيق بسبب عدم وجود تكوين</string>
+    <string name="setupFailedDefault">ملف تعريف التطبيق أو اسم التطبيق غير صالح</string>
+    <!-- *********************************************************************** -->
+
+
+    <!-- Mobile & Social Server -->
+    <string name="invalidAppName">اسم التطبيق غير صالح.</string>
+    <string name="invalidServerUrl">عنوان Url للخادم غير صالح.</string>
+    <string name="invalidServiceDomain">نطاق الخدمة غير صالح.</string>
+    <string name="tokenMissing">لم يتم التصديق على هذا الجهاز عبر خادم Mobile and Social حتى الآن.</string>
+    <string name="noUserToken">لم يتم التصديق على المستخدم حتى الآن.</string>
+    <string name="noRpLoginUrl">يتعذر فتح عنوان URL لتصديق حماية التوجيه.</string>
+    <string name="reqFailed">فشل طلب التصديق على المستخدم %1$s.</string>
+    <string name="reqDenied">تم رفض طلب التصديق.</string>
+    <string name="oaamDeniedAction">التصديق محظور بواسطة الخادم. اتصل بالمسئول لطلب المساعدة.</string>
+    <string name="oaamWipeoutAction">تم تلقي أمر مسح من الخادم. تتم إزالة بيانات التطبيق الحساسة.</string>
+
+    <!-- SSO Messages -->
+    <string name="sigNotValid">فشل تدقيق توقيع تطبيق الاستدعاء.</string>
+    <string name="ssoActivitymissing">لم يتم إدخال اسم تطبيق SSO.</string>
+    <string name="initSSOAgentSuccess">تمت تهيئة تطبيق وكيل SSO بنجاح.</string>
+    <string name="serviceDomainNotSame">تم رفض التصديق بواسطة الوكيل بسبب عدم تطابق نطاق الخدمة.</string>
+    <string name="invalidConfig">تطبيق العميل غير معتمد للمشاركة في تسجيل الدخول الموحد.</string>
+    <string name="noAgentAvail">يتعذر فتح عنوان URL لتصديق تسجيل الدخول الموحد.</string>
+    <string name="tokensNotAvailable">مقطع OAM_ID غير متاح. تحقق من إعدادات الخادم. أحد أوجه سوء التكوين الممكنة هو عدم تعيين مخطط التصديق كـ MobileOAMAuthentication.</string>
+    <!-- *********************************************************************** -->
+
+    <!-- *********************************************************************** -->
+
+
+    <!-- Basic Authentication Messages -->
+    <string name="invalidBasicUrl">عنوان URL للدخول غير صالح.</string>
+    <string name="serverReturnedError">تعرض الخادم للخطأ %1$s. اتصل بالمسئول لطلب المساعدة.</string>
+    <string name="forbidden">المستخدم غير معتمَد.</string>
+    <!-- *********************************************************************** -->
+
+
+    <!-- Federated Authentication Messages -->
+    <string name="authenticationTimedOut">انتهت مهلة التصديق.</string>
+    <!-- *********************************************************************** -->
+
+
+    <!-- HTML Login View Customization -->
+    <string name="customHtmlFieldsInvalid">صفحة التصديق المخصصة لا تشتمل على حقل بيانات الصلاحية.</string>
+    <string name="kbaHtmlFieldsInvalid">صفحة التصديق الفعال المخصصة لا تشتمل على حقل بيانات الصلاحية.</string>
+    <string name="htmlFileException">لا يمكن ترك ملف HTML المخصص خاليًا.</string>
+    <string name="invalidHtmlFile">مسار ملف HTML المخصص من نوع غير صالح</string>
+    <string name="remoteHTMLFile">صفحة HTML المخصصة لا يمكن أن تكون صفحة بعيدة، SDK يدعم صفحة HTML المحلية المطلوب تحميلها فقط</string>
+    <!-- *********************************************************************** -->
+
+
+    <!-- ************************* SSL Certificate Warning ********************* -->
+    <string name="ssl_settingsheader">هذه الشهادة ليست من جهة موثوقة.</string>
+    <string name="ssl_security_certificate">شهادة التأمين</string>
+    <string name="ssl_issued_to">الموضوع:</string>
+    <string name="ssl_common_name">الاسم العام:</string>
+    <string name="ssl_organization">التنظيم:</string>
+    <string name="ssl_organization_unit">الوحدة التنظيمية:</string>
+    <string name="ssl_issued_by">جهة الإصدار:</string>
+    <string name="ssl_validity">الصلاحية:</string>
+    <string name="ssl_issued_on">تاريخ البداية:</string>
+    <string name="ssl_expires_on">تاريخ النهاية:</string>
+    <string name="security_warning">تحذير تأميني</string>
+    <string name="ssl_continue">قبول</string>
+    <string name="ssl_view_certificate">البيانات</string>
+    <string name="ssl_message">توجد مشكلات في شهادة التأمين الخاصة بعنوان URL هذا.</string>
+    <string name="serial_number">الرقم المسلسل:</string>
+    <string name="fingerprint">البصمات:</string>
+    <string name="sha_fp">بصمة SHA1:</string>
+    <string name="md5_fp">بصمة MD5:</string>
+    <string name="ssl_alert_icon">أيقونة التنبيه</string>
+    <string name="importCertificateFailure">يتعذر تثبيت الشهادة.</string>
+    <!-- *********************************************************************** -->
+
+
+    <!-- ************************OAuth2.0 Known errors************************** -->
+    <string name="oAuthFailed">فشل تصديق OAuth.</string>
+    <string name="oAuthInvalidState">تمت استعادة حالة غير صالحة من الاستجابة.</string>
+    <string name="oAuthContextInvalid">لا يوجد مقطع وصول صالح للطلب المحدد. يلزم التصديق في المجال الملائم.</string>
+
+    <!-- ********* Description messages if server returns no description ****** -->
+    <string name="oAuthInvalidRequestDesc">يفتقر الطلب لمعلمة مطلوبة، أو يشتمل على قيمة معلمة غير مدعومة، أو يتضمن معلمة مكررة، أو يشتمل على بيانات صلاحية متعددة، أو يستخدم أكثر من آلية في تصديق العميل، أو هو سيء التكوين بصورة أخرى.</string>
+    <string name="oAuthUnauthorizedClientDesc">عميل التصديق غير معتمد لاستخدام نوع منح الاعتماد.</string>
+    <string name="oAuthAccessDeniedDesc">مالك المورد أو خادم الاعتماد رفض الطلب.</string>
+    <string name="oAuthUnsupportedResponseTypeDesc">خادم الاعتماد لا يدعم الحصول على رمز اعتماد بهذا الأسلوب.</string>
+    <string name="oAuthServerErrorDesc">تعرض خادم الاعتماد لظرف غير متوقع حال دون تنفيذ الطلب.</string>
+    <string name="oAuthTempUnavailableDesc">خادم الاعتماد غير قادر حاليًا على التعامل مع الطلب نتيجة لحالة مؤقتة من التحميل الزائد أو إجراء أعمال صيانة على الخادم.</string>
+    <string name="oAuthInvalidScopeDesc">مجال الطلب غير صالح أو غير معروف أو سيء التكوين أو يتجاوز النطاق الممنوح من جانب مالك المورد.</string>
+    <string name="oAuthUnsupportedGrantTypeDesc">نوع منح الاعتماد غير مدعوم بواسطة خادم الاعتماد.</string>
+    <string name="oAuthInvalidClientDesc">فشل التصديق على العميل.</string>
+    <string name="oAuthInvalidGrantDesc">منح الاعتماد المقدم أو مقطع التجديد غير صالح أو منتهى الصلاحية أو تم سحبه أو غير مطابق لمعرف URI لإعادة التوجيه المستخدم في طلب الاعتماد، أو تم إصداره لعميل آخر.</string>
+    <!-- *********************************************************************** -->
+
+    <!-- *********************************************************************** -->
+
+</resources>

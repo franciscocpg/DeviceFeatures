@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+  package="$$app.package$$">
+  <uses-sdk/>
+
+  <application android:icon="$$app.icon$$"
+    android:label="$$app.name$$" android:name="oracle.adfmf.Application">
+    <activity android:name="oracle.adfmf.Container" android:label="$$app.label$$" android:theme="@android:style/Theme.NoTitleBar"
+              android:configChanges="$$app.configChanges$$" android:windowSoftInputMode="adjustResize" android:launchMode="singleTask" android:hardwareAccelerated="true">
+      <intent-filter>
+        <action android:name="android.intent.action.MAIN" />
+        <category android:name="android.intent.category.LAUNCHER" />
+      </intent-filter>
+      $$app.scheme$$
+    </activity>
+    <activity android:name="oracle.adfmf.AMXActivity" android:theme="@android:style/Theme.NoTitleBar" android:windowSoftInputMode="adjustResize"></activity>
+    <activity android:name="oracle.adfmf.RemoteURLActivity" android:theme="@android:style/Theme.NoTitleBar" android:windowSoftInputMode="adjustResize"></activity>
+    <activity android:name="oracle.adfmf.LocalHTMLActivity" android:theme="@android:style/Theme.NoTitleBar" android:windowSoftInputMode="adjustResize"></activity>
+    <activity android:name="oracle.adfmf.phonegap.AdfSpringboardPhoneGapActivity" android:theme="@android:style/Theme.NoTitleBar" android:windowSoftInputMode="adjustResize"></activity>
+    <activity android:name="oracle.adfmf.SettingsActivity" android:theme="@android:style/Theme.NoTitleBar" android:windowSoftInputMode="adjustResize"></activity>
+    <activity android:name="oracle.adfmf.navbar.MoreTabActivity" android:theme="@android:style/Theme.NoTitleBar" android:windowSoftInputMode="adjustResize"></activity>
+    <activity android:name="oracle.adfmf.BlankActivity" android:theme="@android:style/Theme.NoTitleBar" android:windowSoftInputMode="adjustResize"></activity>
+  </application>
+  
+  <!-- required permissions all apps require or those not controlled by device access -->
+  <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+  <uses-permission android:name="android.permission.VIBRATE" />
+  <uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS" />
+</manifest>

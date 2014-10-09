@@ -1,0 +1,23 @@
+{
+  "generateBaseHtml": true,
+  "dtMode": false,
+  "delayShowComplete": true,
+  "useBatchProcessing": false,
+  "cssResources": [
+    "css/amx.css"
+  ],
+  "jsResources": [
+    "js/adf.el.js",
+    "js/jquery-2.0.0.js",
+    "js/amx.js",
+    "js/adfc-mobile.js",
+    "js/base-controller.js",
+    "js/Core.js",
+    "js/CoreFormat.js",
+    "js/DateFormat.js",
+    "js/NumberFormat.js",
+    "js/NumberConverter.js"
+  ],
+  "locale":
+    "js/Locale.js"
+}

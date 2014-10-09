@@ -4,5 +4,9 @@
     <adfmf:content id="deviceFeatures.1">
       <adfmf:amx file="deviceFeatures/dev_features.amx"/>
     </adfmf:content>
+    <adfmf:deviceFeatureAccess>
+      <adfmf:deviceNetwork access="true" id="dn1"/>
+      <adfmf:deviceCamera access="true" id="dc1"/>
+    </adfmf:deviceFeatureAccess>
   </adfmf:feature>
 </adfmf:features>

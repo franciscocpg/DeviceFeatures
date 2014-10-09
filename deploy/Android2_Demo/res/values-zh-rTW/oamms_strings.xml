@@ -1,0 +1,197 @@
+<?xml version = '1.0' encoding = 'utf-8'?>
+<!-- $Header: wptg/idmmobile/src/Android/IDMMobileSDK/res/values-zh-rTW/oamms_strings.xml /st_wptg_11.1.1.9.0/4 2014/05/31 07:09:07 gmolloy Exp $ -->
+<!--
+ Copyright (c) 2013, 2014, Oracle and/or its affiliates. All rights reserved.
+
+   NAME
+     oamms_strings.xml
+
+   DESCRIPTION
+     Contains the strings being used by the SDK
+
+   NOTES
+     <other useful comments, qualifications, etc.>
+
+   MODIFIED   (MM/DD/YY)
+   ayjindal    04/08/14 - Bug 18477622
+   arunpras    01/17/14 - Bug fix: 17623143
+   arunpras    12/31/13 - Added an error message to be shown during the negative use case: Invoking logout method before performing authentication
+   arunpras	   10/03/13 - Added a string a part of the fix for bug - 16186113
+   arunpras    09/02/13 - Added custom HTTP headers
+-->
+<resources>
+
+    <!-- General Messages -->
+    <string name="oamms_app_name">適用於 Android 的行動電話與社群 SDK</string>
+    <string name="processing">處理中...</string>
+    <string name="activityExcep">活動不可為空值. 建議使用 OMMobileSecurityService#registerActivity(Activity) 在 onResume() 中註冊目前的活動.</string>
+    <string name="secProfileExcep">未呼叫設定 API.</string>
+    <string name="servicenamenull">未指定認證配置.</string>
+    <string name="invalidServerType">認證伺服器類型無效.</string>
+    <string name="notConnectToServer">無法連線至位於指定位址的伺服器. 請洽詢管理員尋求協助.</string>
+    <string name="networkUnavailable">網路無法使用. 請確定您已連線至網際網路, 然後再試一次.</string>
+    <string name="notParseResponse">無法剖析伺服器傳送的回應.</string>
+    <string name="certificateNotAccepted">使用者拒絕伺服器憑證.</string>
+    <string name="internalError">內部錯誤</string>
+    <string name="invalidArgumentsNullOrEmpty">引數不可為空值或空字串</string>
+    <string name="updateCookiesValidationFailure">更新 Cookie 值失敗, 因為無法驗證 Cookie 屬性</string>
+    <string name="cookieNotFound">要更新的 Cookie 不存在</string>
+    <string name="invalidArgumentsNull">引數不可為空值</string>
+    <string name="clearUsernamePasswordFailed">無法將儲存在「內嵌 Webview」中的使用者名稱與密碼刪除, 因為已取消註冊活動.</string>
+    <string name="customAuthHeadersNotAllowed">無法新增「對應」中所指定以值形式針對 OM_PROP_CUSTOM_AUTH_HEADERS 索引鍵傳送的部分 HTTP 標頭. 如需不允許使用的 HTTP 標頭清單, 請參閱文件.</string>
+    <string name="customAuthHeadersCountExceeded">指定作為 OM_PROP_CUSTOM_AUTH_HEADERS 之一部分的自訂授權標頭數目超過個數上限 (%1$d).</string>
+    <string name="applicationNotAvailable">要求的應用程式無法使用.</string>
+    <string name="httpCallbackNull">非同步要求的回呼不可為空值</string>
+    <string name="httpResUrlNull">「HTTP 資源 URL」不可為空值</string>
+    <string name="logoutInProgress">正在登出. 請稍後再試.</string>
+    <string name="logoutTimedOut">連線逾時, 登出作業失敗.</string>
+    <string name="logoutFailure">登出失敗, 因為發生下列錯誤: %1$s</string>
+    <string name="notFound">要求的 URL 不存在. 請洽詢管理員尋求協助.</string>
+    <!-- *********************************************************************** -->
+
+
+    <!-- ************************ Success/Error Messages ************************* -->
+    <string name="usernameRequired">必須輸入使用者名稱.</string>
+    <string name="identityDomainRequired">必須輸入「識別網域」.</string>
+    <string name="usernameIdentityDomainRequired">必須輸入使用者名稱與識別網域.</string>
+    <string name="passwordNull">必須輸入密碼.</string>
+    <string name="unPwdMissing">無效的使用者名稱或密碼.</string>
+    <string name="unPwdTenantMissing">無效的使用者名稱、密碼或識別網域.</string>
+    <string name="chalgMissing">安全提示答覆無效.</string>
+    <string name="userCanceled">使用者已取消登入作業.</string>
+    <string name="authfailed">使用者認證失敗.</string>
+    <string name="authSuccess">使用者認證成功.</string>
+    <!-- *********************************************************************** -->
+
+
+    <!-- *********** UI Messages and Descriptions of Images ************* -->
+    <string name="username">使用者名稱</string>
+    <string name="usernameHint">輸入使用者名稱</string>
+    <string name="password">密碼</string>
+    <string name="passwordHint">輸入密碼</string>
+    <string name="tenant">識別網域</string>
+    <string name="tenantHint">輸入識別網域</string>
+    <string name="login">登入</string>
+    <string name="cancel">取消</string>
+    <string name="challengeHead">提供其他資訊</string>
+    <string name="challengeQues">問題</string>
+    <string name="challengeAns">回答</string>
+    <string name="challengeAnswerHint">輸入安全問題的回答</string>
+    <string name="submit">送出</string>
+    <string name="rememberUsername">記住使用者名稱</string>
+    <string name="rememberCredentials">記住證明資料</string>
+    <string name="autoLogin">自動登入</string>
+    <string name="backButton">上一頁</string>
+    <string name="forwardButton">下一頁</string>
+    <string name="refreshButton">重新整理</string>
+    <string name="cancelButton">取消</string>
+    <!-- *********************************************************************** -->
+
+
+    <!-- URL-Based Configuration -->
+    <string name="configPropertiesMissing">在 SharedPreferences 中找不到組態特性</string>
+    <string name="configIntentUriNull">傳送的 intent 未包含伺服器組態詳細資訊所需的 URI.</string>
+    <string name="configIntentUriInvalid">傳送的 intent 未包含伺服器組態詳細資訊所需的有效 URI.</string>
+    <string name="couldNotRetrieveConfiguration">無法從 SharedPreferences 擷取組態特性</string>
+    <string name="couldNotStoreConfiguration">無法在 SharedPreferences 中儲存組態特性</string>
+    <!-- *********************************************************************** -->
+    
+    
+    <!-- Setup failure -->
+    <string name="mssInitFailed">SDK 初始化失敗, 因為未提供必要的伺服器資訊.</string>
+    <string name="setupFailedMS">無法下載應用程式設定檔, 因為遺漏組態</string>
+    <string name="setupFailedDefault">應用程式設定檔或應用程式名稱無效</string>
+    <!-- *********************************************************************** -->
+
+
+    <!-- Mobile & Social Server -->
+    <string name="invalidAppName">應用程式名稱無效.</string>
+    <string name="invalidServerUrl">伺服器 URL 無效.</string>
+    <string name="invalidServiceDomain">服務網域無效.</string>
+    <string name="tokenMissing">裝置尚未經過「行動電話與社群伺服器」認證.</string>
+    <string name="noUserToken">尚未認證使用者.</string>
+    <string name="noRpLoginUrl">無法開啟 RP 認證 URL.</string>
+    <string name="reqFailed">使用者 %1$s 的認證要求失敗.</string>
+    <string name="reqDenied">認證要求被拒.</string>
+    <string name="oaamDeniedAction">認證被伺服器封鎖. 請洽詢管理員尋求協助.</string>
+    <string name="oaamWipeoutAction">從伺服器收到消除命令. 正在清除機密應用程式資料.</string>
+
+    <!-- SSO Messages -->
+    <string name="sigNotValid">驗證呼叫應用程式簽章失敗.</string>
+    <string name="ssoActivitymissing">尚未提供「SSO 應用程式」名稱.</string>
+    <string name="initSSOAgentSuccess">已順利起始「SSO 代理程式」應用程式.</string>
+    <string name="serviceDomainNotSame">代理程式已拒絕認證, 因為服務網域不符.</string>
+    <string name="invalidConfig">未授權從屬端應用程式參與 SSO.</string>
+    <string name="noAgentAvail">無法開啟 SSO 認證 URL.</string>
+    <string name="tokensNotAvailable">沒有 OAM_ID 記號. 請檢查伺服器設定值. 其中一個可能的組態錯誤原因就是認證配置未設為 MobileOAMAuthentication.</string>
+    <!-- *********************************************************************** -->
+
+    <!-- *********************************************************************** -->
+
+
+    <!-- Basic Authentication Messages -->
+    <string name="invalidBasicUrl">無效的登入 URL.</string>
+    <string name="serverReturnedError">伺服器發生錯誤 %1$s. 請洽詢管理員尋求協助.</string>
+    <string name="forbidden">此使用者未被授權.</string>
+    <!-- *********************************************************************** -->
+
+
+    <!-- Federated Authentication Messages -->
+    <string name="authenticationTimedOut">認證逾時.</string>
+    <!-- *********************************************************************** -->
+
+
+    <!-- HTML Login View Customization -->
+    <string name="customHtmlFieldsInvalid">自訂認證頁面沒有證明資料欄位.</string>
+    <string name="kbaHtmlFieldsInvalid">自訂強制認證頁面中沒有證明資料欄位.</string>
+    <string name="htmlFileException">自訂 HTML 檔案不可為空值.</string>
+    <string name="invalidHtmlFile">自訂 HTML 檔案路徑的類型無效</string>
+    <string name="remoteHTMLFile">自訂 HTML 頁面不可以是遠端頁面, SDK 僅支援載入本機 HTML 頁面</string>
+    <!-- *********************************************************************** -->
+
+
+    <!-- ************************* SSL Certificate Warning ********************* -->
+    <string name="ssl_settingsheader">此憑證不是來自信任的授權單位.</string>
+    <string name="ssl_security_certificate">安全憑證</string>
+    <string name="ssl_issued_to">主體:</string>
+    <string name="ssl_common_name">一般名稱:</string>
+    <string name="ssl_organization">組織:</string>
+    <string name="ssl_organization_unit">組織單位:</string>
+    <string name="ssl_issued_by">發照者:</string>
+    <string name="ssl_validity">有效期:</string>
+    <string name="ssl_issued_on">開始日期:</string>
+    <string name="ssl_expires_on">結束日期:</string>
+    <string name="security_warning">安全警告</string>
+    <string name="ssl_continue">接受</string>
+    <string name="ssl_view_certificate">詳細資訊</string>
+    <string name="ssl_message">此 URL 的安全憑證有問題.</string>
+    <string name="serial_number">序號:</string>
+    <string name="fingerprint">指紋:</string>
+    <string name="sha_fp">SHA1 指紋:</string>
+    <string name="md5_fp">MD5 指紋:</string>
+    <string name="ssl_alert_icon">警示圖示</string>
+    <string name="importCertificateFailure">無法安裝憑證.</string>
+    <!-- *********************************************************************** -->
+
+
+    <!-- ************************OAuth2.0 Known errors************************** -->
+    <string name="oAuthFailed">OAuth 認證失敗.</string>
+    <string name="oAuthInvalidState">從回應復原的狀態無效.</string>
+    <string name="oAuthContextInvalid">指定的要求沒有有效的存取記號. 請以適當的範圍進行認證.</string>
+
+    <!-- ********* Description messages if server returns no description ****** -->
+    <string name="oAuthInvalidRequestDesc">要求遺漏必要的參數、包含不支援的參數值、某個參數重複、包含多個證明資料、使用多個機制認證從屬端, 或是格式錯誤.</string>
+    <string name="oAuthUnauthorizedClientDesc">未授權已認證的從屬端使用此授權授予類型.</string>
+    <string name="oAuthAccessDeniedDesc">資源擁有者或授權伺服器拒絕該項要求.</string>
+    <string name="oAuthUnsupportedResponseTypeDesc">授權伺服器不支援使用此方法取得授權代碼.</string>
+    <string name="oAuthServerErrorDesc">授權伺服器遇到未預期的狀況, 無法執行要求.</string>
+    <string name="oAuthTempUnavailableDesc">授權伺服器暫時超載或進行維護中, 目前無法處理要求.</string>
+    <string name="oAuthInvalidScopeDesc">要求的範圍無效、不明、格式錯誤, 或超過資源擁有者授予的範圍.</string>
+    <string name="oAuthUnsupportedGrantTypeDesc">授權伺服器不支援此授權授予類型.</string>
+    <string name="oAuthInvalidClientDesc">從屬端認證失敗.</string>
+    <string name="oAuthInvalidGrantDesc">提供的授權或重新整理記號無效、已過期、已撤銷、與授權要求中使用的重導 URI 不符, 或者是已發給其他從屬端.</string>
+    <!-- *********************************************************************** -->
+
+    <!-- *********************************************************************** -->
+
+</resources>

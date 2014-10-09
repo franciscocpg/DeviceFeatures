@@ -1,0 +1,1 @@
+l={USA:["USA","\ubbf8\uad6d"],CAN:["CAN","\uce90\ub098\ub2e4"]};(DvtBaseMapManager=this.DvtBaseMapManager)||(DvtBaseMapManager={});DvtBaseMapManager._UNPROCESSED_MAPS||(DvtBaseMapManager._UNPROCESSED_MAPS=[[],[],[]]);DvtBaseMapManager._UNPROCESSED_MAPS[2].push(["usaAndCanada","countries",l]);

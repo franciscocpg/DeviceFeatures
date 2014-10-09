@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- $Header: idmmobile/src/Android/IDMMobileSDK/res/values/oamms_constants.xml /main/1 2014/03/06 23:17:18 arunpras Exp $ -->
+
+
+<!--
+ Copyright (c) 2013, 2014, Oracle and/or its affiliates. All rights reserved.
+
+   NAME
+     oamms_constants.xml
+
+   DESCRIPTION
+     Contains the strings being used by the SDK which do not require translation.
+
+   NOTES
+     <other useful comments, qualifications, etc.>
+
+   MODIFIED   (MM/DD/YY)
+   arunpras    02/20/14 - Creation
+
+-->
+<resources>
+
+    <string-array name="username_param_names">
+        <item>username</item>
+        <item>uname</item>
+        <item>email</item>
+        <item>uid</item>
+        <item>userid</item>
+    </string-array>
+
+</resources>

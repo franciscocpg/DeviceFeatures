@@ -1,0 +1,197 @@
+<?xml version = '1.0' encoding = 'utf-8'?>
+<!-- $Header: wptg/idmmobile/src/Android/IDMMobileSDK/res/values-el/oamms_strings.xml /st_wptg_11.1.1.9.0/4 2014/05/30 01:49:49 gmolloy Exp $ -->
+<!--
+ Copyright (c) 2013, 2014, Oracle and/or its affiliates. All rights reserved.
+
+   NAME
+     oamms_strings.xml
+
+   DESCRIPTION
+     Contains the strings being used by the SDK
+
+   NOTES
+     <other useful comments, qualifications, etc.>
+
+   MODIFIED   (MM/DD/YY)
+   ayjindal    04/08/14 - Bug 18477622
+   arunpras    01/17/14 - Bug fix: 17623143
+   arunpras    12/31/13 - Added an error message to be shown during the negative use case: Invoking logout method before performing authentication
+   arunpras	   10/03/13 - Added a string a part of the fix for bug - 16186113
+   arunpras    09/02/13 - Added custom HTTP headers
+-->
+<resources>
+
+    <!-- General Messages -->
+    <string name="oamms_app_name">Mobile και Social SDK για Android</string>
+    <string name="processing">Γίνεται επεξεργασία...</string>
+    <string name="activityExcep">Η δραστηριότητα δεν μπορεί να είναι null. Καταχωρίστε την τρέχουσα δραστηριότητα χρησιμοποιώντας την εντολή OMMobileSecurityService#registerActivity(Activity), κατά προτίμηση στην ενέργεια onResume().</string>
+    <string name="secProfileExcep">Δεν έγινε κλήση του API ρύθμισης.</string>
+    <string name="servicenamenull">Δεν έχει καθοριστεί σχήμα ελέγχου ταυτότητας.</string>
+    <string name="invalidServerType">Ο τύπος server ελέγχου ταυτότητας δεν είναι έγκυρος.</string>
+    <string name="notConnectToServer">Ο server της καθορισμένης διεύθυνσης δεν είναι προσβάσιμος. Επικοινωνήστε με το διαχειριστή για βοήθεια.</string>
+    <string name="networkUnavailable">Το δίκτυο δεν είναι διαθέσιμο. Βεβαιωθείτε ότι έχετε συνδεθεί στο Internet και δοκιμάστε ξανά.</string>
+    <string name="notParseResponse">Δεν ήταν δυνατή η ανάλυση της απόκρισης που εστάλη από το server.</string>
+    <string name="certificateNotAccepted">Ο χρήστης απέρριψε το πιστοποιητικό server.</string>
+    <string name="internalError">Εσωτερικό σφάλμα</string>
+    <string name="invalidArgumentsNullOrEmpty">Τα ορίσματα δεν μπορούν να είναι null ή κενές συμβολοσειρές</string>
+    <string name="updateCookiesValidationFailure">Απέτυχε η ενημέρωση της τιμής του cookie, διότι δεν είναι δυνατή η επικύρωση των χαρακτηριστικών του cookie</string>
+    <string name="cookieNotFound">Το προς ενημέρωση cookie δεν υπάρχει</string>
+    <string name="invalidArgumentsNull">Τα ορίσματα δεν μπορούν να είναι null</string>
+    <string name="clearUsernamePasswordFailed">Δεν είναι δυνατή αποθήκευση του ονόματος χρήστη και του κωδικού πρόσβασης στην Ενσωματωμένη προβολή ιστού, διότι στο μεταξύ καταργήθηκε η καταχώριση της δραστηριότητας.</string>
+    <string name="customAuthHeadersNotAllowed">Δεν μπορούν να προστεθούν κάποιες από τις κεφαλίδες HTTP που καθορίστηκαν στον χάρτη ο οποίος μεταβιβάστηκε ως μια τιμή έναντι του κλειδιού OM_PROP_CUSTOM_AUTH_HEADERS. Ανατρέξτε στην τεκμηρίωση για τη λίστα με τις κεφαλίδες HTTP που δεν επιτρέπονται.</string>
+    <string name="customAuthHeadersCountExceeded">Ο αριθμός των προσαρμοσμένων κεφαλίδων ελέγχου ταυτότητας που καθορίστηκαν ως μέρος του OM_PROP_CUSTOM_AUTH_HEADERS υπερβαίνει το μέγιστο πλήθος (%1$d).</string>
+    <string name="applicationNotAvailable">Η εφαρμογή που ζητήσατε δεν είναι διαθέσιμη.</string>
+    <string name="httpCallbackNull">Για ασύγχρονη αίτηση, η επανάκληση δεν μπορεί ναι είναι null</string>
+    <string name="httpResUrlNull">Η διεύθυνση τοποθεσίας πόρων Http δεν μπορεί να είναι null</string>
+    <string name="logoutInProgress">Η αποσύνδεση βρίσκεται σε εξέλιξη. Δοκιμάστε ξανά αργότερα.</string>
+    <string name="logoutTimedOut">Η διεργασία αποσύνδεσης απέτυχε, επειδή έληξε το χρονικό όριο της σύνδεσης.</string>
+    <string name="logoutFailure">Η αποσύνδεση απέτυχε λόγω του ακόλουθου σφάλματος: %1$s</string>
+    <string name="notFound">Η ζητηθείσα διεύθυνση τοποθεσίας δεν υπάρχει. Επικοινωνήστε με το διαχειριστή για βοήθεια.</string>
+    <!-- *********************************************************************** -->
+
+
+    <!-- ************************ Success/Error Messages ************************* -->
+    <string name="usernameRequired">Απαιτείται όνομα χρήστη.</string>
+    <string name="identityDomainRequired">Απαιτείται τομέας ταυτότητας.</string>
+    <string name="usernameIdentityDomainRequired">Απαιτείται όνομα χρήστη και τομέας ταυτότητας.</string>
+    <string name="passwordNull">Απαιτείται κωδικός πρόσβασης.</string>
+    <string name="unPwdMissing">Μη αποδεκτό όνομα χρήστη ή κωδικός πρόσβασης.</string>
+    <string name="unPwdTenantMissing">Μη αποδεκτό όνομα χρήστη, κωδικός πρόσβασης ή τομέας ταυτότητας.</string>
+    <string name="chalgMissing">Η απάντηση στην πρόκληση δεν είναι έγκυρη.</string>
+    <string name="userCanceled">Ο χρήστης ακύρωσε τη λειτουργία σύνδεσης.</string>
+    <string name="authfailed">Ο έλεγχος ταυτότητας χρήστη απέτυχε.</string>
+    <string name="authSuccess">Ο έλεγχος ταυτότητας χρήστη ολοκληρώθηκε με επιτυχία.</string>
+    <!-- *********************************************************************** -->
+
+
+    <!-- *********** UI Messages and Descriptions of Images ************* -->
+    <string name="username">Όνομα χρήστη</string>
+    <string name="usernameHint">Καταχωρίστε το όνομα χρήστη</string>
+    <string name="password">Κωδικός πρόσβασης</string>
+    <string name="passwordHint">Εισαγωγή κωδικού πρόσβασης</string>
+    <string name="tenant">Τομέας ταυτότητας</string>
+    <string name="tenantHint">Καταχωρίστε τον τομέα ταυτότητας</string>
+    <string name="login">Σύνδεση</string>
+    <string name="cancel">Άκυρο</string>
+    <string name="challengeHead">Καταχωρίστε πρόσθετες πληροφορίες</string>
+    <string name="challengeQues">Ερώτηση</string>
+    <string name="challengeAns">Απάντηση</string>
+    <string name="challengeAnswerHint">Καταχωρίστε μια απάντηση για την ερώτηση ασφαλείας</string>
+    <string name="submit">Υποβολή</string>
+    <string name="rememberUsername">Απομνημόνευση ονόματος χρήστη</string>
+    <string name="rememberCredentials">Απομνημόνευση διαπιστευτηρίων</string>
+    <string name="autoLogin">Αυτόματη σύνδεση</string>
+    <string name="backButton">Πίσω</string>
+    <string name="forwardButton">Εμπρός</string>
+    <string name="refreshButton">Ανανέωση</string>
+    <string name="cancelButton">Άκυρο</string>
+    <!-- *********************************************************************** -->
+
+
+    <!-- URL-Based Configuration -->
+    <string name="configPropertiesMissing">Δεν βρέθηκαν οι ιδιότητες διαμόρφωσης στο SharedPreferences</string>
+    <string name="configIntentUriNull">Η πρόθεση που μεταβιβάστηκε δεν περιέχει URI για τις λεπτομέρειες διαμόρφωσης server.</string>
+    <string name="configIntentUriInvalid">Η πρόθεση που μεταβιβάστηκε δεν περιέχει έγκυρο URI για τις λεπτομέρειες διαμόρφωσης server.</string>
+    <string name="couldNotRetrieveConfiguration">Δεν ήταν δυνατή η ανάκτηση των ιδιοτήτων διαμόρφωσης από το SharedPreferences</string>
+    <string name="couldNotStoreConfiguration">Δεν ήταν δυνατή η αποθήκευση ιδιοτήτων διαμόρφωσης στο SharedPreferences</string>
+    <!-- *********************************************************************** -->
+    
+    
+    <!-- Setup failure -->
+    <string name="mssInitFailed">Η εκκίνηση του SDK απέτυχε, διότι δεν έχουν καταχωριστεί οι απαιτούμενες πληροφορίες server.</string>
+    <string name="setupFailedMS">Δεν είναι δυνατή η λήψη του προφίλ εφαρμογής λόγω της διαμόρφωσης που λείπει</string>
+    <string name="setupFailedDefault">Το προφίλ ή το όνομα της εφαρμογής δεν είναι έγκυρο</string>
+    <!-- *********************************************************************** -->
+
+
+    <!-- Mobile & Social Server -->
+    <string name="invalidAppName">Το όνομα της εφαρμογής δεν είναι έγκυρο.</string>
+    <string name="invalidServerUrl">Η διεύθυνση τοποθεσίας server δεν είναι έγκυρη.</string>
+    <string name="invalidServiceDomain">Ο τομέας υπηρεσίας δεν είναι έγκυρος.</string>
+    <string name="tokenMissing">Αυτή η συσκευή δεν έχει ολοκληρώσει ακόμη τον έλεγχο ταυτότητας για τον Server Mobile και Social.</string>
+    <string name="noUserToken">Η ταυτότητα του χρήστη δεν έχει πιστοποιηθεί ακόμη.</string>
+    <string name="noRpLoginUrl">Δεν είναι δυνατό το άνοιγμα της διεύθυνσης τοποθεσίας ελέγχου ταυτότητας RP.</string>
+    <string name="reqFailed">Το αίτημα ελέγχου ταυτότητας απέτυχε για τον χρήστη %1$s.</string>
+    <string name="reqDenied">Το αίτημα για έλεγχο ταυτότητας απορρίφθηκε.</string>
+    <string name="oaamDeniedAction">Αποκλεισμός ελέγχου ταυτότητας από το server. Επικοινωνήστε με το διαχειριστή για βοήθεια.</string>
+    <string name="oaamWipeoutAction">Ελήφθη εντολή σβησίματος από τον server. Εκκαθάριση ευαίσθητων δεδομένων εφαρμογής.</string>
+
+    <!-- SSO Messages -->
+    <string name="sigNotValid">Αποτυχία επικύρωσης της υπογραφής εφαρμογής κλήσης.</string>
+    <string name="ssoActivitymissing">Το όνομα της εφαρμογής SSO δεν έχει καταχωριστεί.</string>
+    <string name="initSSOAgentSuccess">Η εφαρμογή παράγοντα SSO εκκινήθηκε με επιτυχία.</string>
+    <string name="serviceDomainNotSame">Ο έλεγχος ταυτότητας απορρίφθηκε από τον παράγοντα επειδή ο τομέας υπηρεσίας δεν συμφωνεί.</string>
+    <string name="invalidConfig">Η εφαρμογή client δεν διαθέτει εξουσιοδότηση για να συμμετάσχει στο SSO.</string>
+    <string name="noAgentAvail">Δεν είναι δυνατό το άνοιγμα της διεύθυνσης τοποθεσίας ελέγχου ταυτότητας SSO URL.</string>
+    <string name="tokensNotAvailable">Το διακριτικό OAM_ID δεν είναι διαθέσιμο. Εξετάστε τις ρυθμίσεις του server. Μία από τις ενδεχόμενες εσφαλμένες διαμορφώσεις είναι ότι το σχήμα ελέγχου ταυτότητας δεν έχει οριστεί ως MobileOAMAuthentication.</string>
+    <!-- *********************************************************************** -->
+
+    <!-- *********************************************************************** -->
+
+
+    <!-- Basic Authentication Messages -->
+    <string name="invalidBasicUrl">Μη έγκυρη διεύθυνση τοποθεσίας σύνδεσης.</string>
+    <string name="serverReturnedError">Παρουσιάστηκε σφάλμα %1$s στον server. Επικοινωνήστε με το διαχειριστή για βοήθεια.</string>
+    <string name="forbidden">Ο χρήστης δεν έχει εξουσιοδότηση.</string>
+    <!-- *********************************************************************** -->
+
+
+    <!-- Federated Authentication Messages -->
+    <string name="authenticationTimedOut">Έληξε το χρονικό όριο ελέγχου ταυτότητας.</string>
+    <!-- *********************************************************************** -->
+
+
+    <!-- HTML Login View Customization -->
+    <string name="customHtmlFieldsInvalid">Η προσαρμοσμένη σελίδα ελέγχου ταυτότητας δεν έχει πεδίο διαπιστευτηρίων.</string>
+    <string name="kbaHtmlFieldsInvalid">Η προσαρμοσμένη σελίδα αυστηρού ελέγχου ταυτότητας δεν έχει πεδίο διαπιστευτηρίων.</string>
+    <string name="htmlFileException">Το προσαρμοσμένο αρχείο HTML δεν μπορεί να είναι null.</string>
+    <string name="invalidHtmlFile">Ο τύπος της προσαρμοσμένης διαδρομής αρχείου HTML δεν είναι έγκυρος</string>
+    <string name="remoteHTMLFile">Η προσαρμοσμένη σελίδα HTML δεν μπορεί να είναι απομακρυσμένη σελίδα, το SDK υποστηρίζει τη φόρτωση μόνο τοπικής σελίδας HTML</string>
+    <!-- *********************************************************************** -->
+
+
+    <!-- ************************* SSL Certificate Warning ********************* -->
+    <string name="ssl_settingsheader">Αυτό το πιστοποιητικό δεν προέρχεται από αξιόπιστη αρχή έκδοσης.</string>
+    <string name="ssl_security_certificate">Πιστοποιητικό ασφάλειας</string>
+    <string name="ssl_issued_to">Θέμα:</string>
+    <string name="ssl_common_name">Κοινό όνομα:</string>
+    <string name="ssl_organization">Οργανισμός:</string>
+    <string name="ssl_organization_unit">Μονάδα οργανισμού:</string>
+    <string name="ssl_issued_by">Εκδότης:</string>
+    <string name="ssl_validity">Ισχύει:</string>
+    <string name="ssl_issued_on">Ημερομηνία έναρξης:</string>
+    <string name="ssl_expires_on">Ημερομηνία λήξης:</string>
+    <string name="security_warning">Προειδοποίηση ασφάλειας</string>
+    <string name="ssl_continue">Αποδοχή</string>
+    <string name="ssl_view_certificate">Λεπτομέρειες</string>
+    <string name="ssl_message">Υπάρχουν προβλήματα με το πιστοποιητικό ασφάλειας για αυτήν την διεύθυνση τοποθεσίας.</string>
+    <string name="serial_number">Αριθμός σειράς:</string>
+    <string name="fingerprint">Δαχτυλικά αποτυπώματα:</string>
+    <string name="sha_fp">Δαχτυλικό αποτύπωμα SHA1:</string>
+    <string name="md5_fp">Δαχτυλικό αποτύπωμα MD5:</string>
+    <string name="ssl_alert_icon">Εικονίδιο ειδοποίησης</string>
+    <string name="importCertificateFailure">Δεν είναι δυνατή η εγκατάσταση του πιστοποιητικού.</string>
+    <!-- *********************************************************************** -->
+
+
+    <!-- ************************OAuth2.0 Known errors************************** -->
+    <string name="oAuthFailed">Απέτυχε ο έλεγχος ταυτότητας OAuth.</string>
+    <string name="oAuthInvalidState">Ανακτήθηκε μη αποδεκτή κατάσταση από την απόκριση.</string>
+    <string name="oAuthContextInvalid">Δεν υπάρχει κανένα έγκυρο διακριτικό πρόσβασης για τη δεδομένη αίτηση. Εκτέλεση ελέγχου ταυτότητας με την κατάλληλη εμβέλεια.</string>
+
+    <!-- ********* Description messages if server returns no description ****** -->
+    <string name="oAuthInvalidRequestDesc">Το αίτημα δεν έχει μια απαιτούμενη παράμετρο, περιλαμβάνει μια μη υποστηριζόμενη τιμή παραμέτρου, επαναλαμβάνει μια παράμετρο, περιλαμβάνει πολλαπλά διαπιστευτήρια, χρησιμοποιεί περισσότερους από έναν μηχανισμούς για τον έλεγχο της ταυτότητας του client ή έχει εσφαλμένη μορφή λόγω άλλων αιτιών.</string>
+    <string name="oAuthUnauthorizedClientDesc">Ο client που υποβλήθηκε σε έλεγχο δεν είναι εξουσιοδοτημένος για τη χρήση αυτού του τύπου εκχώρησης εξουσιοδότησης.</string>
+    <string name="oAuthAccessDeniedDesc">Ο κάτοχος πόρου ή ο server εξουσιοδότησης απέρριψε την αίτηση.</string>
+    <string name="oAuthUnsupportedResponseTypeDesc">Ο server εξουσιοδότησης δεν υποστηρίζει τη λήψη ενός κωδικού εξουσιοδότησης χρησιμοποιώντας αυτήν τη μέθοδο.</string>
+    <string name="oAuthServerErrorDesc">Ο server εξουσιοδότησης εντόπισε μια μη αναμενόμενη συνθήκη που δεν του επέτρεψε να διεκπεριώσει την αίτηση.</string>
+    <string name="oAuthTempUnavailableDesc">Ο server εξουσιοδότησης δεν μπορεί να χειριστεί την αίτηση προς το παρόν, εξαιτίας προσωρινής υπερφόρτωσης ή συντήρησης του server.</string>
+    <string name="oAuthInvalidScopeDesc">Η ζητηθείσα εμβέλεια είναι μη αποδεκτή, άγνωστη, έχει εσφαλμένη μορφή ή υπερβαίνει την εμβέλεια που εκχωρήθηκε από τον κάτοχο πόρου.</string>
+    <string name="oAuthUnsupportedGrantTypeDesc">Ο τύπος εκχώρησης εξουσιοδότησης δεν υποστηρίζεται από το server εξουσιοδότησης.</string>
+    <string name="oAuthInvalidClientDesc">Ο έλεγχος ταυτότητας client απέτυχε.</string>
+    <string name="oAuthInvalidGrantDesc">Η παρεχόμενη εκχώρηση εξουσιοδότησης ή το διακριτικό ανανέωσης είναι μη έγκυρο, έχει λήξει, έχει ανακληθεί, δεν συμφωνεί με το URI ανακατεύθυνσης που χρησιμοποιείται στο αίτημα εξουσιοδότησης ή έχει εκδοθεί σε άλλο client.</string>
+    <!-- *********************************************************************** -->
+
+    <!-- *********************************************************************** -->
+
+</resources>

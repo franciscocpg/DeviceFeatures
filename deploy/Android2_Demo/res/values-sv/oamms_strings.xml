@@ -1,0 +1,197 @@
+<?xml version = '1.0' encoding = 'utf-8'?>
+<!-- $Header: wptg/idmmobile/src/Android/IDMMobileSDK/res/values-sv/oamms_strings.xml /st_wptg_11.1.1.9.0/4 2014/05/31 01:47:44 gmolloy Exp $ -->
+<!--
+ Copyright (c) 2013, 2014, Oracle and/or its affiliates. All rights reserved.
+
+   NAME
+     oamms_strings.xml
+
+   DESCRIPTION
+     Contains the strings being used by the SDK
+
+   NOTES
+     <other useful comments, qualifications, etc.>
+
+   MODIFIED   (MM/DD/YY)
+   ayjindal    04/08/14 - Bug 18477622
+   arunpras    01/17/14 - Bug fix: 17623143
+   arunpras    12/31/13 - Added an error message to be shown during the negative use case: Invoking logout method before performing authentication
+   arunpras	   10/03/13 - Added a string a part of the fix for bug - 16186113
+   arunpras    09/02/13 - Added custom HTTP headers
+-->
+<resources>
+
+    <!-- General Messages -->
+    <string name="oamms_app_name">Mobil och social SDK för Android</string>
+    <string name="processing">Bearbetar...</string>
+    <string name="activityExcep">Aktiviteten kan inte vara null. Registrera den aktuella aktiviteten med OMMobileSecurityService#registerActivity(Activity) helst i onResume().</string>
+    <string name="secProfileExcep">Inställnings-API har inte anropats.</string>
+    <string name="servicenamenull">Inget autentiseringsschema är angivet.</string>
+    <string name="invalidServerType">Autentiseringsservertypen är ogiltig.</string>
+    <string name="notConnectToServer">Servern kan inte nås på den angivna adressen. Kontakta administratören för hjälp.</string>
+    <string name="networkUnavailable">Nätverket är inte tillgängligt. Kontrollera att du är ansluten till internet och försök igen.</string>
+    <string name="notParseResponse">Kunde inte tolka svar från servern.</string>
+    <string name="certificateNotAccepted">Användaren avslog servercertifikat.</string>
+    <string name="internalError">Internt fel</string>
+    <string name="invalidArgumentsNullOrEmpty">Argument kan inte vara null eller tomma strängar</string>
+    <string name="updateCookiesValidationFailure">Uppdatering av cookievärde utfördes inte eftersom cookieattributen inte kan valideras</string>
+    <string name="cookieNotFound">Cookien som ska uppdateras finns inte</string>
+    <string name="invalidArgumentsNull">Argument kan inte vara null</string>
+    <string name="clearUsernamePasswordFailed">Användarnamn och lösenord som lagrade i inbäddad webbvy kunde inte tas bort eftersom aktivitet avregistrerades emellan.</string>
+    <string name="customAuthHeadersNotAllowed">Kan inte lägga till vissa av de HTTP-huvuden som angavs i den mappning som överfördes som värde mot nyckeln OM_PROP_CUSTOM_AUTH_HEADERS. Dokumentationen innehåller en lista över de HTTP-huvuden som inte är tillåtna.</string>
+    <string name="customAuthHeadersCountExceeded">Antalet anpassade auth-huvuden som är angivna som en del av OM_PROP_CUSTOM_AUTH_HEADERS överskrider max.antalet (%1$d).</string>
+    <string name="applicationNotAvailable">Den begärda applikationen är inte tillgänglig.</string>
+    <string name="httpCallbackNull">För asynkrona begäran kan återuppringning inte vara null</string>
+    <string name="httpResUrlNull">Http URL-resurs kan inte vara null</string>
+    <string name="logoutInProgress">Utloggning pågår. Försök igen senare.</string>
+    <string name="logoutTimedOut">Utloggning utfördes inte eftersom tidsgränsen överskreds.</string>
+    <string name="logoutFailure">Utloggning utfördes inte på grund av följande fel: %1$s</string>
+    <string name="notFound">Den begärda URL:en finns inte. Kontakta administratören för hjälp.</string>
+    <!-- *********************************************************************** -->
+
+
+    <!-- ************************ Success/Error Messages ************************* -->
+    <string name="usernameRequired">Användarnamn krävs.</string>
+    <string name="identityDomainRequired">Identitetsdomän krävs.</string>
+    <string name="usernameIdentityDomainRequired">Användarnamn och identitetsdomän krävs.</string>
+    <string name="passwordNull">Lösenord krävs.</string>
+    <string name="unPwdMissing">Användarnamnet eller lösenordet är ogiltigt.</string>
+    <string name="unPwdTenantMissing">Ogiltigt användarnamn, lösenord eller identitetsdomän.</string>
+    <string name="chalgMissing">Ledtrådssvar är ogiltigt.</string>
+    <string name="userCanceled">Användaren avbröt inloggningsåtgärden.</string>
+    <string name="authfailed">Användarautentiseringen utfördes inte.</string>
+    <string name="authSuccess">Användarautentisering har utförts.</string>
+    <!-- *********************************************************************** -->
+
+
+    <!-- *********** UI Messages and Descriptions of Images ************* -->
+    <string name="username">Användarnamn</string>
+    <string name="usernameHint">Ange användarnamn</string>
+    <string name="password">Lösenord</string>
+    <string name="passwordHint">Ange lösenord</string>
+    <string name="tenant">Identitetsdomän</string>
+    <string name="tenantHint">Ange identitetsdomän</string>
+    <string name="login">Logga in</string>
+    <string name="cancel">Avbryt</string>
+    <string name="challengeHead">Ange mer information</string>
+    <string name="challengeQues">Fråga</string>
+    <string name="challengeAns">Svar</string>
+    <string name="challengeAnswerHint">Ange svar för säkerhetsfråga</string>
+    <string name="submit">Skicka</string>
+    <string name="rememberUsername">Kom ihåg användarnamn</string>
+    <string name="rememberCredentials">Kom ihåg inloggningsuppgifter</string>
+    <string name="autoLogin">Automatisk inloggning</string>
+    <string name="backButton">Föregående</string>
+    <string name="forwardButton">Framåt</string>
+    <string name="refreshButton">Förnya</string>
+    <string name="cancelButton">Avbryt</string>
+    <!-- *********************************************************************** -->
+
+
+    <!-- URL-Based Configuration -->
+    <string name="configPropertiesMissing">Konfigurationsegenskaper hittas inte i SharedPreferences</string>
+    <string name="configIntentUriNull">Det överförda syftet innehåller ingen URI för serverkonfigurationsdetaljer.</string>
+    <string name="configIntentUriInvalid">Det överförda syftet innehåller ingen giltig URI för serverkonfigurationsdetaljer.</string>
+    <string name="couldNotRetrieveConfiguration">Kunde inte hämta konfigurationsegenskaper från SharedPreferences</string>
+    <string name="couldNotStoreConfiguration">Kunde inte lagra konfigurationsegenskaper i SharedPreferences</string>
+    <!-- *********************************************************************** -->
+    
+    
+    <!-- Setup failure -->
+    <string name="mssInitFailed">Kunde inte initiera SDK:t eftersom obligatorisk serverinformation inte har angetts.</string>
+    <string name="setupFailedMS">Applikationsprofil kan inte laddas ned på grund av saknad konfiguration</string>
+    <string name="setupFailedDefault">Applikatonsprofil eller applikationsnamn är ogiltigt</string>
+    <!-- *********************************************************************** -->
+
+
+    <!-- Mobile & Social Server -->
+    <string name="invalidAppName">Applikationsnamnet är ogiltigt.</string>
+    <string name="invalidServerUrl">Server-URL är ogiltigt.</string>
+    <string name="invalidServiceDomain">Tjänstedomän är ogiltig.</string>
+    <string name="tokenMissing">Den här enheten har ännu inte autentiserats med mobil- och social server.</string>
+    <string name="noUserToken">Användaren är ännu inte autentiserad.</string>
+    <string name="noRpLoginUrl">Kunde inte öppna URL:en för RP-autentisering.</string>
+    <string name="reqFailed">Autentiseringsbegäran utfördes inte för användaren %1$s.</string>
+    <string name="reqDenied">Begäran om autentisering nekades.</string>
+    <string name="oaamDeniedAction">Autentisering blockerades av servern. Kontakta administratören för hjälp.</string>
+    <string name="oaamWipeoutAction">Tog emot raderingskommando från servern. Rensar känsliga applikationsdata.</string>
+
+    <!-- SSO Messages -->
+    <string name="sigNotValid">Kunde inte validera signatur för uppringande applikation.</string>
+    <string name="ssoActivitymissing">SSO-applikationsnamn har inte angetts.</string>
+    <string name="initSSOAgentSuccess">Initieringen av SSO-agentapplikationen har utförts.</string>
+    <string name="serviceDomainNotSame">Autentiseringen avslås av agenten eftersom tjänstedomänen inte matchar.</string>
+    <string name="invalidConfig">Kundapplikationen är inte auktoriserad för deltagande i SSO.</string>
+    <string name="noAgentAvail">Kunde inte öppna URL:en för SSO-autentisering.</string>
+    <string name="tokensNotAvailable">OAM_ID-tecknet är inte tillgängligt. Kontrollera serverinställningarna. En möjlig felkonfiguration kan vara att autentiseringsschemat inte är inställt som MobileOAMAuthentication.</string>
+    <!-- *********************************************************************** -->
+
+    <!-- *********************************************************************** -->
+
+
+    <!-- Basic Authentication Messages -->
+    <string name="invalidBasicUrl">Ogiltig inloggnings-URL.</string>
+    <string name="serverReturnedError">Servern påträffade ett fel %1$s. Kontakta administratören för hjälp.</string>
+    <string name="forbidden">Användaren är inte behörig.</string>
+    <!-- *********************************************************************** -->
+
+
+    <!-- Federated Authentication Messages -->
+    <string name="authenticationTimedOut">Tidsgränsen för autentiseringen överskreds.</string>
+    <!-- *********************************************************************** -->
+
+
+    <!-- HTML Login View Customization -->
+    <string name="customHtmlFieldsInvalid">Den anpassade autentiseringssidan har inget fält för inloggningsuppgifter.</string>
+    <string name="kbaHtmlFieldsInvalid">Den anpassade sidan för stark autentisering har inget fält för inloggningsuppgifter.</string>
+    <string name="htmlFileException">Den anpassade HTML-filen kan inte vara null.</string>
+    <string name="invalidHtmlFile">Sökvägen till den anpassade HTML-filen är ogiltig</string>
+    <string name="remoteHTMLFile">Den anpassade HTML-sidan får inte vara en fjärrsida. SDK stöder endast laddning av lokal HTML-sida</string>
+    <!-- *********************************************************************** -->
+
+
+    <!-- ************************* SSL Certificate Warning ********************* -->
+    <string name="ssl_settingsheader">Det här certifikatet är inte från en betrodd myndighet.</string>
+    <string name="ssl_security_certificate">Säkerhetscertifikat</string>
+    <string name="ssl_issued_to">Ärende:</string>
+    <string name="ssl_common_name">Nätverksnamn:</string>
+    <string name="ssl_organization">Organisation:</string>
+    <string name="ssl_organization_unit">Organisationsenhet:</string>
+    <string name="ssl_issued_by">Utfärdare:</string>
+    <string name="ssl_validity">Giltighet:</string>
+    <string name="ssl_issued_on">Startdatum:</string>
+    <string name="ssl_expires_on">Slutdatum:</string>
+    <string name="security_warning">Säkerhetsvarning</string>
+    <string name="ssl_continue">Acceptera</string>
+    <string name="ssl_view_certificate">Detaljer</string>
+    <string name="ssl_message">Det finns problem med säkerhetscertifikatet för den här URL-adressen.</string>
+    <string name="serial_number">Serienummer:</string>
+    <string name="fingerprint">Fingeravtryck:</string>
+    <string name="sha_fp">SHA1-fingeravtryck:</string>
+    <string name="md5_fp">MD5-fingeravtryck:</string>
+    <string name="ssl_alert_icon">Ikonen Avisering</string>
+    <string name="importCertificateFailure">Kunde inte installera certifikatet.</string>
+    <!-- *********************************************************************** -->
+
+
+    <!-- ************************OAuth2.0 Known errors************************** -->
+    <string name="oAuthFailed">OAuth-autentisering utfördes inte.</string>
+    <string name="oAuthInvalidState">Ogiltig status återhämtad från svaret.</string>
+    <string name="oAuthContextInvalid">Inget giltigt åtkomsttecken finns för den angivna begäran. Autentisera med lämplig omfattning.</string>
+
+    <!-- ********* Description messages if server returns no description ****** -->
+    <string name="oAuthInvalidRequestDesc">Begäran saknar en obligatorisk parameter, inkluderar ett parametervärde som inte stöds, upprepar en parameter, inkluderar flera inloggningsuppgifter, använder fler än en mekanism för att autentisera klienten eller är på annat sätt felaktigt utformad.</string>
+    <string name="oAuthUnauthorizedClientDesc">Den autentiserade klienten är inte behörig att använda den här auktoriseringstilldelningstypen.</string>
+    <string name="oAuthAccessDeniedDesc">Resursägaren eller auktoriseringsservern nekade begäran.</string>
+    <string name="oAuthUnsupportedResponseTypeDesc">Auktoriseringsservern stöder inte hämtning av auktoriseringskod med den här metoden.</string>
+    <string name="oAuthServerErrorDesc">Auktoriseringsservern påträffade ett oväntat villkor som förhindrade den från att utföra begäran.</string>
+    <string name="oAuthTempUnavailableDesc">Auktoriseringsservern kan för närvarande inte hantera begäran på grund av tillfällig överbelastning eller serverunderhåll.</string>
+    <string name="oAuthInvalidScopeDesc">Begärd omfattning är ogiltig, okänd, felaktigt utformad eller överstiger omfattningen som tilldelats av resursägaren.</string>
+    <string name="oAuthUnsupportedGrantTypeDesc">Auktoriseringstilldelningstypen stöds inte av auktoriseringsservern.</string>
+    <string name="oAuthInvalidClientDesc">Klientautentiseringen har inte utförts.</string>
+    <string name="oAuthInvalidGrantDesc">Angiven auktoriseringstilldelning eller förnyelsetoken är ogiltig, har upphört, återkallats, matchar inte den omdirigerings-URI som används i auktoriseringsbegäran eller som utfärdats till en annan klient.</string>
+    <!-- *********************************************************************** -->
+
+    <!-- *********************************************************************** -->
+
+</resources>

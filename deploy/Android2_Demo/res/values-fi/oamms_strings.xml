@@ -1,0 +1,197 @@
+<?xml version = '1.0' encoding = 'utf-8'?>
+<!-- $Header: wptg/idmmobile/src/Android/IDMMobileSDK/res/values-fi/oamms_strings.xml /st_wptg_11.1.1.9.0/4 2014/05/30 04:21:44 gmolloy Exp $ -->
+<!--
+ Copyright (c) 2013, 2014, Oracle and/or its affiliates. All rights reserved.
+
+   NAME
+     oamms_strings.xml
+
+   DESCRIPTION
+     Contains the strings being used by the SDK
+
+   NOTES
+     <other useful comments, qualifications, etc.>
+
+   MODIFIED   (MM/DD/YY)
+   ayjindal    04/08/14 - Bug 18477622
+   arunpras    01/17/14 - Bug fix: 17623143
+   arunpras    12/31/13 - Added an error message to be shown during the negative use case: Invoking logout method before performing authentication
+   arunpras	   10/03/13 - Added a string a part of the fix for bug - 16186113
+   arunpras    09/02/13 - Added custom HTTP headers
+-->
+<resources>
+
+    <!-- General Messages -->
+    <string name="oamms_app_name">Mobile ja Social SDK for Android</string>
+    <string name="processing">Käsitellään...</string>
+    <string name="activityExcep">Toiminta ei voi olla tyhjä. Kirjaa nykyinen toiminta käyttämällä valintaa OMMobileSecurityService#registerActivity(Activity) mieluiten onResume()-menetelmässä.</string>
+    <string name="secProfileExcep">Määrityksen API:a ei kutsuttu.</string>
+    <string name="servicenamenull">Todennuskaavaa ei ole määritetty.</string>
+    <string name="invalidServerType">Todennuspalvelimen tyyppi on virheellinen.</string>
+    <string name="notConnectToServer">Palvelimeen ei saada yhteyttä määritetyssä osoitteessa. Pyydä apua pääkäyttäjältä.</string>
+    <string name="networkUnavailable">Verkko ei ole käytettävissä. Varmista, että sinulla on yhteys Internetiin, ja yritä uudelleen.</string>
+    <string name="notParseResponse">Palvelimen lähettämää vastausta ei voitu jäsentää.</string>
+    <string name="certificateNotAccepted">Käyttäjä hylkäsi palvelinvarmenteen.</string>
+    <string name="internalError">Sisäinen virhe</string>
+    <string name="invalidArgumentsNullOrEmpty">Argumentit eivät voi olla null tai tyhjiä merkkijonoja</string>
+    <string name="updateCookiesValidationFailure">Cookie-tiedoston arvon päivitys epäonnistui, koska cookie-tiedoston määritteitä ei voitu tarkistaa</string>
+    <string name="cookieNotFound">Päivitettävää cookie-tiedostoa ei ole</string>
+    <string name="invalidArgumentsNull">Argumentit eivät voi olla tyhjiä</string>
+    <string name="clearUsernamePasswordFailed">Upotettuun Web-näkymään tallennettua käyttäjätunnusta ja salasanaa ei voitu poistaa, koska toimen rekisteröinti poistettiin toimintojen välillä.</string>
+    <string name="customAuthHeadersNotAllowed">Tiettyjä HTTP-otsikoita, jotka on määritetty avainta OM_PROP_CUSTOM_AUTH_HEADERS vastaan välitetyssä määrityksessä, ei voi lisätä. Katso dokumentaatiosta lista HTTP-otsikoista, joita ei sallita.</string>
+    <string name="customAuthHeadersCountExceeded">Kohteen OM_PROP_CUSTOM_AUTH_HEADERS osana määritettyjen räätälöityjen todennusotsikoiden määrä ylittää enimmäismäärän (%1$d).</string>
+    <string name="applicationNotAvailable">Pyydetty sovellus ei ole käytettävissä.</string>
+    <string name="httpCallbackNull">Asynkronisen pyynnön vastakutsu ei voi olla tyhjä</string>
+    <string name="httpResUrlNull">Http-resurssin URL ei voi olla tyhjä</string>
+    <string name="logoutInProgress">Uloskirjaus on käynnissä. Yritä myöhemmin uudelleen.</string>
+    <string name="logoutTimedOut">Uloskirjaus epäonnistui, koska yhteys päättyi aikakatkaisuun.</string>
+    <string name="logoutFailure">Uloskirjaus epäonnistui seuraavan virheen takia: %1$s</string>
+    <string name="notFound">Pyydettyä URL-osoitetta ei ole. Pyydä apua pääkäyttäjältä.</string>
+    <!-- *********************************************************************** -->
+
+
+    <!-- ************************ Success/Error Messages ************************* -->
+    <string name="usernameRequired">Käyttäjätunnus on pakollinen.</string>
+    <string name="identityDomainRequired">Tunnistuksen toimialue on pakollinen.</string>
+    <string name="usernameIdentityDomainRequired">Käyttäjätunnus ja tunnistuksen toimialue ovat pakollisia.</string>
+    <string name="passwordNull">Vaaditaan salasana.</string>
+    <string name="unPwdMissing">Väärä käyttäjätunnus tai salasana.</string>
+    <string name="unPwdTenantMissing">Virheellinen käyttäjätunnus, salasana tai tunnistuksen toimialue.</string>
+    <string name="chalgMissing">Haasteen vastaus on virheellinen.</string>
+    <string name="userCanceled">Käyttäjä peruutti sisäänkirjaustoiminnon.</string>
+    <string name="authfailed">Käyttäjän todennus epäonnistui.</string>
+    <string name="authSuccess">Käyttäjän todennus onnistui.</string>
+    <!-- *********************************************************************** -->
+
+
+    <!-- *********** UI Messages and Descriptions of Images ************* -->
+    <string name="username">Käyttäjätunnus</string>
+    <string name="usernameHint">Syötä käyttäjätunnus</string>
+    <string name="password">Salasana</string>
+    <string name="passwordHint">Syötä salasana</string>
+    <string name="tenant">Tunnistuksen toimialue</string>
+    <string name="tenantHint">Syötä tunnistuksen toimialue</string>
+    <string name="login">Sisäänkirjaus</string>
+    <string name="cancel">Peruuta</string>
+    <string name="challengeHead">Määritä lisätiedot</string>
+    <string name="challengeQues">Kysymys</string>
+    <string name="challengeAns">Vastaus</string>
+    <string name="challengeAnswerHint">Anna vastaus suojakysymykseen</string>
+    <string name="submit">Lähetä</string>
+    <string name="rememberUsername">Muista käyttäjätunnus</string>
+    <string name="rememberCredentials">Muista valtuudet</string>
+    <string name="autoLogin">Automaattinen sisäänkirjaus</string>
+    <string name="backButton">Takaisin</string>
+    <string name="forwardButton">Eteenpäin</string>
+    <string name="refreshButton">Päivitä</string>
+    <string name="cancelButton">Peruuta</string>
+    <!-- *********************************************************************** -->
+
+
+    <!-- URL-Based Configuration -->
+    <string name="configPropertiesMissing">Kokoonpanon ominaisuuksia ei löydy kohteesta SharedPreferences</string>
+    <string name="configIntentUriNull">Välitetty aie ei sisällä palvelimen määritystietojen URI-osoitetta.</string>
+    <string name="configIntentUriInvalid">Välitetty aie ei sisällä sallittua palvelimen määritystietojen URI-osoitetta.</string>
+    <string name="couldNotRetrieveConfiguration">Määritysominaisuuksia ei voi noutaa kohteesta SharedPreferences</string>
+    <string name="couldNotStoreConfiguration">Kokoonpanon ominaisuuksia ei voi tallentaa kohteeseen SharedPreferences</string>
+    <!-- *********************************************************************** -->
+    
+    
+    <!-- Setup failure -->
+    <string name="mssInitFailed">SDK:n alustus epäonnistui, koska vaadittuja palvelimen tietoja ei ole määritetty.</string>
+    <string name="setupFailedMS">Sovelluksen profiilia ei voi ladata puuttuvan kokoonpanon takia</string>
+    <string name="setupFailedDefault">Sovelluksen profiili tai sovelluksen nimi on virheellinen</string>
+    <!-- *********************************************************************** -->
+
+
+    <!-- Mobile & Social Server -->
+    <string name="invalidAppName">Sovelluksen nimi on virheellinen.</string>
+    <string name="invalidServerUrl">Palvelimen URL on virheellinen.</string>
+    <string name="invalidServiceDomain">Palvelun toimialue on virheellinen.</string>
+    <string name="tokenMissing">Laitetta ei ole vielä todennettu Mobile- ja Social-palvelimella.</string>
+    <string name="noUserToken">Käyttäjää ei ole vielä todennettu.</string>
+    <string name="noRpLoginUrl">RP-todennuksen URL-osoitetta ei voi avata.</string>
+    <string name="reqFailed">Käyttäjän %1$s todennuspyyntö epäonnistui.</string>
+    <string name="reqDenied">Todennuspyyntö hylättiin.</string>
+    <string name="oaamDeniedAction">Palvelin esti todennuksen. Pyydä apua pääkäyttäjältä.</string>
+    <string name="oaamWipeoutAction">Vastaanotettiin tyhjennyskomento palvelimesta. Luottamukselliset sovellustiedot poistetaan.</string>
+
+    <!-- SSO Messages -->
+    <string name="sigNotValid">Kutsusovelluksen allekirjoituksen todennus epäonnistui.</string>
+    <string name="ssoActivitymissing">SSO-sovelluksen nimeä ei ole annettu.</string>
+    <string name="initSSOAgentSuccess">SSO-agenttisovelluksen alustus onnistui.</string>
+    <string name="serviceDomainNotSame">Agentti hylkäsi todennuksen, koska palvelutoimialue ei täsmää.</string>
+    <string name="invalidConfig">Työasemasovelluksella ei ole valtuuksia osallistua SSO-todennukseen.</string>
+    <string name="noAgentAvail">SSO-todennuksen URL-osoitetta ei voi avata.</string>
+    <string name="tokensNotAvailable">OAM_ID-merkki ei ole saatavilla. Tarkista palvelimen asetukset. Varmista, että todennuskaavaksi on valittu MobileOAMAuthentication.</string>
+    <!-- *********************************************************************** -->
+
+    <!-- *********************************************************************** -->
+
+
+    <!-- Basic Authentication Messages -->
+    <string name="invalidBasicUrl">Virheellinen sisäänkirjauksen URL.</string>
+    <string name="serverReturnedError">Virhe palvelimessa: %1$s. Pyydä apua pääkäyttäjältä.</string>
+    <string name="forbidden">Käyttäjällä ei ole valtuuksia.</string>
+    <!-- *********************************************************************** -->
+
+
+    <!-- Federated Authentication Messages -->
+    <string name="authenticationTimedOut">Todennus aikakatkaistiin.</string>
+    <!-- *********************************************************************** -->
+
+
+    <!-- HTML Login View Customization -->
+    <string name="customHtmlFieldsInvalid">Räätälöidyllä todennussivulla ei ole valtuuskenttää.</string>
+    <string name="kbaHtmlFieldsInvalid">Räätälöidyllä vahvan todennuksen sivulla ei ole valtuuskenttää.</string>
+    <string name="htmlFileException">Räätälöity HTML-tiedosto ei voi olla tyhjä.</string>
+    <string name="invalidHtmlFile">Räätälöidyn HTML-tiedoston polun tyyppi on virheellinen</string>
+    <string name="remoteHTMLFile">Räätälöity HTML-sivu ei voi olla etäsivu, SDK tukee vain paikallisten HTML-sivujen latausta</string>
+    <!-- *********************************************************************** -->
+
+
+    <!-- ************************* SSL Certificate Warning ********************* -->
+    <string name="ssl_settingsheader">Tämä varmenne ei ole luotetun myöntäjän myöntämä.</string>
+    <string name="ssl_security_certificate">Suojausvarmenne</string>
+    <string name="ssl_issued_to">Aihe:</string>
+    <string name="ssl_common_name">Yleinen nimi:</string>
+    <string name="ssl_organization">Organisaatio:</string>
+    <string name="ssl_organization_unit">Organisaatioyksikkö:</string>
+    <string name="ssl_issued_by">Myöntäjä:</string>
+    <string name="ssl_validity">Voimassaolo:</string>
+    <string name="ssl_issued_on">Alkamispäivä:</string>
+    <string name="ssl_expires_on">Loppumispäivä:</string>
+    <string name="security_warning">Suojausvaroitus</string>
+    <string name="ssl_continue">Hyväksy</string>
+    <string name="ssl_view_certificate">Tiedot</string>
+    <string name="ssl_message">Tämän URL-osoitteen suojausvarmenteessa on ongelmia.</string>
+    <string name="serial_number">Sarjanumero:</string>
+    <string name="fingerprint">Sormenjäljet:</string>
+    <string name="sha_fp">SHA1-sormenjälki:</string>
+    <string name="md5_fp">MD5-sormenjälki:</string>
+    <string name="ssl_alert_icon">Ilmoituskuvake</string>
+    <string name="importCertificateFailure">Varmennetta ei voi asentaa.</string>
+    <!-- *********************************************************************** -->
+
+
+    <!-- ************************OAuth2.0 Known errors************************** -->
+    <string name="oAuthFailed">OAuth-todennus epäonnistui.</string>
+    <string name="oAuthInvalidState">Vastaus palautti virheellisen tilan.</string>
+    <string name="oAuthContextInvalid">Määritetylle pyynnölle ei ole sallittua käyttömerkkiä. Todenna käyttämällä sopivaa aluetta.</string>
+
+    <!-- ********* Description messages if server returns no description ****** -->
+    <string name="oAuthInvalidRequestDesc">Pyynnöltä puuttuu pakollinen parametri, sillä on parametrin arvo, jota ei tueta, sillä on toistuva parametri, siihen sisältyy useita valtuuksia, se käyttää useita työaseman todennusmenetelmiä tai se on muuten väärin muodostettu.</string>
+    <string name="oAuthUnauthorizedClientDesc">Todennettua työasemaa ei ole valtuutettu käyttämään tätä valtuutuksen myöntötyyppiä.</string>
+    <string name="oAuthAccessDeniedDesc">Resurssin omistaja tai valtuutuspalvelin hylkäsi pyynnön.</string>
+    <string name="oAuthUnsupportedResponseTypeDesc">Valtuutuspalvelin ei tue valtuutuskoodin noutoa tällä menetelmällä.</string>
+    <string name="oAuthServerErrorDesc">Valtuutuspalvelin kohtasi odottamattoman tilan, joka esti sitä toteuttamasta pyyntöä.</string>
+    <string name="oAuthTempUnavailableDesc">Valtuutuspalvelin ei voi juuri nyt käsitellä pyyntöä palvelimen tilapäisen ylikuormituksen tai huollon vuoksi.</string>
+    <string name="oAuthInvalidScopeDesc">Pyydetty alue on virheellinen, tuntematon, väärin muodostettu tai on resurssin omistajan myöntämän alueen ulkopuolella.</string>
+    <string name="oAuthUnsupportedGrantTypeDesc">Valtuutuspalvelin ei tue valtuutuksen myöntötyyppiä.</string>
+    <string name="oAuthInvalidClientDesc">Työaseman todennus epäonnistui.</string>
+    <string name="oAuthInvalidGrantDesc">Myönnetty valtuutus tai päivitysmerkki on virheellinen, vanhentunut tai peruttu, se ei vastaa valtuutuspyynnön uudelleenohjauksen URI-osoitetta tai se on myönnetty toiselle työasemalle.</string>
+    <!-- *********************************************************************** -->
+
+    <!-- *********************************************************************** -->
+
+</resources>

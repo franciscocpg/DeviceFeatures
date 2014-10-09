@@ -1,0 +1,197 @@
+<?xml version = '1.0' encoding = 'utf-8'?>
+<!-- $Header: wptg/idmmobile/src/Android/IDMMobileSDK/res/values-nl/oamms_strings.xml /st_wptg_11.1.1.9.0/4 2014/05/30 07:19:27 gmolloy Exp $ -->
+<!--
+ Copyright (c) 2013, 2014, Oracle and/or its affiliates. All rights reserved.
+
+   NAME
+     oamms_strings.xml
+
+   DESCRIPTION
+     Contains the strings being used by the SDK
+
+   NOTES
+     <other useful comments, qualifications, etc.>
+
+   MODIFIED   (MM/DD/YY)
+   ayjindal    04/08/14 - Bug 18477622
+   arunpras    01/17/14 - Bug fix: 17623143
+   arunpras    12/31/13 - Added an error message to be shown during the negative use case: Invoking logout method before performing authentication
+   arunpras	   10/03/13 - Added a string a part of the fix for bug - 16186113
+   arunpras    09/02/13 - Added custom HTTP headers
+-->
+<resources>
+
+    <!-- General Messages -->
+    <string name="oamms_app_name">SDK mobiel en sociaal voor Android</string>
+    <string name="processing">Bezig met verwerken...</string>
+    <string name="activityExcep">Activiteit kan niet NULL zijn. Registreer de huidige activiteit met behulp van OMMobileSecurityService#registerActivity(Activity), bij voorkeur in onResume().</string>
+    <string name="secProfileExcep">Installatie-API is niet opgeroepen.</string>
+    <string name="servicenamenull">Geen verificatieschema opgegeven.</string>
+    <string name="invalidServerType">Het type verificatieserver is ongeldig.</string>
+    <string name="notConnectToServer">Server is niet bereikbaar op het opgegeven adres. Neem voor hulp contact op met de beheerder.</string>
+    <string name="networkUnavailable">Netwerk is niet beschikbaar. Controleer of u bent verbonden met internet en probeer het opnieuw.</string>
+    <string name="notParseResponse">De respons die vanaf de server is verstuurd, kan niet worden ontleed.</string>
+    <string name="certificateNotAccepted">Gebruiker heeft servercertificaat afgewezen.</string>
+    <string name="internalError">Interne fout</string>
+    <string name="invalidArgumentsNullOrEmpty">De argumenten kunnen niet NULL of lege strings zijn.</string>
+    <string name="updateCookiesValidationFailure">Het bijwerken van de cookiewaarde is mislukt omdat de cookieattributen niet kunnen worden gevalideerd.</string>
+    <string name="cookieNotFound">De bij te werken cookie bestaat niet.</string>
+    <string name="invalidArgumentsNull">De argumenten kunnen niet NULL zijn.</string>
+    <string name="clearUsernamePasswordFailed">De gebruikersnaam en het wachtwoord die zijn opgeslagen in Embedded Webview kunnen niet worden verwijderd omdat de registratie van de activiteit in de tussentijd ongedaan is gemaakt.</string>
+    <string name="customAuthHeadersNotAllowed">Enkele van de HTTP-kopteksten die zijn opgegeven in de toewijzing die is doorgegeven als waarde voor de sleutel OM_PROP_CUSTOM_AUTH_HEADERS kunnen niet worden toegevoegd. Raadpleeg de documentatie voor de lijst met HTTP-kopteksten die niet zijn toegestaan.</string>
+    <string name="customAuthHeadersCountExceeded">Het aantal aangepaste verificatiekopteksten die zijn opgegeven als onderdeel van OM_PROP_CUSTOM_AUTH_HEADERS overschrijdt het maximumaantal (%1$d).</string>
+    <string name="applicationNotAvailable">De aangevraagde applicatie is niet beschikbaar.</string>
+    <string name="httpCallbackNull">Voor een asynchrone aanvraag kan de callback niet NULL zijn.</string>
+    <string name="httpResUrlNull">HTTP-resource-URL kan niet NULL zijn.</string>
+    <string name="logoutInProgress">Er wordt momenteel uitgelogd. Probeer het over enige tijd opnieuw.</string>
+    <string name="logoutTimedOut">Uitlogbewerking is mislukt omdat er een time-out voor de verbinding is opgetreden.</string>
+    <string name="logoutFailure">Uitloggen is mislukt vanwege de volgende fout: %1$s.</string>
+    <string name="notFound">De aangevraagde URL bestaat niet. Neem voor hulp contact op met de beheerder.</string>
+    <!-- *********************************************************************** -->
+
+
+    <!-- ************************ Success/Error Messages ************************* -->
+    <string name="usernameRequired">Gebruikersnaam is vereist.</string>
+    <string name="identityDomainRequired">Identiteitsdomein is vereist.</string>
+    <string name="usernameIdentityDomainRequired">Gebruikersnaam en identiteitsdomein zijn vereist.</string>
+    <string name="passwordNull">Wachtwoord is vereist.</string>
+    <string name="unPwdMissing">Ongeldige gebruikersnaam of ongeldig wachtwoord</string>
+    <string name="unPwdTenantMissing">Ongeldige gebruikersnaam of ongeldig wachtwoord of identiteitsdomein</string>
+    <string name="chalgMissing">Controleantwoord is ongeldig.</string>
+    <string name="userCanceled">Gebruiker heeft inlogbewerking geannuleerd.</string>
+    <string name="authfailed">Gebruikersverificatie is mislukt.</string>
+    <string name="authSuccess">Gebruikersverificatie is gelukt.</string>
+    <!-- *********************************************************************** -->
+
+
+    <!-- *********** UI Messages and Descriptions of Images ************* -->
+    <string name="username">Gebruikersnaam</string>
+    <string name="usernameHint">Gebruikersnaam invoeren</string>
+    <string name="password">Wachtwoord</string>
+    <string name="passwordHint">Wachtwoord invoeren</string>
+    <string name="tenant">Identiteitsdomein</string>
+    <string name="tenantHint">Identiteitsdomein invoeren</string>
+    <string name="login">Aanmelden</string>
+    <string name="cancel">Annuleren</string>
+    <string name="challengeHead">Aanvullende gegevens opgeven</string>
+    <string name="challengeQues">Vraag</string>
+    <string name="challengeAns">Antwoord</string>
+    <string name="challengeAnswerHint">Antwoord voor beveiligingsvraag invoeren</string>
+    <string name="submit">Versturen</string>
+    <string name="rememberUsername">Gebruikersnaam onthouden</string>
+    <string name="rememberCredentials">Referenties onthouden</string>
+    <string name="autoLogin">Automatisch inloggen</string>
+    <string name="backButton">Terug</string>
+    <string name="forwardButton">Vooruit</string>
+    <string name="refreshButton">Vernieuwen</string>
+    <string name="cancelButton">Annuleren</string>
+    <!-- *********************************************************************** -->
+
+
+    <!-- URL-Based Configuration -->
+    <string name="configPropertiesMissing">Configuratie-eigenschappen zijn niet gevonden in SharedPreferences.</string>
+    <string name="configIntentUriNull">De doorgegeven intent bevat geen URL voor details serverconfiguratie.</string>
+    <string name="configIntentUriInvalid">De doorgegeven intent bevat geen geldige URL voor details serverconfiguratie.</string>
+    <string name="couldNotRetrieveConfiguration">Configuratie-eigenschappen kunnen niet worden opgehaald uit SharedPreferences.</string>
+    <string name="couldNotStoreConfiguration">Configuratie-eigenschappen kunnen niet worden opgeslagen in SharedPreferences.</string>
+    <!-- *********************************************************************** -->
+    
+    
+    <!-- Setup failure -->
+    <string name="mssInitFailed">Initialisatie van de SDK is mislukt omdat de vereiste servergegevens niet zijn opgegeven.</string>
+    <string name="setupFailedMS">Applicatieprofiel kan niet worden gedownload vanwege ontbrekende configuratie.</string>
+    <string name="setupFailedDefault">Applicatieprofiel of applicatienaam is ongeldig.</string>
+    <!-- *********************************************************************** -->
+
+
+    <!-- Mobile & Social Server -->
+    <string name="invalidAppName">Applicatienaam is ongeldig.</string>
+    <string name="invalidServerUrl">Server-URL is ongeldig.</string>
+    <string name="invalidServiceDomain">Servicedomein is ongeldig.</string>
+    <string name="tokenMissing">Dit apparaat is niet geverifieerd bij de server voor mobiel en sociaal.</string>
+    <string name="noUserToken">De gebruiker is nog niet geverifieerd.</string>
+    <string name="noRpLoginUrl">URL voor RP-verificatie kan niet worden geopend.</string>
+    <string name="reqFailed">Verificatieaanvraag is mislukt voor gebruiker %1$s.</string>
+    <string name="reqDenied">Aanvraag voor verificatie is geweigerd.</string>
+    <string name="oaamDeniedAction">Verificatie geblokkeerd door de server. Neem voor hulp contact op met de beheerder.</string>
+    <string name="oaamWipeoutAction">Wisopdracht ontvangen van server. Gevoelige applicatiegegevens worden gewist.</string>
+
+    <!-- SSO Messages -->
+    <string name="sigNotValid">Validatie van handtekening aanroepende applicatie is mislukt.</string>
+    <string name="ssoActivitymissing">Er is geen SSO-applicatienaam opgegeven.</string>
+    <string name="initSSOAgentSuccess">SSO-agentapplicatie is geïnitialiseerd.</string>
+    <string name="serviceDomainNotSame">Verificatie is geweigerd door de agent omdat het servicedomein niet overeenkomt.</string>
+    <string name="invalidConfig">Clientapplicatie is niet gemachtigd voor deelname aan SSO.</string>
+    <string name="noAgentAvail">URL voor SSO-verificatie kan niet worden geopend.</string>
+    <string name="tokensNotAvailable">Token \'OAM_ID\' is niet beschikbaar. Controleer de serverinstellingen. Mogelijk is het verificatieschema niet ingesteld op \'MobileOAMAuthentication\'.</string>
+    <!-- *********************************************************************** -->
+
+    <!-- *********************************************************************** -->
+
+
+    <!-- Basic Authentication Messages -->
+    <string name="invalidBasicUrl">Ongeldige inlog-URL</string>
+    <string name="serverReturnedError">Er is een fout %1$s aangetroffen op de server. Neem voor hulp contact op met de beheerder.</string>
+    <string name="forbidden">De gebruiker is niet bevoegd.</string>
+    <!-- *********************************************************************** -->
+
+
+    <!-- Federated Authentication Messages -->
+    <string name="authenticationTimedOut">Time-out bij verificatie</string>
+    <!-- *********************************************************************** -->
+
+
+    <!-- HTML Login View Customization -->
+    <string name="customHtmlFieldsInvalid">De aangepaste verificatiepagina bevat geen referentieveld.</string>
+    <string name="kbaHtmlFieldsInvalid">De aangepaste strenge-verificatiepagina bevat geen referentieveld.</string>
+    <string name="htmlFileException">Het aangepaste HTML-bestand kan niet NULL zijn.</string>
+    <string name="invalidHtmlFile">Het aangepaste HTML-bestandspad is van een ongeldig type.</string>
+    <string name="remoteHTMLFile">De aangepaste HTML-pagina kan geen externe pagina zijn. De SDK ondersteunt alleen het laden van een lokale HTML-pagina.</string>
+    <!-- *********************************************************************** -->
+
+
+    <!-- ************************* SSL Certificate Warning ********************* -->
+    <string name="ssl_settingsheader">Dit certificaat is niet afkomstig van een vertrouwde instantie.</string>
+    <string name="ssl_security_certificate">Beveiligingscertificaat</string>
+    <string name="ssl_issued_to">Onderwerp:</string>
+    <string name="ssl_common_name">Algemene naam:</string>
+    <string name="ssl_organization">Organisatie:</string>
+    <string name="ssl_organization_unit">Organisatie-eenheid:</string>
+    <string name="ssl_issued_by">Uitgever:</string>
+    <string name="ssl_validity">Geldigheid:</string>
+    <string name="ssl_issued_on">Begindatum:</string>
+    <string name="ssl_expires_on">Einddatum:</string>
+    <string name="security_warning">Beveiligingswaarschuwing</string>
+    <string name="ssl_continue">Accepteren</string>
+    <string name="ssl_view_certificate">Details</string>
+    <string name="ssl_message">Er zijn problemen met het beveiligingscertificaat van deze URL.</string>
+    <string name="serial_number">Serienummer:</string>
+    <string name="fingerprint">Vingerafdrukken:</string>
+    <string name="sha_fp">SHA1-vingerafdruk:</string>
+    <string name="md5_fp">MD5-vingerafdruk:</string>
+    <string name="ssl_alert_icon">Waarschuwingspictogram</string>
+    <string name="importCertificateFailure">Certificaat kan niet worden geïnstalleerd.</string>
+    <!-- *********************************************************************** -->
+
+
+    <!-- ************************OAuth2.0 Known errors************************** -->
+    <string name="oAuthFailed">OAuth-verificatie is mislukt.</string>
+    <string name="oAuthInvalidState">Er is een ongeldige staat teruggehaald uit de respons.</string>
+    <string name="oAuthContextInvalid">Er is geen geldig toegangstoken aanwezig voor de opgegeven aanvraag. Verifieer met het juiste bereik.</string>
+
+    <!-- ********* Description messages if server returns no description ****** -->
+    <string name="oAuthInvalidRequestDesc">Er ontbreekt een vereiste parameter in de aanvraag, de aanvraag bevat een niet-ondersteunde parameterwaarde, er wordt een parameter herhaald, er zijn meerdere referenties, er wordt meer dan één mechanisme voor het verifiëren van de client gebruikt of er is een andere onjuistheid.</string>
+    <string name="oAuthUnauthorizedClientDesc">De geverifieerde client is niet geautoriseerd om dit autorisatietoekenningstype te gebruiken.</string>
+    <string name="oAuthAccessDeniedDesc">De aanvraag is geweigerd door de resource-eigenaar of autorisatieserver.</string>
+    <string name="oAuthUnsupportedResponseTypeDesc">Het verkrijgen van een autorisatiecode met behulp van deze methode wordt niet ondersteund door de autorisatieserver.</string>
+    <string name="oAuthServerErrorDesc">De autorisatieserver heeft een onverwachte toestand aangetroffen waardoor de aanvraag niet kan worden uitgevoerd.</string>
+    <string name="oAuthTempUnavailableDesc">De autorisatieserver is op het moment niet in staat de aanvraag uit te voeren, vanwege een tijdelijke overbelasting of vanwege onderhoud van de server.</string>
+    <string name="oAuthInvalidScopeDesc">Het aangevraagde bereik is ongeldig, onbekend, heeft een onjuiste indeling of overschrijdt het bereik dat is toegekend door de resource-eigenaar.</string>
+    <string name="oAuthUnsupportedGrantTypeDesc">Het autorisatietoekenningstype wordt niet ondersteund door de autorisatieserver.</string>
+    <string name="oAuthInvalidClientDesc">Clientverificatie is mislukt.</string>
+    <string name="oAuthInvalidGrantDesc">De opgegeven autorisatietoekenning of het opgegeven vernieuwingstoken is ongeldig, verlopen, ingetrokken, komt niet overeen met de omleidings-URI gebruikt in de autorisatieaanvraag of is verstrekt aan een andere client.</string>
+    <!-- *********************************************************************** -->
+
+    <!-- *********************************************************************** -->
+
+</resources>

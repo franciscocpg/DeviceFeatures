@@ -1,0 +1,197 @@
+<?xml version = '1.0' encoding = 'utf-8'?>
+<!-- $Header: wptg/idmmobile/src/Android/IDMMobileSDK/res/values-hu/oamms_strings.xml /st_wptg_11.1.1.9.0/4 2014/05/30 13:09:15 gmolloy Exp $ -->
+<!--
+ Copyright (c) 2013, 2014, Oracle and/or its affiliates. All rights reserved.
+
+   NAME
+     oamms_strings.xml
+
+   DESCRIPTION
+     Contains the strings being used by the SDK
+
+   NOTES
+     <other useful comments, qualifications, etc.>
+
+   MODIFIED   (MM/DD/YY)
+   ayjindal    04/08/14 - Bug 18477622
+   arunpras    01/17/14 - Bug fix: 17623143
+   arunpras    12/31/13 - Added an error message to be shown during the negative use case: Invoking logout method before performing authentication
+   arunpras	   10/03/13 - Added a string a part of the fix for bug - 16186113
+   arunpras    09/02/13 - Added custom HTTP headers
+-->
+<resources>
+
+    <!-- General Messages -->
+    <string name="oamms_app_name">Mobile and Social SDK for Android</string>
+    <string name="processing">Feldolgozás...</string>
+    <string name="activityExcep">A tevékenység nem lehet null értékű. Regisztrálja az aktuális tevékenységet az OMMobileSecurityService#registerActivity(Activity) használatával lehetőség szerint az onResume() metódussal.</string>
+    <string name="secProfileExcep">Az API telepítése nincs meghívva.</string>
+    <string name="servicenamenull">Nincs megadva hitelesítési séma.</string>
+    <string name="invalidServerType">A hitelesítési kiszolgáló típusa érvénytelen.</string>
+    <string name="notConnectToServer">Kiszolgáló nem érhető el a megadott címen. Kérjen segítséget a rendszergazdától.</string>
+    <string name="networkUnavailable">A hálózat nem érhető el. Ellenőrizze internetkapcsolatát, majd próbálja újra.</string>
+    <string name="notParseResponse">Nem értelmezhető a kiszolgálóról küldött válasz.</string>
+    <string name="certificateNotAccepted">A felhasználó visszautasította a kiszolgáló tanúsítványát.</string>
+    <string name="internalError">Belső hiba</string>
+    <string name="invalidArgumentsNullOrEmpty">Egyik argumentum sem lehet null vagy üres karakterlánc</string>
+    <string name="updateCookiesValidationFailure">Nem sikerült módosítani a cookie értékét, mivel nem érvényesíthetők a cookie attribútumai</string>
+    <string name="cookieNotFound">A módosítandó cookie nem létezik</string>
+    <string name="invalidArgumentsNull">Egyik argumentum sem lehet null.</string>
+    <string name="clearUsernamePasswordFailed">A beágyazott webes nézetben nem törölhető a felhasználónév és a jelszó, mivel közben törölve lett a tevékenység regisztrálása.</string>
+    <string name="customAuthHeadersNotAllowed">Az átadott leképezésben az OM_PROP_CUSTOM_AUTH_HEADERS kulcs értékként megadott néhány HTTP fejléc nem adható hozzád. Nézze meg a dokumentációban a nem megengedett HTTP fejlécek listáját.</string>
+    <string name="customAuthHeadersCountExceeded">Az OM_PROP_CUSTOM_AUTH_HEADERS részeként megadott felhasználói hitelesítési fejlécek száma túllépte a megengedett maximumot (%1$d).</string>
+    <string name="applicationNotAvailable">A kért alkalmazás nem érhető el.</string>
+    <string name="httpCallbackNull">Aszinkron kérelemnél a visszahívás nem lehet null</string>
+    <string name="httpResUrlNull">A HTTP erőforrás URL-címe nem lehet null</string>
+    <string name="logoutInProgress">A kijelentkezés folyamatban van. Próbálja újra kicsit később.</string>
+    <string name="logoutTimedOut">A kijelentkezési művelet kapcsolati időtúllépés miatt sikertelen.</string>
+    <string name="logoutFailure">A kijelentkezés a következő hiba miatt sikertelen: %1$s</string>
+    <string name="notFound">A kért URL nem létezik. Kérjen segítséget a rendszergazdától.</string>
+    <!-- *********************************************************************** -->
+
+
+    <!-- ************************ Success/Error Messages ************************* -->
+    <string name="usernameRequired">Felhasználónév megadása kötelező.</string>
+    <string name="identityDomainRequired">Azonosságkezelési tartomány megadása kötelező.</string>
+    <string name="usernameIdentityDomainRequired">Felhasználónév és azonosságkezelési tartomány megadása kötelező.</string>
+    <string name="passwordNull">A jelszót meg kell adni.</string>
+    <string name="unPwdMissing">Érvénytelen felhasználónév vagy jelszó.</string>
+    <string name="unPwdTenantMissing">Érvénytelen felhasználónév, jelszó vagy azonosságkezelési tartomány.</string>
+    <string name="chalgMissing">A biztonsági válasz érvénytelen.</string>
+    <string name="userCanceled">A felhasználó törölte a bejelentkezési műveletet.</string>
+    <string name="authfailed">Nem sikerült a felhasználó hitelesítése.</string>
+    <string name="authSuccess">A felhasználó hitelesítése sikerült.</string>
+    <!-- *********************************************************************** -->
+
+
+    <!-- *********** UI Messages and Descriptions of Images ************* -->
+    <string name="username">Felhasználónév</string>
+    <string name="usernameHint">Adja meg a felhasználónevet</string>
+    <string name="password">Jelszó</string>
+    <string name="passwordHint">Adja meg a jelszót</string>
+    <string name="tenant">Azonosságkezelési tartomány</string>
+    <string name="tenantHint">Adja meg az azonosságkezelési tartományt</string>
+    <string name="login">Bejelentkezés</string>
+    <string name="cancel">Mégse</string>
+    <string name="challengeHead">További adatok megadása</string>
+    <string name="challengeQues">Kérdés</string>
+    <string name="challengeAns">Válasz</string>
+    <string name="challengeAnswerHint">Adja meg a választ a biztonsági kérdésre</string>
+    <string name="submit">Küldés</string>
+    <string name="rememberUsername">Felhasználónév mentése</string>
+    <string name="rememberCredentials">Hitelesítőadatok mentése</string>
+    <string name="autoLogin">Automatikus bejelentkezés</string>
+    <string name="backButton">Vissza</string>
+    <string name="forwardButton">Előre</string>
+    <string name="refreshButton">Frissítés</string>
+    <string name="cancelButton">Mégse</string>
+    <!-- *********************************************************************** -->
+
+
+    <!-- URL-Based Configuration -->
+    <string name="configPropertiesMissing">Nem találhatók konfigurálási tulajdonságok a SharedPreferences beállításban</string>
+    <string name="configIntentUriNull">Az átadott szándék nem tartalmazza az URI azonosítót a kiszolgáló konfigurálási részleteihez.</string>
+    <string name="configIntentUriInvalid">Az átadott szándék nem tartalmaz érvényes URI azonosítót a kiszolgáló konfigurálási részleteihez.</string>
+    <string name="couldNotRetrieveConfiguration">Nem lehetett visszakeresni a konfigurálási tulajdonságokat a SharedPreferences beállításaiból</string>
+    <string name="couldNotStoreConfiguration">Nem tárolhatók a SharedPreferences konfigurálási tulajdonságai</string>
+    <!-- *********************************************************************** -->
+    
+    
+    <!-- Setup failure -->
+    <string name="mssInitFailed">Az SDK inicializálása sikertelen, mivel nincsenek megadva a kiszolgáló szükséges adatai.</string>
+    <string name="setupFailedMS">Hiányzó konfiguráció miatt az alkalmazásprofil nem tölthető le</string>
+    <string name="setupFailedDefault">Az alkalmazásprofil vagy az alkalmazás neve érvénytelen</string>
+    <!-- *********************************************************************** -->
+
+
+    <!-- Mobile & Social Server -->
+    <string name="invalidAppName">Az alkalmazás neve érvénytelen.</string>
+    <string name="invalidServerUrl">A kiszolgáló URL-címe érvénytelen.</string>
+    <string name="invalidServiceDomain">A szolgáltatás tartománya érvénytelen.</string>
+    <string name="tokenMissing">Az eszköz még nincs hitelesítve a Mobile és Social kiszolgálónál.</string>
+    <string name="noUserToken">A felhasználó még nincs hitelesítve.</string>
+    <string name="noRpLoginUrl">Nem nyitható meg az RP-hitelesítési URL.</string>
+    <string name="reqFailed">A hitelesítési kérelem sikertelen a felhasználónál: %1$s.</string>
+    <string name="reqDenied">A hitelesítési kérelem megtagadva.</string>
+    <string name="oaamDeniedAction">A hitelesítést a kiszolgáló letiltotta. Kérjen segítséget a rendszergazdától.</string>
+    <string name="oaamWipeoutAction">Teljes törlési parancs érkezett a kiszolgálóról. Bizalmas alkalmazásadatok törlése.</string>
+
+    <!-- SSO Messages -->
+    <string name="sigNotValid">Hiba a hívó alkalmazás aláírásának érvényesítésekor.</string>
+    <string name="ssoActivitymissing">Nem lett megadva az SSO alkalmazás neve.</string>
+    <string name="initSSOAgentSuccess">Az SSO ügynökalkalmazás inicializálása sikerült.</string>
+    <string name="serviceDomainNotSame">A hitelesítést visszautasította az ügynök, mivel nem megfelelő a szolgáltatás tartománya.</string>
+    <string name="invalidConfig">Az ügyfélalkalmazás nincs hitelesítve, hogy a globális bejelentkezés részese legyen.</string>
+    <string name="noAgentAvail">Nem nyitható meg az SSO-hitelesítési URL.</string>
+    <string name="tokensNotAvailable">Az OAM_ID token nem érhető el. Ellenőrizze a kiszolgáló beállításait. A hibás konfigurációk közé tartozik, ha a hitelesítési séma beállítása nem MobileOAMAuthentication.</string>
+    <!-- *********************************************************************** -->
+
+    <!-- *********************************************************************** -->
+
+
+    <!-- Basic Authentication Messages -->
+    <string name="invalidBasicUrl">Érvénytelen a bejelentkezés URL-címe.</string>
+    <string name="serverReturnedError">A kiszolgálónál %1$s hiba fordult elő. Kérjen segítséget a rendszergazdától.</string>
+    <string name="forbidden">A felhasználónak nincs jogosultsága.</string>
+    <!-- *********************************************************************** -->
+
+
+    <!-- Federated Authentication Messages -->
+    <string name="authenticationTimedOut">A hitelesítés túllépte az időkorlátot.</string>
+    <!-- *********************************************************************** -->
+
+
+    <!-- HTML Login View Customization -->
+    <string name="customHtmlFieldsInvalid">Az egyéni hitelesítés oldal nem tartalmaz hitelesítőadatok mezőt.</string>
+    <string name="kbaHtmlFieldsInvalid">Az egyéni erős hitelesítés oldal nem tartalmaz hitelesítőadatok mezőt.</string>
+    <string name="htmlFileException">Az egyéni HTML fájl nem lehet null értékű.</string>
+    <string name="invalidHtmlFile">Az egyéni HTML fájl elérési útvonala érvénytelen típusú</string>
+    <string name="remoteHTMLFile">A felhasználói HTML lap nem lehet távelérési lap, az SDK csak a helyi HTML lap betöltését támogatja</string>
+    <!-- *********************************************************************** -->
+
+
+    <!-- ************************* SSL Certificate Warning ********************* -->
+    <string name="ssl_settingsheader">A tanúsítvány nem megbízható szolgáltatótól származik.</string>
+    <string name="ssl_security_certificate">Biztonsági tanúsítvány</string>
+    <string name="ssl_issued_to">Tárgy:</string>
+    <string name="ssl_common_name">Általános név:</string>
+    <string name="ssl_organization">Szervezet:</string>
+    <string name="ssl_organization_unit">Szervezeti egység:</string>
+    <string name="ssl_issued_by">Kiállító:</string>
+    <string name="ssl_validity">Érvényesség:</string>
+    <string name="ssl_issued_on">Kezdő dátum:</string>
+    <string name="ssl_expires_on">Záró dátum:</string>
+    <string name="security_warning">Biztonsági figyelmeztetés</string>
+    <string name="ssl_continue">Elfogadás</string>
+    <string name="ssl_view_certificate">Részletek</string>
+    <string name="ssl_message">Problémák vannak az URL-cím biztonsági tanúsítványával.</string>
+    <string name="serial_number">Sorozatszám:</string>
+    <string name="fingerprint">Ujjlenyomatok:</string>
+    <string name="sha_fp">SHA1 ujjlenyomat:</string>
+    <string name="md5_fp">MD5 ujjlenyomat:</string>
+    <string name="ssl_alert_icon">Riasztás ikonja</string>
+    <string name="importCertificateFailure">A tanúsítvány nem telepíthető.</string>
+    <!-- *********************************************************************** -->
+
+
+    <!-- ************************OAuth2.0 Known errors************************** -->
+    <string name="oAuthFailed">Az OAuth hitelesítés sikertelen.</string>
+    <string name="oAuthInvalidState">A válaszból érvénytelen állapot lett helyreállítva.</string>
+    <string name="oAuthContextInvalid">Az adott kérelemhez nincs érvényes hozzáférési token. Hitelesítse a megfelelő hatókörön belül.</string>
+
+    <!-- ********* Description messages if server returns no description ****** -->
+    <string name="oAuthInvalidRequestDesc">A kérelemnek vagy hiányzik az egyik kötelező paramétere, vagy nem támogatott paraméterértéket tartalmaz, vagy valamelyik paramétere ismétlődő, vagy többféle hitelesítőadatot tartalmaz, vagy az ügyfél hitelesítéséhez több mechanizmust használ, illetve egyéb okból nem megfelelő kialakítású.</string>
+    <string name="oAuthUnauthorizedClientDesc">A hitelesített ügyfél nem jogosult ezt a jogosultságot biztosító típust használni.</string>
+    <string name="oAuthAccessDeniedDesc">Az erőforrás tulajdonosa vagy a hitelesítési kiszolgáló megtagadta a kérelem teljesítését.</string>
+    <string name="oAuthUnsupportedResponseTypeDesc">A hitelesítési kiszolgáló nem támogatja a hitelesítési kódnak ilyen módszerrel történő megszerzését.</string>
+    <string name="oAuthServerErrorDesc">A hitelesítési kiszolgáló olyan váratlan feltételt talált, amely megakadályozza a kérelem teljesítésében.</string>
+    <string name="oAuthTempUnavailableDesc">A hitelesítési kiszolgáló átmeneti túlterheltség vagy karbantartás miatt jelenleg nem képes a kérelmet kezelni.</string>
+    <string name="oAuthInvalidScopeDesc">A kért hatókör érvénytelen, ismeretlen, rosszul formázott, illetve túllépi az erőforrás tulajdonosa által biztosított hatókört.</string>
+    <string name="oAuthUnsupportedGrantTypeDesc">A hitelesítési kiszolgáló nem támogatja a hitelesítés-nyújtás ilyen típusát.</string>
+    <string name="oAuthInvalidClientDesc">Az ügyfél hitelesítése nem sikerült.</string>
+    <string name="oAuthInvalidGrantDesc">A kapott hitelesítési vagy frissítési token érvénytelen, lejárt, visszavont, nem ugyanaz, mint a hitelesítési kérelemben használt átirányítási URI, illetve más ügyfél részére lett kiadva.</string>
+    <!-- *********************************************************************** -->
+
+    <!-- *********************************************************************** -->
+
+</resources>

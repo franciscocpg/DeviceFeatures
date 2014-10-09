@@ -1,0 +1,1 @@
+l={LAT:["LAT","\u62c9\u4e01\u7f8e\u6d32"]};(DvtBaseMapManager=this.DvtBaseMapManager)||(DvtBaseMapManager={});DvtBaseMapManager._UNPROCESSED_MAPS||(DvtBaseMapManager._UNPROCESSED_MAPS=[[],[],[]]);DvtBaseMapManager._UNPROCESSED_MAPS[2].push(["latinAmerica","region",l]);

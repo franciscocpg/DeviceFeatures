@@ -1,0 +1,197 @@
+<?xml version = '1.0' encoding = 'utf-8'?>
+<!-- $Header: wptg/idmmobile/src/Android/IDMMobileSDK/res/values-da/oamms_strings.xml /st_wptg_11.1.1.9.0/4 2014/05/29 22:48:47 gmolloy Exp $ -->
+<!--
+ Copyright (c) 2013, 2014, Oracle and/or its affiliates. All rights reserved.
+
+   NAME
+     oamms_strings.xml
+
+   DESCRIPTION
+     Contains the strings being used by the SDK
+
+   NOTES
+     <other useful comments, qualifications, etc.>
+
+   MODIFIED   (MM/DD/YY)
+   ayjindal    04/08/14 - Bug 18477622
+   arunpras    01/17/14 - Bug fix: 17623143
+   arunpras    12/31/13 - Added an error message to be shown during the negative use case: Invoking logout method before performing authentication
+   arunpras	   10/03/13 - Added a string a part of the fix for bug - 16186113
+   arunpras    09/02/13 - Added custom HTTP headers
+-->
+<resources>
+
+    <!-- General Messages -->
+    <string name="oamms_app_name">Mobil og social SDK til Android</string>
+    <string name="processing">Behandler...</string>
+    <string name="activityExcep">Aktivitet kan ikke være NULL. Registrér den aktuelle aktivitet ved brug af OMMobileSecurityService#registerActivity(Activity), helst i onResume().</string>
+    <string name="secProfileExcep">Installations-API er ikke kaldt.</string>
+    <string name="servicenamenull">Der er ikke angivet et autentificeringsskema.</string>
+    <string name="invalidServerType">Autentifikationsservertypen er ugyldig.</string>
+    <string name="notConnectToServer">Serveren kan ikke nås på den angivne adresse. Kontakt administratoren for at få hjælp.</string>
+    <string name="networkUnavailable">Netværket er ikke tilgængeligt. Sørg for, at du har forbindelse til internettet, og prøv igen.</string>
+    <string name="notParseResponse">Kunne ikke analysere det svar, der er sendt fra serveren.</string>
+    <string name="certificateNotAccepted">Bruger afviste servercertifikatet.</string>
+    <string name="internalError">Intern fejl</string>
+    <string name="invalidArgumentsNullOrEmpty">Argumentet/argumenterne kan ikke være NULL eller en tom streng/tomme strenge</string>
+    <string name="updateCookiesValidationFailure">Opdatering af cookie-værdi fejlede, da cookie-attributterne ikke kan valideres</string>
+    <string name="cookieNotFound">Den cookie, der skal opdateres, findes ikke</string>
+    <string name="invalidArgumentsNull">Argumentet/argumenterne kan ikke være NULL</string>
+    <string name="clearUsernamePasswordFailed">Brugernavn og adgangskode, der er gemt i integreret webvisning, kunne ikke slettes, da aktivitet blev afregistreret ind imellem.</string>
+    <string name="customAuthHeadersNotAllowed">Nogle af de HTTP-headere, som er angivet i den map, der blev videregivet som en værdi mod nøglen OM_PROP_CUSTOM_AUTH_HEADERS, kan ikke tilføjes. Se en liste over de HTTP-headere, der ikke er tilladt, i dokumentationen.</string>
+    <string name="customAuthHeadersCountExceeded">Antallet af tilpassede autentificeringsoverskrifter, der er angivet som en del af OM_PROP_CUSTOM_AUTH_HEADERS, overskred maksimumantallet (%1$d).</string>
+    <string name="applicationNotAvailable">Den anmodede applikation er ikke tilgængelig.</string>
+    <string name="httpCallbackNull">Tilbagekald kan ikke være NULL for asynkron anmodning</string>
+    <string name="httpResUrlNull">Http-ressource-URL kan ikke være NULL</string>
+    <string name="logoutInProgress">Logger af nu. Prøv igen lidt senere.</string>
+    <string name="logoutTimedOut">Log af fejlede, da der var opstået en timeout for forbindelsen.</string>
+    <string name="logoutFailure">Log af fejlede på grund af følgende fejl: %1$s</string>
+    <string name="notFound">Den anmodede URL findes ikke. Kontakt administratoren for at få hjælp.</string>
+    <!-- *********************************************************************** -->
+
+
+    <!-- ************************ Success/Error Messages ************************* -->
+    <string name="usernameRequired">Brugernavn er påkrævet.</string>
+    <string name="identityDomainRequired">Identitetsdomæne er påkrævet</string>
+    <string name="usernameIdentityDomainRequired">Brugernavn og identitetsdomæne er påkrævet</string>
+    <string name="passwordNull">Adgangskode er påkrævet.</string>
+    <string name="unPwdMissing">Ugyldigt brugernavn eller adgangskode.</string>
+    <string name="unPwdTenantMissing">Ugyldigt brugernavn, ugyldig adgangskode eller ugyldigt identitetsdomæne.</string>
+    <string name="chalgMissing">Testsvar er ugyldigt.</string>
+    <string name="userCanceled">Brugeren annullerede logon-handlingen.</string>
+    <string name="authfailed">Brugerautentificeringen mislykkedes.</string>
+    <string name="authSuccess">Brugerautentificering er udført.</string>
+    <!-- *********************************************************************** -->
+
+
+    <!-- *********** UI Messages and Descriptions of Images ************* -->
+    <string name="username">Brugernavn</string>
+    <string name="usernameHint">Indtast brugernavn</string>
+    <string name="password">Adgangskode</string>
+    <string name="passwordHint">Indtast adgangskode</string>
+    <string name="tenant">Identitetsdomæne</string>
+    <string name="tenantHint">Indtast identitetsdomæne</string>
+    <string name="login">Log på</string>
+    <string name="cancel">Annuller</string>
+    <string name="challengeHead">Angiv yderligere oplysninger</string>
+    <string name="challengeQues">Spørgsmål</string>
+    <string name="challengeAns">Svar</string>
+    <string name="challengeAnswerHint">Indtast svar på sikkerhedsspørgsmål</string>
+    <string name="submit">Send</string>
+    <string name="rememberUsername">Husk brugernavn</string>
+    <string name="rememberCredentials">Husk ID-oplysninger</string>
+    <string name="autoLogin">Automatisk logon</string>
+    <string name="backButton">Tilbage</string>
+    <string name="forwardButton">Fremad</string>
+    <string name="refreshButton">Opfrisk</string>
+    <string name="cancelButton">Annuller</string>
+    <!-- *********************************************************************** -->
+
+
+    <!-- URL-Based Configuration -->
+    <string name="configPropertiesMissing">Konfigurationsegenskaber blev ikke fundet i SharedPreferences</string>
+    <string name="configIntentUriNull">Det videregivne formål indeholder ikke en URI for detaljer om serverkonfiguration.</string>
+    <string name="configIntentUriInvalid">Det videregivne formål indeholder ikke en gyldig URI for detaljer om serverkonfiguration.</string>
+    <string name="couldNotRetrieveConfiguration">Kunne ikke hente konfigurationsegenskaber i SharedPreferences.</string>
+    <string name="couldNotStoreConfiguration">Kunne ikke gemme konfigurationsegenskaber i SharedPreferences</string>
+    <!-- *********************************************************************** -->
+    
+    
+    <!-- Setup failure -->
+    <string name="mssInitFailed">Initialisering af SDK fejlede, da de påkrævede\tserveroplysninger ikke er angivet.</string>
+    <string name="setupFailedMS">Applikationsprofil kan ikke downloades på grund af manglende konfiguration</string>
+    <string name="setupFailedDefault">Applikationsprofil eller -navn er ugyldige</string>
+    <!-- *********************************************************************** -->
+
+
+    <!-- Mobile & Social Server -->
+    <string name="invalidAppName">Applikationsnavn er ugyldigt.</string>
+    <string name="invalidServerUrl">Server-URL er ugyldig.</string>
+    <string name="invalidServiceDomain">Servicedomæne er ugyldigt.</string>
+    <string name="tokenMissing">Denne enhed er endnu ikke autentificeret med den mobile og sociale server.</string>
+    <string name="noUserToken">Brugeren er endnu ikke autentificeret.</string>
+    <string name="noRpLoginUrl">Kan ikke åbne RP-autentificerings-URL.</string>
+    <string name="reqFailed">Autentifikationsanmodning fejlede for brugeren %1$s.</string>
+    <string name="reqDenied">Anmodning om autentifikation nægtet.</string>
+    <string name="oaamDeniedAction">Autentificering er blokeret af server. Kontakt administratoren for at få hjælp.</string>
+    <string name="oaamWipeoutAction">Fjern-kommando er modtaget fra server. Rydder følsomme applikationsdata.</string>
+
+    <!-- SSO Messages -->
+    <string name="sigNotValid">Fejl under validering af signatur af den applikation, som kalder.</string>
+    <string name="ssoActivitymissing">Navn på SSO-applikation er ikke angivet.</string>
+    <string name="initSSOAgentSuccess">SSO-agentapplikation er initialiseret.</string>
+    <string name="serviceDomainNotSame">Autentificering er afvist af agenten, da servicedomænet ikke matcher.</string>
+    <string name="invalidConfig">Klientapplikationen er ikke godkendt til at deltage i SSO.</string>
+    <string name="noAgentAvail">Kan ikke åbne SSO-autentificerings-URL.</string>
+    <string name="tokensNotAvailable">OAM_ID-token er ikke tilgængeligt. Tjek serverindstillingerne. En af de mulige fejlkonfigurationer er, at autentificeringsskemaet ikke er sat som MobileOAMAuthentication.</string>
+    <!-- *********************************************************************** -->
+
+    <!-- *********************************************************************** -->
+
+
+    <!-- Basic Authentication Messages -->
+    <string name="invalidBasicUrl">Ugyldig logon-URL.</string>
+    <string name="serverReturnedError">Serveren fandt en fejl %1$s. Kontakt administratoren for at få hjælp.</string>
+    <string name="forbidden">Brugeren er ikke autoriseret.</string>
+    <!-- *********************************************************************** -->
+
+
+    <!-- Federated Authentication Messages -->
+    <string name="authenticationTimedOut">Timeout opstod for autentificering.</string>
+    <!-- *********************************************************************** -->
+
+
+    <!-- HTML Login View Customization -->
+    <string name="customHtmlFieldsInvalid">Den tilpassede autentificeringsside har ikke felter med ID-oplysninger.</string>
+    <string name="kbaHtmlFieldsInvalid">Den tilpassede side til stærk autentificering har ikke felter med ID-oplysninger.</string>
+    <string name="htmlFileException">Den tilpassede HTML-fil kan ikke være NULL.</string>
+    <string name="invalidHtmlFile">Den tilpassede HTML-filsti er en ugyldig type</string>
+    <string name="remoteHTMLFile">Den tilpassede HTML-side kan ikke være en ekstern side. SDK understøtter kun indlæsning af lokale HTML-sider</string>
+    <!-- *********************************************************************** -->
+
+
+    <!-- ************************* SSL Certificate Warning ********************* -->
+    <string name="ssl_settingsheader">Dette certifikat kommer ikke fra en myndighed, der er tillid til.</string>
+    <string name="ssl_security_certificate">Sikkerhedscertifikat</string>
+    <string name="ssl_issued_to">Emne:</string>
+    <string name="ssl_common_name">Kaldenavn:</string>
+    <string name="ssl_organization">Organisation:</string>
+    <string name="ssl_organization_unit">Organisationsenhed:</string>
+    <string name="ssl_issued_by">Udsteder:</string>
+    <string name="ssl_validity">Gyldighed:</string>
+    <string name="ssl_issued_on">Startdato:</string>
+    <string name="ssl_expires_on">Slutdato:</string>
+    <string name="security_warning">Sikkerhedsadvarsel</string>
+    <string name="ssl_continue">Acceptér</string>
+    <string name="ssl_view_certificate">Detaljer</string>
+    <string name="ssl_message">Der er problemer med sikkerhedscertifikatet for denne URL.</string>
+    <string name="serial_number">Serienr.:</string>
+    <string name="fingerprint">Fingeraftryk:</string>
+    <string name="sha_fp">SHA1-fingeraftryk:</string>
+    <string name="md5_fp">MD5-fingeraftryk:</string>
+    <string name="ssl_alert_icon">Varslingsikon</string>
+    <string name="importCertificateFailure">Kan ikke installere certifikatet.</string>
+    <!-- *********************************************************************** -->
+
+
+    <!-- ************************OAuth2.0 Known errors************************** -->
+    <string name="oAuthFailed">OAuth-autentificering fejlede.</string>
+    <string name="oAuthInvalidState">Ugyldig tilstand blev gendannet fra svaret.</string>
+    <string name="oAuthContextInvalid">Der findes intet gyldigt adgangs-token for den givne anmodning. Autentificer med det relevante omfang.</string>
+
+    <!-- ********* Description messages if server returns no description ****** -->
+    <string name="oAuthInvalidRequestDesc">Anmodningen mangler en påkrævet parameter, inkluderer en ikke-understøttet parameterværdi, gentager en parameter, inkluderer flere ID-oplysninger, bruger mere end én mekanisme til autentificering af klienten eller er på anden måde forkert udformet.</string>
+    <string name="oAuthUnauthorizedClientDesc">Den autentificerede klient er ikke autoriseret til at bruge denne autorisationstildelingstype.</string>
+    <string name="oAuthAccessDeniedDesc">Ressourceejeren eller autorisationsserveren afviste anmodningen.</string>
+    <string name="oAuthUnsupportedResponseTypeDesc">Autorisationsserveren understøtter ikke hentning af en autorisationskode ved brug af denne metode.</string>
+    <string name="oAuthServerErrorDesc">Autorisationsserveren fandt en uventet tilstand, som forhindrede den i at imødekomme anmodningen.</string>
+    <string name="oAuthTempUnavailableDesc">Autorisationsserveren kan p.t. ikke håndtere anmodningen, da den er midlertidigt overbelastet, eller den vedligeholdes.</string>
+    <string name="oAuthInvalidScopeDesc">Det omfang, der blev anmodet om, er ugyldigt, ukendt, forkert udformet eller overstiger det omfang, der er tildelt af ressourceejeren.</string>
+    <string name="oAuthUnsupportedGrantTypeDesc">Autorisationstildelingstypen understøttes ikke af autorisationsserveren.</string>
+    <string name="oAuthInvalidClientDesc">Klientautentificering fejlede.</string>
+    <string name="oAuthInvalidGrantDesc">Den angivne autorisationstildeling eller det angivne opfrisknings-token er ugyldig(t), udløbet, tilbagekaldt, matcher ikke den omdirigerings-URI, der bruges i autorisationsanmodningen, eller er udstedt til en anden klient.</string>
+    <!-- *********************************************************************** -->
+
+    <!-- *********************************************************************** -->
+
+</resources>

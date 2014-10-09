@@ -1,0 +1,1 @@
+l={VEN_CARACAS:[null,"Karakas"],COL_MEDELLIN:[null,"Medelin"]};(DvtBaseMapManager=this.DvtBaseMapManager)||(DvtBaseMapManager={});DvtBaseMapManager._UNPROCESSED_MAPS||(DvtBaseMapManager._UNPROCESSED_MAPS=[[],[],[]]);DvtBaseMapManager._UNPROCESSED_MAPS[2].push(["southAmerica","cities",l]);

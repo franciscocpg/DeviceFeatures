@@ -1,0 +1,1 @@
+l={EMEA:["EMEA","Europa, Mellan\u00f6stern och Afrika"]};(DvtBaseMapManager=this.DvtBaseMapManager)||(DvtBaseMapManager={});DvtBaseMapManager._UNPROCESSED_MAPS||(DvtBaseMapManager._UNPROCESSED_MAPS=[[],[],[]]);DvtBaseMapManager._UNPROCESSED_MAPS[2].push(["emea","region",l]);

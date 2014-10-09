@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- $Header: idmmobile/src/Android/IDMMobileSDK/res/values/oamms_strings.xml /main/37 2014/04/23 00:04:45 ayjindal Exp $ -->
+
+
+<!--
+ Copyright (c) 2013, 2014, Oracle and/or its affiliates. All rights reserved.
+
+   NAME
+     oamms_strings.xml
+
+   DESCRIPTION
+     Contains the strings being used by the SDK
+
+   NOTES
+     <other useful comments, qualifications, etc.>
+
+   MODIFIED   (MM/DD/YY)
+   ayjindal    04/08/14 - Bug 18477622
+   arunpras    01/17/14 - Bug fix: 17623143
+   arunpras    12/31/13 - Added an error message to be shown during the negative use case: Invoking logout method before performing authentication
+   arunpras	   10/03/13 - Added a string a part of the fix for bug - 16186113
+   arunpras    09/02/13 - Added custom HTTP headers
+-->
+<resources>
+
+    <!-- General Messages -->
+    <string name="oamms_app_name">Mobile and Social SDK for Android</string>
+    <string name="processing">Processing...</string>
+    <string name="activityExcep">Activity cannot be null. Register the current actvity using OMMobileSecurityService#registerActivity(Activity) preferably in onResume().</string>
+    <string name="secProfileExcep">Setup API is not invoked.</string>
+    <string name="servicenamenull">No authentication scheme is specified.</string>
+    <string name="invalidServerType">Authentication server type is invalid.</string>
+    <string name="notConnectToServer">Server is not reachable at the specified address. Contact the administrator for help.</string>
+    <string name="networkUnavailable">Network is unavailable. Ensure that you are connected to internet and try again.</string>
+    <string name="notParseResponse">Could not parse the response sent from the server.</string>
+    <string name="certificateNotAccepted">User rejected server certificate.</string>
+    <string name="internalError">Internal Error</string>
+    <string name="invalidArgumentsNullOrEmpty">The argument(s) cannot be null or empty string(s)</string>
+    <string name="updateCookiesValidationFailure">Updation of cookie value failed as the cookie attributes cannot be validated</string>
+    <string name="cookieNotFound">The cookie to be updated does not exist</string>
+    <string name="invalidArgumentsNull">The argument(s) cannot be null</string>
+    <string name="clearUsernamePasswordFailed">Username and password stored in Embedded Webview could not be deleted as activity was deregistered in between.</string>
+    <string name="customAuthHeadersNotAllowed">Some of the HTTP headers specified in the Map passed as a value against the key OM_PROP_CUSTOM_AUTH_HEADERS cannot be added. Refer the documentaion for the list of HTTP headers not allowed.</string>
+    <string name="customAuthHeadersCountExceeded">The number of custom auth headers which are specified as part of OM_PROP_CUSTOM_AUTH_HEADERS exceeded the maximum count (%1$d).</string>
+    <string name="applicationNotAvailable">The requested application is not available.</string>
+    <string name="httpCallbackNull">For asynchronus request the call back can not be null</string>
+    <string name="httpResUrlNull">Http Resource URL can not be null</string>
+    <string name="logoutInProgress">Logout is in progress. Try again after some time.</string>
+    <string name="logoutTimedOut">Logout operation failed as connection timed out.</string>
+    <string name="logoutFailure">Logout failed because of the following error: %1$s</string>
+    <string name="notFound">The requested URL does not exist. Contact the administrator for help.</string>
+    <!-- *********************************************************************** -->
+
+
+    <!-- ************************ Success/Error Messages ************************* -->
+    <string name="usernameRequired">Username is required.</string>
+    <string name="identityDomainRequired">Identity Domain is required.</string>
+    <string name="usernameIdentityDomainRequired">Username and identity domain are required.</string>
+    <string name="passwordNull">Password is required.</string>
+    <string name="unPwdMissing">Invalid username or password.</string>
+    <string name="unPwdTenantMissing">Invalid username or password or identity domain.</string>
+    <string name="chalgMissing">Challenge answer is invalid.</string>
+    <string name="userCanceled">The user cancelled login operation.</string>
+    <string name="authfailed">User authentication has failed.</string>
+    <string name="authSuccess">User authentication is Successful.</string>
+    <!-- *********************************************************************** -->
+
+
+    <!-- *********** UI Messages and Descriptions of Images ************* -->
+    <string name="username">Username</string>
+    <string name="usernameHint">Enter username</string>
+    <string name="password">Password</string>
+    <string name="passwordHint">Enter password</string>
+    <string name="tenant">Identity Domain</string>
+    <string name="tenantHint">Enter identity domain</string>
+    <string name="login">Sign in</string>
+    <string name="cancel">Cancel</string>
+    <string name="challengeHead">Provide additional information</string>
+    <string name="challengeQues">Question</string>
+    <string name="challengeAns">Answer</string>
+    <string name="challengeAnswerHint">Enter answer for security question</string>
+    <string name="submit">Submit</string>
+    <string name="rememberUsername">Remember Username</string>
+    <string name="rememberCredentials">Remember Credentials</string>
+    <string name="autoLogin">Auto Login</string>
+    <string name="backButton">Back</string>
+    <string name="forwardButton">Forward</string>
+    <string name="refreshButton">Refresh</string>
+    <string name="cancelButton">Cancel</string>
+    <!-- *********************************************************************** -->
+
+
+    <!-- URL-Based Configuration -->
+    <string name="configPropertiesMissing">Configuration properties are not found in SharedPreferences</string>
+    <string name="configIntentUriNull">The passed intent does not contain a URI for server configuration details.</string>
+    <string name="configIntentUriInvalid">The passed intent does not contain a valid URI for server configuration details.</string>
+    <string name="couldNotRetrieveConfiguration">Could not retrieve configuration properties from SharedPreferences</string>
+    <string name="couldNotStoreConfiguration">Could not store configuration properties in SharedPreferences</string>
+    <!-- *********************************************************************** -->
+    
+    
+    <!-- Setup failure -->
+    <string name="mssInitFailed">Initialization of the SDK failed, as the required server information is not supplied.</string>
+    <string name="setupFailedMS">Application profile cannot be downloaded due to missing configuration</string>
+    <string name="setupFailedDefault">Application profile or application name is invalid</string>
+    <!-- *********************************************************************** -->
+
+
+    <!-- Mobile & Social Server -->
+    <string name="invalidAppName">Application name is invalid.</string>
+    <string name="invalidServerUrl">Server Url is invalid.</string>
+    <string name="invalidServiceDomain">Service Domain is invalid.</string>
+    <string name="tokenMissing">This device is not yet authenticated with Mobile and Social Server.</string>
+    <string name="noUserToken">The user is not yet authenticated.</string>
+    <string name="noRpLoginUrl">Unable to open RP Authentication URL.</string>
+    <string name="reqFailed">Authentication request failed for user %1$s.</string>
+    <string name="reqDenied">Request for authentication is denied.</string>
+    <string name="oaamDeniedAction">Authentication blocked by server. Contact the administrator for help.</string>
+    <string name="oaamWipeoutAction">Received wipe command from server. Clearing sensitive application data.</string>
+
+    <!-- SSO Messages -->
+    <string name="sigNotValid">Failed in validating calling application signature.</string>
+    <string name="ssoActivitymissing">SSO Application name has not been provided.</string>
+    <string name="initSSOAgentSuccess">SSO Agent application has been initialized successfully.</string>
+    <string name="serviceDomainNotSame">Authentication is rejected by the agent as the service domain does not match.</string>
+    <string name="invalidConfig">Client application is not authorized to participate in SSO.</string>
+    <string name="noAgentAvail">Unable to open SSO Authentication URL.</string>
+    <string name="tokensNotAvailable">OAM_ID token is not available. Check the server settings. One of the possible misconfigurations is that authentication scheme is not set as MobileOAMAuthentication.</string>
+    <!-- *********************************************************************** -->
+
+    <!-- *********************************************************************** -->
+
+
+    <!-- Basic Authentication Messages -->
+    <string name="invalidBasicUrl">Invalid login URL.</string>
+    <string name="serverReturnedError">The server encountered an error %1$s. Contact the administrator for help.</string>
+    <string name="forbidden">The user is not authorized.</string>
+    <!-- *********************************************************************** -->
+
+
+    <!-- Federated Authentication Messages -->
+    <string name="authenticationTimedOut">Authentication timed out.</string>
+    <!-- *********************************************************************** -->
+
+
+    <!-- HTML Login View Customization -->
+    <string name="customHtmlFieldsInvalid">The custom authentication page does not have credentials field.</string>
+    <string name="kbaHtmlFieldsInvalid">The custom strong authentication page does not have credentials field.</string>
+    <string name="htmlFileException">The custom HTML file cannot be null.</string>
+    <string name="invalidHtmlFile">The custom HTML file path is of invalid type</string>
+    <string name="remoteHTMLFile">The custom HTML page can not be a remote page , SDK only supports a local HTML page to be loaded</string>
+    <!-- *********************************************************************** -->
+
+
+    <!-- ************************* SSL Certificate Warning ********************* -->
+    <string name="ssl_settingsheader">This certificate is not from a trusted authority.</string>
+    <string name="ssl_security_certificate">Security Certificate</string>
+    <string name="ssl_issued_to">Subject:</string>
+    <string name="ssl_common_name">Common name:</string>
+    <string name="ssl_organization">Organization:</string>
+    <string name="ssl_organization_unit">Organizational Unit:</string>
+    <string name="ssl_issued_by">Issuer:</string>
+    <string name="ssl_validity">Validity:</string>
+    <string name="ssl_issued_on">Start Date:</string>
+    <string name="ssl_expires_on">End Date:</string>
+    <string name="security_warning">Security Warning</string>
+    <string name="ssl_continue">Accept</string>
+    <string name="ssl_view_certificate">Details</string>
+    <string name="ssl_message">There are problems with the security certificate for this URL.</string>
+    <string name="serial_number">Serial Number:</string>
+    <string name="fingerprint">Fingerprints:</string>
+    <string name="sha_fp">SHA1 Fingerprint:</string>
+    <string name="md5_fp">MD5 Fingerprint:</string>
+    <string name="ssl_alert_icon">Alert Icon</string>
+    <string name="importCertificateFailure">Unable to install the certificate.</string>
+    <!-- *********************************************************************** -->
+
+
+    <!-- ************************OAuth2.0 Known errors************************** -->
+    <string name="oAuthFailed">OAuth Authentication failed.</string>
+    <string name="oAuthInvalidState">Invalid state recovered from the response.</string>
+    <string name="oAuthContextInvalid">No valid access token is present for the given request. Authenticate with the appropriate scope.</string>
+
+    <!-- ********* Description messages if server returns no description ****** -->
+    <string name="oAuthInvalidRequestDesc">The request is missing a required parameter, includes an unsupported parameter value,repeats a parameter, includes multiple credentials, utilizes more than one mechanism for authenticating the client, or is otherwise malformed.</string>
+    <string name="oAuthUnauthorizedClientDesc">The authenticated client is not authorized to use this authorization grant type.</string>
+    <string name="oAuthAccessDeniedDesc">The resource owner or authorization server denied the request.</string>
+    <string name="oAuthUnsupportedResponseTypeDesc">The authorization server does not support obtaining an authorization code using this method.</string>
+    <string name="oAuthServerErrorDesc">The authorization server encountered an unexpected condition that prevented it from fulfilling the request.</string>
+    <string name="oAuthTempUnavailableDesc">The authorization server is currently unable to handle the request due to a temporary overloading or maintenance of the server.</string>
+    <string name="oAuthInvalidScopeDesc">The requested scope is invalid, unknown, malformed, or exceeds the scope granted by the resource owner.</string>
+    <string name="oAuthUnsupportedGrantTypeDesc">The authorization grant type is not supported by the authorization server.</string>
+    <string name="oAuthInvalidClientDesc">Client authentication failed.</string>
+    <string name="oAuthInvalidGrantDesc">The provided authorization grant or refresh token is invalid, expired, revoked, does not match the redirection URI used in the authorization request, or was issued to another client.</string>
+    <!-- *********************************************************************** -->
+
+    <!-- *********************************************************************** -->
+
+</resources>

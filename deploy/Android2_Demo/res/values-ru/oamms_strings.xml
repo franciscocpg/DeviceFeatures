@@ -1,0 +1,197 @@
+<?xml version = '1.0' encoding = 'utf-8'?>
+<!-- $Header: wptg/idmmobile/src/Android/IDMMobileSDK/res/values-ru/oamms_strings.xml /st_wptg_11.1.1.9.0/4 2014/05/30 05:46:11 gmolloy Exp $ -->
+<!--
+ Copyright (c) 2013, 2014, Oracle and/or its affiliates. All rights reserved.
+
+   NAME
+     oamms_strings.xml
+
+   DESCRIPTION
+     Contains the strings being used by the SDK
+
+   NOTES
+     <other useful comments, qualifications, etc.>
+
+   MODIFIED   (MM/DD/YY)
+   ayjindal    04/08/14 - Bug 18477622
+   arunpras    01/17/14 - Bug fix: 17623143
+   arunpras    12/31/13 - Added an error message to be shown during the negative use case: Invoking logout method before performing authentication
+   arunpras	   10/03/13 - Added a string a part of the fix for bug - 16186113
+   arunpras    09/02/13 - Added custom HTTP headers
+-->
+<resources>
+
+    <!-- General Messages -->
+    <string name="oamms_app_name">Комплект разработчика ПО для социальных сетей и мобильных устройств на базе Android</string>
+    <string name="processing">Выполняется обработка...</string>
+    <string name="activityExcep">Действие не может иметь значение null. Зарегистрируйте текущее действие с помощью OMMobileSecurityService#registerActivity(Activity), предпочтительно в onResume().</string>
+    <string name="secProfileExcep">API-интерфейс настройки не вызван.</string>
+    <string name="servicenamenull">Не указана схема аутентификации.</string>
+    <string name="invalidServerType">Недопустимый тип сервера аутентификации.</string>
+    <string name="notConnectToServer">Не удается получить доступ к серверу по указанному адресу. Обратитесь за помощью к администратору.</string>
+    <string name="networkUnavailable">Сеть недоступна. Убедитесь, что подключение к сети Интернет установлено, и повторите попытку.</string>
+    <string name="notParseResponse">Невозможно выполнить синтаксический анализ отклика с сервера.</string>
+    <string name="certificateNotAccepted">Пользователь отклонил сертификат сервера.</string>
+    <string name="internalError">Внутренняя ошибка</string>
+    <string name="invalidArgumentsNullOrEmpty">Аргументы не могут быть неопределенными или пустыми строками</string>
+    <string name="updateCookiesValidationFailure">Сбой обновления значения cookie: невозможно проверить корректность атрибутов cookie</string>
+    <string name="cookieNotFound">Выбранный для обновления cookie не существует</string>
+    <string name="invalidArgumentsNull">Аргументы не могут быть неопределенными</string>
+    <string name="clearUsernamePasswordFailed">Не удалось удалить имя пользователя и пароль, сохраненные в Embedded Webview, так как регистрация данной комбинации была отменена.</string>
+    <string name="customAuthHeadersNotAllowed">Не удается добавить некоторые заголовки HTTP, которые указаны в сопоставлении, переданном как значение ключа OM_PROP_CUSTOM_AUTH_HEADERS. См. в документации список неразрешенных заголовков HTTP.</string>
+    <string name="customAuthHeadersCountExceeded">Число пользовательских заголовков auth, которые указаны как часть OM_PROP_CUSTOM_AUTH_HEADERS, превышает максимально допустимое количество (%1$d).</string>
+    <string name="applicationNotAvailable">Запрошенное приложение недоступно.</string>
+    <string name="httpCallbackNull">Отклик для асинхронного запроса не может быть неопределенным</string>
+    <string name="httpResUrlNull">URL-адрес HTTP-ресурса не может быть неопределенным</string>
+    <string name="logoutInProgress">Выполняется выход. Повторите попытку позже.</string>
+    <string name="logoutTimedOut">Сбой операции выхода - истекло время ожидания для соединения.</string>
+    <string name="logoutFailure">Сбой выхода из-за следующей ошибки: %1$s</string>
+    <string name="notFound">Запрошенного URL-адреса не существует. Обратитесь за помощью к администратору.</string>
+    <!-- *********************************************************************** -->
+
+
+    <!-- ************************ Success/Error Messages ************************* -->
+    <string name="usernameRequired">Требуется имя пользователя.</string>
+    <string name="identityDomainRequired">Требуется домен удостоверения.</string>
+    <string name="usernameIdentityDomainRequired">Требуются имя пользователя и домен удостоверения.</string>
+    <string name="passwordNull">Требуется пароль.</string>
+    <string name="unPwdMissing">Недопустимое имя пользователя или пароль.</string>
+    <string name="unPwdTenantMissing">Недопустимое имя пользователя, пароль или домен удостоверения.</string>
+    <string name="chalgMissing">Неверный ответ на контрольный вопрос.</string>
+    <string name="userCanceled">Пользователь отменил операцию входа.</string>
+    <string name="authfailed">Сбой при аутентификации пользователя.</string>
+    <string name="authSuccess">Аутентификация пользователя выполнена успешно.</string>
+    <!-- *********************************************************************** -->
+
+
+    <!-- *********** UI Messages and Descriptions of Images ************* -->
+    <string name="username">Имя пользователя</string>
+    <string name="usernameHint">Введите имя пользователя</string>
+    <string name="password">Пароль</string>
+    <string name="passwordHint">Введите пароль</string>
+    <string name="tenant">Домен идентификаторов</string>
+    <string name="tenantHint">Введите домен идентификаторов</string>
+    <string name="login">Зарегистрироваться</string>
+    <string name="cancel">Отменить</string>
+    <string name="challengeHead">Укажите дополнительную информацию</string>
+    <string name="challengeQues">Вопрос</string>
+    <string name="challengeAns">Ответ</string>
+    <string name="challengeAnswerHint">Введите ответ на контрольный вопрос</string>
+    <string name="submit">Отправить</string>
+    <string name="rememberUsername">Запомнить имя пользователя</string>
+    <string name="rememberCredentials">Запомнить учетные данные</string>
+    <string name="autoLogin">Автоматический вход</string>
+    <string name="backButton">Назад</string>
+    <string name="forwardButton">Переслать</string>
+    <string name="refreshButton">Обновить</string>
+    <string name="cancelButton">Отменить</string>
+    <!-- *********************************************************************** -->
+
+
+    <!-- URL-Based Configuration -->
+    <string name="configPropertiesMissing">Свойства конфигурации не найдены в SharedPreferences</string>
+    <string name="configIntentUriNull">В переданном значении не содержится URI для сведений о конфигурации сервера.</string>
+    <string name="configIntentUriInvalid">В переданном значении не содержится допустимый URI для сведений о конфигурации сервера.</string>
+    <string name="couldNotRetrieveConfiguration">Не удалось извлечь свойства конфигурации из общих предпочтений</string>
+    <string name="couldNotStoreConfiguration">Не удалось сохранить свойства конфигурации в SharedPreferences</string>
+    <!-- *********************************************************************** -->
+    
+    
+    <!-- Setup failure -->
+    <string name="mssInitFailed">Сбой при инициализации комплекта разработчика ПО: отсутствует обязательная серверная информация.</string>
+    <string name="setupFailedMS">Невозможно загрузить профиль приложения из-за отсутствия конфигурации</string>
+    <string name="setupFailedDefault">Профиль приложения или имя приложения является недопустимым</string>
+    <!-- *********************************************************************** -->
+
+
+    <!-- Mobile & Social Server -->
+    <string name="invalidAppName">Недопустимое имя приложения.</string>
+    <string name="invalidServerUrl">Недопустимый Url-адрес сервера.</string>
+    <string name="invalidServiceDomain">Недопустимый служебный домен.</string>
+    <string name="tokenMissing">Устройство еще не прошло аутентификацию на сервере приложений для мобильных устройств и социальных сетей.</string>
+    <string name="noUserToken">Пользователь еще не аутентифицирован.</string>
+    <string name="noRpLoginUrl">Невозможно открыть URL-адрес аутентификации RP.</string>
+    <string name="reqFailed">Сбой запроса на аутентификацию пользователя %1$s.</string>
+    <string name="reqDenied">Запрос на аутентификацию отклонен.</string>
+    <string name="oaamDeniedAction">Аутентификация заблокирована сервером. Обратитесь за помощью к администратору.</string>
+    <string name="oaamWipeoutAction">Получена команда стирания от сервера. Выполняется очистка конфиденциальных данных приложения.</string>
+
+    <!-- SSO Messages -->
+    <string name="sigNotValid">Сбой при проверке подписи вызывающего приложения.</string>
+    <string name="ssoActivitymissing">Не указано имя приложения SSO.</string>
+    <string name="initSSOAgentSuccess">Приложение-агент SSO инициализировано успешно.</string>
+    <string name="serviceDomainNotSame">Аутентификация отклонена агентом: неверно указан служебный домен.</string>
+    <string name="invalidConfig">Клиентское приложение не авторизовано для участия в SSO.</string>
+    <string name="noAgentAvail">Невозможно открыть URL-адрес аутентификации SSO.</string>
+    <string name="tokensNotAvailable">Маркер OAM_ID недоступен. Проверьте настройки сервера. Одна из возможных ошибок конфигурации: для схемы аутентификации не установлено значение MobileOAMAuthentication.</string>
+    <!-- *********************************************************************** -->
+
+    <!-- *********************************************************************** -->
+
+
+    <!-- Basic Authentication Messages -->
+    <string name="invalidBasicUrl">Недопустимый URL-адрес для входа.</string>
+    <string name="serverReturnedError">Сервер обнаружил ошибку %1$s. Обратитесь за помощью к администратору.</string>
+    <string name="forbidden">Пользователь не авторизован.</string>
+    <!-- *********************************************************************** -->
+
+
+    <!-- Federated Authentication Messages -->
+    <string name="authenticationTimedOut">Истекло время ожидания аутентификации.</string>
+    <!-- *********************************************************************** -->
+
+
+    <!-- HTML Login View Customization -->
+    <string name="customHtmlFieldsInvalid">Пользовательская страница аутентификации не имеет поля для учетных данных.</string>
+    <string name="kbaHtmlFieldsInvalid">Пользовательская страница строгой аутентификации не имеет поля для учетных данных.</string>
+    <string name="htmlFileException">Пользовательский файл HTML не может иметь значения null.</string>
+    <string name="invalidHtmlFile">Путь к пользовательскому файлу HTML не может иметь недопустимый тип</string>
+    <string name="remoteHTMLFile">Нестандартная HTML-страница не может быть удаленной страницей, SDK поддерживает загрузку только локальных HTML-страниц</string>
+    <!-- *********************************************************************** -->
+
+
+    <!-- ************************* SSL Certificate Warning ********************* -->
+    <string name="ssl_settingsheader">Сертификат выдан не доверенным источником.</string>
+    <string name="ssl_security_certificate">Сертификат безопасности</string>
+    <string name="ssl_issued_to">Тема:</string>
+    <string name="ssl_common_name">Общее имя:</string>
+    <string name="ssl_organization">Организация:</string>
+    <string name="ssl_organization_unit">Подразделение:</string>
+    <string name="ssl_issued_by">Кем выдан: </string>
+    <string name="ssl_validity">Срок действия:</string>
+    <string name="ssl_issued_on">Дата начала:</string>
+    <string name="ssl_expires_on">Дата окончания:</string>
+    <string name="security_warning">Предупреждение о защите</string>
+    <string name="ssl_continue">Принять</string>
+    <string name="ssl_view_certificate">Сведения</string>
+    <string name="ssl_message">Существуют проблемы с сертификатом безопасности этого URL-адреса.</string>
+    <string name="serial_number">Серийный номер:</string>
+    <string name="fingerprint">Отпечатки пальцев:</string>
+    <string name="sha_fp">Отпечаток пальца SHA1:</string>
+    <string name="md5_fp">Отпечаток пальца MD5:</string>
+    <string name="ssl_alert_icon">Значок оповещения</string>
+    <string name="importCertificateFailure">Невозможно установить сертификат.</string>
+    <!-- *********************************************************************** -->
+
+
+    <!-- ************************OAuth2.0 Known errors************************** -->
+    <string name="oAuthFailed">Сбой аутентификации OAuth.</string>
+    <string name="oAuthInvalidState">В ответе получено недопустимое состояние.</string>
+    <string name="oAuthContextInvalid">Отсутствует действительный маркер доступа для указанного запроса. Выполните аутентификацию с соответствующими данными.</string>
+
+    <!-- ********* Description messages if server returns no description ****** -->
+    <string name="oAuthInvalidRequestDesc">В запросе отсутствует требуемый параметр, содержится неподдерживаемое значение параметра, повторяется параметр, содержится несколько реквизитов, используется несколько механизмов аутентификации клиента, либо запрос неверно сформирован по другой причине.</string>
+    <string name="oAuthUnauthorizedClientDesc">Аутентифицированный клиент не имеет прав на использование данного типа предоставления аутентификации.</string>
+    <string name="oAuthAccessDeniedDesc">Владелец ресурса или сервер авторизации отклонил запрос.</string>
+    <string name="oAuthUnsupportedResponseTypeDesc">Сервер авторизации не поддерживает получение кода авторизации с помощью данного метода.</string>
+    <string name="oAuthServerErrorDesc">В сервере авторизации возникло непредвиденное состояние, которое не позволило ему выполнить этот запрос.</string>
+    <string name="oAuthTempUnavailableDesc">В текущий момент сервер авторизации не может обработать запрос из-за временной перегрузки или технического обслуживания этого сервера.</string>
+    <string name="oAuthInvalidScopeDesc">Запрашиваемый объем данных является недопустимым, неизвестным, неверно сформированным, или превышает объем данных, предоставляемый владельцем ресурса.</string>
+    <string name="oAuthUnsupportedGrantTypeDesc">Этот тип предоставления авторизации не поддерживается сервером авторизации.</string>
+    <string name="oAuthInvalidClientDesc">Сбой при аутентификации клиента.</string>
+    <string name="oAuthInvalidGrantDesc">Предоставленные данные авторизации или маркера обновления являются недопустимыми, просроченными, аннулированными, не совпадают с URI перенаправления, используемом в запросе авторизации, или были сформированы для другого клиента.</string>
+    <!-- *********************************************************************** -->
+
+    <!-- *********************************************************************** -->
+
+</resources>

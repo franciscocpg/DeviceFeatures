@@ -1,0 +1,2 @@
+l={VA:["VA","Virginie"],NM:["NM","Nouveau Mexique"],NC:["NC","Caroline du Nord"],ND:["ND","Dakota du Nord"],GA:["GA","G\u00e9orgie"],FL:["FL","Floride"],WV:["WV","Virginie-Occidentale"],PA:["PA","Pennsylvanie"],HI:["HI","Hawa\u00ef"],CA:["CA","Californie"],SD:["SD","Dakota du Sud"],SC:["SC","Caroline du Sud"],LA:["LA","Louisiane"]};(DvtBaseMapManager=this.DvtBaseMapManager)||(DvtBaseMapManager={});DvtBaseMapManager._UNPROCESSED_MAPS||(DvtBaseMapManager._UNPROCESSED_MAPS=[[],[],[]]);
+DvtBaseMapManager._UNPROCESSED_MAPS[2].push(["usa","states",l]);

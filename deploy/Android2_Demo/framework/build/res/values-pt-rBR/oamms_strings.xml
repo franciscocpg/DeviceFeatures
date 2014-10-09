@@ -1,0 +1,197 @@
+<?xml version = '1.0' encoding = 'utf-8'?>
+<!-- $Header: wptg/idmmobile/src/Android/IDMMobileSDK/res/values-pt-rBR/oamms_strings.xml /st_wptg_11.1.1.9.0/4 2014/05/30 19:31:12 gmolloy Exp $ -->
+<!--
+ Copyright (c) 2013, 2014, Oracle and/or its affiliates. All rights reserved.
+
+   NAME
+     oamms_strings.xml
+
+   DESCRIPTION
+     Contains the strings being used by the SDK
+
+   NOTES
+     <other useful comments, qualifications, etc.>
+
+   MODIFIED   (MM/DD/YY)
+   ayjindal    04/08/14 - Bug 18477622
+   arunpras    01/17/14 - Bug fix: 17623143
+   arunpras    12/31/13 - Added an error message to be shown during the negative use case: Invoking logout method before performing authentication
+   arunpras	   10/03/13 - Added a string a part of the fix for bug - 16186113
+   arunpras    09/02/13 - Added custom HTTP headers
+-->
+<resources>
+
+    <!-- General Messages -->
+    <string name="oamms_app_name">Mobile e Social SDK para Android</string>
+    <string name="processing">Processando...</string>
+    <string name="activityExcep">A atividade não pode ser nula. Registre a atividade atual usando OMMobileSecurityService#registerActivity(Activity), de preferência em onResume().</string>
+    <string name="secProfileExcep">A API de configuração não foi chamada.</string>
+    <string name="servicenamenull">Nenhum esquema de autenticação foi especificado.</string>
+    <string name="invalidServerType">O tipo do servidor de autenticação é inválido.</string>
+    <string name="notConnectToServer">Servidor inacessível no endereço especificado. Entre em contato com o administrador para obter ajuda.</string>
+    <string name="networkUnavailable">Rede indisponível. Certifique-se de que está conectado à Internet e tente novamente.</string>
+    <string name="notParseResponse">Não foi possível efetuar parse na resposta enviada do servidor.</string>
+    <string name="certificateNotAccepted">Certificado do servidor rejeitado pelo usuário.</string>
+    <string name="internalError">Erro Interno</string>
+    <string name="invalidArgumentsNullOrEmpty">Os argumentos não podem ser uma string vazia ou nula</string>
+    <string name="updateCookiesValidationFailure">Falha na atualização do valor de cookie, pois os atributos de cookie não podem ser validados</string>
+    <string name="cookieNotFound">O cookie a ser atualizado não existe</string>
+    <string name="invalidArgumentsNull">Os argumentos não podem ser nulos</string>
+    <string name="clearUsernamePasswordFailed">Nome de usuário e senha armazenados na view da Web Incorporada não podem ser excluídos, pois a atividade teve o registro cancelado.</string>
+    <string name="customAuthHeadersNotAllowed">Alguns cabeçalhos HTTP especificados no Mapa informados com um valor com a chave OM_PROP_CUSTOM_AUTH_HEADERS não podem ser adicionados. Consulte a documentação para obter a lista de cabeçalhos HTTP não permitidos.</string>
+    <string name="customAuthHeadersCountExceeded">O número de cabeçalhos de autenticação personalizados que são especificados como parte de OM_PROP_CUSTOM_AUTH_HEADERS excedeu a contagem máxima (%1$d).</string>
+    <string name="applicationNotAvailable">A aplicação solicitada não está disponível.</string>
+    <string name="httpCallbackNull">Para solicitação assíncrona, o callback não pode ser nulo</string>
+    <string name="httpResUrlNull">O URL do Recurso Http não pode ser nulo</string>
+    <string name="logoutInProgress">Log-out em andamento. Tente novamente mais tarde.</string>
+    <string name="logoutTimedOut">A operação de log-out falhou porque houve time-out da conexão.</string>
+    <string name="logoutFailure">O log-out falhou por causa do seguinte erro: %1$s</string>
+    <string name="notFound">O URL solicitado não existe. Entre em contato com o administrador para obter ajuda.</string>
+    <!-- *********************************************************************** -->
+
+
+    <!-- ************************ Success/Error Messages ************************* -->
+    <string name="usernameRequired">O nome do usuário é obrigatório.</string>
+    <string name="identityDomainRequired">O Domínio da Identidade é obrigatório.</string>
+    <string name="usernameIdentityDomainRequired">O nome do usuário e o domínio da identidade são obrigatórios.</string>
+    <string name="passwordNull">É necessário informar uma senha.</string>
+    <string name="unPwdMissing">Senha ou nome de usuário inválido.</string>
+    <string name="unPwdTenantMissing">Senha, nome de usuário ou domínio de identidade inválido.</string>
+    <string name="chalgMissing">A resposta do Desafio é inválida.</string>
+    <string name="userCanceled">O usuário cancelou a operação de log-in.</string>
+    <string name="authfailed">Falha na autenticação do usuário.</string>
+    <string name="authSuccess">Autenticação do usuário Bem-sucedida.</string>
+    <!-- *********************************************************************** -->
+
+
+    <!-- *********** UI Messages and Descriptions of Images ************* -->
+    <string name="username">Nome do usuário</string>
+    <string name="usernameHint">Informe o nome do usuário</string>
+    <string name="password">Senha</string>
+    <string name="passwordHint">Informe a senha</string>
+    <string name="tenant">Domínio de Identidades</string>
+    <string name="tenantHint">Informar domínio da identidade</string>
+    <string name="login">Efetuar Sign-In</string>
+    <string name="cancel">Cancelar</string>
+    <string name="challengeHead">Fornecer informações adicionais</string>
+    <string name="challengeQues">Pergunta</string>
+    <string name="challengeAns">Resposta</string>
+    <string name="challengeAnswerHint">Digite a resposta da pergunta de segurança</string>
+    <string name="submit">Submeter</string>
+    <string name="rememberUsername">Lembrar Nome do Usuário</string>
+    <string name="rememberCredentials">Lembrar Credenciais</string>
+    <string name="autoLogin">Login Automático</string>
+    <string name="backButton">Voltar</string>
+    <string name="forwardButton">Encaminhar</string>
+    <string name="refreshButton">Atualizar</string>
+    <string name="cancelButton">Cancelar</string>
+    <!-- *********************************************************************** -->
+
+
+    <!-- URL-Based Configuration -->
+    <string name="configPropertiesMissing">Propriedades de configuração não encontradas no SharedPreferences</string>
+    <string name="configIntentUriNull">A intenção informada não contém um URI para detalhes de configuração do servidor.</string>
+    <string name="configIntentUriInvalid">A intenção informada não contém um URI válido para detalhes de configuração do servidor.</string>
+    <string name="couldNotRetrieveConfiguration">Não foi possível recuperar as propriedades de configuração de SharedPreferences</string>
+    <string name="couldNotStoreConfiguration">Não foi possível armazenar propriedades de configuração no SharedPreferences</string>
+    <!-- *********************************************************************** -->
+    
+    
+    <!-- Setup failure -->
+    <string name="mssInitFailed">Ocorreu uma falha na inicialização do SDK, pois as informações de servidor necessárias não foram fornecidas.</string>
+    <string name="setupFailedMS">Não é possível fazer download do perfil da aplicação devido a uma configuração ausente</string>
+    <string name="setupFailedDefault">O perfil ou o nome da aplicação é inválido</string>
+    <!-- *********************************************************************** -->
+
+
+    <!-- Mobile & Social Server -->
+    <string name="invalidAppName">Nome da aplicação inválido.</string>
+    <string name="invalidServerUrl">O Url do servidor é inválido.</string>
+    <string name="invalidServiceDomain">O Domínio do Serviço é inválido.</string>
+    <string name="tokenMissing">Este dispositivo ainda não está autenticado no Mobile ou Social Server.</string>
+    <string name="noUserToken">O usuário ainda não foi autenticado.</string>
+    <string name="noRpLoginUrl">Não é possível abrir o URL de Autenticação de RP.</string>
+    <string name="reqFailed">Falha na solicitação de autenticação do usuário %1$s.</string>
+    <string name="reqDenied">A solicitação de autenticação foi negada.</string>
+    <string name="oaamDeniedAction">Autenticação bloqueada pelo servidor. Entre em contato com o administrador para obter ajuda.</string>
+    <string name="oaamWipeoutAction">Comando de remoção recebido do servidor. Removendo dados confidenciais da aplicação.</string>
+
+    <!-- SSO Messages -->
+    <string name="sigNotValid">Ocorreu uma falha na validação da assinatura da aplicação de chamada.</string>
+    <string name="ssoActivitymissing">O nome da Aplicação SSO não foi fornecido.</string>
+    <string name="initSSOAgentSuccess">A aplicação do Agente SSO foi inicializada com sucesso.</string>
+    <string name="serviceDomainNotSame">A autenticação foi rejeitada pelo agente, pois o domínio do serviço não é correspondente.</string>
+    <string name="invalidConfig">A aplicação do cliente não tem autorização para participar do SSO.</string>
+    <string name="noAgentAvail">Não é possível abrir o URL de Autenticação de SSO.</string>
+    <string name="tokensNotAvailable">O token OAM_ID não está disponível. Verifique as definições do servidor. Um dos possíveis erros de configuração é que o esquema de autenticação não esteja definido como MobileOAMAuthentication.</string>
+    <!-- *********************************************************************** -->
+
+    <!-- *********************************************************************** -->
+
+
+    <!-- Basic Authentication Messages -->
+    <string name="invalidBasicUrl">URL de log-in inválido.</string>
+    <string name="serverReturnedError">O servidor detectou um erro %1$s. Entre em contato com o administrador para obter ajuda.</string>
+    <string name="forbidden">O usuário não está autorizado.</string>
+    <!-- *********************************************************************** -->
+
+
+    <!-- Federated Authentication Messages -->
+    <string name="authenticationTimedOut">A autenticação sofreu timeout.</string>
+    <!-- *********************************************************************** -->
+
+
+    <!-- HTML Login View Customization -->
+    <string name="customHtmlFieldsInvalid">A página de autenticação personalizada não tem campos das credenciais.</string>
+    <string name="kbaHtmlFieldsInvalid">A página de autenticação reforçada personalizada não tem campos das credenciais.</string>
+    <string name="htmlFileException">O arquivo HTML personalizado não pode ser nulo.</string>
+    <string name="invalidHtmlFile">O caminho do arquivo HTML personalizado é do tipo inválido</string>
+    <string name="remoteHTMLFile">A página HTML personalizada não pode ser uma página remota. O SDK só permite que uma página HTML local seja carregada</string>
+    <!-- *********************************************************************** -->
+
+
+    <!-- ************************* SSL Certificate Warning ********************* -->
+    <string name="ssl_settingsheader">Este certificado não é de uma autoridade confiável.</string>
+    <string name="ssl_security_certificate">Certificado de Segurança</string>
+    <string name="ssl_issued_to">Assunto:</string>
+    <string name="ssl_common_name">Nome comum:</string>
+    <string name="ssl_organization">Organização:</string>
+    <string name="ssl_organization_unit">Unidade Organizacional:</string>
+    <string name="ssl_issued_by">Emissor:</string>
+    <string name="ssl_validity">Validade:</string>
+    <string name="ssl_issued_on">Data Inicial:</string>
+    <string name="ssl_expires_on">Data Final:</string>
+    <string name="security_warning">Advertência de Segurança</string>
+    <string name="ssl_continue">Aceitar</string>
+    <string name="ssl_view_certificate">Detalhes</string>
+    <string name="ssl_message">Há problemas com o certificado de segurança deste URL.</string>
+    <string name="serial_number">Número de Série:</string>
+    <string name="fingerprint">Impressões Digitais:</string>
+    <string name="sha_fp">Impressão Digital SHA1:</string>
+    <string name="md5_fp">Impressão Digital MD5:</string>
+    <string name="ssl_alert_icon">Ícone de Alerta</string>
+    <string name="importCertificateFailure">Não é possível instalar o certificado.</string>
+    <!-- *********************************************************************** -->
+
+
+    <!-- ************************OAuth2.0 Known errors************************** -->
+    <string name="oAuthFailed">Falha na Autenticação de OAuth.</string>
+    <string name="oAuthInvalidState">Estado inválido recuperado da resposta.</string>
+    <string name="oAuthContextInvalid">Não há token de acesso válido para a solicitação fornecida. Autentique com o escopo apropriado.</string>
+
+    <!-- ********* Description messages if server returns no description ****** -->
+    <string name="oAuthInvalidRequestDesc">A solicitação não tem um parâmetro obrigatório, tem um valor de parâmetro não suportado, repete um parâmetro, contém várias credenciais, utiliza mais de um mecanismo de autenticação do cliente ou está incorreta.</string>
+    <string name="oAuthUnauthorizedClientDesc">O cliente autenticado não está autorizado a usar este tipo de concessão de autorização.</string>
+    <string name="oAuthAccessDeniedDesc">O proprietário do recurso ou o servidor de autorização negou a solicitação.</string>
+    <string name="oAuthUnsupportedResponseTypeDesc">O servidor de autorização não suporta a obtenção de um código de autorização usando este método.</string>
+    <string name="oAuthServerErrorDesc">O servidor de autorização encontrou uma condição inesperada que o impediu de atender à solicitação.</string>
+    <string name="oAuthTempUnavailableDesc">O servidor de autorização atualmente não pode tratar a solicitação devido a uma sobrecarga temporária ou manutenção do servidor.</string>
+    <string name="oAuthInvalidScopeDesc">O escopo solicitado é inválido, desconhecido, incorreto ou excede o escopo concedido pelo proprietário do recurso.</string>
+    <string name="oAuthUnsupportedGrantTypeDesc">O tipo de concessão de autorização não é suportado pelo servidor de autorização.</string>
+    <string name="oAuthInvalidClientDesc">Falha na autenticação do cliente.</string>
+    <string name="oAuthInvalidGrantDesc">A concessão de autorização fornecida ou o token de atualização é inválido, expirou, foi revogado, não corresponde ao URI de redirecionamento usado na solicitação de autorização ou foi emitido para outro cliente.</string>
+    <!-- *********************************************************************** -->
+
+    <!-- *********************************************************************** -->
+
+</resources>

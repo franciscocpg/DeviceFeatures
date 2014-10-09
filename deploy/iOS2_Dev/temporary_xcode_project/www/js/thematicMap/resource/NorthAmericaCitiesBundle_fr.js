@@ -1,0 +1,2 @@
+l={GTM_GUATEMALA_CITY:[null,"Guatemala (ville)"],USA_PHILADELPHIA:[null,"Philadelphie"],PAN_PANAMA_CITY:[null,"Panama (ville)"],CUB_HAVANA:[null,"La Havane"],DOM_SANTO_DOMINGO:[null,"Saint-Domingue"],MEX_MEXICO_CITY:[null,"Mexico"],USA_ST__LOUIS:[null,"Saint Louis"],CAN_MONTREAL:[null,"Montr\u00e9al"]};(DvtBaseMapManager=this.DvtBaseMapManager)||(DvtBaseMapManager={});DvtBaseMapManager._UNPROCESSED_MAPS||(DvtBaseMapManager._UNPROCESSED_MAPS=[[],[],[]]);
+DvtBaseMapManager._UNPROCESSED_MAPS[2].push(["northAmerica","cities",l]);

@@ -1,0 +1,197 @@
+<?xml version = '1.0' encoding = 'utf-8'?>
+<!-- $Header: wptg/idmmobile/src/Android/IDMMobileSDK/res/values-cs/oamms_strings.xml /st_wptg_11.1.1.9.0/4 2014/05/29 20:45:42 gmolloy Exp $ -->
+<!--
+ Copyright (c) 2013, 2014, Oracle and/or its affiliates. All rights reserved.
+
+   NAME
+     oamms_strings.xml
+
+   DESCRIPTION
+     Contains the strings being used by the SDK
+
+   NOTES
+     <other useful comments, qualifications, etc.>
+
+   MODIFIED   (MM/DD/YY)
+   ayjindal    04/08/14 - Bug 18477622
+   arunpras    01/17/14 - Bug fix: 17623143
+   arunpras    12/31/13 - Added an error message to be shown during the negative use case: Invoking logout method before performing authentication
+   arunpras	   10/03/13 - Added a string a part of the fix for bug - 16186113
+   arunpras    09/02/13 - Added custom HTTP headers
+-->
+<resources>
+
+    <!-- General Messages -->
+    <string name="oamms_app_name">Mobile a Social SDK for Android</string>
+    <string name="processing">Zpracování...</string>
+    <string name="activityExcep">Aktivita nemůže mít hodnotu null. Zaregistrujte aktuální aktivitu pomocí OMMobileSecurityService#registerActivity(aktivita), nejlépe ve funkci onResume().</string>
+    <string name="secProfileExcep">Setup API není ještě voláno.</string>
+    <string name="servicenamenull">Není zadáno žádné schéma ověřování.</string>
+    <string name="invalidServerType">Typ serveru ověřování není platný</string>
+    <string name="notConnectToServer">Server není na zadané adrese dostupný. Požádejte správce o pomoc.</string>
+    <string name="networkUnavailable">Síť je nedostupná. Ujistěte se, že jste připojen k internetu a zkuste to znovu.</string>
+    <string name="notParseResponse">Nelze analyzovat odpověď odeslanou ze serveru.</string>
+    <string name="certificateNotAccepted">Uživatel odmítl certifikát serveru.</string>
+    <string name="internalError">Vnitřní chyba</string>
+    <string name="invalidArgumentsNullOrEmpty">Argumenty nemohou mít hodnotu null nebo prázdný řetězec</string>
+    <string name="updateCookiesValidationFailure">Aktualizace hodnoty cookie selhala, protože atributy cookie nelze ověřit</string>
+    <string name="cookieNotFound">Položka cookie pro aktualizaci neexistuje</string>
+    <string name="invalidArgumentsNull">Argumenty nemohou mít hodnotu null</string>
+    <string name="clearUsernamePasswordFailed">Uživatelské jméno a heslo uložené ve vloženém webovém zobrazení nebylo možné odstranit, protože registrace činnosti byla mezitím zrušena.</string>
+    <string name="customAuthHeadersNotAllowed">Nelze přidat některé hlavičky HTTP, zadané v předané mapě jako hodnota pro případ klíče OM_PROP_CUSTOM_AUTH_HEADERS. Pročtěte si v dokumentaci seznam nepovolených hlaviček HTTP.</string>
+    <string name="customAuthHeadersCountExceeded">Počet vlastních ověřovacích hlaviček, které jsou zadány jako část OM_PROP_CUSTOM_AUTH_HEADERS, překročil maximální povolený počet (%1$d).</string>
+    <string name="applicationNotAvailable">Požadovaná aplikace není dostupná.</string>
+    <string name="httpCallbackNull">Zpětné volání pro asynchronní požadavek nemůže mít hodnotu null</string>
+    <string name="httpResUrlNull">Adresa URL zdroje Http nemůže mít hodnotu null</string>
+    <string name="logoutInProgress">Probíhá odhlášení. Zkuste to za chvíli znovu.</string>
+    <string name="logoutTimedOut">Operace odhlášení selhala kvůli vypršení platnosti připojení.</string>
+    <string name="logoutFailure">Operace odhlášení selhala kvůli následující chybě: %1$s</string>
+    <string name="notFound">Požadovaná adresa URL neexistuje. Požádejte správce o pomoc.</string>
+    <!-- *********************************************************************** -->
+
+
+    <!-- ************************ Success/Error Messages ************************* -->
+    <string name="usernameRequired">Uživatelské jméno je povinný údaj.</string>
+    <string name="identityDomainRequired">Doména identity je povinný údaj.</string>
+    <string name="usernameIdentityDomainRequired">Uživatelské jméno a doména identity jsou povinné údaje.</string>
+    <string name="passwordNull">Požaduje se heslo.</string>
+    <string name="unPwdMissing">Neplatné uživatelské jméno nebo heslo.</string>
+    <string name="unPwdTenantMissing">Neplatné uživatelské jméno, heslo nebo doména identity.</string>
+    <string name="chalgMissing">Odpověď na otázku výzvy je neplatná.</string>
+    <string name="userCanceled">Uživatel zrušil operaci přihlášení.</string>
+    <string name="authfailed">Ověření uživatele selhalo.</string>
+    <string name="authSuccess">Ověření uživatele bylo úspěšné.</string>
+    <!-- *********************************************************************** -->
+
+
+    <!-- *********** UI Messages and Descriptions of Images ************* -->
+    <string name="username">Uživatelské jméno</string>
+    <string name="usernameHint">Zadejte uživatelské jméno</string>
+    <string name="password">Heslo</string>
+    <string name="passwordHint">Zadejte heslo</string>
+    <string name="tenant">Doména identity</string>
+    <string name="tenantHint">Zadejte doménu identity</string>
+    <string name="login">Přihlásit se</string>
+    <string name="cancel">Zrušit</string>
+    <string name="challengeHead">Zadejte další informace</string>
+    <string name="challengeQues">Otázka</string>
+    <string name="challengeAns">Odpověď</string>
+    <string name="challengeAnswerHint">Zadejte odpověď na bezpečnostní otázku</string>
+    <string name="submit">Odeslat</string>
+    <string name="rememberUsername">Zapamatovat uživatelské jméno</string>
+    <string name="rememberCredentials">Pamatovat si ověřovací údaje</string>
+    <string name="autoLogin">Automatické přihlášení</string>
+    <string name="backButton">Zpět</string>
+    <string name="forwardButton">Vpřed</string>
+    <string name="refreshButton">Aktualizovat</string>
+    <string name="cancelButton">Zrušit</string>
+    <!-- *********************************************************************** -->
+
+
+    <!-- URL-Based Configuration -->
+    <string name="configPropertiesMissing">Vlastnosti konfigurace nebyly v SharedPreferences nalezeny</string>
+    <string name="configIntentUriNull">Předaný záměr neobsahuje identifikátor URI podrobností konfigurace serveru.</string>
+    <string name="configIntentUriInvalid">Předaný záměr neobsahuje platný identifikátor URI podrobností konfigurace serveru.</string>
+    <string name="couldNotRetrieveConfiguration">Nelze načíst vlastnosti konfigurace z SharedPreferences</string>
+    <string name="couldNotStoreConfiguration">Vlastnosti konfigurace nelze uložit do SharedPreferences</string>
+    <!-- *********************************************************************** -->
+    
+    
+    <!-- Setup failure -->
+    <string name="mssInitFailed">Inicializace SDK selhala, protože nejsou zadány požadované informace o serveru.</string>
+    <string name="setupFailedMS">Profil aplikace nelze stáhnout z důvodu chybějící konfigurace</string>
+    <string name="setupFailedDefault">Profil nebo název aplikace je neplatný</string>
+    <!-- *********************************************************************** -->
+
+
+    <!-- Mobile & Social Server -->
+    <string name="invalidAppName">Název aplikace je neplatný.</string>
+    <string name="invalidServerUrl">Adresa URL serveru je neplatná.</string>
+    <string name="invalidServiceDomain">Doména služby je neplatná.</string>
+    <string name="tokenMissing">Toto zařízení nebylo ještě ověřeno na serveru Mobile and Social Server.</string>
+    <string name="noUserToken">Uživatel ještě není ověřen</string>
+    <string name="noRpLoginUrl">Nelze otevřít adresu URL pro ověření RL.</string>
+    <string name="reqFailed">Požadavek na ověření pro uživatele %1$s selhal.</string>
+    <string name="reqDenied">Požadavek na ověření byl odepřen.</string>
+    <string name="oaamDeniedAction">Ověření blokováno serverem. Požádejte správce o pomoc.</string>
+    <string name="oaamWipeoutAction">Ze serveru byl obdržen příkaz k vymazání. Probíhá mazání citlivých dat aplikace.</string>
+
+    <!-- SSO Messages -->
+    <string name="sigNotValid">Chyba při ověřování volání podpisu aplikace.</string>
+    <string name="ssoActivitymissing">Název aplikace SSO není zadán.</string>
+    <string name="initSSOAgentSuccess">Aplikace agentu SSO byla úspěšně inicializována.</string>
+    <string name="serviceDomainNotSame">Ověření bylo agentem odmítnuto, protože doména služby se neshoduje.</string>
+    <string name="invalidConfig">Klientská aplikace není autorizována ke spoluúčasti v SSO.</string>
+    <string name="noAgentAvail">Nelze otevřít adresu URL pro ověření SSO.</string>
+    <string name="tokensNotAvailable">Lexikální jednotka OAM_ID není dostupná. Zkontrolujte nastavení serveru. Jednou z možných chybných konfigurací je, že schéma ověření není nastaveno jako MobileOAMAuthentication.</string>
+    <!-- *********************************************************************** -->
+
+    <!-- *********************************************************************** -->
+
+
+    <!-- Basic Authentication Messages -->
+    <string name="invalidBasicUrl">Neplatná adresa URL přihlášení.</string>
+    <string name="serverReturnedError">Na serveru došlo k chybě %1$s. Požádejte správce o pomoc.</string>
+    <string name="forbidden">Uživatel nemá oprávnění.</string>
+    <!-- *********************************************************************** -->
+
+
+    <!-- Federated Authentication Messages -->
+    <string name="authenticationTimedOut">Vypršel čas ověřování.</string>
+    <!-- *********************************************************************** -->
+
+
+    <!-- HTML Login View Customization -->
+    <string name="customHtmlFieldsInvalid">Uživatelská stránka ověření neobsahuje pole s ověřovacími údaji.</string>
+    <string name="kbaHtmlFieldsInvalid">Stránka s uživatelským silným ověřováním neobsahuje pole pro ověřovací údaje.</string>
+    <string name="htmlFileException">Uživatelský soubor HTML nemůže mít hodnotu null.</string>
+    <string name="invalidHtmlFile">Cesta uživatelského souboru HTML je neplatného typu</string>
+    <string name="remoteHTMLFile">Vlastní stránka HTML nemůže být vzdálená, SDK podporuje jen načítání místních stránek HTML.</string>
+    <!-- *********************************************************************** -->
+
+
+    <!-- ************************* SSL Certificate Warning ********************* -->
+    <string name="ssl_settingsheader">Tento certifikát není od důvěryhodné autority.</string>
+    <string name="ssl_security_certificate">Bezpečnostní certifikát</string>
+    <string name="ssl_issued_to">Předmět:</string>
+    <string name="ssl_common_name">Běžný název:</string>
+    <string name="ssl_organization">Organizace :</string>
+    <string name="ssl_organization_unit">Organizační jednotka</string>
+    <string name="ssl_issued_by">Výstavce:</string>
+    <string name="ssl_validity">Platnost:</string>
+    <string name="ssl_issued_on">Počáteční datum:</string>
+    <string name="ssl_expires_on">Koncové datum:</string>
+    <string name="security_warning">Varování zabezpečení</string>
+    <string name="ssl_continue">Přijmout</string>
+    <string name="ssl_view_certificate">Podrobnosti</string>
+    <string name="ssl_message">Došlo k potížím s bezpečnostním certifikátem pro tuto adresu URL.</string>
+    <string name="serial_number">Sériové číslo:</string>
+    <string name="fingerprint">Otisky prstu:</string>
+    <string name="sha_fp">Otisk prstu SHA1:</string>
+    <string name="md5_fp">Otisk prstu MD5:</string>
+    <string name="ssl_alert_icon">Ikona výstrahy</string>
+    <string name="importCertificateFailure">Nelze instalovat certifikát.</string>
+    <!-- *********************************************************************** -->
+
+
+    <!-- ************************OAuth2.0 Known errors************************** -->
+    <string name="oAuthFailed">Ověřování OAuth selhalo.</string>
+    <string name="oAuthInvalidState">Neplatný stav obnovený z odpovědi.</string>
+    <string name="oAuthContextInvalid">Pro daný požadavek není k dispozici žádná platná přístupová lexikální jednotka. Ověřte pomocí příslušného rozsahu.</string>
+
+    <!-- ********* Description messages if server returns no description ****** -->
+    <string name="oAuthInvalidRequestDesc">Požadavek nemá požadovaný parametr, obsahuje nepodporovanou hodnotu parametru, opakuje parametr, obsahuje více ověřovacích údajů, používá více než jeden mechanizmus ověření klientu nebo je jinak poškozen.</string>
+    <string name="oAuthUnauthorizedClientDesc">Ověřovaný klient není oprávněn používat tento udělený typ ověření.</string>
+    <string name="oAuthAccessDeniedDesc">Vlastník zdroje nebo ověřovací server požadavek zamítl.</string>
+    <string name="oAuthUnsupportedResponseTypeDesc">Server ověření nepodporuje získávání kódu ověření pomocí této metody.</string>
+    <string name="oAuthServerErrorDesc">Ověřovací server narazil na neočekávaný stav, který mu zabránil ve splnění požadavku.</string>
+    <string name="oAuthTempUnavailableDesc">Ověřovací server nyní nemůže zpracovat požadavek, protože je dočasně přetížen nebo ve stavu údržby.</string>
+    <string name="oAuthInvalidScopeDesc">Rozsah požadavku je neplatný, neznámý, poškozený nebo překračuje rozsah udělený vlastníkem zdroje.</string>
+    <string name="oAuthUnsupportedGrantTypeDesc">Typ uděleného ověření není podporován serverem ověření.</string>
+    <string name="oAuthInvalidClientDesc">Ověření na straně klienta selhalo.</string>
+    <string name="oAuthInvalidGrantDesc">Poskytnuté udělení ověření nebo token aktualizace je neplatné, má skončenou platnost, odejmuté, neshoduje se s použitým URI přesměrování v požadavku ověření nebo bylo vydáno pro jiný klient.</string>
+    <!-- *********************************************************************** -->
+
+    <!-- *********************************************************************** -->
+
+</resources>

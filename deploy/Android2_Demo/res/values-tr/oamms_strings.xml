@@ -1,0 +1,197 @@
+<?xml version = '1.0' encoding = 'utf-8'?>
+<!-- $Header: wptg/idmmobile/src/Android/IDMMobileSDK/res/values-tr/oamms_strings.xml /st_wptg_11.1.1.9.0/4 2014/05/31 08:40:02 gmolloy Exp $ -->
+<!--
+ Copyright (c) 2013, 2014, Oracle and/or its affiliates. All rights reserved.
+
+   NAME
+     oamms_strings.xml
+
+   DESCRIPTION
+     Contains the strings being used by the SDK
+
+   NOTES
+     <other useful comments, qualifications, etc.>
+
+   MODIFIED   (MM/DD/YY)
+   ayjindal    04/08/14 - Bug 18477622
+   arunpras    01/17/14 - Bug fix: 17623143
+   arunpras    12/31/13 - Added an error message to be shown during the negative use case: Invoking logout method before performing authentication
+   arunpras	   10/03/13 - Added a string a part of the fix for bug - 16186113
+   arunpras    09/02/13 - Added custom HTTP headers
+-->
+<resources>
+
+    <!-- General Messages -->
+    <string name="oamms_app_name">Android için Mobile and Social SDK</string>
+    <string name="processing">İşleniyor...</string>
+    <string name="activityExcep">Etkinlik boş olamaz. Geçerli etkinliği tercihen onResume() içinde OMMobileSecurityService#registerActivity(Activity) kullanarak kaydedin.</string>
+    <string name="secProfileExcep">Kurulum API\'si çağrılmadı.</string>
+    <string name="servicenamenull">Kimlik doğrulama şeması belirtilmedi.</string>
+    <string name="invalidServerType">Kimlik doğrulama sunucusu türü geçersiz.</string>
+    <string name="notConnectToServer">Sunucu belirtilen adreste erişilebilir değil. Yardım için yöneticiye başvurun.</string>
+    <string name="networkUnavailable">Ağlar kullanılamıyor. Internet\'e bağlı olduğunuzdan emin olun ve tekrar deneyin.</string>
+    <string name="notParseResponse">Sunucudan gönderilen yanıt ayrıştırılamadı.</string>
+    <string name="certificateNotAccepted">Kullanıcı, sunucu sertifikasını reddetti.</string>
+    <string name="internalError">Dahili Hata</string>
+    <string name="invalidArgumentsNullOrEmpty">Bağımsız değişkenler null veya boş dize olamaz</string>
+    <string name="updateCookiesValidationFailure">Tanımlama bilgisi özellikleri doğrulanamadığından tanımlama bilgisi değeri güncellenemedi</string>
+    <string name="cookieNotFound">Güncellenecek tanımlama bilgisi yok</string>
+    <string name="invalidArgumentsNull">Bağımsız değişkenler null (boş) olamaz</string>
+    <string name="clearUsernamePasswordFailed">Aralarındaki etkinlik kaydı silindiğinden katıştırılmış Web Görünümünde depolanan kullanıcı adı ve parola silinemedi</string>
+    <string name="customAuthHeadersNotAllowed">Eşlemede belirtilen, OM_PROP_CUSTOM_AUTH_HEADERS anahtarına göre değer olarak iletilen HTTP başlıklarından bazıları eklenemiyor. İzin verilmeyen HTTP başlıklarının listesi için dokümanlara bakın.</string>
+    <string name="customAuthHeadersCountExceeded">OM_PROP_CUSTOM_AUTH_HEADERS anahtarının parçası olarak belirtilen özel kimlik doğrulama başlıklarının sayısı maksimum sayıyı (%1$d) aştı.</string>
+    <string name="applicationNotAvailable">İstenen uygulama kullanılamıyor.</string>
+    <string name="httpCallbackNull">Eşzamansız isteği geri çağırma null (boş) olamaz</string>
+    <string name="httpResUrlNull">Http Kaynak URL\'si null (boş) olamaz</string>
+    <string name="logoutInProgress">Oturumu kapatma devam ediyor. Bir süre sonra tekrar deneyin.</string>
+    <string name="logoutTimedOut">Bağlantı zaman aşımına uğradığından oturum kapatma işlemi başarısız oldu.</string>
+    <string name="logoutFailure">Şu hata nedeniyle oturum kapatılamadı: %1$s</string>
+    <string name="notFound">İstenen URL mevcut değil. Yardım için yöneticiye başvurun.</string>
+    <!-- *********************************************************************** -->
+
+
+    <!-- ************************ Success/Error Messages ************************* -->
+    <string name="usernameRequired">Kullanıcı adı gereklidir.</string>
+    <string name="identityDomainRequired">Kimlik Etki Alanı gereklidir.</string>
+    <string name="usernameIdentityDomainRequired">Kullanıcı adı ve kimlik etki alanı gereklidir.</string>
+    <string name="passwordNull">Parola gerekli.</string>
+    <string name="unPwdMissing">Geçersiz kullanıcı adı veya parola.</string>
+    <string name="unPwdTenantMissing">Kullanıcı adı, parola veya kimlik etki alanı geçersiz.</string>
+    <string name="chalgMissing">Parola hatırlatma yanıtı geçersiz.</string>
+    <string name="userCanceled">Oturum açma işlemi kullanıcı tarafından iptal edildi.</string>
+    <string name="authfailed">Kullanıcı kimlik doğrulaması gerçekleştirilemedi.</string>
+    <string name="authSuccess">Kullanıcı kimliği doğrulandı.</string>
+    <!-- *********************************************************************** -->
+
+
+    <!-- *********** UI Messages and Descriptions of Images ************* -->
+    <string name="username">Kullanıcı Adı</string>
+    <string name="usernameHint">Kullanıcı adı girin</string>
+    <string name="password">Parola</string>
+    <string name="passwordHint">Parola girin</string>
+    <string name="tenant">Kimlik Etki Alanı</string>
+    <string name="tenantHint">Kimlik etki alanını girin</string>
+    <string name="login">Oturum aç</string>
+    <string name="cancel">İptal</string>
+    <string name="challengeHead">Ek bilgi sağlayın</string>
+    <string name="challengeQues">Soru</string>
+    <string name="challengeAns">Yanıt</string>
+    <string name="challengeAnswerHint">Güvenlik sorusu için yanıt girin</string>
+    <string name="submit">Gönder</string>
+    <string name="rememberUsername">Kullanıcı Adını Hatırla</string>
+    <string name="rememberCredentials">Kimlik Bilgilerini Hatırla</string>
+    <string name="autoLogin">Otomatik Oturum Açma</string>
+    <string name="backButton">Geri</string>
+    <string name="forwardButton">İleri</string>
+    <string name="refreshButton">Yenile</string>
+    <string name="cancelButton">İptal</string>
+    <!-- *********************************************************************** -->
+
+
+    <!-- URL-Based Configuration -->
+    <string name="configPropertiesMissing">Konfigürasyon nitelikleri SharedPreferences içinde bulunamadı</string>
+    <string name="configIntentUriNull">İletilen eğilim, sunucu konfigürasyon detayları için URI içermiyor.</string>
+    <string name="configIntentUriInvalid">İletilen eğilim, sunucu konfigürasyon detayları için geçerli bir URI içermiyor.</string>
+    <string name="couldNotRetrieveConfiguration">SharedPreferences öğesinden konfigürasyon nitelikleri alınamadı</string>
+    <string name="couldNotStoreConfiguration">Konfigürasyon neitelikleri SharedPreferences içinde depolanamadı</string>
+    <!-- *********************************************************************** -->
+    
+    
+    <!-- Setup failure -->
+    <string name="mssInitFailed">SDK başlatılamadı; gereken sunucu bilgileri sağlanmadı.</string>
+    <string name="setupFailedMS">Eksik konfigürasyon nedeniyle uygulama profili indirilemiyor</string>
+    <string name="setupFailedDefault">Uygulama profili veya uygulama adı geçersiz</string>
+    <!-- *********************************************************************** -->
+
+
+    <!-- Mobile & Social Server -->
+    <string name="invalidAppName">Uygulama adı geçersiz.</string>
+    <string name="invalidServerUrl">Sunucu Url\'si geçersiz.</string>
+    <string name="invalidServiceDomain">Hizmet Etki Alanı geçersiz.</string>
+    <string name="tokenMissing">Bu aygıtın kimliği Mobile and Social Server ile henüz doğrulanmadı.</string>
+    <string name="noUserToken">Kullanıcı kimliği henüz doğrulanmadı.</string>
+    <string name="noRpLoginUrl">RP Kimlik Doğrulama URL\'si açılamadı.</string>
+    <string name="reqFailed">%1$s kullanıcısı için kimlik doğrulama isteği başarısız oldu.</string>
+    <string name="reqDenied">Kimlik doğrulama isteği geri çevrildi.</string>
+    <string name="oaamDeniedAction">Kimlik doğrulaması sunucu tarafından engellendi. Yardım için yöneticiye başvurun.</string>
+    <string name="oaamWipeoutAction">Sunucudan temizleme komutu alındı. Duyarlı uygulama verileri temizleniyor.</string>
+
+    <!-- SSO Messages -->
+    <string name="sigNotValid">Çağırma uygulaması imzası doğrulanamadı.</string>
+    <string name="ssoActivitymissing">SSO Uygulaması adı sağlanmadı.</string>
+    <string name="initSSOAgentSuccess">SSO Aracı uygulaması başarıyla başlatıldı.</string>
+    <string name="serviceDomainNotSame">Hizmet etki alanı eşleşmediğinden kimlik doğrulama, aracı tarafından reddedildi.</string>
+    <string name="invalidConfig">İstemci uygulaması SSO\'ya dahil olma yetkisine sahip değil.</string>
+    <string name="noAgentAvail">SSO Kimlik Doğrulama URL\'si açılamadı.</string>
+    <string name="tokensNotAvailable">OAM_ID belirteci kullanılamıyor. Sunucu ayarlarını kontrol edin. Olası hatalı konfigürasyon: kimlik doğrulama şeması MobileOAMAuthentication olarak ayarlanmamış olabilir.</string>
+    <!-- *********************************************************************** -->
+
+    <!-- *********************************************************************** -->
+
+
+    <!-- Basic Authentication Messages -->
+    <string name="invalidBasicUrl">Otrm açma URL\'si geçersiz.</string>
+    <string name="serverReturnedError">Sunucuda bir hata oluştu: %1$s Yardım için yöneticiye başvurun.</string>
+    <string name="forbidden">Kullanıcı yetkili değil.</string>
+    <!-- *********************************************************************** -->
+
+
+    <!-- Federated Authentication Messages -->
+    <string name="authenticationTimedOut">Kimlik doğrulaması zaman aşımına uğradı.</string>
+    <!-- *********************************************************************** -->
+
+
+    <!-- HTML Login View Customization -->
+    <string name="customHtmlFieldsInvalid">Özel kimlik doğrulama sayfası kimlik bilgileri alanı içermiyor.</string>
+    <string name="kbaHtmlFieldsInvalid">Özelleştirilmiş güçlü kimlik doğrulama sayfası kimlik bilgileri alanı içermiyor.</string>
+    <string name="htmlFileException">Özel HTML dosyası boş olamaz.</string>
+    <string name="invalidHtmlFile">Özel HTML dosyasının dizin yolu türü geçersiz.</string>
+    <string name="remoteHTMLFile">Özel HTML sayfası bir uzak sayfa olamaz; SDK sadece yerel HTML sayfası yüklenmesini destekler</string>
+    <!-- *********************************************************************** -->
+
+
+    <!-- ************************* SSL Certificate Warning ********************* -->
+    <string name="ssl_settingsheader">Bu sertifika güvenilir bir kuruma ait değil.</string>
+    <string name="ssl_security_certificate">Güvenlik Sertifikası</string>
+    <string name="ssl_issued_to">Konu:</string>
+    <string name="ssl_common_name">Ortak ad:</string>
+    <string name="ssl_organization">Organizasyon:</string>
+    <string name="ssl_organization_unit">Organizasyon Birimi:</string>
+    <string name="ssl_issued_by">Yayınlayan:</string>
+    <string name="ssl_validity">Geçerlilik:</string>
+    <string name="ssl_issued_on">Başlangıç Tarihi:</string>
+    <string name="ssl_expires_on">Bitiş Tarihi:</string>
+    <string name="security_warning">Güvenlik Uyarısı</string>
+    <string name="ssl_continue">Kabul Et</string>
+    <string name="ssl_view_certificate">Detaylar</string>
+    <string name="ssl_message">Bu URL\'nin güvenlik sertifikasıyla ilgili sorunlar var.</string>
+    <string name="serial_number">Seri Numarası:</string>
+    <string name="fingerprint">Parmak İzi:</string>
+    <string name="sha_fp">SHA1 Parmak İzi:</string>
+    <string name="md5_fp">MD5 Parmak İzi:</string>
+    <string name="ssl_alert_icon">Uyarı Simgesi</string>
+    <string name="importCertificateFailure">Sertifika yüklenemiyor.</string>
+    <!-- *********************************************************************** -->
+
+
+    <!-- ************************OAuth2.0 Known errors************************** -->
+    <string name="oAuthFailed">OAuth Kimlik Doğrulaması başarısız oldu.</string>
+    <string name="oAuthInvalidState">Yanıttan geçersiz durumu giderildi.</string>
+    <string name="oAuthContextInvalid">Belirtilen istek için geçerli bir erişim belirteci yok. En uygun kapsamla kimlik doğrulaması yapın.</string>
+
+    <!-- ********* Description messages if server returns no description ****** -->
+    <string name="oAuthInvalidRequestDesc">İstek için gerekli bir parametre eksik, desteklenmeyen bir parametre değeri içeriyor, bir parametre yineleniyor, birden çok kimlik bilgisi mevcut, istemcinin kimlik doğrulaması için birden fazla mekanizma kullanıyor veya başka bir hata oluştu.</string>
+    <string name="oAuthUnauthorizedClientDesc">Kimliği doğrulanan istemci bu yetki verme tipini kullanma yetkisine sahip değil.</string>
+    <string name="oAuthAccessDeniedDesc">Kaynak sahibi veya yetkilendirme sunucusu isteği geri çevirdi.</string>
+    <string name="oAuthUnsupportedResponseTypeDesc">Yetkilendirme sunucusu bu yöntemi kullanarak yetki kodu temin etmeyi desteklemiyor.</string>
+    <string name="oAuthServerErrorDesc">Yetkilendirme sunucusu, isteği karşılamasını engelleyen beklenmeyen bir durumla karşılaştı.</string>
+    <string name="oAuthTempUnavailableDesc">Yetkilendirme sunucusu geçicici olarak aşırı yüklendiğinden veya bakımda olduğundan şu an isteği işleyemiyor.</string>
+    <string name="oAuthInvalidScopeDesc">İstenen kapsam geçersiz, bilinmiyor, hatalı veya kaynak sahibi tarafından yetki verilen kapsamı aşıyor.</string>
+    <string name="oAuthUnsupportedGrantTypeDesc">Yetki verme tipi yetkilendirme sunucusu tarafından desteklenmiyor.</string>
+    <string name="oAuthInvalidClientDesc">İstemci kimlik doğrulaması başarısız oldu.</string>
+    <string name="oAuthInvalidGrantDesc">Sağlanan yetki verme veya yenileme belirteci geçersiz, süresi dolmuş, kaldırılmış, yetki isteğinde kullanılan tekrar yönlendirme URI\'si ile eşleşmiyor veya başka bir istemci için düzenlenmiş.</string>
+    <!-- *********************************************************************** -->
+
+    <!-- *********************************************************************** -->
+
+</resources>

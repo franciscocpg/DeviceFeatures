@@ -1,0 +1,197 @@
+<?xml version = '1.0' encoding = 'utf-8'?>
+<!-- $Header: wptg/idmmobile/src/Android/IDMMobileSDK/res/values-hr/oamms_strings.xml /st_wptg_11.1.1.9.0/4 2014/06/16 01:22:58 gmolloy Exp $ -->
+<!--
+ Copyright (c) 2013, 2014, Oracle and/or its affiliates. All rights reserved.
+
+   NAME
+     oamms_strings.xml
+
+   DESCRIPTION
+     Contains the strings being used by the SDK
+
+   NOTES
+     <other useful comments, qualifications, etc.>
+
+   MODIFIED   (MM/DD/YY)
+   ayjindal    04/08/14 - Bug 18477622
+   arunpras    01/17/14 - Bug fix: 17623143
+   arunpras    12/31/13 - Added an error message to be shown during the negative use case: Invoking logout method before performing authentication
+   arunpras	   10/03/13 - Added a string a part of the fix for bug - 16186113
+   arunpras    09/02/13 - Added custom HTTP headers
+-->
+<resources>
+
+    <!-- General Messages -->
+    <string name="oamms_app_name">Mobile and Social SDK za Android</string>
+    <string name="processing">Obrada u tijeku...</string>
+    <string name="activityExcep">Aktivnost ne može biti null. Registrirajte trenutnu aktivnost, OMMobileSecurityService#registerActivity(Activity), po mogućnosti u onResume().</string>
+    <string name="secProfileExcep">API za postavljanje nije pozvan.</string>
+    <string name="servicenamenull">Nije navedena shema provjere autentičnosti.</string>
+    <string name="invalidServerType">Vrsta poslužitelja za provjeru autentičnosti nije valjana.</string>
+    <string name="notConnectToServer">Poslužitelj nije dostupan na navedenoj adresi. Za pomoć se obratite administratoru.</string>
+    <string name="networkUnavailable">Mreža je nedostupna. Provjerite jeste li uspostavili internetsku vezu i pokušajte ponovo.</string>
+    <string name="notParseResponse">Ne može se analizirati odgovor poslan s poslužitelja.</string>
+    <string name="certificateNotAccepted">Korisnik je odbio certifikat poslužitelja.</string>
+    <string name="internalError">Interna pogreška</string>
+    <string name="invalidArgumentsNullOrEmpty">Argumenti ne mogu biti null ili prazni reci</string>
+    <string name="updateCookiesValidationFailure">Vrijednosti kolačića nije ažurirana jer je se ne može potvrditi valjanost atributa kolačića</string>
+    <string name="cookieNotFound">Kolačić koji želite ažurirati ne postoji</string>
+    <string name="invalidArgumentsNull">Argumenti ne mogu biti null</string>
+    <string name="clearUsernamePasswordFailed">Korisničko ime i lozinka pohranjeni u ugrađenom web-prikazu ne mogu se izbrisati jer je u međuvremenu poništena registracija aktivnosti.</string>
+    <string name="customAuthHeadersNotAllowed">Neka od HTTP zaglavlja iz mape koja su navedena kao vrijednost za ključ OM_PROP_CUSTOM_AUTH_HEADERS ne mogu se dodati. U dokumentaciji potražite popis nedopuštenih HTTP zaglavlja.</string>
+    <string name="customAuthHeadersCountExceeded">Broj prilagođenih zaglavlja za provjeru autentičnosti koja su specificirana u sklopu OM_PROP_CUSTOM_AUTH_HEADERS prekoračuju maksimalan broj (%1$d).</string>
+    <string name="applicationNotAvailable">Tražena aplikacija nije dostupna.</string>
+    <string name="httpCallbackNull">Povratni poziv za asinkroni zahtjev ne može biti null</string>
+    <string name="httpResUrlNull">URL http resursa ne može biti null</string>
+    <string name="logoutInProgress">Odjava je u tijeku. Nakon određenog vremena pokušajte ponovo.</string>
+    <string name="logoutTimedOut">Veza je istekla i operacija odjave nije uspjela.</string>
+    <string name="logoutFailure">Odjava nije uspjela zbog sljedeće pogreške: %1$s</string>
+    <string name="notFound">Traženi URL ne postoji. Za pomoć se obratite administratoru.</string>
+    <!-- *********************************************************************** -->
+
+
+    <!-- ************************ Success/Error Messages ************************* -->
+    <string name="usernameRequired">Potrebno je korisničko ime.</string>
+    <string name="identityDomainRequired">Potrebna je domena identiteta.</string>
+    <string name="usernameIdentityDomainRequired">Potrebni su korisničko ime i domena identiteta.</string>
+    <string name="passwordNull">Potrebna je lozinka.</string>
+    <string name="unPwdMissing">Neispravno ime ili lozinka korisnika.</string>
+    <string name="unPwdTenantMissing">Neispravno ime, lozinka korisnika ili domena identiteta.</string>
+    <string name="chalgMissing">Odgovor na izazov nije valjan.</string>
+    <string name="userCanceled">Korisnik je otkazao operaciju prijave.</string>
+    <string name="authfailed">Neuspjela provjera autentičnosti korisnika.</string>
+    <string name="authSuccess">Provjera autentičnosti korisnika uspjela.</string>
+    <!-- *********************************************************************** -->
+
+
+    <!-- *********** UI Messages and Descriptions of Images ************* -->
+    <string name="username">Korisničko ime</string>
+    <string name="usernameHint">Unesite korisničko ime</string>
+    <string name="password">Lozinka</string>
+    <string name="passwordHint">Unesite lozinku</string>
+    <string name="tenant">Domena identiteta</string>
+    <string name="tenantHint">Unesite domenu identiteta</string>
+    <string name="login">Prijava</string>
+    <string name="cancel">Odustani</string>
+    <string name="challengeHead">Unesite dodatne informacije</string>
+    <string name="challengeQues">Pitanje</string>
+    <string name="challengeAns">Odgovor</string>
+    <string name="challengeAnswerHint">Odgovorite na sigurnosno pitanje</string>
+    <string name="submit">Podnesi</string>
+    <string name="rememberUsername">Zapamti korisničko ime</string>
+    <string name="rememberCredentials">Zapamti sigurnosne podatke</string>
+    <string name="autoLogin">Automatska prijava</string>
+    <string name="backButton">Natrag</string>
+    <string name="forwardButton">Naprijed</string>
+    <string name="refreshButton">Osvježi</string>
+    <string name="cancelButton">Odustani</string>
+    <!-- *********************************************************************** -->
+
+
+    <!-- URL-Based Configuration -->
+    <string name="configPropertiesMissing">Zajedničke preference ne sadrže svojstva konfiguracije</string>
+    <string name="configIntentUriNull">Navedena namjera ne sadrži URI za pojedinosti konfiguracije poslužitelja.</string>
+    <string name="configIntentUriInvalid">Navedena namjera ne sadrži valjani URI za pojedinosti konfiguracije poslužitelja.</string>
+    <string name="couldNotRetrieveConfiguration">Ne mogu se učitati svojstva konfiguracije iz zajedničkih preferenci</string>
+    <string name="couldNotStoreConfiguration">Ne mogu se spremiti svojstva konfiguracije u zajedničke preference</string>
+    <!-- *********************************************************************** -->
+    
+    
+    <!-- Setup failure -->
+    <string name="mssInitFailed">Pokretanje SDK nije uspjelo; nisu navedene potrebne informacije poslužitelja.</string>
+    <string name="setupFailedMS">Profil aplikacije ne može se preuzeti jer nedostaje konfiguracija</string>
+    <string name="setupFailedDefault">Profil ili naziv aplikacije nisu valjani</string>
+    <!-- *********************************************************************** -->
+
+
+    <!-- Mobile & Social Server -->
+    <string name="invalidAppName">Naziv aplikacije nije valjan.</string>
+    <string name="invalidServerUrl">URL poslužitelja nije valjan.</string>
+    <string name="invalidServiceDomain">Domena usluge nije valjana.</string>
+    <string name="tokenMissing">Mobile and Social poslužitelj još nije potvrdio autentičnost uređaja.</string>
+    <string name="noUserToken">Još nije potvrđena autentičnost korisnika.</string>
+    <string name="noRpLoginUrl">Ne može se otvoriti URL RP provjere autentičnosti.</string>
+    <string name="reqFailed">Zahtjev za provjeru autentičnosti nije uspio za korisnika %1$s.</string>
+    <string name="reqDenied">Zahtjev za provjeru autentičnosti odbijen je.</string>
+    <string name="oaamDeniedAction">Poslužitelj je blokirao provjeru autentičnosti. Za pomoć se obratite administratoru.</string>
+    <string name="oaamWipeoutAction">Poslužitelj je izdao naredbu za brisanje. U tijeku je brisanje osjetljivih podataka aplikacije.</string>
+
+    <!-- SSO Messages -->
+    <string name="sigNotValid">Nije uspjela provjera valjanosti potpisa pozivne aplikacije.</string>
+    <string name="ssoActivitymissing">Nije unesen naziv aplikacije za jedinstvenu prijavu.</string>
+    <string name="initSSOAgentSuccess">Aplikacija agenta za jedinstvenu prijavu uspješno je pokrenuta.</string>
+    <string name="serviceDomainNotSame">Agent je odbio provjeru autentičnosti jer se ne podudara domena usluge.</string>
+    <string name="invalidConfig">Klijentska aplikacija nema ovlaštenja za sudjelovanje u jedinstvenoj prijavi.</string>
+    <string name="noAgentAvail">Ne može se otvoriti URL provjere autentičnosti za jedinstvenu prijavu</string>
+    <string name="tokensNotAvailable">Token OAM_ID nedostupan. Provjerite postavke poslužitelja. Prema jednoj od mogućih pogrešnih konfiguracija, shema za provjeru autentičnosti nije postavljena kao MobileOAMAuthentication.</string>
+    <!-- *********************************************************************** -->
+
+    <!-- *********************************************************************** -->
+
+
+    <!-- Basic Authentication Messages -->
+    <string name="invalidBasicUrl">URL za prijavu nije valjan.</string>
+    <string name="serverReturnedError">Na poslužitelju je došlo do pogreške %1$s. Za pomoć se obratite administratoru.</string>
+    <string name="forbidden">Korisnik nema ovlasti.</string>
+    <!-- *********************************************************************** -->
+
+
+    <!-- Federated Authentication Messages -->
+    <string name="authenticationTimedOut">Isteklo je vrijeme za provjeru autentičnosti.</string>
+    <!-- *********************************************************************** -->
+
+
+    <!-- HTML Login View Customization -->
+    <string name="customHtmlFieldsInvalid">Prilagođena stranica za provjeru autentičnosti nema polje za sigurnosne podatke.</string>
+    <string name="kbaHtmlFieldsInvalid">Prilagođena stranica za snažnu provjeru autentičnosti nema polje za sigurnosne podatke</string>
+    <string name="htmlFileException">Prilagođena HTML datoteka ne može biti null.</string>
+    <string name="invalidHtmlFile">Vrsta staze prilagođene HTML datoteke nije valjana</string>
+    <string name="remoteHTMLFile">Prilagođena HTML stranica ne može biti udaljena stranica; SDK podržava učitavanje samo lokalnih HTML stranica</string>
+    <!-- *********************************************************************** -->
+
+
+    <!-- ************************* SSL Certificate Warning ********************* -->
+    <string name="ssl_settingsheader">Certifikat ne dolazi iz pouzdanog izvora.</string>
+    <string name="ssl_security_certificate">Sigurnosni certifikat</string>
+    <string name="ssl_issued_to">Predmet:</string>
+    <string name="ssl_common_name">Uobičajeni naziv:</string>
+    <string name="ssl_organization">Organizacija:</string>
+    <string name="ssl_organization_unit">Organizacijska jedinica:</string>
+    <string name="ssl_issued_by">Izdavatelj:</string>
+    <string name="ssl_validity">Valjanost:</string>
+    <string name="ssl_issued_on">Datum početka:</string>
+    <string name="ssl_expires_on">Datum završetka:</string>
+    <string name="security_warning">Sigurnosno upozorenje</string>
+    <string name="ssl_continue">Prihvati</string>
+    <string name="ssl_view_certificate">Pojedinosti</string>
+    <string name="ssl_message">Postoje poteškoće sa sigurnosnim certifikatom za ovaj URL.</string>
+    <string name="serial_number">Serijski broj:</string>
+    <string name="fingerprint">Otisci prstiju:</string>
+    <string name="sha_fp">SHA1 otisak prsta:</string>
+    <string name="md5_fp">MD5 otisak prsta:</string>
+    <string name="ssl_alert_icon">Ikona upozorenja</string>
+    <string name="importCertificateFailure">Instalacija certifikata nije uspjela.</string>
+    <!-- *********************************************************************** -->
+
+
+    <!-- ************************OAuth2.0 Known errors************************** -->
+    <string name="oAuthFailed">Provjera autentičnosti OAuth nije uspjela.</string>
+    <string name="oAuthInvalidState">Stanje koje je učitano iz odgovora nije valjano.</string>
+    <string name="oAuthContextInvalid">Navedenom zahtjevu nije pridodan valjani token za pristup. Provjerite autentičnost u odgovarajućem opsegu.</string>
+
+    <!-- ********* Description messages if server returns no description ****** -->
+    <string name="oAuthInvalidRequestDesc">Zahtjevu nedostaje obavezan parametar, sadrži vrijednost parametra koja nije podržana, sadrži ponovljene parametre, sadrži više sigurnosnih podataka, koristi više od jednog mehanizma za provjeru autentičnosti klijenta ili je na drugi način neispravno oblikovan.</string>
+    <string name="oAuthUnauthorizedClientDesc">Klijent za autorizaciju nije ovlašten za upotrebu ove vrste dodjele za autorizaciju.</string>
+    <string name="oAuthAccessDeniedDesc">Zahtjev je odbio vlasnik resursa ili poslužitelj za autorizaciju.</string>
+    <string name="oAuthUnsupportedResponseTypeDesc">Poslužitelj za autorizaciju ne podržava traženje šifre za autorizaciju ovom metodom.</string>
+    <string name="oAuthServerErrorDesc">Poslužitelj za autorizaciju naišao je na neočekivano stanje koje je spriječilo ispunjavanje zahtjeva.</string>
+    <string name="oAuthTempUnavailableDesc">Poslužitelj za autorizaciju trenutno ne može obraditi zahtjev zbog privremenog preopterećenja ili održavanja poslužitelja.</string>
+    <string name="oAuthInvalidScopeDesc">Zatraženi raspon nije valjan, nije poznat, nije ispravno oblikovan ili izlazi iz opsega koji je odredio vlasnik resursa.</string>
+    <string name="oAuthUnsupportedGrantTypeDesc">Poslužitelj za autorizaciju ne podržava vrstu dodjele autorizacije.</string>
+    <string name="oAuthInvalidClientDesc">Provjera autentičnosti klijenta nije uspjela.</string>
+    <string name="oAuthInvalidGrantDesc">Navedena dodjela autorizacije ili token za osvježavanje nije valjan, istekao je, opozvan je, nije u skladu s URI-jem za preusmjeravanje koji se koristi u zahtjevu za autorizaciju ili je izdan za drugi klijent.</string>
+    <!-- *********************************************************************** -->
+
+    <!-- *********************************************************************** -->
+
+</resources>

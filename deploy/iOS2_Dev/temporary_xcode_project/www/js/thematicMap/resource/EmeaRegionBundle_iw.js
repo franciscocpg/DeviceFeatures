@@ -1,0 +1,1 @@
+l={EMEA:["EMEA","\u05d0\u05e4\u05e8\u05d9\u05e7\u05d4, \u05d4\u05de\u05d6\u05e8\u05d7 \u05d4\u05ea\u05d9\u05db\u05d5\u05df, \u05d0\u05e4\u05e8\u05d9\u05e7\u05d4"]};(DvtBaseMapManager=this.DvtBaseMapManager)||(DvtBaseMapManager={});DvtBaseMapManager._UNPROCESSED_MAPS||(DvtBaseMapManager._UNPROCESSED_MAPS=[[],[],[]]);DvtBaseMapManager._UNPROCESSED_MAPS[2].push(["emea","region",l]);

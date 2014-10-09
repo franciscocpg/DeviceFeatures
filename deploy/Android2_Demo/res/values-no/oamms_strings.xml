@@ -1,0 +1,197 @@
+<?xml version = '1.0' encoding = 'utf-8'?>
+<!-- $Header: wptg/idmmobile/src/Android/IDMMobileSDK/res/values-no/oamms_strings.xml /st_wptg_11.1.1.9.0/4 2014/05/30 18:58:42 gmolloy Exp $ -->
+<!--
+ Copyright (c) 2013, 2014, Oracle and/or its affiliates. All rights reserved.
+
+   NAME
+     oamms_strings.xml
+
+   DESCRIPTION
+     Contains the strings being used by the SDK
+
+   NOTES
+     <other useful comments, qualifications, etc.>
+
+   MODIFIED   (MM/DD/YY)
+   ayjindal    04/08/14 - Bug 18477622
+   arunpras    01/17/14 - Bug fix: 17623143
+   arunpras    12/31/13 - Added an error message to be shown during the negative use case: Invoking logout method before performing authentication
+   arunpras	   10/03/13 - Added a string a part of the fix for bug - 16186113
+   arunpras    09/02/13 - Added custom HTTP headers
+-->
+<resources>
+
+    <!-- General Messages -->
+    <string name="oamms_app_name">Mobil og sosial SDK for Android</string>
+    <string name="processing">Behandler ...</string>
+    <string name="activityExcep">Aktivitet kan ikke være null. Registrer den gjeldende aktiviteten ved hjelp av OMMobileSecurityService#registerActivity(Activity), helst i onResume().</string>
+    <string name="secProfileExcep">API for oppsett er ikke startet.</string>
+    <string name="servicenamenull">Det er ikke angitt noe autentiseringsskjema.</string>
+    <string name="invalidServerType">Autentiseringstjenertypen er ugyldig.</string>
+    <string name="notConnectToServer">Tjeneren kan ikke nås på den angitte adressen. Ta kontakt med administratoren hvis du trenger hjelp.</string>
+    <string name="networkUnavailable">Nettverket er utilgjengelig. Forsikre deg om at du er koblet til Internett, og prøv på nytt.</string>
+    <string name="notParseResponse">Kan ikke analysere svaret som ble sendt fra tjeneren.</string>
+    <string name="certificateNotAccepted">Brukeren avviste tjenersertifikatet.</string>
+    <string name="internalError">Intern feil</string>
+    <string name="invalidArgumentsNullOrEmpty">Argumentene kan ikke være null eller tomme strenger.</string>
+    <string name="updateCookiesValidationFailure">Oppdatering av informasjonskapselverdi mislyktes fordi informasjonskapselattributtene ikke kan valideres</string>
+    <string name="cookieNotFound">Informasjonskapselen som skal oppdateres, finnes ikke</string>
+    <string name="invalidArgumentsNull">Argumentene kan ikke være null</string>
+    <string name="clearUsernamePasswordFailed">Kan ikke slette brukernavnet og passordet som er lagret i innebygd Web-visning, ettersom aktivitet ble avregistrert i mellomtiden.</string>
+    <string name="customAuthHeadersNotAllowed">Noen av HTTP-hodene som er angitt i tilordningen som ble sendt som en verdi mot nøkkelen OM_PROP_CUSTOM_AUTH_HEADERS, kan ikke legges til. Se i dokumentasjonen hvis du vil ha en liste over HTTP-hoder som ikke er tillatt.</string>
+    <string name="customAuthHeadersCountExceeded">Antallet hoder for egendefinert autentisering som er angitt som en del av OM_PROP_CUSTOM_AUTH_HEADERS, overskred det maksimale antallet (%1$d).</string>
+    <string name="applicationNotAvailable">Den forespurte applikasjonen er ikke tilgjengelig.</string>
+    <string name="httpCallbackNull">Tilbakekallet kan ikke være null for asynkron forespørsel</string>
+    <string name="httpResUrlNull">URL-adressen for HTTP-ressursen kan ikke være null</string>
+    <string name="logoutInProgress">Avlogging pågår. Prøv på nytt om en stund.</string>
+    <string name="logoutTimedOut">Avloggingen mislyktes fordi tilkoblingen ble tidsavbrutt.</string>
+    <string name="logoutFailure">Avloggingen mislyktes på grunn av følgende feil: %1$s</string>
+    <string name="notFound">Den forespurte URL-adressen finnes ikke. Ta kontakt med administratoren hvis du trenger hjelp.</string>
+    <!-- *********************************************************************** -->
+
+
+    <!-- ************************ Success/Error Messages ************************* -->
+    <string name="usernameRequired">Brukernavn er obligatorisk.</string>
+    <string name="identityDomainRequired">Identitetsdomene er obligatorisk.</string>
+    <string name="usernameIdentityDomainRequired">Brukernavn og identitetsdomene er obligatorisk.</string>
+    <string name="passwordNull">Passord er nødvendig.</string>
+    <string name="unPwdMissing">Ugyldig brukernavn eller passord.</string>
+    <string name="unPwdTenantMissing">Ugyldig brukernavn, passord eller identitetsdomene.</string>
+    <string name="chalgMissing">Identifiseringssvaret er ugyldig.</string>
+    <string name="userCanceled">Brukeren avbrøt påloggingsoperasjonen.</string>
+    <string name="authfailed">Brukerautentiseringen mislyktes.</string>
+    <string name="authSuccess">Brukerautentiseringen er fullført.</string>
+    <!-- *********************************************************************** -->
+
+
+    <!-- *********** UI Messages and Descriptions of Images ************* -->
+    <string name="username">Brukernavn</string>
+    <string name="usernameHint">Angi brukernavn</string>
+    <string name="password">Passord</string>
+    <string name="passwordHint">Angi passord</string>
+    <string name="tenant">Identitetsdomene</string>
+    <string name="tenantHint">Angi identitetsdomene</string>
+    <string name="login">Logg på</string>
+    <string name="cancel">Avbryt</string>
+    <string name="challengeHead">Angi tilleggsopplysninger</string>
+    <string name="challengeQues">Spørsmål</string>
+    <string name="challengeAns">Svar</string>
+    <string name="challengeAnswerHint">Angi svar på sikkerhetsspørsmål</string>
+    <string name="submit">Send</string>
+    <string name="rememberUsername">Husk brukernavn</string>
+    <string name="rememberCredentials">Husk påloggingsinformasjon</string>
+    <string name="autoLogin">Automatisk pålogging</string>
+    <string name="backButton">Tilbake</string>
+    <string name="forwardButton">Frem</string>
+    <string name="refreshButton">Oppdater</string>
+    <string name="cancelButton">Avbryt</string>
+    <!-- *********************************************************************** -->
+
+
+    <!-- URL-Based Configuration -->
+    <string name="configPropertiesMissing">Finner ikke konfigurasjonsegenskaper i SharedPreferences</string>
+    <string name="configIntentUriNull">Det sendte forsøket inneholder ikke en URI for tjenerkonfigurasjonsdetaljer.</string>
+    <string name="configIntentUriInvalid">Det sendte forsøket inneholder ikke en gyldig URI for tjenerkonfigurasjonsdetaljer.</string>
+    <string name="couldNotRetrieveConfiguration">Kan ikke hente konfigurasjonsegenskaper fra SharedPreferences</string>
+    <string name="couldNotStoreConfiguration">Kan ikke lagre konfigurasjonsegenskaper i SharedPreferences</string>
+    <!-- *********************************************************************** -->
+    
+    
+    <!-- Setup failure -->
+    <string name="mssInitFailed">Initialiseringen av SDK-en mislyktes fordi de nødvendige tjeneropplysningene ikke er angitt.</string>
+    <string name="setupFailedMS">Applikasjonsprofilen kan ikke lastes ned på grunn av manglende konfigurasjon</string>
+    <string name="setupFailedDefault">Applikasjonsprofilen eller applikasjonsnavnet er ugyldig</string>
+    <!-- *********************************************************************** -->
+
+
+    <!-- Mobile & Social Server -->
+    <string name="invalidAppName">Applikasjonsnavnet er ugyldig.</string>
+    <string name="invalidServerUrl">URL-adressen til tjeneren er ugyldig.</string>
+    <string name="invalidServiceDomain">Tjenestedomenet er ugyldig.</string>
+    <string name="tokenMissing">Denne enheten er ennå ikke autentisert med mobil og sosial tjener.</string>
+    <string name="noUserToken">Brukeren er ennå ikke autentisert.</string>
+    <string name="noRpLoginUrl">Kan ikke åpne URL-adresse for RP-autentisering.</string>
+    <string name="reqFailed">Autentiseringsforespørselen mislyktes for brukeren %1$s.</string>
+    <string name="reqDenied">Forespørsel om autentisering avvises.</string>
+    <string name="oaamDeniedAction">Autentiseringen er blokkert av tjeneren. Ta kontakt med administratoren hvis du trenger hjelp.</string>
+    <string name="oaamWipeoutAction">Mottok en tømmekommando fra tjeneren. Fjerner sensitive applikasjonsdata.</string>
+
+    <!-- SSO Messages -->
+    <string name="sigNotValid">Mislyktes ved validering av kall til applikasjonssignatur.</string>
+    <string name="ssoActivitymissing">Applikasjonsnavn for engangspålogging er ikke angitt.</string>
+    <string name="initSSOAgentSuccess">Agentapplikasjonen for engangspålogging er initialisert.</string>
+    <string name="serviceDomainNotSame">Autentiseringen ble avvist av agenten fordi tjenestedomenet ikke samsvarer.</string>
+    <string name="invalidConfig">Klientapplikasjonen er ikke autorisert til å delta i SSO.</string>
+    <string name="noAgentAvail">Kan ikke åpne URL-adresse for SSO-autentisering.</string>
+    <string name="tokensNotAvailable">OAM_ID-symbolet er ikke tilgjengelig. Kontroller tjenerinnstillingene. Én av de mulige feilkonfigurasjonene er at autentiseringsskjemaet ikke er angitt som MobileOAMAuthentication.</string>
+    <!-- *********************************************************************** -->
+
+    <!-- *********************************************************************** -->
+
+
+    <!-- Basic Authentication Messages -->
+    <string name="invalidBasicUrl">Ugyldig påloggings-URL.</string>
+    <string name="serverReturnedError">Tjeneren fant en feil, %1$s. Ta kontakt med administratoren hvis du trenger hjelp.</string>
+    <string name="forbidden">Brukeren er ikke autorisert.</string>
+    <!-- *********************************************************************** -->
+
+
+    <!-- Federated Authentication Messages -->
+    <string name="authenticationTimedOut">Autentisering ble tidsavbrutt.</string>
+    <!-- *********************************************************************** -->
+
+
+    <!-- HTML Login View Customization -->
+    <string name="customHtmlFieldsInvalid">Siden for egendefinert autentisering har ikke noe felt for påloggingsinformasjon.</string>
+    <string name="kbaHtmlFieldsInvalid">Siden for egendefinert sterk autentisering har ikke noe felt for påloggingsinformasjon.</string>
+    <string name="htmlFileException">Filen for egendefinert HTML kan ikke være null.</string>
+    <string name="invalidHtmlFile">Banen til filen for egendefinert HTML er av en ugyldig type</string>
+    <string name="remoteHTMLFile">Den egendefinerte HTML-siden kan ikke være en ekstern side, SDK støtter bare lasting av en lokal HTML-side</string>
+    <!-- *********************************************************************** -->
+
+
+    <!-- ************************* SSL Certificate Warning ********************* -->
+    <string name="ssl_settingsheader">Dette sertifikatet er ikke fra en klarert instans.</string>
+    <string name="ssl_security_certificate">Sikkerhetssertifikat</string>
+    <string name="ssl_issued_to">Emne:</string>
+    <string name="ssl_common_name">Allment navn:</string>
+    <string name="ssl_organization">Organisasjon:</string>
+    <string name="ssl_organization_unit">Organisasjonsenhet:</string>
+    <string name="ssl_issued_by">Utsteder:</string>
+    <string name="ssl_validity">Gyldighet:</string>
+    <string name="ssl_issued_on">Startdato:</string>
+    <string name="ssl_expires_on">Sluttdato:</string>
+    <string name="security_warning">Sikkerhetsadvarsel</string>
+    <string name="ssl_continue">Godta</string>
+    <string name="ssl_view_certificate">Detaljer</string>
+    <string name="ssl_message">Det er problemer med sikkerhetssertifikatet for denne URL-adressen.</string>
+    <string name="serial_number">Serienummer:</string>
+    <string name="fingerprint">Fingeravtrykk:</string>
+    <string name="sha_fp">SHA1-fingeravtrykk:</string>
+    <string name="md5_fp">MD5-fingeravtrykk:</string>
+    <string name="ssl_alert_icon">Varselsikon</string>
+    <string name="importCertificateFailure">Kan ikke installere sertifikatet.</string>
+    <!-- *********************************************************************** -->
+
+
+    <!-- ************************OAuth2.0 Known errors************************** -->
+    <string name="oAuthFailed">OAuth-autentisering mislyktes.</string>
+    <string name="oAuthInvalidState">Ugyldig tilstand gjenopprettet fra svaret.</string>
+    <string name="oAuthContextInvalid">Det finnes ikke noe gyldig tilgangssymbol for den angitte forespørselen. Autentiser med det riktige omfanget.</string>
+
+    <!-- ********* Description messages if server returns no description ****** -->
+    <string name="oAuthInvalidRequestDesc">Forespørselen mangler en obligatorisk parameter, inkluderer en parameterverdi som ikke støttes, gjentar en parameter, inkluderer flere sett med påloggingsinformasjon, utnytter flere mekanismer for autentisering av klienten eller er misformet på andre måter.</string>
+    <string name="oAuthUnauthorizedClientDesc">Den autentiserte klienten er ikke autorisert for bruk av denne tildelingstypen for autorisering.</string>
+    <string name="oAuthAccessDeniedDesc">Ressurseieren eller autoriseringstjeneren avslo forespørselen.</string>
+    <string name="oAuthUnsupportedResponseTypeDesc">Autoriseringstjeneren støtter ikke henting av en autoriseringskode ved hjelp av denne metoden.</string>
+    <string name="oAuthServerErrorDesc">Autoriseringstjeneren fant en uventet tilstand som hindret den i å fullføre forespørselen.</string>
+    <string name="oAuthTempUnavailableDesc">Autoriseringstjeneren er for tiden ikke i stand til å håndtere forespørselen på grunn av midlertidig overbelastning eller vedlikehold på tjeneren.</string>
+    <string name="oAuthInvalidScopeDesc">Det forespurte omfanget er ugyldig, er ukjent, har feil format eller overskrider omfanget som er tildelt av ressurseieren.</string>
+    <string name="oAuthUnsupportedGrantTypeDesc">Tildelingstypen for autorisering støttes ikke av autoriseringstjeneren.</string>
+    <string name="oAuthInvalidClientDesc">Klientautentisering mislyktes.</string>
+    <string name="oAuthInvalidGrantDesc">Den angitte autoriseringstildelingen eller oppdateringssymbolet er ugyldig, utløpt eller tilbakekalt, samsvarer ikke med URI-en for omdirigering som brukes i autoriseringsforespørselen, eller ble utstedt til en annen klient.</string>
+    <!-- *********************************************************************** -->
+
+    <!-- *********************************************************************** -->
+
+</resources>
