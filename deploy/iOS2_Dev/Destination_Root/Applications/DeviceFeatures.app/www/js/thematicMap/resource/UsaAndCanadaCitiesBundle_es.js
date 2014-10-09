@@ -1,1 +1,0 @@
-l={USA_LOS_ANGELES:[null,"Los \u00c1ngeles"],USA_NEW_YORK:[null,"Nueva York"]};(DvtBaseMapManager=this.DvtBaseMapManager)||(DvtBaseMapManager={});DvtBaseMapManager._UNPROCESSED_MAPS||(DvtBaseMapManager._UNPROCESSED_MAPS=[[],[],[]]);DvtBaseMapManager._UNPROCESSED_MAPS[2].push(["usaAndCanada","cities",l]);

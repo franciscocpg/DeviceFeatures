@@ -1,1 +1,0 @@
-l={EU:["EU","\u30e8\u30fc\u30ed\u30c3\u30d1"]};(DvtBaseMapManager=this.DvtBaseMapManager)||(DvtBaseMapManager={});DvtBaseMapManager._UNPROCESSED_MAPS||(DvtBaseMapManager._UNPROCESSED_MAPS=[[],[],[]]);DvtBaseMapManager._UNPROCESSED_MAPS[2].push(["europe","continent",l]);
