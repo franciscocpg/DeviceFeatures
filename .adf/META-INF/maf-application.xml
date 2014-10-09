@@ -3,4 +3,7 @@
                    version="1.0" name="DeviceFeatures" id="com.company.DeviceFeatures"
                    appControllerFolder="ApplicationController" listener-class="application.LifeCycleListenerImpl">
   <adfmf:featureReference id="deviceFeatures"/>
+  <adfmf:navigation>
+    <adfmf:navigationBar enabled="false"/>
+  </adfmf:navigation>
 </adfmf:application>
